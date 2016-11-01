@@ -1,0 +1,3 @@
+{:require  [dcd-website.app]
+ :init-fns [dcd-website.app/init]
+ :compiler-options {:asset-path "js/app.out"}}
