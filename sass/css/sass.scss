@@ -2,9 +2,10 @@ $primary-color: #505050;
 $dark-border:   #203257;
 
 body {
-    font: 120% 'CarlitoRegular'; 
-    font-weight: normal; 
-    font-style: normal; 
+    font: 100% 'NowRegular';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 170%
 
     color: $primary-color;
     margin: 0;
@@ -189,7 +190,6 @@ body {
     .footer {
         display: flex;
         flex-direction: row wrap;
-        padding: 10px;
 
         a {
             flex: 1 1 auto;
@@ -205,7 +205,6 @@ body {
         .footer {
             a {
                 text-align: center;
-                padding: 10px;
             }
         }
     }
