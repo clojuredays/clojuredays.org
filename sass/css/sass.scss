@@ -9,10 +9,9 @@ body {
     background-color: white;
 }
 
-.wrapper {
-    * {
-        /* border: 1px solid red; */
-    }
+.site {
+    display: flex;
+    flex-direction: column;
 
     a, a:visited {
         text-decoration: none;
@@ -24,96 +23,161 @@ body {
         opacity: 0.6;
     }
 
-    display: flex;
-    flex-flow: row wrap;
+    .wrapper {
+        flex: 1;
 
-    .header, .main, .footer, .sidebar {
-        flex: 1 1 100%;
-    }
+        * {
+            /* border: 1px solid red; */
+        }
 
-    .header {
         display: flex;
-        flex-direction: column;
-        padding: 0;
+        flex-flow: row wrap;
 
-        div.title {
-            flex: 1 100%;
-            width: 100%;
-            margin: auto;
+        .header, .main, .sidebar {
+            flex: 1 1 100%;
         }
 
-        div.logo {
-            margin-left: 20px;
-            margin-top: 20px;
+        .header {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
 
-            flex: 1 100%;
-
-            img {
-                width: 200px;
-            }
-        }
-
-        h1 {
-            display: block;
-            text-align: center;
-            color: #fff;
-            padding: 10px;
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            min-width: 300px;
-
-            &::after {
-                content: " ";
-                z-index: -1;
-                position: absolute;
-                top: 0;
-                left: 0;
+            div.title {
+                flex: 1 100%;
                 width: 100%;
-                height: 100%;
-                background: #203257;
-                opacity: 0.8;
+                margin: auto;
             }
-        }
 
-        background: url('/img/houses.jpg');
-        background-size: cover;
-        background-position: center;
-    }
+            div.logo {
+                margin-left: 20px;
+                margin-top: 20px;
 
-    .sidebar {
-        flex-direction: column;
-        display: flex;
-        background: #f7f7f7;
-        padding-top: 40px;
-        padding-left: 20px;
+                flex: 1 100%;
 
-        a.item {
-            padding-bottom: 20px;
-        }
-    }
+                img {
+                    width: 200px;
+                }
+            }
 
-    .main {
-        padding-left: 20px;
-        padding-bottom: 40px;
-
-        h2 {
-            font-size: 1.2rem;
-
-            &::after {
-                content: " ";
+            h1 {
                 display: block;
-                width: 80px;
-                height: 2px;
-                margin: 10px 0;
-                background: #ae1c28;
+                text-align: center;
+                color: #fff;
+                padding: 10px;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                min-width: 300px;
+
+                &::after {
+                    content: " ";
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #203257;
+                    opacity: 0.8;
+                }
             }
 
-            margin-top: 40px;
+            background: url('/img/houses.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
-        h3 {
-            font-size: 0.9rem;
+        .sidebar {
+            flex-direction: column;
+            display: flex;
+            background: #f7f7f7;
+            padding-top: 40px;
+            padding-left: 20px;
+
+            a.item {
+                padding-bottom: 20px;
+            }
+        }
+
+        .sidebar.collapsed {
+            height: 20px;
+        }
+
+        .main {
+            padding-left: 20px;
+            padding-bottom: 40px;
+
+            h2 {
+                font-size: 1.2rem;
+
+                &::after {
+                    content: " ";
+                    display: block;
+                    width: 80px;
+                    height: 2px;
+                    margin: 10px 0;
+                    background: #ae1c28;
+                }
+
+                margin-top: 40px;
+            }
+
+            h3 {
+                font-size: 0.9rem;
+            }
+        }
+
+        // Large viewport
+        @media all and (min-width: 800px) {
+            .main {
+                flex: 4 1 0;
+                padding-bottom: 40px;
+            }
+
+            .sidebar {
+                flex: 1 1 0;
+            }
+        }
+
+        // Medium viewport
+        @media all and (max-width: 800px) {
+            .sidebar {
+                padding-top: 20px;
+
+
+                a.item {
+                    text-align: center;
+                }
+            }
+
+            .header {
+                div.logo {
+                    margin: auto;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        // Small viewport
+        @media all and (max-width: 500px) {
+            .sidebar {
+            }
+
+            .org-info {
+                display: block;
+            }
+        }
+
+        .org-info {
+            &:after {
+                content: ",";
+            }
+        }
+
+        .org-info:last-child {
+            &:after {
+                content: "";
+            }
         }
     }
 
@@ -131,61 +195,14 @@ body {
         border-top: 1px solid $dark-border;
     }
 
-    // Large viewport
-    @media all and (min-width: 800px) {
-        .main {
-            flex: 4 1 0;
-            padding-bottom: 40px;
-        }
-
-        .sidebar {
-            flex: 1 1 0;
-        }
-    }
-
-    // Medium viewport
-    @media all and (max-width: 800px) {
-        .sidebar {
-            padding-top: 20px;
-
-
-            a.item {
-                text-align: center;
-            }
-        }
-
-        .header {
-            div.logo {
-                margin: auto;
-                margin-top: 20px;
-            }
-        }
-    }
-
     // Small viewport
     @media all and (max-width: 500px) {
-        .sidebar {
-        }
-
         .footer {
-            flex-direction: column;
-
             a {
+                text-align: center;
                 padding: 10px;
-                text-align: left;
             }
         }
     }
 
-    .org-info {
-        &:after {
-            content: ",";
-        }
-    }
-
-    .org-info:last-child {
-        &:after {
-            content: "";
-        }
-    }
 }

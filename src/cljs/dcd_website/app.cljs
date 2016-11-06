@@ -62,7 +62,7 @@
                  (str "@" handle)]
                 ")"])]
        (map organizer dcd-team))]
-    [:h3 "Design by"]
+    [:h3 "Design & Art"]
     "Lubov Soltan ("
     [:a {:href "https://twitter.com/moolver_sin"}
      "@moolver_sin"] ")"]])
@@ -71,15 +71,19 @@
   [:footer.footer
    [:a {:href "https://twitter.com/clojuredays"
         :target :_blank}
-    "@clojuredays"]
+    [:img {:src "/img/icons/twitter.svg"}]]
+   [:a {:href "https://www.youtube.com/channel/UCZ7rYtyjSgF1jMYHCkyjwMQ"
+        :target :_blank}
+    [:img {:src "/img/icons/youtube.svg"}]]
    [:a {:href "mailto:contact@clojuredays.org"}
-    "contact@clojuredays.org"]])
+    [:img {:src "/img/icons/email.svg"}]]])
 
 (defn calling-component []
-  [:div.wrapper
-   [header-component]
-   [sidebar-component]
-   [main-component]
+  [:div.site
+   [:div.wrapper
+    [header-component]
+    [sidebar-component]
+    [main-component]]
    [footer-component]])
 
 (defn init []
