@@ -3,7 +3,7 @@ release:
 	mkdir -p docs
 	cp -rf target/* docs/
 	git add docs/
-	git commit "Website updated on $(shell date)"
+	git commit -m "Website updated on $(shell date)"
 	git push
 
 dev:
