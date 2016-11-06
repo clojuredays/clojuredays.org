@@ -107,7 +107,7 @@ body {
 
         .main {
             padding-left: 20px;
-            padding-bottom: 40px;
+            padding-bottom: 20px;
 
             h2 {
                 font-size: 1.2rem;
@@ -133,7 +133,7 @@ body {
         @media all and (min-width: 800px) {
             .main {
                 flex: 4 1 0;
-                padding-bottom: 40px;
+                padding-bottom: 20px;
             }
 
             .sidebar {
