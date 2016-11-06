@@ -5,7 +5,7 @@ body {
     font: 100% 'NowRegular';
     font-weight: normal;
     font-style: normal;
-    line-height: 170%
+    line-height: 170%;
 
     color: $primary-color;
     margin: 0;
@@ -69,7 +69,6 @@ body {
                 padding: 10px;
                 position: relative;
                 z-index: 1;
-                width: 100%;
                 min-width: 300px;
 
                 &::after {
@@ -190,11 +189,19 @@ body {
     .footer {
         display: flex;
         flex-direction: row wrap;
+        height: 52px;
 
         a {
             flex: 1 1 auto;
-            display: block;
+            display: inline-block;
             text-align: center;
+            vertical-align: middle;
+
+            img {
+                padding: 10px;
+                height: 32px;
+                width: 32px;
+            }
         }
 
         border-top: 1px solid $dark-border;
