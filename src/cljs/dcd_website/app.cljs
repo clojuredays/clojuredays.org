@@ -36,7 +36,7 @@
     [:p "Videos from the previous event are available here: "
      [:a {:href "https://www.youtube.com/playlist?list=PLjzcwcP9P2LeiVXofnnXcxAqvmVNn3fTD"
           :target :_blank}
-      "DCD 2016"]]]
+      "DCD16 Playlist on Youtube"] "."]]
    [:div#date
     [:h2 "When?"]
     [:p (lorem 1)]]
