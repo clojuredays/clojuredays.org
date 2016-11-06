@@ -175,10 +175,6 @@ body {
         .org-info {
             display: block;
 
-            &:after {
-                content: ",";
-            }
-
             img {
                 height: 15px;
                 padding: 0 10px;
