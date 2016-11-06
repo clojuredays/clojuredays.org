@@ -1,9 +1,11 @@
-$font-stack:    Helvetica, sans-serif;
 $primary-color: #505050;
 $dark-border:   #203257;
 
 body {
-    font: 100% $font-stack;
+    font: 120% 'CarlitoRegular'; 
+    font-weight: normal; 
+    font-style: normal; 
+
     color: $primary-color;
     margin: 0;
     background-color: white;
