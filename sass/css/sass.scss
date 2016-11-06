@@ -144,6 +144,11 @@ body {
 
         // Medium viewport
         @media all and (max-width: 800px) {
+            .sidebar, .main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
             .sidebar {
                 padding-top: 20px;
 
