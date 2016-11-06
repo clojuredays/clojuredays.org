@@ -162,15 +162,18 @@ body {
         @media all and (max-width: 500px) {
             .sidebar {
             }
-
-            .org-info {
-                display: block;
-            }
         }
 
         .org-info {
+            display: block;
+
             &:after {
                 content: ",";
+            }
+
+            img {
+                height: 15px;
+                padding: 0 10px;
             }
         }
 

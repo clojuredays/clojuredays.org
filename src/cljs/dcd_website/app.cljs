@@ -55,17 +55,18 @@
     [:div
      (letfn [(organizer [[name handle]]
                ^{:key handle}
-               [:span.org-info " " name " "
-                "("
+               [:span.org-info
                 [:a {:href (str "https://twitter.com/" handle)
                      :target :_blank}
-                 (str "@" handle)]
-                ")"])]
+                 [:img {:src "/img/icons/twitter.svg"}]
+                 name]])]
        (map organizer dcd-team))]
     [:h3 "Design & Art"]
-    "Lubov Soltan ("
-    [:a {:href "https://twitter.com/moolver_sin"}
-     "@moolver_sin"] ")"]])
+    [:span.org-info
+     [:a {:href "https://twitter.com/moolver_sin"
+          :target :_blank}
+      [:img {:src "/img/icons/twitter.svg"}]
+      "Lubov Soltan"]]]])
 
 (defn footer-component []
   [:footer.footer
