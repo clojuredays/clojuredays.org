@@ -15,7 +15,7 @@
 (defn header-component []
   [:header.header
    [:div.logo
-    [:img {:src "/img/logo.png"}]]
+    [:img {:src "img/logo.png"}]]
    [:div.title
     [:h1 "Dutch Clojure Days 2017"]]])
 
@@ -58,26 +58,26 @@
                [:span.org-info
                 [:a {:href (str "https://twitter.com/" handle)
                      :target :_blank}
-                 [:img {:src "/img/icons/twitter.svg"}]
+                 [:img {:src "img/icons/twitter.svg"}]
                  name]])]
        (map organizer dcd-team))]
     [:h3 "Design & Art"]
     [:span.org-info
      [:a {:href "https://twitter.com/moolver_sin"
           :target :_blank}
-      [:img {:src "/img/icons/twitter.svg"}]
+      [:img {:src "img/icons/twitter.svg"}]
       "Lubov Soltan"]]]])
 
 (defn footer-component []
   [:footer.footer
    [:a {:href "https://twitter.com/clojuredays"
         :target :_blank}
-    [:img {:src "/img/icons/twitter.svg"}]]
+    [:img {:src "img/icons/twitter.svg"}]]
    [:a {:href "https://www.youtube.com/channel/UCZ7rYtyjSgF1jMYHCkyjwMQ"
         :target :_blank}
-    [:img {:src "/img/icons/youtube.svg"}]]
+    [:img {:src "img/icons/youtube.svg"}]]
    [:a {:href "mailto:contact@clojuredays.org"}
-    [:img {:src "/img/icons/email.svg"}]]])
+    [:img {:src "img/icons/email.svg"}]]])
 
 (defn calling-component []
   [:div.site
