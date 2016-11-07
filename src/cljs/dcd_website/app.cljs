@@ -47,7 +47,7 @@
    [:p "We expect participants to follow these rules at conference and workshop venues and conference-related social events."]])
 
 (defn when-component []
-  [:p "Dutch Clojure Days will happen on Saturday 25 of March 2017."])
+  [:p "Dutch Clojure Days will happen on Saturday, March 25th, 2017."])
 
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to contact us."])
