@@ -46,6 +46,12 @@
    [:p "Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance."]
    [:p "We expect participants to follow these rules at conference and workshop venues and conference-related social events."]])
 
+(defn when-component []
+  [:p "Dutch Clojure Days will happen on Saturday 25 of March 2017."])
+
+(defn location-component []
+  [:p "Amsterdam. Probably. Exact location is yet be announced. If you have any ideas or suggestions feel free to contact us."])
+
 (defn main-component []
   [:article.main
    [:div#about
@@ -57,10 +63,10 @@
       "DCD16 Playlist on Youtube"] "."]]
    [:div#date
     [:h2 "When?"]
-    [:p (lorem 1)]]
+    [:p [when-component]]]
    [:div#location
     [:h2 "Where?"]
-    [:p (lorem 2)]]
+    [:p [location-component]]]
    [:div#cfp
     [:h2 "Call for papers"]
     [:p (lorem 1)]]
