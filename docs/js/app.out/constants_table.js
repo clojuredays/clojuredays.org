@@ -65,6 +65,7 @@ cljs.core.cst$sym$loop_STAR_ = new cljs.core.Symbol(null,"loop*","loop*",6150294
 cljs.core.cst$sym$watches = new cljs.core.Symbol(null,"watches","watches",1367433992,null);
 cljs.core.cst$kw$ns = new cljs.core.Keyword(null,"ns","ns",441598760);
 cljs.core.cst$kw$_blank = new cljs.core.Keyword(null,"_blank","_blank",1070304072);
+cljs.core.cst$kw$strong = new cljs.core.Keyword(null,"strong","strong",269529000);
 cljs.core.cst$kw$name = new cljs.core.Keyword(null,"name","name",1843675177);
 cljs.core.cst$sym$bitmap = new cljs.core.Symbol(null,"bitmap","bitmap",501334601,null);
 cljs.core.cst$sym$_seq = new cljs.core.Symbol(null,"_seq","_seq",-449557847,null);
