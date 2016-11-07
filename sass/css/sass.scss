@@ -191,7 +191,7 @@ body {
 
     .footer {
         display: flex;
-        flex-direction: row wrap;
+        flex-flow: row wrap;
         height: 52px;
 
         a {
