@@ -19,15 +19,32 @@
    [:div.title
     [:h1 "Dutch Clojure Days 2017"]]])
 
+(defonce sidebar-expanded (atom false))
+
+(defn collapse-sidebar [_]
+  (reset! sidebar-expanded false)
+  true)
+
+(defn expand-sidebar [_]
+  (reset! sidebar-expanded true)
+  true)
+
 (defn sidebar-component []
   [:aside.sidebar
-   [:a.item {:href "#about"} "About"]
-   [:a.item {:href "#date"} "When?"]
-   [:a.item {:href "#location"} "Where?"]
-   [:a.item {:href "#cfp"} "Call for papers"]
-   [:a.item {:href "#behave"} "Code of conduct"]
-   [:a.item {:href "#org"} "Organizers"]
-   [:a.item {:href "#dcd16"} "DCD16"]])
+   {:class (when-not @sidebar-expanded "collapsed")}
+   [:a.item.expand-icon
+    {:href "#"
+     :on-click (fn [e]
+                 (.preventDefault e)
+                 (swap! sidebar-expanded not))}
+    "☰"]
+   [:a.item {:href "#about"    :on-click collapse-sidebar} "About"]
+   [:a.item {:href "#date"     :on-click collapse-sidebar} "When?"]
+   [:a.item {:href "#location" :on-click collapse-sidebar} "Where?"]
+   [:a.item {:href "#cfp"      :on-click collapse-sidebar} "Call for papers"]
+   [:a.item {:href "#behave"   :on-click collapse-sidebar} "Code of conduct"]
+   [:a.item {:href "#org"      :on-click collapse-sidebar} "Organizers"]
+   [:a.item {:href "#dcd16"    :on-click collapse-sidebar} "DCD16"]])
 
 (defn code-of-conduct-component []
   [:div
@@ -60,10 +77,6 @@
         :target :_blank}
     "this form"]
   " to submit your talk proposal."])
-
-(defn viewport-width []
-  (when js/document.location
-    js/document.documentElement.clientWidth))
 
 (defn main-component []
   [:article.main

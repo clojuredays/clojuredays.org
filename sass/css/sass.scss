@@ -100,10 +100,10 @@ body {
             a.item {
                 padding-bottom: 20px;
             }
-        }
 
-        .sidebar.collapsed {
-            height: 20px;
+            .expand-icon {
+              display: none;
+            }
         }
 
         .main {
@@ -154,8 +154,31 @@ body {
                 padding-right: 10px;
             }
 
+            .header {
+            }
+
             .sidebar {
-                padding-top: 20px;
+                padding-top: 10px;
+                padding-right: 0;
+                padding-left: 0;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                z-index: 2;
+                transition: height 500ms ease 0s;
+                transition: width 500ms ease 0s;
+                overflow: hidden;
+
+                &.collapsed {
+                  height: 40px;
+                  width: 80px;
+                }
+
+                .expand-icon {
+                  display: block;
+                  font-size: 30px;
+                }
 
 
                 a.item {
