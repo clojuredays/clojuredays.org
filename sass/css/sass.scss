@@ -166,8 +166,8 @@ body {
                 right: 0;
                 width: 100%;
                 z-index: 2;
-                transition: height 500ms ease 0s;
-                transition: width 500ms ease 0s;
+                transition: height 200ms ease 0s;
+                transition: width 200ms ease 0s;
                 overflow: hidden;
 
                 &.collapsed {
