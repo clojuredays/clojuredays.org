@@ -69,7 +69,7 @@
   [:article.main
    [:div#about
     [:h2 "About DCD17"]
-    [:p "The Annual Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]
+    [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]
     [:p "Videos from the previous event are available here: "
      [:a {:href "https://www.youtube.com/playlist?list=PLjzcwcP9P2LeiVXofnnXcxAqvmVNn3fTD"
           :target :_blank}
