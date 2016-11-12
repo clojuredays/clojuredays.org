@@ -97,6 +97,11 @@
     [code-of-conduct-component]]
    [:div#org
     [:h2 "Organizers"]
+    [:h3 "Contact email"]
+    [:span.email-info
+     [:a {:href "mailto:events@clojuredays.org"}
+      [:img {:src "img/icons/email.svg"}]
+      "events@clojuredays.org"]]
     [:h3 "DCD team"]
     [:div
      (letfn [(organizer [[name handle]]
