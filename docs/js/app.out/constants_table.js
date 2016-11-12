@@ -127,6 +127,7 @@ cljs.core.cst$sym$n = new cljs.core.Symbol(null,"n","n",-2092305744,null);
 cljs.core.cst$kw$div = new cljs.core.Keyword(null,"div","div",1057191632);
 cljs.core.cst$kw$readably = new cljs.core.Keyword(null,"readably","readably",1129599760);
 cljs.core.cst$kw$more_DASH_marker = new cljs.core.Keyword(null,"more-marker","more-marker",-14717935);
+cljs.core.cst$kw$span$email_DASH_info = new cljs.core.Keyword(null,"span.email-info","span.email-info",47033425);
 cljs.core.cst$sym$fields = new cljs.core.Symbol(null,"fields","fields",-291534703,null);
 cljs.core.cst$sym$scheduled_QMARK_ = new cljs.core.Symbol(null,"scheduled?","scheduled?",579986609,null);
 cljs.core.cst$sym$method_DASH_cache = new cljs.core.Symbol(null,"method-cache","method-cache",1230193905,null);
