@@ -52,6 +52,19 @@
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to contact us."])
 
+(defn call-for-paper-component []
+  [:div
+   [:p "Call for papers ends on 25th of February."]
+   [:a {:href "https://docs.google.com/forms/d/e/1FAIpQLSdrIjuqnLvmakSdvI7PVw_833fo5nIaXwSA2bYd-dMjZL5qwg/viewform"
+        :target :_blank}
+    "Link to the form."]
+   [:iframe {:src "https://docs.google.com/forms/d/e/1FAIpQLSdrIjuqnLvmakSdvI7PVw_833fo5nIaXwSA2bYd-dMjZL5qwg/viewform?embedded=true"
+             :width "100%"
+             :height "800"
+             :frameBorder 0
+             :marginHeight 0}
+    "Loading..."]])
+
 (defn main-component []
   [:article.main
    [:div#about
@@ -69,7 +82,7 @@
     [:p [location-component]]]
    [:div#cfp
     [:h2 "Call for papers"]
-    [:p (lorem 1)]]
+    [call-for-paper-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]
