@@ -26,7 +26,8 @@
    [:a.item {:href "#location"} "Where?"]
    [:a.item {:href "#cfp"} "Call for papers"]
    [:a.item {:href "#behave"} "Code of conduct"]
-   [:a.item {:href "#org"} "Organizers"]])
+   [:a.item {:href "#org"} "Organizers"]
+   [:a.item {:href "#dcd16"} "DCD16"]])
 
 (defn code-of-conduct-component []
   [:div
@@ -53,27 +54,22 @@
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to contact us."])
 
 (defn call-for-paper-component []
-  [:div
-   [:p "Call for papers ends on 25th of February."]
+  [:p
+   "Call for papers ends on 15th of January, 2017. Please use "
    [:a {:href "https://docs.google.com/forms/d/e/1FAIpQLSdrIjuqnLvmakSdvI7PVw_833fo5nIaXwSA2bYd-dMjZL5qwg/viewform"
         :target :_blank}
-    "Link to the form."]
-   [:iframe {:src "https://docs.google.com/forms/d/e/1FAIpQLSdrIjuqnLvmakSdvI7PVw_833fo5nIaXwSA2bYd-dMjZL5qwg/viewform?embedded=true"
-             :width "100%"
-             :height "800"
-             :frameBorder 0
-             :marginHeight 0}
-    "Loading..."]])
+    "this form"]
+  " to submit your talk proposal."])
+
+(defn viewport-width []
+  (when js/document.location
+    js/document.documentElement.clientWidth))
 
 (defn main-component []
   [:article.main
    [:div#about
     [:h2 "About DCD17"]
-    [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]
-    [:p "Videos from the previous event are available here: "
-     [:a {:href "https://www.youtube.com/playlist?list=PLjzcwcP9P2LeiVXofnnXcxAqvmVNn3fTD"
-          :target :_blank}
-      "DCD16 Playlist on Youtube"] "."]]
+    [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]]
    [:div#date
     [:h2 "When?"]
     [:p [when-component]]]
@@ -103,7 +99,13 @@
      [:a {:href "https://twitter.com/moolver_sin"
           :target :_blank}
       [:img {:src "img/icons/twitter.svg"}]
-      "Lubov Soltan"]]]])
+      "Lubov Soltan"]]]
+   [:div#dcd16
+    [:h2 "DCD16"]
+    [:p "Videos from the previous event are available here: "
+     [:a {:href "https://www.youtube.com/playlist?list=PLjzcwcP9P2LeiVXofnnXcxAqvmVNn3fTD"
+          :target :_blank}
+      "DCD16 Playlist on Youtube"] "."]]])
 
 (defn footer-component []
   [:footer.footer
