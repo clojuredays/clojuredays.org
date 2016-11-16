@@ -136,7 +136,7 @@
    [:a {:href "mailto:events@clojuredays.org"}
     [:img {:src "img/icons/email.svg"}]]])
 
-(defn calling-component []
+(defn website-component []
   [:div.site
    [:div.wrapper
     [header-component]
@@ -145,6 +145,10 @@
    [footer-component]])
 
 (defn init []
-  (reagent/render-component
-   [calling-component]
-   (.getElementById js/document "container")))
+  (when js/document.location
+    (reagent/render-component
+      [website-component]
+      (.getElementById js/document "container"))))
+
+(defn ^:export render-to-string []
+  (reagent/render-to-string [website-component]))

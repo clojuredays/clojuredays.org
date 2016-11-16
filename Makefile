@@ -1,5 +1,5 @@
 release:
-	boot production build target
+	boot production build target pre-render
 	mkdir -p docs
 	cp -rf target/* docs/
 	git add docs/
