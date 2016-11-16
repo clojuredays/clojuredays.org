@@ -106,9 +106,9 @@
             outputs (output-files fileset)
             fname "index.html"
             code-fname "js/app.js"
-            code-file  (tmp-file (first (by-path [code-fname] inputs)))
-            in-file  (tmp-file (first (by-path [fname] inputs)))
-            out-file (tmp-file (first (by-path [fname] outputs)))
+            code-file (tmp-file (first (by-path [code-fname] inputs)))
+            in-file   (tmp-file (first (by-path [fname] inputs)))
+            out-file  (tmp-file (first (by-path [fname] outputs)))
             content (slurp in-file)
             html (render-component code-file)
             new-content (string/replace content "<!--placeholder-->" html)]
