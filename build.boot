@@ -101,19 +101,18 @@
     result))
 
 (deftask pre-render []
-  (let [tmp (tmp-dir!)]
-    (fn [next-handler]
-      (fn [fileset]
-        (empty-dir! tmp)
-        (let [inputs (input-files fileset)
-              outputs (output-files fileset)
-              fname "index.html"
-              in-file  (tmp-file (first (by-path [fname] inputs)))
-              out-file (tmp-file (first (by-path [fname] outputs)))
-              content (slurp in-file)
-              html (render-component)
-              new-content (string/replace content "<!--placeholder-->" html)]
-          (spit out-file new-content)
-          (-> fileset
-              commit!
-              next-handler))))))
+  (fn [next-handler]
+    (fn [fileset]
+      (empty-dir! tmp)
+      (let [inputs (input-files fileset)
+            outputs (output-files fileset)
+            fname "index.html"
+            in-file  (tmp-file (first (by-path [fname] inputs)))
+            out-file (tmp-file (first (by-path [fname] outputs)))
+            content (slurp in-file)
+            html (render-component)
+            new-content (string/replace content "<!--placeholder-->" html)]
+        (spit out-file new-content)
+        (-> fileset
+            commit!
+            next-handler)))))
