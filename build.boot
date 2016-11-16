@@ -89,10 +89,9 @@
           }
         });")
 
-(defn render-component []
+(defn render-component [in-file]
   (println "Pre-rendering component")
-  (let [path "target/js/app.js"
-        code (slurp path)
+  (let [code (slurp in-file)
         runtime (V8/createV8Runtime)
         _ (.executeVoidScript runtime js-setup-code)
         _ (.executeVoidScript runtime code)
@@ -103,14 +102,15 @@
 (deftask pre-render []
   (fn [next-handler]
     (fn [fileset]
-      (empty-dir! tmp)
       (let [inputs (input-files fileset)
             outputs (output-files fileset)
             fname "index.html"
+            code-fname "js/app.js"
+            code-file  (tmp-file (first (by-path [code-fname] inputs)))
             in-file  (tmp-file (first (by-path [fname] inputs)))
             out-file (tmp-file (first (by-path [fname] outputs)))
             content (slurp in-file)
-            html (render-component)
+            html (render-component code-file)
             new-content (string/replace content "<!--placeholder-->" html)]
         (spit out-file new-content)
         (-> fileset
