@@ -16,6 +16,7 @@
                  [com.eclipsesource.j2v8/j2v8_linux_x86_64 "4.6.0"]])
 
 (require
+  '[clojure.java.io             :as io]
   '[clojure.string              :as string]
   '[adzerk.boot-cljs            :refer [cljs]]
   '[adzerk.boot-cljs-repl       :refer [cljs-repl start-repl]]
@@ -89,7 +90,7 @@
         });")
 
 (defn render-component []
-  (println "Pre rendering component")
+  (println "Pre-rendering component")
   (let [path "target/js/app.js"
         code (slurp path)
         runtime (V8/createV8Runtime)
@@ -100,10 +101,19 @@
     result))
 
 (deftask pre-render []
-  (with-pre-wrap fileset
-    (let [path "target/index.html"
-          content (slurp path)
-          html (render-component)
-          new-content (string/replace content "<!--placeholder-->" html)]
-      (spit path new-content))
-    fileset))
+  (let [tmp (tmp-dir!)]
+    (fn [next-handler]
+      (fn [fileset]
+        (empty-dir! tmp)
+        (let [inputs (input-files fileset)
+              outputs (output-files fileset)
+              fname "index.html"
+              in-file  (tmp-file (first (by-path [fname] inputs)))
+              out-file (tmp-file (first (by-path [fname] outputs)))
+              content (slurp in-file)
+              html (render-component)
+              new-content (string/replace content "<!--placeholder-->" html)]
+          (spit out-file new-content)
+          (-> fileset
+              commit!
+              next-handler))))))
