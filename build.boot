@@ -93,9 +93,8 @@
   (println "Pre-rendering component")
   (let [code (slurp in-file)
         runtime (V8/createV8Runtime)
-        _ (.executeVoidScript runtime js-setup-code)
-        _ (.executeVoidScript runtime code)
-        result (.executeStringScript runtime "dcd_website.app.render_to_string()")]
+        combined-code (str js-setup-code "\n\n" code "\n\n" "dcd_website.app.render_to_string()")
+        result (.executeStringScript runtime combined-code)]
     (.release runtime)
     result))
 
