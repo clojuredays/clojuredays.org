@@ -47,16 +47,18 @@
                               {:link "#cfp"      :text "Call for papers"}
                               {:link "#sponsors" :text "Sponsors"}
                               {:link "#behave"   :text "Code of conduct"}
-                              {:link "#org"      :text "Organizers"}
+                              {:link "#org"      :text "Contacts"}
                               {:link "#dcd16"    :text "DCD16"}])])
 
 (defn code-of-conduct-component []
   [:div
    [:p "All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody."]
    [:h3 "Need Help?"]
-   [:p "Contact email is "
+   [:p "You can always reach out to us at "
     [:a {:href "mailto:events@clojuredays.org"}
-     "events@clojuredays.org"]]
+     "events@clojuredays.org"] " or on "
+    [:a {:href "https://twitter.com/clojuredays"}
+     "twitter"] "."]
    [:h3 "The Quick Version"]
    [:p "Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference  " [:strong "without a refund"] " at the discretion of the conference organisers."]
    [:h3 "The Less Quick Version"]
@@ -72,7 +74,9 @@
   [:p "Dutch Clojure Days will happen on Saturday, March 25th, 2017."])
 
 (defn location-component []
-  [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to contact us."])
+  [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
+   [:a {:href "mailto:events@clojuredays.org"}
+    "contact us"] "."])
 
 (defn call-for-paper-component []
   [:p
@@ -100,12 +104,16 @@
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]
    [:div#org
-    [:h2 "Organizers"]
-    [:h3 "Contact email"]
+    [:h2 "Contacts"]
+    [:h3 "Official contacts"]
     [:span.email-info
      [:a {:href "mailto:events@clojuredays.org"}
       [:img {:src "img/icons/email.svg"}]
       "events@clojuredays.org"]]
+    [:span.org-info
+     [:a {:href "https://twitter.com/clojuredays"}
+      [:img {:src "img/icons/twitter.svg"}]
+      "@clojuredays"]]
     [:h3 "DCD team"]
     [:div
      (letfn [(organizer [[name handle]]
