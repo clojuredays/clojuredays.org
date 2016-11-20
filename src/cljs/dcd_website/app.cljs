@@ -29,6 +29,9 @@
   (reset! sidebar-expanded true)
   true)
 
+(defn menu-entry-component [{:keys [link text]}]
+  [:a.item {:href link :on-click collapse-sidebar :key (gensym)} text])
+
 (defn sidebar-component []
   [:aside.sidebar
    {:class (when-not @sidebar-expanded "collapsed")}
@@ -38,13 +41,14 @@
                  (.preventDefault e)
                  (swap! sidebar-expanded not))}
     "☰"]
-   [:a.item {:href "#about"    :on-click collapse-sidebar} "About"]
-   [:a.item {:href "#date"     :on-click collapse-sidebar} "When?"]
-   [:a.item {:href "#location" :on-click collapse-sidebar} "Where?"]
-   [:a.item {:href "#cfp"      :on-click collapse-sidebar} "Call for papers"]
-   [:a.item {:href "#behave"   :on-click collapse-sidebar} "Code of conduct"]
-   [:a.item {:href "#org"      :on-click collapse-sidebar} "Organizers"]
-   [:a.item {:href "#dcd16"    :on-click collapse-sidebar} "DCD16"]])
+   (map menu-entry-component [{:link "#about"    :text "About"}
+                              {:link "#date"     :text "When?"}
+                              {:link "#location" :text "Where?"}
+                              {:link "#cfp"      :text "Call for papers"}
+                              {:link "#sponsors" :text "Sponsors"}
+                              {:link "#behave"   :text "Code of conduct"}
+                              {:link "#org"      :text "Organizers"}
+                              {:link "#dcd16"    :text "DCD16"}])])
 
 (defn code-of-conduct-component []
   [:div
@@ -76,7 +80,7 @@
    [:a {:href "https://docs.google.com/forms/d/e/1FAIpQLSdrIjuqnLvmakSdvI7PVw_833fo5nIaXwSA2bYd-dMjZL5qwg/viewform"
         :target :_blank}
     "this form"]
-  " to submit your talk proposal."])
+   " to submit your talk proposal."])
 
 (defn main-component []
   [:article.main
@@ -147,8 +151,8 @@
 (defn init []
   (when js/document.location
     (reagent/render-component
-      [website-component]
-      (.getElementById js/document "container"))))
+     [website-component]
+     (.getElementById js/document "container"))))
 
 (defn ^:export render-to-string []
   (reagent/render-to-string [website-component]))
