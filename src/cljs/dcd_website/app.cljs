@@ -7,11 +7,6 @@
    ["Max Gonzih" "gonzih"]
    ["Joost Diepenmaat" "ZeekatSoftware"]])
 
-(def lorem-str "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.")
-
-(defn lorem [n]
-  (apply str (take n (repeat lorem-str))))
-
 (defn header-component []
   [:header.header
    [:div.logo
@@ -71,7 +66,9 @@
    [:p "We expect participants to follow these rules at conference and workshop venues and conference-related social events."]])
 
 (defn sponsors-component []
-  [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers. Currently we are looking for sponsors for DCD17. If you are interested in sponsoring this event please contact us via" [:a {:href "mailto:events@clojuredays.org"} "email."]])
+  [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers.
+       Currently we are looking for sponsors for DCD17.
+       If you are interested in sponsoring this event please contact us via " [:a {:href "mailto:events@clojuredays.org"} "email."]])
 
 (defn when-component []
   [:p "Dutch Clojure Days will happen on "
