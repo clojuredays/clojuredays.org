@@ -55,6 +55,7 @@ cljs.core.cst$sym$iters = new cljs.core.Symbol(null,"iters","iters",719353031,nu
 cljs.core.cst$kw$derefed = new cljs.core.Keyword(null,"derefed","derefed",590684583);
 cljs.core.cst$kw$a$item$expand_DASH_icon = new cljs.core.Keyword(null,"a.item.expand-icon","a.item.expand-icon",-1421097497);
 cljs.core.cst$sym$new_DASH_value = new cljs.core.Symbol(null,"new-value","new-value",-1567397401,null);
+cljs.core.cst$kw$div_SHARP_sponsors = new cljs.core.Keyword(null,"div#sponsors","div#sponsors",1108789831);
 cljs.core.cst$kw$displayName = new cljs.core.Keyword(null,"displayName","displayName",-809144601);
 cljs.core.cst$sym$args = new cljs.core.Symbol(null,"args","args",-1338879193,null);
 cljs.core.cst$sym$active_QMARK_ = new cljs.core.Symbol(null,"active?","active?",2100031303,null);
