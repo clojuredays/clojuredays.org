@@ -86,7 +86,7 @@
 (defn call-for-paper-component []
   [:p
    "Call for papers ends on 15th of January, 2017. Please use "
-   [:a {:href "https://docs.google.com/forms/d/e/1FAIpQLSdrIjuqnLvmakSdvI7PVw_833fo5nIaXwSA2bYd-dMjZL5qwg/viewform"
+   [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
         :target :_blank}
     "this form"]
    " to submit your talk proposal."])
