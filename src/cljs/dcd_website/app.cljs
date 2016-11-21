@@ -70,6 +70,9 @@
    [:p "Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance."]
    [:p "We expect participants to follow these rules at conference and workshop venues and conference-related social events."]])
 
+(defn sponsors-component []
+  [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers. Currently we are looking for sponsors for DCD17. If you are interested in sponsoring this event please contact us via" [:a {:href "mailto:events@clojuredays.org"} "email."]])
+
 (defn when-component []
   [:p "Dutch Clojure Days will happen on "
    [:a {:href "dcd.ics"}
@@ -102,6 +105,9 @@
    [:div#cfp
     [:h2 "Call for papers"]
     [call-for-paper-component]]
+   [:div#behave
+    [:h2 "Sponsors"]
+    [sponsors-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]
