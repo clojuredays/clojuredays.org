@@ -105,7 +105,7 @@
    [:div#cfp
     [:h2 "Call for papers"]
     [call-for-paper-component]]
-   [:div#behave
+   [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
    [:div#behave
