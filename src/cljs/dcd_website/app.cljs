@@ -82,7 +82,7 @@
 
 (defn call-for-paper-component []
   [:p
-   "Call for papers ends on 15th of January, 2017. Please use "
+   "Call for papers ends on 31th of January, 2017. Please use "
    [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
         :target :_blank}
     "this form"]
