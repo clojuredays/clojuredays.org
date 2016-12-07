@@ -37,9 +37,9 @@
                  (swap! sidebar-expanded not))}
     "☰"]
    (map menu-entry-component [{:link "#about"    :text "About"}
+                              {:link "#cfp"      :text "Call for papers"}
                               {:link "#date"     :text "When?"}
                               {:link "#location" :text "Where?"}
-                              {:link "#cfp"      :text "Call for papers"}
                               {:link "#sponsors" :text "Sponsors"}
                               {:link "#behave"   :text "Code of conduct"}
                               {:link "#org"      :text "Contacts"}
@@ -51,8 +51,10 @@
    [:h3 "Need Help?"]
    [:p "You can always reach out to us at "
     [:a {:href "mailto:events@clojuredays.org"}
+     [:img.icon {:src "img/icons/email.svg"}]
      "events@clojuredays.org"] " or on "
     [:a {:href "https://twitter.com/clojuredays"}
+     [:img.icon {:src "img/icons/twitter.svg"}]
      "twitter"] "."]
    [:h3 "The Quick Version"]
    [:p "Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference  " [:strong "without a refund"] " at the discretion of the conference organisers."]
@@ -68,7 +70,10 @@
 (defn sponsors-component []
   [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers.
        Currently we are looking for sponsors for DCD17.
-       If you are interested in sponsoring this event please contact us via " [:a {:href "mailto:events@clojuredays.org"} "email."]])
+       If you are interested in sponsoring this event please contact us via "
+   [:a {:href "mailto:events@clojuredays.org"}
+    [:img.icon {:src "img/icons/email.svg"}]
+    "email."]])
 
 (defn when-component []
   [:p "Dutch Clojure Days will happen on "
@@ -78,6 +83,7 @@
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
    [:a {:href "mailto:events@clojuredays.org"}
+    [:img.icon {:src "img/icons/email.svg"}]
     "contact us"] "."])
 
 (defn call-for-paper-component []
@@ -85,6 +91,7 @@
    "Call for papers ends on 31th of January, 2017. Please use "
    [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
         :target :_blank}
+    [:img.icon {:src "img/icons/form.svg"}]
     "this form"]
    " to submit your talk proposal."])
 
@@ -93,15 +100,15 @@
    [:div#about
     [:h2 "About DCD17"]
     [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]]
+   [:div#cfp
+    [:h2 "Call for papers"]
+    [call-for-paper-component]]
    [:div#date
     [:h2 "When?"]
     [:p [when-component]]]
    [:div#location
     [:h2 "Where?"]
     [:p [location-component]]]
-   [:div#cfp
-    [:h2 "Call for papers"]
-    [call-for-paper-component]]
    [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
@@ -140,6 +147,7 @@
     [:p "Videos from the previous event are available here: "
      [:a {:href "https://www.youtube.com/playlist?list=PLjzcwcP9P2LeiVXofnnXcxAqvmVNn3fTD"
           :target :_blank}
+      [:img.icon {:src "img/icons/youtube.svg"}]
       "DCD16 Playlist on Youtube"] "."]]])
 
 (defn footer-component []
