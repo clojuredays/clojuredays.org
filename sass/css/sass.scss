@@ -36,9 +36,9 @@ body {
       margin: auto;
       width: 100px;
       padding: 10px 20px;
-      border: 1px solid black;
+      border: 1px solid $primary-color;
       background: #fff;
-      color: #000;
+      color: $primary-color;
       text-align: center;
     }
 
