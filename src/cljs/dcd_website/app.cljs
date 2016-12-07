@@ -51,10 +51,10 @@
    [:h3 "Need Help?"]
    [:p "You can always reach out to us at "
     [:a {:href "mailto:events@clojuredays.org"}
-     [:img.icon {:src "img/icons/email.svg"}]
+     [:img.icon.email {:src "img/icons/email.svg"}]
      "events@clojuredays.org"] " or on "
     [:a {:href "https://twitter.com/clojuredays"}
-     [:img.icon {:src "img/icons/twitter.svg"}]
+     [:img.icon.twitter {:src "img/icons/twitter.svg"}]
      "twitter"] "."]
    [:h3 "The Quick Version"]
    [:p "Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference  " [:strong "without a refund"] " at the discretion of the conference organisers."]
@@ -72,7 +72,7 @@
        Currently we are looking for sponsors for DCD17.
        If you are interested in sponsoring this event please contact us via "
    [:a {:href "mailto:events@clojuredays.org"}
-    [:img.icon {:src "img/icons/email.svg"}]
+    [:img.icon.email {:src "img/icons/email.svg"}]
     "email."]])
 
 (defn when-component []
@@ -83,7 +83,7 @@
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
    [:a {:href "mailto:events@clojuredays.org"}
-    [:img.icon {:src "img/icons/email.svg"}]
+    [:img.icon.email {:src "img/icons/email.svg"}]
     "contact us"] "."])
 
 (defn call-for-paper-component []
@@ -93,7 +93,7 @@
     [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
          :target :_blank}
      [:span.form-button
-      [:img.icon {:src "img/icons/book.svg"}]
+      [:img.icon.book {:src "img/icons/book.svg"}]
       "Google form"]]]])
 
 (defn main-component []
@@ -121,11 +121,11 @@
     [:h3 "Official contacts"]
     [:span.email-info
      [:a {:href "mailto:events@clojuredays.org"}
-      [:img {:src "img/icons/email.svg"}]
+      [:img.icon.email {:src "img/icons/email.svg"}]
       "events@clojuredays.org"]]
     [:span.org-info
      [:a {:href "https://twitter.com/clojuredays"}
-      [:img {:src "img/icons/twitter.svg"}]
+      [:img.icon.twitter {:src "img/icons/twitter.svg"}]
       "@clojuredays"]]
     [:h3 "DCD team"]
     [:div
@@ -134,21 +134,21 @@
                [:span.org-info
                 [:a {:href (str "https://twitter.com/" handle)
                      :target :_blank}
-                 [:img {:src "img/icons/twitter.svg"}]
+                 [:img.icon.twitter {:src "img/icons/twitter.svg"}]
                  name]])]
        (map organizer dcd-team))]
     [:h3 "Design & Art"]
     [:span.org-info
      [:a {:href "https://twitter.com/moolver_sin"
           :target :_blank}
-      [:img {:src "img/icons/twitter.svg"}]
+      [:img.icon.twitter {:src "img/icons/twitter.svg"}]
       "Lubov Soltan"]]]
    [:div#dcd16
     [:h2 "DCD16"]
     [:p "Videos from the previous event are available here: "
      [:a {:href "https://www.youtube.com/playlist?list=PLjzcwcP9P2LeiVXofnnXcxAqvmVNn3fTD"
           :target :_blank}
-      [:img.icon {:src "img/icons/youtube.svg"}]
+      [:img.icon.youtube {:src "img/icons/youtube.svg"}]
       "DCD16 Playlist on Youtube"] "."]]])
 
 (defn footer-component []

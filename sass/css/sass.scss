@@ -27,9 +27,21 @@ body {
     }
 
     img.icon {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       padding: 0px 5px;
+
+      &.email, &.twitter, &.book {
+        position: relative;
+        bottom: -2px;
+      }
+
+      &.youtube {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        bottom: -3px;
+      }
     }
 
     .form-button {
@@ -220,7 +232,6 @@ body {
             display: block;
 
             img {
-                height: 15px;
                 padding: 0 10px;
             }
         }
