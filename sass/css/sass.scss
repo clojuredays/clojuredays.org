@@ -45,8 +45,9 @@ body {
     }
 
     .form-button {
+      display: inline-block;
       margin: auto;
-      width: 100px;
+      width: 150px;
       padding: 10px 20px;
       border: 1px solid $primary-color;
       background: #fff;
