@@ -83,7 +83,7 @@
     [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
          :target :_blank}
      [:span.form-button
-      #_[:img.icon.book {:src "img/icons/check.svg"}]
+      [:img.icon.book {:src "img/icons/check.svg"}]
       "RSVP Now!"]]]])
 
 (defn location-component []
