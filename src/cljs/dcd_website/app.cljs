@@ -78,7 +78,13 @@
 (defn when-component []
   [:p "Dutch Clojure Days will happen on "
    [:a {:href "dcd.ics"}
-    [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."])
+    [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."
+   [:div.button-wrapper
+    [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
+         :target :_blank}
+     [:span.form-button
+      #_[:img.icon.book {:src "img/icons/check.svg"}]
+      "RSVP Now!"]]]])
 
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
