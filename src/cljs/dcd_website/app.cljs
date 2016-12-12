@@ -80,7 +80,7 @@
    [:a {:href "dcd.ics"}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."
    [:div.button-wrapper
-    [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
+    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440"
          :target :_blank}
      [:span.form-button
       [:img.icon.book {:src "img/icons/check.svg"}]
