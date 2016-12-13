@@ -84,7 +84,7 @@
          :target :_blank}
      [:span.form-button
       [:img.icon.book {:src "img/icons/check.svg"}]
-      "RSVP Now!"]]]])
+      "Get your free ticket now!"]]]])
 
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
