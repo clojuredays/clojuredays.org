@@ -79,7 +79,9 @@
   [:p "Dutch Clojure Days will happen on "
    [:a {:href "dcd.ics"}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."
-   [:div {:style {}}
+   [:div {:style {:width "100%"
+                  :max-width "800px"
+                  :text-align "left"}}
     [:iframe {:src "//eventbrite.com/tickets-external?eid=30113550440&ref=etckt"
               :frame-border 0
               :height 275
