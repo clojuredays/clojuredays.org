@@ -79,12 +79,17 @@
   [:p "Dutch Clojure Days will happen on "
    [:a {:href "dcd.ics"}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."
-   [:div.button-wrapper
-    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440?aff=clojuredaysorg"
-         :target :_blank}
-     [:span.form-button
-      [:img.icon.book {:src "img/icons/check.svg"}]
-      "Get free ticket"]]]])
+   [:div {:style {}}
+    [:iframe {:src "//eventbrite.com/tickets-external?eid=30113550440&ref=etckt"
+              :frame-border 0
+              :height 275
+              :width "100%"
+              :vspace 0
+              :hspace 0
+              :margin-height 5
+              :margin-width 5
+              :scrolling "auto"
+              :allowtranspacency true}]]])
 
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
