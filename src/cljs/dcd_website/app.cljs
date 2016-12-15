@@ -80,11 +80,11 @@
    [:a {:href "dcd.ics"}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."
    [:div.button-wrapper
-    [:a {:href "http://tinyurl.com/dcd2017"
+    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440?aff=clojuredaysorg"
          :target :_blank}
      [:span.form-button
       [:img.icon.book {:src "img/icons/check.svg"}]
-      "RSVP Now!"]]]])
+      "Register Now!"]]]])
 
 (defn location-component []
   [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
