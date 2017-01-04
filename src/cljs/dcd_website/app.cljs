@@ -97,7 +97,7 @@
               :allowtranspacency true}]]])
 
 (defn location-component []
-  [:p "Amsterdam. Probably. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
+  [:p "Amsterdam. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
    [:a {:href "mailto:events@clojuredays.org"}
     [:img.icon.email {:src "img/icons/email.svg"}]
     "contact us"] "."])
