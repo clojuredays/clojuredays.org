@@ -68,12 +68,15 @@
    [:p "We expect participants to follow these rules at conference and workshop venues and conference-related social events."]])
 
 (defn sponsors-component []
-  [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers.
-       Currently we are looking for sponsors for DCD17.
-       If you are interested in sponsoring this event please contact us via "
-   [:a {:href "mailto:events@clojuredays.org"}
-    [:img.icon.email {:src "img/icons/email.svg"}]
-    "email."]])
+  [:div.sponsors
+   [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
+   [:h2.platinum "Platinum sponsors"]
+   [:a.sponsor {:href "http://www.adgoji.com/" :target :_blank}
+    [:img {:src "img/sponsors/adgoji.svg"}]]
+   [:p "If you are interested in sponsoring this event please contact us via "
+    [:a {:href "mailto:events@clojuredays.org"}
+     [:img.icon.email {:src "img/icons/email.svg"}]
+     "email."]]])
 
 (defn when-component []
   [:p "Dutch Clojure Days will happen on "

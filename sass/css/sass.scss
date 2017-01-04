@@ -275,4 +275,15 @@ body {
         }
     }
 
+    .sponsors {
+      h2.platinum {
+        &:after {
+          content: none;
+        }
+      }
+
+      a.sponsor {
+        max-width: 800px;
+      }
+    }
 }
