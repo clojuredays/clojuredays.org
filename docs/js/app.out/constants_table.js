@@ -5,6 +5,7 @@ cljs.core.cst$sym$stepper = new cljs.core.Symbol(null,"stepper","stepper",115916
 cljs.core.cst$sym$uuid = new cljs.core.Symbol(null,"uuid","uuid",-504564192,null);
 cljs.core.cst$sym$after_DASH_render = new cljs.core.Symbol(null,"after-render","after-render",-656902336,null);
 cljs.core.cst$sym$valid_DASH_tag_QMARK_ = new cljs.core.Symbol(null,"valid-tag?","valid-tag?",1243064160,null);
+cljs.core.cst$kw$h2$regular = new cljs.core.Keyword(null,"h2.regular","h2.regular",-1168969760);
 cljs.core.cst$kw$h2$platinum = new cljs.core.Keyword(null,"h2.platinum","h2.platinum",-1235773311);
 cljs.core.cst$sym$end = new cljs.core.Symbol(null,"end","end",1372345569,null);
 cljs.core.cst$sym$defrecord_STAR_ = new cljs.core.Symbol(null,"defrecord*","defrecord*",-1936366207,null);
