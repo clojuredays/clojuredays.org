@@ -1,19 +1,20 @@
 (set-env!
  :source-paths    #{"sass" "src/cljs"}
  :resource-paths  #{"resources"}
- :dependencies '[[adzerk/boot-cljs          "1.7.228-1"        :scope "test"]
-                 [adzerk/boot-cljs-repl     "0.3.0"            :scope "test"]
-                 [adzerk/boot-reload        "0.4.8"            :scope "test"]
-                 [pandeiro/boot-http        "0.7.2"            :scope "test"]
+ :dependencies '[[adzerk/boot-cljs          "1.7.228-2"        :scope "test"]
+                 [adzerk/boot-cljs-repl     "0.3.3"            :scope "test"]
+                 [adzerk/boot-reload        "0.5.0"            :scope "test"]
+                 [pandeiro/boot-http        "0.7.6"            :scope "test"]
                  [com.cemerick/piggieback   "0.2.1"            :scope "test"]
                  [org.clojure/tools.nrepl   "0.2.12"           :scope "test"]
                  [weasel                    "0.7.0"            :scope "test"]
-                 [crisptrutski/boot-cljs-test "0.2.0-SNAPSHOT" :scope "test"]
-                 [deraen/boot-sass  "0.2.1"                    :scope "test"]
-                 [org.slf4j/slf4j-nop  "1.7.13"                :scope "test"]
+                 [crisptrutski/boot-cljs-test "0.3.0"          :scope "test"]
+                 [deraen/boot-sass  "0.3.0"                    :scope "test"]
+                 [org.slf4j/slf4j-nop  "1.7.22"                :scope "test"]
                  [org.clojure/clojurescript "1.7.228"]
-                 [reagent "0.5.0"]
-                 [com.eclipsesource.j2v8/j2v8_linux_x86_64 "4.6.0"]])
+                 [reagent "0.6.0"]
+                 [com.eclipsesource.j2v8/j2v8_linux_x86_64 "4.6.0"]
+                 [boot-deps "0.1.6"]])
 
 (require
   '[clojure.java.io             :as io]
