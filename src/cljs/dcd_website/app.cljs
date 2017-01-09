@@ -73,7 +73,7 @@
    [:h2.platinum "Platinum sponsors"]
    [:a.sponsor {:href "http://www.adgoji.com/" :target :_blank}
     [:img {:src "img/sponsors/adgoji.svg"}]]
-   [:h2.regular "Sponsors"]
+   [:h2.regular "Silver sponsors"]
    [:a.sponsor {:href "https://juxt.pro/" :target :_blank}
     [:img {:src "img/sponsors/juxt.svg"}]]
    [:p "If you are interested in sponsoring this event please contact us via "
