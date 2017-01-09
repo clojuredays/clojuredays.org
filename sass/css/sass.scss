@@ -276,7 +276,7 @@ body {
     }
 
     .sponsors {
-      h2.platinum {
+      h2.platinum, h2.regular {
         &:after {
           content: none;
         }
@@ -286,6 +286,7 @@ body {
         max-width: 800px;
 
         img {
+          max-width: 800px;
           width: 100%;
         }
       }
