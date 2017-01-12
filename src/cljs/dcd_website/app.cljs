@@ -90,7 +90,7 @@
                   :text-align "left"}}
     [:iframe {:src "//eventbrite.com/tickets-external?eid=30113550440&ref=etckt"
               :frame-border 0
-              :height 275
+              :height 290
               :width "100%"
               :vspace 0
               :hspace 0
