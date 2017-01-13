@@ -108,7 +108,7 @@
 (defn init-tile-layer! [mymap]
   (-> js/L
       (.tileLayer "https://api.mapbox.com/styles/v1/gonzih/cixw9sqla002c2sn0a5uqu72s/tiles/256/{z}/{x}/{y}?access_token={accessToken}"
-                  (clj->js {:attribution "Map data &copy; <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors, <a href='http://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, Imagery © <a href='http://mapbox.com'>Mapbox</a>"
+                  (clj->js {:attribution "Map data &copy; <a href='http://openstreetmap.org'>OpenStreetMap</a>, <a href='http://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, © <a href='http://mapbox.com'>Mapbox</a>"
                             :maxZoom 18
                             :id "gonzih/cixw69s4900282sn00gsbdqgm"
                             :accessToken "pk.eyJ1IjoiZ29uemloIiwiYSI6ImNpeHc1eDA0NjAwMmczMmw4MnR5b2p4eWsifQ.nrJj6lim59mVefvEwsiCgA"}))
