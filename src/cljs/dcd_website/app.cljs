@@ -102,7 +102,7 @@
 (defn add-marker! [mymap]
   (-> js/L
       (.marker coords)
-      (.bindPopup "<a href=''>TQ - Singel 542</a>")
+      (.bindPopup "<a href='http://tq.co' target='_blank'>TQ - Singel 542</a>")
       (.addTo mymap)))
 
 (defn init-tile-layer! [mymap]
