@@ -100,7 +100,7 @@
 (defn add-marker! [mymap]
   (-> js/L
       (.marker (clj->js [52.3667284,4.8924893]))
-      (.bindPopup "<a href=''>TQ - Singel 542, 1017 AZ Amsterdam</a>")
+      (.bindPopup "<a href=''>TQ - Singel 542</a>")
       (.addTo mymap)))
 
 (defn init-tile-layer! [mymap]
