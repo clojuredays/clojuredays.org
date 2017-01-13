@@ -45,10 +45,10 @@ return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMP
 });
 dcd_website.app.coords = cljs.core.clj__GT_js(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [52.3666451,4.892396599999984], null));
 dcd_website.app.add_marker_BANG_ = (function dcd_website$app$add_marker_BANG_(mymap){
-return L.marker(dcd_website.app.coords).bindPopup("<a href=''>TQ - Singel 542</a>").addTo(mymap);
+return L.marker(dcd_website.app.coords).bindPopup("<a href='http://tq.co' target='_blank'>TQ - Singel 542</a>").addTo(mymap);
 });
 dcd_website.app.init_tile_layer_BANG_ = (function dcd_website$app$init_tile_layer_BANG_(mymap){
-return L.tileLayer("https://api.mapbox.com/styles/v1/gonzih/cixw9sqla002c2sn0a5uqu72s/tiles/256/{z}/{x}/{y}?access_token={accessToken}",cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$attribution,"Map data &copy; <a href='http://openstreetmap.org'>OpenStreetMap</a>, <a href='http://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, \u00A9 <a href='http://mapbox.com'>Mapbox</a>",cljs.core.cst$kw$maxZoom,(18),cljs.core.cst$kw$id,"gonzih/cixw69s4900282sn00gsbdqgm",cljs.core.cst$kw$accessToken,"pk.eyJ1IjoiZ29uemloIiwiYSI6ImNpeHc1eDA0NjAwMmczMmw4MnR5b2p4eWsifQ.nrJj6lim59mVefvEwsiCgA"], null))).addTo(mymap);
+return L.tileLayer("https://api.mapbox.com/styles/v1/gonzih/cixw9sqla002c2sn0a5uqu72s/tiles/256/{z}/{x}/{y}?access_token={accessToken}",cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$attribution,"&copy; <a href='http://openstreetmap.org'>OpenStreetMap</a>, <a href='http://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, \u00A9 <a href='http://mapbox.com'>Mapbox</a>",cljs.core.cst$kw$maxZoom,(18),cljs.core.cst$kw$id,"gonzih/cixw69s4900282sn00gsbdqgm",cljs.core.cst$kw$accessToken,"pk.eyJ1IjoiZ29uemloIiwiYSI6ImNpeHc1eDA0NjAwMmczMmw4MnR5b2p4eWsifQ.nrJj6lim59mVefvEwsiCgA"], null))).addTo(mymap);
 });
 dcd_website.app.init_map_BANG_ = (function dcd_website$app$init_map_BANG_(){
 var mymap = L.map("location-map").setView(dcd_website.app.coords,(17));
