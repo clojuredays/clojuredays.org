@@ -97,7 +97,7 @@
               :margin-width 5
               :scrolling "auto"}]]])
 
-(def coords (clj->js [52.3666451,4.8902079]))
+(def coords (clj->js [52.3666451 4.892396599999984]))
 
 (defn add-marker! [mymap]
   (-> js/L
@@ -115,7 +115,6 @@
       (.addTo mymap)))
 
 (defn init-map! []
-  ;; map = L.map('map').setView([52.3667284,4.8924893],17);
   (let [mymap (-> js/L
                   (.map "location-map")
                   (.setView coords 17))]
