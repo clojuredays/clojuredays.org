@@ -294,6 +294,8 @@ body {
 
     .location {
       #location-map {
+        z-index: 1;
+
         @media all and (min-width: 800px) {
           height: 400px;
         }
