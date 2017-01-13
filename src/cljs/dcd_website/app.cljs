@@ -93,12 +93,9 @@
               :frame-border 0
               :height 290
               :width "100%"
-              :vspace 0
-              :hspace 0
               :margin-height 5
               :margin-width 5
-              :scrolling "auto"
-              :allowtranspacency true}]]])
+              :scrolling "auto"}]]])
 
 (defn location-component []
   [:div.location
