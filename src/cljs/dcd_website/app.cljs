@@ -82,7 +82,8 @@
      "email."]]])
 
 (defn when-component []
-  [:p "Dutch Clojure Days will happen on "
+  [:div
+   [:p"Dutch Clojure Days will happen on "]
    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440" :target :_blank}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."
    [:div {:style {:width "100%"
@@ -100,14 +101,16 @@
               :allowtranspacency true}]]])
 
 (defn location-component []
-  [:p "Amsterdam. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
-   [:a {:href "mailto:events@clojuredays.org"}
-    [:img.icon.email {:src "img/icons/email.svg"}]
-    "contact us"] "."])
+  [:div.location
+   [:p "Amsterdam. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
+    [:a {:href "mailto:events@clojuredays.org"}
+     [:img.icon.email {:src "img/icons/email.svg"}]
+     "contact us"] "."]
+   [:div#map]])
 
 (defn call-for-paper-component []
-  [:p
-   "Call for papers ends on 31th of January, 2017. To submit your talk proposal please use "
+  [:div
+   [:p "Call for papers ends on 31th of January, 2017. To submit your talk proposal please use "]
    [:div.button-wrapper
     [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
          :target :_blank}
@@ -125,10 +128,10 @@
     [call-for-paper-component]]
    [:div#date
     [:h2 "When?"]
-    [:p [when-component]]]
+    [when-component]]
    [:div#location
     [:h2 "Where?"]
-    [:p [location-component]]]
+    [location-component]]
    [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
