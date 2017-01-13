@@ -97,13 +97,38 @@
               :margin-width 5
               :scrolling "auto"}]]])
 
-(defn location-component []
-  [:div.location
-   [:p "Amsterdam. Exact location is yet to be announced. If you have any ideas or suggestions feel free to "
-    [:a {:href "mailto:events@clojuredays.org"}
-     [:img.icon.email {:src "img/icons/email.svg"}]
-     "contact us"] "."]
-   [:div#map]])
+(defn add-marker! [mymap]
+  (-> js/L
+      (.marker [52.3667284,4.8924893])
+      (.addTo mymap)))
+
+(defn init-tile-layer! [mymap]
+  (-> js/L
+      (.tileLayer "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}"
+                  (clj->js {:attribution "Map data &copy; <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors, <a href='http://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, Imagery © <a href='http://mapbox.com'>Mapbox</a>"
+                            :maxZoom 18
+                            :id "gonzih/cixw69s4900282sn00gsbdqgm"
+                            :accessToken "pk.eyJ1IjoiZ29uemloIiwiYSI6ImNpeHc1eDA0NjAwMmczMmw4MnR5b2p4eWsifQ.nrJj6lim59mVefvEwsiCgA"}))
+      (.addTo mymap)))
+
+(defn init-map! []
+  ;; map = L.map('map').setView([52.3667284,4.8924893],17);
+  #_(let [mymap (-> js/L
+                  (.map "location-map")
+                  (.setView (clj->js [52.3667284,4.8924893])
+                            17))]
+    (init-tile-layer! mymap)
+    (add-marker! mymap)))
+
+(def location-component
+  (with-meta
+    (fn []
+      [:div.location
+       [:p "Dutch Clojure Days 2017 will take place at "
+        [:a {:href "http://tq.co" :target :_blank} "TQ"]
+        " (Singel 542, 1017AZ, Amsterdam)."]
+       #_[:div#location-map]])
+    {:component-did-mount init-map!}))
 
 (defn call-for-paper-component []
   [:div
