@@ -97,9 +97,11 @@
               :margin-width 5
               :scrolling "auto"}]]])
 
+(def coords (clj->js [52.3666451,4.8902079]))
+
 (defn add-marker! [mymap]
   (-> js/L
-      (.marker (clj->js [52.3667284,4.8924893]))
+      (.marker coords)
       (.bindPopup "<a href=''>TQ - Singel 542</a>")
       (.addTo mymap)))
 
@@ -116,8 +118,7 @@
   ;; map = L.map('map').setView([52.3667284,4.8924893],17);
   (let [mymap (-> js/L
                   (.map "location-map")
-                  (.setView (clj->js [52.3667284,4.8924893])
-                            17))]
+                  (.setView coords 17))]
     (init-tile-layer! mymap)
     (add-marker! mymap)))
 
