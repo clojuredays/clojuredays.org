@@ -43,14 +43,15 @@ return new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMP
 dcd_website.app.when_component = (function dcd_website$app$when_component(){
 return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$p,"Dutch Clojure Days will happen on "], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$href,"https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440",cljs.core.cst$kw$target,cljs.core.cst$kw$_blank], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img$icon,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,"img/icons/calendar.svg"], null)], null),"Saturday, March 25th 2017"], null),".",new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$width,"100%",cljs.core.cst$kw$max_DASH_width,"800px",cljs.core.cst$kw$text_DASH_align,"left"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$iframe,new cljs.core.PersistentArrayMap(null, 7, [cljs.core.cst$kw$src,"//eventbrite.com/tickets-external?eid=30113550440&ref=etckt",cljs.core.cst$kw$frame_DASH_border,(0),cljs.core.cst$kw$height,(290),cljs.core.cst$kw$width,"100%",cljs.core.cst$kw$margin_DASH_height,(5),cljs.core.cst$kw$margin_DASH_width,(5),cljs.core.cst$kw$scrolling,"auto"], null)], null)], null)], null);
 });
+dcd_website.app.coords = cljs.core.clj__GT_js(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [52.3666451,4.8902079], null));
 dcd_website.app.add_marker_BANG_ = (function dcd_website$app$add_marker_BANG_(mymap){
-return L.marker(cljs.core.clj__GT_js(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [52.3667284,4.8924893], null))).bindPopup("<a href=''>TQ - Singel 542</a>").addTo(mymap);
+return L.marker(dcd_website.app.coords).bindPopup("<a href=''>TQ - Singel 542</a>").addTo(mymap);
 });
 dcd_website.app.init_tile_layer_BANG_ = (function dcd_website$app$init_tile_layer_BANG_(mymap){
 return L.tileLayer("https://api.mapbox.com/styles/v1/gonzih/cixw9sqla002c2sn0a5uqu72s/tiles/256/{z}/{x}/{y}?access_token={accessToken}",cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$attribution,"Map data &copy; <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors, <a href='http://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, Imagery \u00A9 <a href='http://mapbox.com'>Mapbox</a>",cljs.core.cst$kw$maxZoom,(18),cljs.core.cst$kw$id,"gonzih/cixw69s4900282sn00gsbdqgm",cljs.core.cst$kw$accessToken,"pk.eyJ1IjoiZ29uemloIiwiYSI6ImNpeHc1eDA0NjAwMmczMmw4MnR5b2p4eWsifQ.nrJj6lim59mVefvEwsiCgA"], null))).addTo(mymap);
 });
 dcd_website.app.init_map_BANG_ = (function dcd_website$app$init_map_BANG_(){
-var mymap = L.map("location-map").setView(cljs.core.clj__GT_js(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [52.3667284,4.8924893], null)),(17));
+var mymap = L.map("location-map").setView(dcd_website.app.coords,(17));
 dcd_website.app.init_tile_layer_BANG_(mymap);
 
 return dcd_website.app.add_marker_BANG_(mymap);
