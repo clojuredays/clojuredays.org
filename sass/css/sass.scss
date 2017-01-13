@@ -294,7 +294,12 @@ body {
 
     .location {
       #location-map {
-        height: 580px;
+        @media all and (min-width: 800px) {
+          height: 400px;
+        }
+        @media all and (max-width: 800px) {
+          height: 200px;
+        }
       }
     }
 }

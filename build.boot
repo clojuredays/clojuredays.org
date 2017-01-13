@@ -40,7 +40,7 @@
         (build)))
 
 (deftask production []
-  (task-options! cljs {:optimizations :advanced}
+  (task-options! cljs {:optimizations :advanced :externs ["ext/leaflet.ext.js"]}
                  sass {:output-style :compressed})
   identity)
 
