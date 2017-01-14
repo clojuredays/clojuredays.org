@@ -74,7 +74,7 @@
    [:a.sponsor {:href "http://www.adgoji.com/" :target :_blank}
     [:img {:src "img/sponsors/adgoji.svg"}]]
    [:h2.regular "Silver sponsors"]
-   [:a.sponsor {:href "https://juxt.pro/" :target :_blank}
+   [:a.sponsor.juxt {:href "https://juxt.pro/" :target :_blank}
     [:img {:src "img/sponsors/juxt.svg"}]]
    [:p "If you are interested in sponsoring this event please contact us via "
     [:a {:href "mailto:events@clojuredays.org"}

@@ -297,7 +297,15 @@ body {
 
         img {
           max-width: 800px;
+          display: block;
+          margin: auto;
           width: 100%;
+        }
+      }
+
+      a.sponsor.juxt {
+        img {
+          width: 50%;
         }
       }
     }
