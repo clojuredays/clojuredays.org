@@ -162,6 +162,7 @@ cljs.core.cst$kw$render = new cljs.core.Keyword(null,"render","render",-14080334
 cljs.core.cst$sym$collision_DASH_hash = new cljs.core.Symbol(null,"collision-hash","collision-hash",-35831342,null);
 cljs.core.cst$sym$renders = new cljs.core.Symbol(null,"renders","renders",-925348398,null);
 cljs.core.cst$sym$deftype_STAR_ = new cljs.core.Symbol(null,"deftype*","deftype*",962659890,null);
+cljs.core.cst$kw$a$sponsor$juxt = new cljs.core.Keyword(null,"a.sponsor.juxt","a.sponsor.juxt",-486648270);
 cljs.core.cst$sym$let_STAR_ = new cljs.core.Symbol(null,"let*","let*",1920721458,null);
 cljs.core.cst$sym$nil_QMARK_ = new cljs.core.Symbol(null,"nil?","nil?",1612038930,null);
 cljs.core.cst$sym$start = new cljs.core.Symbol(null,"start","start",1285322546,null);
