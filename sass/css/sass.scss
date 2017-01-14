@@ -159,8 +159,18 @@ body {
                 font-size: 0.9rem;
             }
 
-            iframe {
+            .iframe-wrapper {
+              width: 100%;
+              max-width: 800px;
+              text-align: left;
               padding-top: 25px;
+
+              @media all and (min-width: 500px) {
+                height: 280px;
+              }
+              @media all and (max-width: 500px) {
+                height: 310px;
+              }
             }
         }
 

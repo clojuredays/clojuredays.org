@@ -86,12 +86,10 @@
    [:p"Dutch Clojure Days will happen on "]
    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440" :target :_blank}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017"] "."
-   [:div {:style {:width "100%"
-                  :max-width "800px"
-                  :text-align "left"}}
+   [:div.iframe-wrapper
     [:iframe {:src "//eventbrite.com/tickets-external?eid=30113550440&ref=etckt"
               :frame-border 0
-              :height 290
+              :height "100%"
               :width "100%"
               :margin-height 5
               :margin-width 5
