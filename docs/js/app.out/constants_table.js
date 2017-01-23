@@ -256,6 +256,7 @@ cljs.core.cst$sym$stack = new cljs.core.Symbol(null,"stack","stack",847125597,nu
 cljs.core.cst$kw$p = new cljs.core.Keyword(null,"p","p",151049309);
 cljs.core.cst$sym$transient_DASH_map = new cljs.core.Symbol(null,"transient-map","transient-map",351764893,null);
 cljs.core.cst$sym$len = new cljs.core.Symbol(null,"len","len",-1230778691,null);
+cljs.core.cst$kw$a$sponsor$infi = new cljs.core.Keyword(null,"a.sponsor.infi","a.sponsor.infi",-1847710979);
 cljs.core.cst$kw$componentWillMount = new cljs.core.Keyword(null,"componentWillMount","componentWillMount",-285327619);
 cljs.core.cst$sym$right = new cljs.core.Symbol(null,"right","right",1187949694,null);
 cljs.core.cst$kw$href = new cljs.core.Keyword(null,"href","href",-793805698);
