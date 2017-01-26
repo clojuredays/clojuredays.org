@@ -73,6 +73,8 @@
    [:h2.platinum "Platinum sponsors"]
    [:a.sponsor {:href "http://www.adgoji.com/" :target :_blank}
     [:img {:src "img/sponsors/adgoji.svg"}]]
+   [:a.sponsor {:href "http://www.vakantiediscounter.nl/" :target :_blank}
+    [:img {:src "img/sponsors/elmar.svg"}]]
    [:h2.regular "Silver sponsors"]
    [:a.sponsor.juxt {:href "https://juxt.pro/" :target :_blank}
     [:img {:src "img/sponsors/juxt.svg"}]]
