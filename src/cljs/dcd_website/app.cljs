@@ -134,13 +134,7 @@
 
 (defn call-for-paper-component []
   [:div
-   [:p "Call for papers ends on 31th of January, 2017. To submit your talk proposal please use "]
-   [:div.button-wrapper
-    [:a {:href "https://goo.gl/forms/yvTZUAZ2YyCtfEM02"
-         :target :_blank}
-     [:span.form-button
-      [:img.icon.book {:src "img/icons/book.svg"}]
-      "Google form"]]]])
+   [:p "Call for papers ended on 31th of January, 2017."]])
 
 (defn main-component []
   [:article.main
