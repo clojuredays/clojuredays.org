@@ -221,6 +221,7 @@
    {:time "9.30-10.15"
     :title "Transparency through data"
     :author "James Reeves"
+    :description "How do we make effective use of data when designing software in Clojure? This talk will provide a tour of the options that are available, and explain how liberal use of data structures can make a codebase simpler and more adaptive to change."
     :color :talk}
 
    {:time "10:30-11:15"
