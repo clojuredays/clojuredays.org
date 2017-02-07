@@ -1,7 +1,7 @@
 (ns dcd-website.app
   (:require [reagent.core :as reagent :refer [atom]]))
 
-(declare agenda-component)
+(declare agenda-component speakers-component)
 
 (def dcd-team
   [["Carlo Sciolla" "skuro"]
@@ -43,6 +43,8 @@
                               {:link "#date"     :text "When?"}
                               {:link "#location" :text "Where?"}
                               {:link "#sponsors" :text "Sponsors"}
+                              {:link "#agenda"   :text "Agenda"}
+                              {:link "#speakers" :text "Speakers"}
                               {:link "#behave"   :text "Code of conduct"}
                               {:link "#org"      :text "Contacts"}
                               {:link "#dcd16"    :text "DCD16"}])])
@@ -158,6 +160,9 @@
    [:div#agenda
     [:h2 "Agenda"]
     [agenda-component]]
+   [:div#speakers
+    [:h2 "Speakers"]
+    [speakers-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]
@@ -211,81 +216,81 @@
   [
    {:time "8.30-9.15"
     :title "Reception/Welcome"
-    :color :org}
+    :type :org}
 
    {:time "9.15-9.30"
     :title "Opening"
     :author "#DCD17 team"
-    :color :org}
+    :type :org}
 
    {:time "9.30-10.15"
-    :title "Transparency through data"
+    :title "Keynote: Transparency through data"
     :author "James Reeves"
     :description "How do we make effective use of data when designing software in Clojure? This talk will provide a tour of the options that are available, and explain how liberal use of data structures can make a codebase simpler and more adaptive to change."
-    :color :talk}
+    :type :talk}
 
    {:time "10:30-11:15"
     :title "Generatively testing user interfaces"
     :author "Andreas Geffen Lundahl"
-    :color :talk}
+    :type :talk}
 
    {:time "11:30-12:15"
     :title "Building Hermetic Systems (without Docker)"
     :author "Will Farrell"
-    :color :talk}
+    :type :talk}
 
    {:time "12:15-13:30"
     :title "Lunch"
-    :color :org}
+    :type :org}
 
    {:time "13:30-14:15"
     :title "Sequencing Dance Music with Clojure"
     :author "Piotr Jagielski"
-    :color :talk}
+    :type :talk}
 
    {:time "14:30-15:15"
     :title "Lightning Talks"
-    :color :lightning}
+    :type :lightning}
 
    {:title "CREPL: Write and run ClojureScript code together"
     :author "Gijs Stuurman"
-    :color :lightning}
+    :type :lightning}
 
    {:title "Shipping a Clojurescript App"
     :author "Riccardo Cambiassi"
-    :color :lightning}
+    :type :lightning}
 
    {:title "Mach"
     :author "Malcolm Sparks"
-    :color :lightning}
+    :type :lightning}
 
    {:time "15:30-16:15"
     :title "Using Onyx in anger"
     :author "Simon Belak"
-    :color :talk}
+    :type :talk}
 
    {:time "16:15-16:45"
     :title "Coffee break"
-    :color :org}
+    :type :org}
 
    {:time "16:45-17:30"
     :title "From 0 to prototype using ClojureScript, re-frame and friends."
     :author "Martin Clausen"
-    :color :talk}
+    :type :talk}
 
    {:time "17:30-18:15"
     :title "Clojure Puzzlers"
     :author "Renzo Borgatti"
-    :color :talk}
+    :type :talk}
 
    {:time "18:15-18:30"
     :title "Closing"
     :author "#DCD17 team"
-    :color :org}
+    :type :org}
 
    {:time "18:30-21:30"
     :title "Networking / drinks + defjoke - a macro for creating FP jokes by Ray McDermott"
-    :color :org}
+    :type :org}
    ])
 
 (def colors
@@ -293,21 +298,30 @@
    :talk "#b1e8b1"
    :lightning "#cbebff"})
 
-(defn table-row [{:keys [title time author color]}]
+(defn table-row [{:keys [title time author type]}]
   ^{:key (str time author)}
   [:tr
-   {:style {:background (colors color)}}
+   {:style {:background (colors type)}}
    [:td time]
    [:td {:col-span (if author 1 2)} title]
    (when author
-     [:td author])
-   ])
+     [:td author])])
 
 (defn agenda-component []
   [:div.agenda
    [:table {:cell-spacing 0}
     [:tbody
      (doall (map table-row agenda-data))]]])
+
+(defn speaker-component [{:keys [author description title type]}]
+  ^{:key author}
+  [:div author "-" title "-" description])
+
+(defn speakers-component []
+  [:div.speakers
+   (doall (->> agenda-data
+               (filter #(#{:lightning :talk} (:type %)))
+               (map speaker-component)))])
 
 (defn website-component []
   [:div.site
