@@ -1,6 +1,8 @@
 (ns dcd-website.app
   (:require [reagent.core :as reagent :refer [atom]]))
 
+(declare agenda-component)
+
 (def dcd-team
   [["Carlo Sciolla" "skuro"]
    ["Vijay Kiran" "vijaykiran"]
@@ -153,6 +155,9 @@
    [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
+   [:div#agenda
+    [:h2 "Agenda"]
+    [agenda-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]
@@ -201,6 +206,107 @@
     [:img {:src "img/icons/youtube.svg"}]]
    [:a {:href "mailto:events@clojuredays.org"}
     [:img {:src "img/icons/email.svg"}]]])
+
+(def agenda-data
+  [
+   {:time "8.30-9.15"
+    :title "Reception/Welcome"
+    :color :org}
+
+   {:time "9.15-9.30"
+    :title "Opening"
+    :author "#DCD17 team"
+    :color :org}
+
+   {:time "9.30-10.15"
+    :title "Transparency through data"
+    :author "James Reeves"
+    :color :talk}
+
+   {:time "10:30-11:15"
+    :title "Generatively testing user interfaces"
+    :author "Andreas Geffen Lundahl"
+    :color :talk}
+
+   {:time "11:30-12:15"
+    :title "Building Hermetic Systems (without Docker)"
+    :author "Will Farrell"
+    :color :talk}
+
+   {:time "12:15-13:30"
+    :title "Lunch"
+    :color :org}
+
+   {:time "13:30-14:15"
+    :title "Sequencing Dance Music with Clojure"
+    :author "Piotr Jagielski"
+    :color :talk}
+
+   {:time "14:30-15:15"
+    :title "Lightning Talks"
+    :color :lightning}
+
+   {:title "CREPL: Write and run ClojureScript code together"
+    :author "Gijs Stuurman"
+    :color :lightning}
+
+   {:title "Shipping a Clojurescript App"
+    :author "Riccardo Cambiassi"
+    :color :lightning}
+
+   {:title "Mach"
+    :author "Malcolm Sparks"
+    :color :lightning}
+
+   {:time "15:30-16:15"
+    :title "Using Onyx in anger"
+    :author "Simon Belak"
+    :color :talk}
+
+   {:time "16:15-16:45"
+    :title "Coffee break"
+    :color :org}
+
+   {:time "16:45-17:30"
+    :title "From 0 to prototype using ClojureScript, re-frame and friends."
+    :author "Martin Clausen"
+    :color :talk}
+
+   {:time "17:30-18:15"
+    :title "Clojure Puzzlers"
+    :author "Renzo Borgatti"
+    :color :talk}
+
+   {:time "18:15-18:30"
+    :title "Closing"
+    :author "#DCD17 team"
+    :color :org}
+
+   {:time "18:30-21:30"
+    :title "Networking / drinks + defjoke - a macro for creating FP jokes by Ray McDermott"
+    :color :org}
+   ])
+
+(def colors
+  {:org "#f1f1f1"
+   :talk "#b1e8b1"
+   :lightning "#cbebff"})
+
+(defn table-row [{:keys [title time author color]}]
+  ^{:key (str time author)}
+  [:tr
+   {:style {:background (colors color)}}
+   [:td time]
+   [:td {:col-span (if author 1 2)} title]
+   (when author
+     [:td author])
+   ])
+
+(defn agenda-component []
+  [:div.agenda
+   [:table {:cell-spacing 0}
+    [:tbody
+     (doall (map table-row agenda-data))]]])
 
 (defn website-component []
   [:div.site
