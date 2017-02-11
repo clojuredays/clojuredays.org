@@ -388,8 +388,7 @@
     [:img {:src (str "img/speakers/" profile-pic)}]
     [:a.twitter-link {:href (str "https://twitter.com/" twitter)}
      [:img.icon.twitter {:src "img/icons/twitter.svg"}]]
-    [:h3 author]
-    ]
+    [:h3 author]]
    [:div.info
     [:h3.title title]
     [:div.description description]
