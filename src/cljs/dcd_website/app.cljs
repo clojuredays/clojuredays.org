@@ -351,7 +351,7 @@
     :type :org}
 
    {:time ["18:30" "21:30"]
-    :title "Networking / drinks"
+    :title "Networking/Drinks"
     :type :org}
 
    {:time ["19:00" "19:30"]
