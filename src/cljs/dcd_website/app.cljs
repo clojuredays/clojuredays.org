@@ -241,20 +241,25 @@
     :twitter "aglundahl"
     :type :talk}
 
+   ; {:time ["11:20" "12:05"]
+   ;  :title "Building Hermetic Systems (without Docker)"
+   ;  :profile-pic "will.jpg"
+   ;  :author "Will Farrell"
+   ;  :description
+   ;  [:div
+   ;   [:p "Besides being a fun word to say, what is \"hermeticity\"? Put simply, a hermetic system lacks external dependencies, which simplifies development, testing, and deployment. As a design principal, it mirrors the functional design so prevalent in Clojure. Learn how to use Clojure to build hermetic systems  (with or without Docker) and leverage the REPL to manage the lifecycle of your services."]
+   ;   [:p "Takeways: "]
+   ;   [:ul
+   ;    [:li "How the notion of hermeticity is an example of functional design thinking"]
+   ;    [:li "How to identify hermetic  (and not so hermetic) systems"]
+   ;    [:li "How to leverage Clojure  (and the REPL) to build and manage hermetic systems"]]]
+   ;  :bio "Will Farrell is the Lead Software Architect at MojoTech in Providence, RI, where he oversees software projects large and small. He’s been building software for about a decade and loves Clojure especially. In his free time, when not working on open source software, he’s likely practicing his vinyl DJing skills or cooking a fancy meal."
+   ;  :twitter "wkf"
+   ;  :type :talk}
+
    {:time ["11:20" "12:05"]
-    :title "Building Hermetic Systems (without Docker)"
-    :profile-pic "will.jpg"
-    :author "Will Farrell"
-    :description
-    [:div
-     [:p "Besides being a fun word to say, what is \"hermeticity\"? Put simply, a hermetic system lacks external dependencies, which simplifies development, testing, and deployment. As a design principal, it mirrors the functional design so prevalent in Clojure. Learn how to use Clojure to build hermetic systems  (with or without Docker) and leverage the REPL to manage the lifecycle of your services."]
-     [:p "Takeways: "]
-     [:ul
-      [:li "How the notion of hermeticity is an example of functional design thinking"]
-      [:li "How to identify hermetic  (and not so hermetic) systems"]
-      [:li "How to leverage Clojure  (and the REPL) to build and manage hermetic systems"]]]
-    :bio "Will Farrell is the Lead Software Architect at MojoTech in Providence, RI, where he oversees software projects large and small. He’s been building software for about a decade and loves Clojure especially. In his free time, when not working on open source software, he’s likely practicing his vinyl DJing skills or cooking a fancy meal."
-    :twitter "wkf"
+    :title "TBA"
+    :author "TBA"
     :type :talk}
 
    {:time ["12:05" "13:20"]
@@ -333,7 +338,7 @@
 
    {:time ["17:35" "18:20"]
     :title "From 0 to prototype using ClojureScript, re-frame and friends."
-    :profile-pic "martin.png"
+    :profile-pic "martin.jpg"
     :author "Martin Clausen"
     :description "The talk goes over how to translate a product idea and continuous real world  user feedback from rapid iterations into a working prototype. I will highlight the distinct advantages of ClojureScript itself and its sophisticated tooling for this purpose, but also show how the excellent re-frame library provides sane and scalable structure and other \"similar in spirit\" technologies like PouchDB and CouchDB serve as a solid foundation for the prototype."
     :bio "Former lawyer now legal tech consultant and entrepreneur build next generation contract management system using ClojureScript."

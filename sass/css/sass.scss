@@ -361,7 +361,7 @@ body {
     .speakers {
       .speaker {
         width: 100%;
-        margin-top: 25px;
+        margin-top: 55px;
 
         // border: 1px solid red;
         display: flex;
@@ -373,6 +373,8 @@ body {
         .name {
           @media all and (min-width: 550px) {
             width: 25%;
+            max-width: 210px;
+            padding-top: 25px;
           }
 
           img {
