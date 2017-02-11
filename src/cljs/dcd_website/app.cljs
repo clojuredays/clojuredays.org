@@ -234,12 +234,21 @@
     :title "Generatively testing user interfaces"
     :profile-pic "andreas.jpg"
     :author "Andreas Geffen Lundahl"
+    :description "Brace yourself for a journey into the mysterious and magnificent world of generative testing. Andreas tells his story of how he has combined data generators with Selenium, to test the part of the application every programmer dreads the most: the user interface. By applying this chaotic testing technique to the user interface and the application as a whole, he has found bugs, gained new insight, and ultimately had a lot of fun."
     :type :talk}
 
    {:time ["11:20" "12:05"]
     :title "Building Hermetic Systems (without Docker)"
     :profile-pic "will.jpg"
     :author "Will Farrell"
+    :description
+    [:div
+     [:p "Besides being a fun word to say, what is \"hermeticity\"? Put simply, a hermetic system lacks external dependencies, which simplifies development, testing, and deployment. As a design principal, it mirrors the functional design so prevalent in Clojure. Learn how to use Clojure to build hermetic systems  (with or without Docker) and leverage the REPL to manage the lifecycle of your services."]
+     [:p "Takeways: "]
+     [:ul
+      [:li "How the notion of hermeticity is an example of functional design thinking"]
+      [:li "How to identify hermetic  (and not so hermetic) systems"]
+      [:li "How to leverage Clojure  (and the REPL) to build and manage hermetic systems"]]]
     :type :talk}
 
    {:time ["12:05" "13:20"]
@@ -250,6 +259,7 @@
     :title "Our Road Trip to Component"
     :profile-pic "marketa.jpg"
     :author "Marketa Adamova"
+    :description "Few months ago our company NomNom decided to move all its backend services from Ruby to Clojure. And I think a road trip is best comparison for this migration. There was excitement at start, then panic a few hours down the road wondering what was left behind,  but now a constant joy of discovering new things. In this talk I’d like to share how we eventually arrived at Stuart Sierra’s Component. Let’s take a look at how components improved our quickly growing codebase and testing, as well as some of the trade-offs we had to make. Finally I’ll show how components can help with managing running code in production."
     :type :talk}
 
    {:title "Lightning Talks"
@@ -258,6 +268,7 @@
    {:time ["14:15" "14:30"]
     :title "Sequencing Dance Music with Clojure"
     :profile-pic "piotr.jpg"
+    :description "In this talk I'll give a short introduction to Overtone, Leipzig and my own Disclojure libraries. I'll focus on techniques of sequencing and looping sounds and samples which can be used in live on-stage dance music performances."
     :author "Piotr Jagielski"
     :type :lightning}
 
@@ -265,18 +276,21 @@
     :title "Shipping a Clojurescript App"
     :profile-pic "riccardo.jpg"
     :author "Riccardo Cambiassi"
+    :description "We will explore a case study of the use of Clojurescript on top of Electron  (Atom Shell) for the development and distribution of a desktop application. Rather than going through an introductory proof of concept, we will focus on the characteristics that made this technology stack a good fit for building, distributing and supporting a desktop app. Along the way, we will pick a few extra tools and practical tricks that may be beneficial to a similar endeavour."
     :type :lightning}
 
    {:time ["14:45" "15:00"]
     :title "Mach"
     :profile-pic "malcolm.jpg"
     :author "Malcolm Sparks"
+    :description "JUXT's Mach is a remake of make, the venerable build system rebuilt in ClojureScript with some differences. There are hundreds of build tools, this talk will introduce Mach and explain why I felt the need to make one more, what you can do with it and why you might want to use it."
     :type :lightning}
 
    {:time ["15:00" "15:15"]
     :title "CREPL: Write and run ClojureScript code together"
     :profile-pic "gijs.png"
     :author "Gijs Stuurman"
+    :description "CREPL is an online collaborative ClojureScript editor and evaluator. It's like a Google docs for ClojureScript, with a self-hosted ClojureScript compiler. This talks shows how to use CREPL to work together on the same ClojureScript code, for instance in a teaching setting. This talk is also a demonstration of what is possible with Clojure and ClojureScript because CREPL is written with both."
     :type :lightning}
 
    {:time ["15:15" "15:45"]
@@ -287,18 +301,21 @@
     :title "Using Onyx in anger"
     :profile-pic "simon.jpg"
     :author "Simon Belak"
+    :description "Clojure has always been good at manipulating data. With the release of spec and Onyx (\"masterless, cloud scale, fault tolerant, high performance distributed computation system\") good became best. In this talk I will walk you through a data layer architecture build around Kafka an Onyx that is self-describing, declarative, scalable and convenient to work with for the end user. The focus will be on the power and elegance of describing data and computation with data; and the inferences and automations that can be built on top of that."
     :type :talk}
 
    {:time ["16:40" "17:25"]
     :title "Clojure Puzzlers"
     :profile-pic "renzo.jpg"
     :author "Renzo Borgatti"
+    :description "Are you learning Clojure and want to be prepared for some of the most common traps and pitfalls? Are you a seasoned Clojure veteran and you think you've seen them all? Then come join us to play the Clojure Puzzlers! 8 questions are presented to the audience and you'll have to pick one of the possible answers. Anyone with a working knowledge of the language will be able to understand the puzzles, but even the most senior Clojure master will be puzzled. The interactive talk format is entertaining while the puzzles teach you about the subtleties of Clojure and its standard library."
     :type :talk}
 
    {:time ["17:35" "18:20"]
     :title "From 0 to prototype using ClojureScript, re-frame and friends."
     :profile-pic "martin.jpg"
     :author "Martin Clausen"
+    :description "The talk goes over how to translate a product idea and continuous real world  user feedback from rapid iterations into a working prototype. I will highlight the distinct advantages of ClojureScript itself and its sophisticated tooling for this purpose, but also show how the excellent re-frame library provides sane and scalable structure and other \"similar in spirit\" technologies like PouchDB and CouchDB serve as a solid foundation for the prototype."
     :type :talk}
 
    {:time ["18:20" "18:30"]
@@ -337,11 +354,10 @@
   ^{:key author}
   [:div.speaker
    [:div.name
-    [:img {:src (str "img/speakers/" profile-pic)
-           :width "64"}]
-    [:div author]]
+    [:img {:src (str "img/speakers/" profile-pic)}]
+    [:h3 author]]
    [:div.info
-    [:div.title title]
+    [:h3.title title]
     [:div.description description]]])
 
 (defn speakers-component []

@@ -361,15 +361,28 @@ body {
     .speakers {
       .speaker {
         width: 100%;
-        border: 1px solid red;
+        margin-top: 25px;
+
+        // border: 1px solid red;
         display: flex;
 
         .name {
-          width: 200px;
+          width: 25%;
+
+          img {
+            max-width: 120px;
+          }
+        }
+
+        .info {
+          width: 75%;
+
+          h3 {
+            margin-top: 0;
+          }
         }
 
         .name, .info {
-          border: 1px solid green;
           display: inline-block;
         }
       }
