@@ -346,8 +346,17 @@
     :type :org}
 
    {:time ["18:30" "21:30"]
-    :title "Networking / drinks + defjoke - a macro for creating FP jokes by Ray McDermott"
-    :type :org}])
+    :title "Networking / drinks"
+    :type :org}
+
+   {:time ["19:00" "19:30"]
+    :title "defjoke - a macro for creating FP jokes"
+    :profile-pic "ray.jpg"
+    :author "Ray McDermott"
+    :description "Bringing pure fun to an impure world."
+    :bio "Clojure enthusiast: software architect by day, co-orgniser Belgian Clojure User group and co-host of defn podcast by night (some nights anyway)."
+    :twitter "raymcdermott"
+    :type :lightning}])
 
 (def colors
   {:org "#f1f1f1"
