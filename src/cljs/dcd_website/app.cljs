@@ -272,7 +272,7 @@
 
    {:time "15:00-15:15"
     :title "CREPL: Write and run ClojureScript code together"
-    :profile-pic "gijs.jpg"
+    :profile-pic "gijs.png"
     :author "Gijs Stuurman"
     :type :lightning}
 
