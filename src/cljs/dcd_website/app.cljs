@@ -333,7 +333,7 @@
 
    {:time ["17:35" "18:20"]
     :title "From 0 to prototype using ClojureScript, re-frame and friends."
-    :profile-pic "martin.jpg"
+    :profile-pic "martin.png"
     :author "Martin Clausen"
     :description "The talk goes over how to translate a product idea and continuous real world  user feedback from rapid iterations into a working prototype. I will highlight the distinct advantages of ClojureScript itself and its sophisticated tooling for this purpose, but also show how the excellent re-frame library provides sane and scalable structure and other \"similar in spirit\" technologies like PouchDB and CouchDB serve as a solid foundation for the prototype."
     :bio "Former lawyer now legal tech consultant and entrepreneur build next generation contract management system using ClojureScript."
