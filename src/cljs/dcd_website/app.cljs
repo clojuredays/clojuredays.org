@@ -392,7 +392,7 @@
    [:div.info
     [:h3.title title]
     [:div.description description]
-    (when bio [:div.bio "About this speaker: " bio])]])
+    (when bio [:div.bio "About the speaker: " bio])]])
 
 (defn speakers-component []
   [:div.speakers
