@@ -366,8 +366,14 @@ body {
         // border: 1px solid red;
         display: flex;
 
+        @media all and (max-width: 500px) {
+          flex-direction: column;
+        }
+
         .name {
-          width: 25%;
+          @media all and (min-width: 500px) {
+            width: 25%;
+          }
 
           img {
             max-width: 120px;
@@ -375,15 +381,17 @@ body {
         }
 
         .info {
-          width: 75%;
-
-          h3 {
-            margin-top: 0;
+          @media all and (min-width: 500px) {
+            width: 75%;
           }
         }
 
         .name, .info {
           display: inline-block;
+
+          h3 {
+            margin-top: 0;
+          }
         }
       }
     }
