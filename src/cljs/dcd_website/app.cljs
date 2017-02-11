@@ -214,7 +214,7 @@
 
 (def agenda-data
   [
-   {:time "8.30-9.15"
+   {:time "8.30-9.30"
     :title "Reception/Welcome"
     :type :org}
 
@@ -229,69 +229,72 @@
     :description "How do we make effective use of data when designing software in Clojure? This talk will provide a tour of the options that are available, and explain how liberal use of data structures can make a codebase simpler and more adaptive to change."
     :type :talk}
 
-   {:time "10:30-11:15"
+   {:time "10:25-11:10"
     :title "Generatively testing user interfaces"
     :author "Andreas Geffen Lundahl"
     :type :talk}
 
-   {:time "11:30-12:15"
+   {:time "11:20-12:05"
     :title "Building Hermetic Systems (without Docker)"
     :author "Will Farrell"
     :type :talk}
 
-   {:time "12:15-13:30"
+   {:time "12:05-13:20"
     :title "Lunch"
     :type :org}
 
-   {:time "13:30-14:15"
-    :title "Sequencing Dance Music with Clojure"
-    :author "Piotr Jagielski"
+   {:time "13:20-14:05"
+    :title "Our Road Trip to Component"
+    :author "Marketa Adamova"
     :type :talk}
 
-   {:time "14:30-15:15"
-    :title "Lightning Talks"
+   {:time "14:15-14:30"
+    :title "Sequencing Dance Music with Clojure"
+    :author "Piotr Jagielski"
     :type :lightning}
 
-   {:title "CREPL: Write and run ClojureScript code together"
-    :author "Gijs Stuurman"
-    :type :lightning}
-
-   {:title "Shipping a Clojurescript App"
+   {:time "14:30-14:45"
+    :title "Shipping a Clojurescript App"
     :author "Riccardo Cambiassi"
     :type :lightning}
 
-   {:title "Mach"
+   {:time "14:45-15:00"
+    :title "Mach"
     :author "Malcolm Sparks"
     :type :lightning}
 
-   {:time "15:30-16:15"
+   {:time "15:00-15:15"
+    :title "CREPL: Write and run ClojureScript code together"
+    :author "Gijs Stuurman"
+    :type :lightning}
+
+   {:time "15:15-15:45"
+    :title "Coffee break"
+    :type :org}
+
+   {:time "15:45-16:30"
     :title "Using Onyx in anger"
     :author "Simon Belak"
     :type :talk}
 
-   {:time "16:15-16:45"
-    :title "Coffee break"
-    :type :org}
-
-   {:time "16:45-17:30"
-    :title "From 0 to prototype using ClojureScript, re-frame and friends."
-    :author "Martin Clausen"
-    :type :talk}
-
-   {:time "17:30-18:15"
+   {:time "16:40-17:25"
     :title "Clojure Puzzlers"
     :author "Renzo Borgatti"
     :type :talk}
 
-   {:time "18:15-18:30"
+   {:time "17:35-18:20"
+    :title "From 0 to prototype using ClojureScript, re-frame and friends."
+    :author "Martin Clausen"
+    :type :talk}
+
+   {:time "18:20-18:30"
     :title "Closing"
     :author "#DCD17 team"
     :type :org}
 
    {:time "18:30-21:30"
     :title "Networking / drinks + defjoke - a macro for creating FP jokes by Ray McDermott"
-    :type :org}
-   ])
+    :type :org}])
 
 (def colors
   {:org "#f1f1f1"
