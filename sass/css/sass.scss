@@ -366,22 +366,26 @@ body {
         // border: 1px solid red;
         display: flex;
 
-        @media all and (max-width: 500px) {
+        @media all and (max-width: 550px) {
           flex-direction: column;
         }
 
         .name {
-          @media all and (min-width: 500px) {
+          @media all and (min-width: 550px) {
             width: 25%;
           }
 
           img {
             max-width: 120px;
           }
+
+          .twitter-link {
+            display: block;
+          }
         }
 
         .info {
-          @media all and (min-width: 500px) {
+          @media all and (min-width: 550px) {
             width: 75%;
           }
 
