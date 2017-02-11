@@ -332,6 +332,29 @@ body {
           padding: 15px;
           border-bottom: 1px solid black;
         }
+
+        td.time {
+          @media all and (min-width: 800px) {
+            width: 120px;
+          }
+
+          p {
+            display: inline;
+          }
+
+          p.start {
+            @media all and (min-width: 800px) {
+              &::after {
+                content: " - ";
+              }
+            }
+            @media all and (max-width: 800px) {
+              &::after {
+                content: " ";
+              }
+            }
+          }
+        }
       }
     }
 
