@@ -226,16 +226,19 @@
    {:time "9.30-10.15"
     :title "Keynote: Transparency through data"
     :author "James Reeves"
+    :profile-pic "james.jpg"
     :description "How do we make effective use of data when designing software in Clojure? This talk will provide a tour of the options that are available, and explain how liberal use of data structures can make a codebase simpler and more adaptive to change."
     :type :talk}
 
    {:time "10:25-11:10"
     :title "Generatively testing user interfaces"
+    :profile-pic "andreas.jpg"
     :author "Andreas Geffen Lundahl"
     :type :talk}
 
    {:time "11:20-12:05"
     :title "Building Hermetic Systems (without Docker)"
+    :profile-pic "will.jpg"
     :author "Will Farrell"
     :type :talk}
 
@@ -245,26 +248,31 @@
 
    {:time "13:20-14:05"
     :title "Our Road Trip to Component"
+    :profile-pic "marketa.jpg"
     :author "Marketa Adamova"
     :type :talk}
 
    {:time "14:15-14:30"
     :title "Sequencing Dance Music with Clojure"
+    :profile-pic "piotr.jpg"
     :author "Piotr Jagielski"
     :type :lightning}
 
    {:time "14:30-14:45"
     :title "Shipping a Clojurescript App"
+    :profile-pic "riccardo.jpg"
     :author "Riccardo Cambiassi"
     :type :lightning}
 
    {:time "14:45-15:00"
     :title "Mach"
+    :profile-pic "malcolm.jpg"
     :author "Malcolm Sparks"
     :type :lightning}
 
    {:time "15:00-15:15"
     :title "CREPL: Write and run ClojureScript code together"
+    :profile-pic "gijs.jpg"
     :author "Gijs Stuurman"
     :type :lightning}
 
@@ -274,16 +282,19 @@
 
    {:time "15:45-16:30"
     :title "Using Onyx in anger"
+    :profile-pic "simon.jpg"
     :author "Simon Belak"
     :type :talk}
 
    {:time "16:40-17:25"
     :title "Clojure Puzzlers"
+    :profile-pic "renzo.jpg"
     :author "Renzo Borgatti"
     :type :talk}
 
    {:time "17:35-18:20"
     :title "From 0 to prototype using ClojureScript, re-frame and friends."
+    :profile-pic "martin.jpg"
     :author "Martin Clausen"
     :type :talk}
 
