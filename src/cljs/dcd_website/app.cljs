@@ -275,7 +275,7 @@
 
    {:time ["14:15" "14:30"]
     :title "Sequencing Dance Music with Clojure"
-    :profile-pic "piotr.jpg"
+    :profile-pic "piotr.png"
     :description "In this talk I'll give a short introduction to Overtone, Leipzig and my own Disclojure libraries. I'll focus on techniques of sequencing and looping sounds and samples which can be used in live on-stage dance music performances."
     :author "Piotr Jagielski"
     :bio "JVM/Java developer for 10 years, last 2 years exploring Clojure/Overtone."
