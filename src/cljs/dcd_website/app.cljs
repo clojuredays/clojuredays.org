@@ -386,7 +386,7 @@
   [:div.speaker
    [:div.name
     [:img {:src (str "img/speakers/" profile-pic)}]
-    [:a.twitter-link {:href (str "https://twitter.com/" twitter)}
+    [:a.twitter-link {:href (str "https://twitter.com/" twitter) :href :_blank}
      [:img.icon.twitter {:src "img/icons/twitter.svg"}]]
     [:h3 author]]
    [:div.info
