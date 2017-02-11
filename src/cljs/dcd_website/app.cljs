@@ -252,6 +252,9 @@
     :author "Marketa Adamova"
     :type :talk}
 
+   {:title "Lightning Talks"
+    :type :lightning}
+
    {:time "14:15-14:30"
     :title "Sequencing Dance Music with Clojure"
     :profile-pic "piotr.jpg"
@@ -327,14 +330,22 @@
     [:tbody
      (doall (map table-row agenda-data))]]])
 
-(defn speaker-component [{:keys [author description title type]}]
+(defn speaker-component [{:keys [author description title type profile-pic]}]
   ^{:key author}
-  [:div author "-" title "-" description])
+  [:div.speaker
+   [:div.name
+    [:img {:src (str "img/speakers/" profile-pic)
+           :width "64"}]
+    [:div author]]
+   [:div.info
+    [:div.title title]
+    [:div.description description]]])
 
 (defn speakers-component []
   [:div.speakers
    (doall (->> agenda-data
-               (filter #(#{:lightning :talk} (:type %)))
+               (filter #(and (:profile-pic %)
+                             (#{:lightning :talk} (:type %))))
                (map speaker-component)))])
 
 (defn website-component []

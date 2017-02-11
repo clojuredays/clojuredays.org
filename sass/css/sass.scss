@@ -334,4 +334,21 @@ body {
         }
       }
     }
+
+    .speakers {
+      .speaker {
+        width: 100%;
+        border: 1px solid red;
+        display: flex;
+
+        .name {
+          width: 20%;
+        }
+
+        .name, .info {
+          border: 1px solid green;
+          display: inline-block;
+        }
+      }
+    }
 }
