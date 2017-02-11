@@ -384,6 +384,12 @@ body {
           @media all and (min-width: 500px) {
             width: 75%;
           }
+
+          .bio {
+            margin-top: 15px;
+            font-style: italic;
+            font-size: 14px;
+          }
         }
 
         .name, .info {
