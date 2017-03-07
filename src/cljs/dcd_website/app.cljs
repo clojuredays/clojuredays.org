@@ -12,7 +12,7 @@
 (defn header-component []
   [:header.header
    [:div.logo
-    [:img {:src "img/logo.png"}]]
+    [:img {:src "img/logo.svg"}]]
    [:div.title
     [:h1 "Dutch Clojure Days 2017"]]])
 
