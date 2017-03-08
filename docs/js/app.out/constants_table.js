@@ -16,6 +16,7 @@ cljs.core.cst$sym$satisfies_QMARK_ = new cljs.core.Symbol(null,"satisfies?","sat
 cljs.core.cst$sym$first = new cljs.core.Symbol(null,"first","first",996428481,null);
 cljs.core.cst$kw$div$logo = new cljs.core.Keyword(null,"div.logo","div.logo",281122689);
 cljs.core.cst$kw$header$header = new cljs.core.Keyword(null,"header.header","header.header",1073294241);
+cljs.core.cst$kw$span$twitter_DASH_handle = new cljs.core.Keyword(null,"span.twitter-handle","span.twitter-handle",222098337);
 cljs.core.cst$sym$try = new cljs.core.Symbol(null,"try","try",-1273693247,null);
 cljs.core.cst$sym$has_DASH_nil_QMARK_ = new cljs.core.Symbol(null,"has-nil?","has-nil?",825886722,null);
 cljs.core.cst$kw$on_DASH_set = new cljs.core.Keyword(null,"on-set","on-set",-140953470);
