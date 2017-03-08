@@ -214,8 +214,8 @@
 
 (def agenda-data
   [
-   {:time ["8.30" "9.30"]
-    :title "Reception/Welcome"
+   {:time ["8.30" "9.15"]
+    :title "Reception"
     :type :org}
 
    {:time ["9.15" "9.30"]
