@@ -384,6 +384,14 @@ body {
 
           .twitter-link {
             display: block;
+
+            .twitter-handle {
+              color: $primary-color;
+              font-weight: bold;
+              font-size: 13px;
+              vertical-align: middle;
+              display: inline-block;
+            }
           }
         }
 
