@@ -213,8 +213,7 @@
     [:img {:src "img/icons/email.svg"}]]])
 
 (def agenda-data
-  [
-   {:time ["8.30" "9.15"]
+  [{:time ["8.30" "9.15"]
     :title "Reception"
     :type :org}
 
