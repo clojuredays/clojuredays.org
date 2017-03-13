@@ -303,11 +303,15 @@ body {
         }
       }
 
-      a.sponsor.juxt, a.sponsor.infi {
+      a.sponsor.juxt, a.sponsor.infi, a.sponsor.lunatech {
         img {
           max-width: 400px;
           width: 50%;
         }
+      }
+
+      a.sponsor.lunatech {
+        margin-top: 40px;
       }
     }
 

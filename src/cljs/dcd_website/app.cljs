@@ -84,6 +84,8 @@
     [:img {:src "img/sponsors/juxt.svg"}]]
    [:a.sponsor.infi {:href "https://infi.nl/" :target :_blank}
     [:img {:src "img/sponsors/infi.svg"}]]
+   [:a.sponsor.lunatech {:href "http://lunatech.com/" :target :_blank}
+    [:img {:src "img/sponsors/lunatech.svg"}]]
    [:p "If you are interested in sponsoring this event please contact us via "
     [:a {:href "mailto:events@clojuredays.org"}
      [:img.icon.email {:src "img/icons/email.svg"}]
