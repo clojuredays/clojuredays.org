@@ -268,6 +268,7 @@ cljs.core.cst$kw$div_SHARP_date = new cljs.core.Keyword(null,"div#date","div#dat
 cljs.core.cst$sym$meta8145 = new cljs.core.Symbol(null,"meta8145","meta8145",2120543515,null);
 cljs.core.cst$kw$autobind = new cljs.core.Keyword(null,"autobind","autobind",-570650245);
 cljs.core.cst$kw$h3 = new cljs.core.Keyword(null,"h3","h3",2067611163);
+cljs.core.cst$kw$a$sponsor$lunatech = new cljs.core.Keyword(null,"a.sponsor.lunatech","a.sponsor.lunatech",-1449618885);
 cljs.core.cst$kw$alt_DASH_impl = new cljs.core.Keyword(null,"alt-impl","alt-impl",670969595);
 cljs.core.cst$sym$ext_DASH_map_DASH_iter = new cljs.core.Symbol(null,"ext-map-iter","ext-map-iter",-1215982757,null);
 cljs.core.cst$sym$tail = new cljs.core.Symbol(null,"tail","tail",494507963,null);
