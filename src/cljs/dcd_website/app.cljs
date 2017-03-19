@@ -9,12 +9,16 @@
    ["Max Gonzih" "gonzih"]
    ["Joost Diepenmaat" "ZeekatSoftware"]])
 
-(defn header-component []
-  [:header.header
-   [:div.logo
-    [:img {:src "img/logo.svg"}]]
-   [:div.title
-    [:h1 "Dutch Clojure Days 2017"]]])
+(defn header-component
+  ([]
+   (header-component {}))
+  ([styles & children]
+   [:header.header styles
+    [:div.logo
+     [:img {:src "img/logo.svg"}]]
+    [:div.title
+     [:h1 "Dutch Clojure Days 2017"]]
+    children]))
 
 (defonce sidebar-expanded (atom false))
 
@@ -215,16 +219,16 @@
     [:img {:src "img/icons/email.svg"}]]])
 
 (def agenda-data
-  [{:time ["8.30" "9.15"]
+  [{:time ["8:30" "9:15"]
     :title "Reception"
     :type :org}
 
-   {:time ["9.15" "9.30"]
+   {:time ["9:15" "9:30"]
     :title "Opening"
     :author "#DCD17 team"
     :type :org}
 
-   {:time ["9.30" "10.15"]
+   {:time ["9:30" "10:15"]
     :title "Keynote: Transparency through data"
     :author "James Reeves"
     :profile-pic "james.jpg"
