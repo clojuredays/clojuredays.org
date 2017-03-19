@@ -3,12 +3,26 @@
             [clojure.string :as s]
             [dcd-website.app :as dcd]))
 
-(def slot (atom {}))
-
 (def minute-size 10)
 
 (defn minutes-of-day [hh mm]
   (+ (* 60 hh) mm))
+
+(defn date->minutes [d]
+  (minutes-of-day (.getHours d) (.getMinutes d)))
+
+(def agenda-start
+  (let [start (doto (js/Date.)
+                (.setHours 8)
+                (.setMinutes 30))]
+    (date->minutes start)))
+
+(defn agenda-progress
+  "Calculates the number of minutes since 8:30"
+  [date]
+  (- (date->minutes date) agenda-start))
+
+(def progress (atom (agenda-progress (js/Date.))))
 
 (defn time-str->minutes [s]
   (let [[hh mm] (mapv int (s/split s #":"))]
@@ -75,7 +89,13 @@
                  :background-color "red"
                  :min-width "10px"
                  :min-height "100%"
-                 :left "250px"}}])
+                 :left "650px"}}])
+
+(defn progress->margin []
+  (if (> 0 @progress)
+    "650px"
+    (str (max (- 650 (* minute-size @progress))
+              (- 650 (* minute-size 780))) "px")))
 
 (defn render-all-slots
   [slots]
@@ -83,7 +103,7 @@
                  :display "flex"
                  :position "relative"
                  :min-height "100%"
-                 :margin-left "50%"}}
+                 :margin-left (progress->margin)}}
    (map (fn [slot bg]
           [:span {:key (gensym)
                   :style {:display "block"
@@ -93,9 +113,6 @@
                           :min-height "100%"
                           :padding-right "50px"}}
            [render-slot slot]]) slots (cycle ["lightgray" "white"]))])
-
-(defn update-slot [t]
-  (reset! slot (current-slot t)))
 
 (defn carousel-component
   []
