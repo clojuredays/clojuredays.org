@@ -199,4 +199,4 @@
     (reagent/render-component
      [carousel-component]
      (.getElementById js/document "container"))
-    #_(.setInterval js/window update-progress 1000)))
+    (.setInterval js/window update-progress 1000)))
