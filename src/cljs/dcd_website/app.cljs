@@ -264,7 +264,8 @@
 
    {:time ["12:05" "13:20"]
     :title "Lunch"
-    :type :org}
+    :type :org
+    :force-timeline-visible? true}
 
    {:time ["13:20" "14:05"]
     :title "Our Road Trip to Component"
@@ -276,6 +277,7 @@
     :type :talk}
 
    {:title "Lightning Talks"
+    :force-timeline-hidden? true
     :type :lightning}
 
    {:time ["14:15" "14:30"]
@@ -316,7 +318,8 @@
 
    {:time ["15:15" "15:45"]
     :title "Coffee break"
-    :type :org}
+    :type :org
+    :force-timeline-visible? true}
 
    {:time ["15:45" "16:30"]
     :title "Using Onyx in anger"
@@ -361,7 +364,8 @@
     :description "Bringing pure fun to an impure world."
     :bio "Clojure enthusiast: software architect by day, co-orgniser Belgian Clojure User group and co-host of defn podcast by night (some nights anyway)."
     :twitter "raymcdermott"
-    :type :lightning}])
+    :type :lightning
+    :force-timeline-hidden? true}])
 
 (def colors
   {:org "#f1f1f1"
@@ -417,9 +421,9 @@
 
 (defn init []
   (when js/document.location
-    (reagent/render-component
-     [website-component]
-     (.getElementById js/document "container"))))
+    (let [root (.getElementById js/document "container")]
+      (when root
+        (reagent/render-component [website-component] root)))))
 
 (defn ^:export render-to-string []
   (reagent/render-to-string [website-component]))

@@ -47,7 +47,7 @@
 
 (deftask development []
   (task-options! cljs   {:optimizations :none :source-map true}
-                 reload {:on-jsload 'dcd-website.app/init})
+                 reload {:on-jsload 'dcd-website.carousel/init})
   identity)
 
 (deftask dev

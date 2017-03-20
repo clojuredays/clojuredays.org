@@ -3,12 +3,23 @@
             [clojure.string :as s]
             [dcd-website.app :as dcd]))
 
-(def minute-size 10)
+(def minute-size 15)
+
+; (enable-console-print!)
 
 (def clean-agenda
-  (let [rm-pos (fn [v pos] (vec (concat (subvec v 0 pos) (subvec v (inc pos)))))
-        bogus-slots [7 17]]
-    (reduce rm-pos dcd/agenda-data bogus-slots)))
+  (as-> dcd/agenda-data $
+       (filter (fn [{:keys [type force-timeline-visible? force-timeline-hidden?]}]
+                 (and (or force-timeline-visible? (#{:lightning :talk} type))
+                      (not force-timeline-hidden?)))
+               $)
+       (concat [{:time ["8:30" "9:30"]
+                 :type :org
+                 :title "Reception/Opening"}]
+               $
+               [{:time ["18:20" "20:00"]
+                 :type :org
+                 :title "Closing/Networking/Drinks"}])))
 
 (defn minutes-of-day [hh mm]
   (+ (* 60 hh) mm))
@@ -25,57 +36,29 @@
 (defn agenda-progress
   "Calculates the number of minutes since 8:30"
   [date]
-  (- (date->minutes date) agenda-start))
+  (min 780
+       (max 0
+            (- (date->minutes date) agenda-start))))
 
 (defn time-str->minutes [s]
   (let [[hh mm] (mapv int (s/split s #":"))]
     (minutes-of-day hh mm)))
 
-(defn between? [time start end]
-  (and (>= time start)
-       (< time end)))
-
-(defn time-slot [{[start end] :time}]
-  (mapv time-str->minutes [start end]))
-
-(defn current? [t]
-  (fn [[first second]]
-    (let [[second-start second-end] (time-slot second)]
-      (< t second-start))))
-
-(defn slot-index [slot]
-  (.indexOf (to-array clean-agenda) slot))
-
-(defn current-slot [now]
-  (let [hh (.getHours now)
-        mm (.getMinutes now)
-        current-time (minutes-of-day hh mm)
-        slot-pairs (partition 2 1 clean-agenda)]
-    (first (first (filter (current? current-time) slot-pairs)))))
-
-(defn next-slot [slot]
-  (get clean-agenda (inc (slot-index slot))))
-
-(defn before-org? [slot]
-  (= :org (:type (next-slot slot))))
-
 (defn current-progress [now]
   {:progress (agenda-progress now)
-   :current  (current-slot now)
-   :slot     (slot-index (current-slot now))})
+   })
 
-(def progress (atom (current-progress (js/Date.))))
+(defonce progress (atom (current-progress (js/Date.))))
 
 (def light-blue "rgba(160,200,220,.8)")
 
 (def lightning-starts?
   (set (map (comp first :time) (filter (comp #{:lightning} :type) clean-agenda))))
 
-(defn render-time [start idx]
-  [:h1 {:style {:position "absolute"
-                :bottom -30
-                :color (if (even? idx) "white" light-blue)
-                :font-size "4em"}} start])
+(defn render-time [start fg]
+  [:h1.time
+   {:style {:color fg}}
+   start])
 
 (defn org-slot->width
   [start end]
@@ -84,57 +67,41 @@
     (str (* minute-size (- end-min start-min)) "px")))
 
 (defn talk-slot->width
-  ([start end correction?]
-   (let [start-min (time-str->minutes start)
-         end-min (time-str->minutes end)
-         correction (if correction? 10 0)]
-     (str (* minute-size (+ correction (- end-min start-min))) "px")))
   ([start end]
-   (talk-slot->width start end true)))
+   (let [start-min (time-str->minutes start)
+         end-min (time-str->minutes end)]
+     (str (* minute-size (- end-min start-min)) "px"))))
 
-(defmulti render-slot :type)
+(defmulti render-slot (fn [{:keys [type]} _ _] type))
 
 (defmethod render-slot :org
-  [{title :title [start end] :time :as slot}]
+  [{title :title [start end] :time author :author :as slot} bg fg]
   (let [size (org-slot->width start end)]
     [:div.slot {:style {:min-height "100%"
-                        :min-width size}}
-     [:h1 title]
-     [:div {:style {:text-align "center"}}
-      [:img {:src "img/logo.svg"
-             :style {:width "200px"}}]]
-     [render-time start (slot-index slot)]]))
+                        :min-width size
+                        :background-color bg}}
+     [:h1.title title]
+     [render-time start fg]]))
+
+(defn render-talk-slot
+  [{title :title [start end] :time pic :profile-pic author :author :as slot} bg fg]
+  [:div.slot {:style {:min-width (talk-slot->width start end)
+                      :background-color bg}}
+   [:h1.title title]
+   [:div.author
+    [:img.speaker {:src (str "img/speakers/" pic) }]
+    [:h3.name "By " author]]
+   [render-time start fg]])
 
 (defmethod render-slot :talk
-  [{title :title [start end] :time pic :profile-pic author :author :as slot}]
-  [:div.slot {:style {:min-width (if (before-org? slot)
-                                   (talk-slot->width start end false)
-                                   (talk-slot->width start end))}}
-   [:h1 {:style {:line-height "1.5em"}} title]
-   [:div {:style {:text-align "center"}}
-    [:img {:src (str "img/speakers/" pic)
-           :style {:width "200px"
-                   :height "200px"
-                   :border (str "2px solid " light-blue)
-                   :border-radius "200px"}}]
-    [:h3 "By " author]]
-   [render-time start (slot-index slot)]])
+  [slot bg fg]
+  (render-talk-slot slot bg fg))
 
 (defmethod render-slot :lightning
-  [{title :title [start end] :time pic :profile-pic author :author :as slot}]
-  [:div.slot {:style {:min-width (talk-slot->width start end false)}}
-   [:div {:style {:text-align "center"
-                  :margin-right "-50px"}}
-    [:h2 {:style {:line-height "1.5em"}} title]
-    [:h3 "By " author]
-    [:img {:src (str "img/speakers/" pic)
-           :style {:width "200px"
-                   :height "200px"
-                   :border-radius "200px"}}]]
-   [render-time start (slot-index slot)]])
+  [slot bg fg]
+  (render-talk-slot slot bg fg))
 
-(defmethod render-slot :default
-  []
+(defmethod render-slot :default [_ _ _]
   [:h1 "Something went wrong!"])
 
 (defn time-bar []
@@ -145,42 +112,28 @@
                  :left "650px"
                  :top "-100px"}}])
 
-(defn adjust-progress-for-margin
-  "Every slot has a 50px margin, need to adjust the time scale accordingly"
-  [{progress :progress {[slot-start slot-end] :time} :current slot :slot}]
-  (let [slot-start (time-str->minutes slot-start)
-        slot-end   (time-str->minutes slot-end)
-        length (- slot-end slot-start)
-        slot-progress (- (+ agenda-start progress) slot-start)]
-    (+ (* 50 slot)
-       (/ (* 50 slot-progress) length))))
-
 (defn progress->margin []
   (if (> 0 (:progress @progress))
     "650px"
-    (let [correction (adjust-progress-for-margin @progress)]
-      (str (max (- (- 650 (* minute-size (:progress @progress))) correction)
-                (- (- 650 (* minute-size 780)) correction)) "px"))))
+    (str (- 650 (* minute-size (:progress @progress)))
+         "px")))
 
-(defn render-all-slots
-  [slots]
+(defn render-all-slots [slots]
+  (let [colors (cycle [light-blue "white"])]
   [:div {:style {:overflow "hidden"
                  :display "flex"
                  :position "relative"
                  :min-height "100%"
+                 :transition "margin-left 200ms ease-in-out"
                  :margin-left (progress->margin)}}
-   (map (fn [slot bg]
-          [:span {:key (gensym)
-                  :style {:display "block"
-                          :position "relative"
-                          :background-color bg
-                          :float "left"
-                          :min-height "100%"
-                          :padding-right "50px"}}
-           [render-slot slot]]) slots (cycle [light-blue "white"]))])
+   (doall (map
+            (fn [slot bg fg]
+              ^{:key slot} [render-slot slot bg fg])
+            slots
+            colors
+            (drop 1 colors)))]))
 
-(defn carousel-component
-  []
+(defn carousel-component []
   [:div.site {:style {:height "70vh"}}
    [render-all-slots clean-agenda]
    [time-bar]
@@ -190,13 +143,33 @@
                                    :height "30vh"
                                    :width "100%"}}]]])
 
-(defn update-progress []
-  (let [time (js/Date.)]
-    (reset! progress (current-progress time))))
+(def test-progress (atom 8))
+
+(defn update-progress-test! []
+  (when (< @test-progress 19)
+    (reset! progress (current-progress (doto (js/Date.)
+                                         (.setHours @test-progress)
+                                         (.setMinutes 55))))
+    (swap! test-progress inc)
+    true))
+
+(defn update-progress! []
+  (when (< (.getHours (js/Date.)) 19)
+    (reset! progress (current-progress (js/Date.)))
+    true))
+
+(defn schedule [f t]
+  (.setTimeout js/window
+               (fn [] (when (f) (schedule f t)))
+               t))
 
 (defn init []
+  (dcd/init)
   (when js/document.location
-    (reagent/render-component
-     [carousel-component]
-     (.getElementById js/document "container"))
-    (.setInterval js/window update-progress 1000)))
+    (let [root (.getElementById js/document "carousel-container")]
+      (when root
+        (reagent/render-component [carousel-component] root)
+        (schedule update-progress! 1000)
+        ; (schedule update-progress-test! 1000)
+        ; (dotimes [_ 5] (update-progress-test!))
+        ))))

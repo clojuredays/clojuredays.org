@@ -421,3 +421,32 @@ body {
       }
     }
 }
+
+#carousel-container {
+  div.slot {
+    text-align: left;
+    position: relative;
+
+    div.author, .title {
+      padding-left: 10px;
+    }
+
+    img.speaker {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+
+    h1.time {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      font-size: 4em;
+      width: 100%;
+    }
+
+    .title {
+      line-height: 1.5em;
+    }
+  }
+}
