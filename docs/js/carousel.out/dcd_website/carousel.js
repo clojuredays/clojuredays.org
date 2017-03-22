@@ -27,7 +27,7 @@ return and__6443__auto__;
 }
 });})($))
 ,$);
-var $__$2 = cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$time,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["8:30","9:30"], null),cljs.core.cst$kw$type,cljs.core.cst$kw$org,cljs.core.cst$kw$title,"Reception/Opening"], null)], null),$__$1,cljs.core.array_seq([new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$time,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["18:20","20:00"], null),cljs.core.cst$kw$type,cljs.core.cst$kw$org,cljs.core.cst$kw$title,"Closing/Networking/Drinks"], null)], null)], 0));
+var $__$2 = cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$time,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["8:30","9:30"], null),cljs.core.cst$kw$type,cljs.core.cst$kw$org,cljs.core.cst$kw$title,"Reception/Opening"], null)], null),$__$1,cljs.core.array_seq([new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$time,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["18:20","20:00"], null),cljs.core.cst$kw$type,cljs.core.cst$kw$org,cljs.core.cst$kw$timeline_DASH_description,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$timeline_DASH_description,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2,"Thank you!"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h3,"See you next year for #DCD18!"], null)], null),cljs.core.cst$kw$title,"Closing/Networking/Drinks"], null)], null)], 0));
 return $__$2;
 })();
 dcd_website.carousel.minutes_of_day = (function dcd_website$carousel$minutes_of_day(hh,mm){
@@ -118,8 +118,9 @@ var vec__12818 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs
 var start = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12818,(0),null);
 var end = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12818,(1),null);
 var author = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs.core.cst$kw$author);
+var description = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs.core.cst$kw$timeline_DASH_description);
 var size = dcd_website.carousel.org_slot__GT_width(start,end);
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$slot,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$min_DASH_height,"100%",cljs.core.cst$kw$min_DASH_width,size,cljs.core.cst$kw$background_DASH_color,bg], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$title,title], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.render_time,start,fg], null)], null);
+return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$slot,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$min_DASH_height,"100%",cljs.core.cst$kw$min_DASH_width,size,cljs.core.cst$kw$background_DASH_color,bg], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$title,title], null),(cljs.core.truth_(description)?description:null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.render_time,start,fg], null)], null);
 }));
 dcd_website.carousel.render_talk_slot = (function dcd_website$carousel$render_talk_slot(p__12820,bg,fg){
 var map__12824 = p__12820;
@@ -184,14 +185,25 @@ return null;
 }
 });
 dcd_website.carousel.update_progress_BANG_ = (function dcd_website$carousel$update_progress_BANG_(){
-if(((new Date()).getHours() < (19))){
-var G__12839_12841 = dcd_website.carousel.progress;
-var G__12840_12842 = dcd_website.carousel.current_progress((new Date()));
-(cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__12839_12841,G__12840_12842) : cljs.core.reset_BANG_.call(null,G__12839_12841,G__12840_12842));
+var d = (new Date());
+if((d.getHours() < (19))){
+var G__12843_12849 = dcd_website.carousel.progress;
+var G__12844_12850 = dcd_website.carousel.current_progress(d);
+(cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__12843_12849,G__12844_12850) : cljs.core.reset_BANG_.call(null,G__12843_12849,G__12844_12850));
 
 return true;
 } else {
-return null;
+var G__12846_12851 = dcd_website.carousel.progress;
+var G__12847_12852 = dcd_website.carousel.current_progress((function (){var G__12848 = d;
+G__12848.setHours((19));
+
+G__12848.setMinutes((30));
+
+return G__12848;
+})());
+(cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__12846_12851,G__12847_12852) : cljs.core.reset_BANG_.call(null,G__12846_12851,G__12847_12852));
+
+return false;
 }
 });
 dcd_website.carousel.schedule = (function dcd_website$carousel$schedule(f,t){
@@ -209,9 +221,9 @@ dcd_website.app.init();
 if(cljs.core.truth_(document.location)){
 var root = document.getElementById("carousel-container");
 if(cljs.core.truth_(root)){
-var G__12845_12847 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.carousel_component], null);
-var G__12846_12848 = root;
-(reagent.core.render_component.cljs$core$IFn$_invoke$arity$2 ? reagent.core.render_component.cljs$core$IFn$_invoke$arity$2(G__12845_12847,G__12846_12848) : reagent.core.render_component.call(null,G__12845_12847,G__12846_12848));
+var G__12855_12857 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.carousel_component], null);
+var G__12856_12858 = root;
+(reagent.core.render_component.cljs$core$IFn$_invoke$arity$2 ? reagent.core.render_component.cljs$core$IFn$_invoke$arity$2(G__12855_12857,G__12856_12858) : reagent.core.render_component.call(null,G__12855_12857,G__12856_12858));
 
 return dcd_website.carousel.schedule(dcd_website.carousel.update_progress_BANG_,(1000));
 } else {
