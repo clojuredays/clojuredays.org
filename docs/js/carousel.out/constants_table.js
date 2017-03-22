@@ -322,6 +322,7 @@ cljs.core.cst$sym$nocache_QMARK_ = new cljs.core.Symbol(null,"nocache?","nocache
 cljs.core.cst$sym$number_QMARK_ = new cljs.core.Symbol(null,"number?","number?",-1747282210,null);
 cljs.core.cst$kw$a = new cljs.core.Keyword(null,"a","a",-2123407586);
 cljs.core.cst$kw$div_SHARP_behave = new cljs.core.Keyword(null,"div#behave","div#behave",-1738240162);
+cljs.core.cst$kw$img$all_DASH_sponsors = new cljs.core.Keyword(null,"img.all-sponsors","img.all-sponsors",610085790);
 cljs.core.cst$kw$height = new cljs.core.Keyword(null,"height","height",1025178622);
 cljs.core.cst$sym$symbol_QMARK_ = new cljs.core.Symbol(null,"symbol?","symbol?",1820680511,null);
 cljs.core.cst$kw$left = new cljs.core.Keyword(null,"left","left",-399115937);
