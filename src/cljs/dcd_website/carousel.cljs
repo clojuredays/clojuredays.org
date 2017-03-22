@@ -19,6 +19,10 @@
                $
                [{:time ["18:20" "20:00"]
                  :type :org
+                 :timeline-description
+                 [:div.timeline-description
+                  [:h2 "Thank you!"]
+                  [:h3 "See you next year for #DCD18!"]]
                  :title "Closing/Networking/Drinks"}])))
 
 (defn minutes-of-day [hh mm]
@@ -75,12 +79,13 @@
 (defmulti render-slot (fn [{:keys [type]} _ _] type))
 
 (defmethod render-slot :org
-  [{title :title [start end] :time author :author :as slot} bg fg]
+  [{title :title [start end] :time author :author description :timeline-description :as slot} bg fg]
   (let [size (org-slot->width start end)]
     [:div.slot {:style {:min-height "100%"
                         :min-width size
                         :background-color bg}}
      [:h1.title title]
+     (when description description)
      [render-time start fg]]))
 
 (defn render-talk-slot
@@ -170,7 +175,7 @@
     (let [root (.getElementById js/document "carousel-container")]
       (when root
         (reagent/render-component [carousel-component] root)
-        (schedule update-progress! 1000)
+        ; (schedule update-progress! 1000)
         ; (schedule update-progress-test! 1000)
         ; (dotimes [_ 5] (update-progress-test!))
         ))))
