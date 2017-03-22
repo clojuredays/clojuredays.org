@@ -137,11 +137,12 @@
   [:div.site {:style {:height "70vh"}}
    [render-all-slots clean-agenda]
    [time-bar]
-   [:div.wrapper {:style {}}
+   [:div.wrapper
     [dcd/header-component {:style {:position "absolute"
                                    :bottom 0
                                    :height "30vh"
-                                   :width "100%"}}]]])
+                                   :width "100%"}}]
+    [:img.all-sponsors {:src "img/all-sponsors.svg"}]]])
 
 (def test-progress (atom 8))
 
