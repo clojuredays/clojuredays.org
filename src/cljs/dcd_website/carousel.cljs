@@ -160,9 +160,16 @@
     true))
 
 (defn update-progress! []
-  (when (< (.getHours (js/Date.)) 19)
-    (reset! progress (current-progress (js/Date.)))
-    true))
+  (let [d (js/Date.)]
+    (if (< (.getHours d) 19)
+      (do
+        (reset! progress (current-progress d))
+        true)
+      (do
+        (reset! progress (current-progress (doto d
+                                             (.setHours 19)
+                                             (.setMinutes 30))))
+        false))))
 
 (defn schedule [f t]
   (.setTimeout js/window
@@ -175,7 +182,7 @@
     (let [root (.getElementById js/document "carousel-container")]
       (when root
         (reagent/render-component [carousel-component] root)
-        ; (schedule update-progress! 1000)
+        (schedule update-progress! 1000)
         ; (schedule update-progress-test! 1000)
         ; (dotimes [_ 5] (update-progress-test!))
         ))))
