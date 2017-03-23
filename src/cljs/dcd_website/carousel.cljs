@@ -145,7 +145,7 @@
    [:div.wrapper
     [dcd/header-component {:style {:position "absolute"
                                    :bottom 0
-                                   :height "30vh"
+                                   :height "350px"
                                    :width "100%"}}]
     [:img.all-sponsors {:src "img/all-sponsors.svg"}]]])
 
