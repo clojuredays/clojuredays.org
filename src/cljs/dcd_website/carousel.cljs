@@ -139,7 +139,7 @@
             (drop 1 colors)))]))
 
 (defn carousel-component []
-  [:div.site {:style {:height "70vh"}}
+  [:div.site {:style {:height "71vh"}}
    [render-all-slots clean-agenda]
    [time-bar]
    [:div.wrapper
