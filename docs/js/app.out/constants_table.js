@@ -286,6 +286,7 @@ cljs.core.cst$kw$div_SHARP_org = new cljs.core.Keyword(null,"div#org","div#org",
 cljs.core.cst$kw$keywordize_DASH_keys = new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252);
 cljs.core.cst$sym$off = new cljs.core.Symbol(null,"off","off",-2047994980,null);
 cljs.core.cst$sym$auto_DASH_run = new cljs.core.Symbol(null,"auto-run","auto-run",-696035332,null);
+cljs.core.cst$kw$add_DASH_padding = new cljs.core.Keyword(null,"add-padding","add-padding",-933872579);
 cljs.core.cst$kw$footer$footer = new cljs.core.Keyword(null,"footer.footer","footer.footer",1361475645);
 cljs.core.cst$sym$stack = new cljs.core.Symbol(null,"stack","stack",847125597,null);
 cljs.core.cst$kw$p = new cljs.core.Keyword(null,"p","p",151049309);

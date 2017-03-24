@@ -49,12 +49,9 @@ return dcd_website.carousel.date__GT_minutes(start);
  * Calculates the number of minutes since 8:30
  */
 dcd_website.carousel.agenda_progress = (function dcd_website$carousel$agenda_progress(date){
-var x__6793__auto__ = (780);
-var y__6794__auto__ = (function (){var x__6786__auto__ = (0);
+var x__6786__auto__ = (0);
 var y__6787__auto__ = (dcd_website.carousel.date__GT_minutes(date) - dcd_website.carousel.agenda_start);
 return ((x__6786__auto__ > y__6787__auto__) ? x__6786__auto__ : y__6787__auto__);
-})();
-return ((x__6793__auto__ < y__6794__auto__) ? x__6793__auto__ : y__6794__auto__);
 });
 dcd_website.carousel.time_str__GT_minutes = (function dcd_website$carousel$time_str__GT_minutes(s){
 var vec__12808 = cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(cljs.core.int$,clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/:/));
@@ -63,6 +60,8 @@ var mm = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12808,(1),null);
 return dcd_website.carousel.minutes_of_day(hh,mm);
 });
 dcd_website.carousel.current_progress = (function dcd_website$carousel$current_progress(now){
+cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$progress,now], 0));
+
 return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$progress,dcd_website.carousel.agenda_progress(now)], null);
 });
 if(typeof dcd_website.carousel.progress !== 'undefined'){
@@ -79,10 +78,11 @@ var start_min = dcd_website.carousel.time_str__GT_minutes(start);
 var end_min = dcd_website.carousel.time_str__GT_minutes(end);
 return [cljs.core.str((dcd_website.carousel.minute_size * (end_min - start_min))),cljs.core.str("px")].join('');
 });
-dcd_website.carousel.talk_slot__GT_width = (function dcd_website$carousel$talk_slot__GT_width(start,end){
+dcd_website.carousel.talk_slot__GT_width = (function dcd_website$carousel$talk_slot__GT_width(start,end,add_padding){
 var start_min = dcd_website.carousel.time_str__GT_minutes(start);
 var end_min = dcd_website.carousel.time_str__GT_minutes(end);
-return [cljs.core.str((dcd_website.carousel.minute_size * (end_min - start_min))),cljs.core.str("px")].join('');
+var padding = (cljs.core.truth_(add_padding)?((10) * dcd_website.carousel.minute_size):(0));
+return [cljs.core.str((padding + (dcd_website.carousel.minute_size * (end_min - start_min)))),cljs.core.str("px")].join('');
 });
 if(typeof dcd_website.carousel.render_slot !== 'undefined'){
 } else {
@@ -132,7 +132,8 @@ var start = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12825,(0),null);
 var end = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12825,(1),null);
 var pic = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12824__$1,cljs.core.cst$kw$profile_DASH_pic);
 var author = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12824__$1,cljs.core.cst$kw$author);
-return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$slot,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$min_DASH_width,dcd_website.carousel.talk_slot__GT_width(start,end),cljs.core.cst$kw$background_DASH_color,bg], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$title,title], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$author,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img$speaker,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,[cljs.core.str("img/speakers/"),cljs.core.str(pic)].join('')], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h3$name,"By ",author], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.render_time,start,fg], null)], null);
+var add_padding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12824__$1,cljs.core.cst$kw$add_DASH_padding);
+return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$slot,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$min_DASH_width,dcd_website.carousel.talk_slot__GT_width(start,end,add_padding),cljs.core.cst$kw$background_DASH_color,bg], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$title,title], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$author,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img$speaker,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,[cljs.core.str("img/speakers/"),cljs.core.str(pic)].join('')], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h3$name,"By ",author], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.render_time,start,fg], null)], null);
 });
 dcd_website.carousel.render_slot.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$talk,(function (slot,bg,fg){
 return dcd_website.carousel.render_talk_slot(slot,bg,fg);
@@ -166,12 +167,11 @@ return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMP
 });
 dcd_website.carousel.test_progress = reagent.core.atom.cljs$core$IFn$_invoke$arity$1((8));
 dcd_website.carousel.update_progress_test_BANG_ = (function dcd_website$carousel$update_progress_test_BANG_(){
-if(((cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(dcd_website.carousel.test_progress) : cljs.core.deref.call(null,dcd_website.carousel.test_progress)) < (19))){
 var G__12832_12835 = dcd_website.carousel.progress;
 var G__12833_12836 = dcd_website.carousel.current_progress((function (){var G__12834 = (new Date());
 G__12834.setHours((cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(dcd_website.carousel.test_progress) : cljs.core.deref.call(null,dcd_website.carousel.test_progress)));
 
-G__12834.setMinutes((55));
+G__12834.setMinutes((20));
 
 return G__12834;
 })());
@@ -180,13 +180,10 @@ return G__12834;
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(dcd_website.carousel.test_progress,cljs.core.inc);
 
 return true;
-} else {
-return null;
-}
 });
 dcd_website.carousel.update_progress_BANG_ = (function dcd_website$carousel$update_progress_BANG_(){
 var d = (new Date());
-if((d.getHours() > (19))){
+if((d.getHours() < (19))){
 var G__12843_12849 = dcd_website.carousel.progress;
 var G__12844_12850 = dcd_website.carousel.current_progress(d);
 (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__12843_12849,G__12844_12850) : cljs.core.reset_BANG_.call(null,G__12843_12849,G__12844_12850));
@@ -197,7 +194,7 @@ var G__12846_12851 = dcd_website.carousel.progress;
 var G__12847_12852 = dcd_website.carousel.current_progress((function (){var G__12848 = d;
 G__12848.setHours((19));
 
-G__12848.setMinutes((30));
+G__12848.setMinutes((20));
 
 return G__12848;
 })());
