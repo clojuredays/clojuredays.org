@@ -161,7 +161,7 @@
 
 (defn update-progress! []
   (let [d (js/Date.)]
-    (if (< (.getHours d) 19)
+    (if (> (.getHours d) 19)
       (do
         (reset! progress (current-progress d))
         true)
