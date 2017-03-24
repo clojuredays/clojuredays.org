@@ -186,7 +186,7 @@ return null;
 });
 dcd_website.carousel.update_progress_BANG_ = (function dcd_website$carousel$update_progress_BANG_(){
 var d = (new Date());
-if((d.getHours() < (19))){
+if((d.getHours() > (19))){
 var G__12843_12849 = dcd_website.carousel.progress;
 var G__12844_12850 = dcd_website.carousel.current_progress(d);
 (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__12843_12849,G__12844_12850) : cljs.core.reset_BANG_.call(null,G__12843_12849,G__12844_12850));
