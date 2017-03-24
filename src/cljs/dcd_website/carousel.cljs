@@ -40,17 +40,16 @@
 (defn agenda-progress
   "Calculates the number of minutes since 8:30"
   [date]
-  (min 780
-       (max 0
-            (- (date->minutes date) agenda-start))))
+  (max 0
+       (- (date->minutes date) agenda-start)))
 
 (defn time-str->minutes [s]
   (let [[hh mm] (mapv int (s/split s #":"))]
     (minutes-of-day hh mm)))
 
 (defn current-progress [now]
-  {:progress (agenda-progress now)
-   })
+  (prn :progress now)
+  {:progress (agenda-progress now)})
 
 (defonce progress (atom (current-progress (js/Date.))))
 
@@ -71,10 +70,11 @@
     (str (* minute-size (- end-min start-min)) "px")))
 
 (defn talk-slot->width
-  ([start end]
+  ([start end add-padding]
    (let [start-min (time-str->minutes start)
-         end-min (time-str->minutes end)]
-     (str (* minute-size (- end-min start-min)) "px"))))
+         end-min (time-str->minutes end)
+         padding (if add-padding (* 10 minute-size) 0)]
+     (str (+ padding (* minute-size (- end-min start-min))) "px"))))
 
 (defmulti render-slot (fn [{:keys [type]} _ _] type))
 
@@ -89,8 +89,8 @@
      [render-time start fg]]))
 
 (defn render-talk-slot
-  [{title :title [start end] :time pic :profile-pic author :author :as slot} bg fg]
-  [:div.slot {:style {:min-width (talk-slot->width start end)
+  [{title :title [start end] :time pic :profile-pic author :author add-padding :add-padding :as slot} bg fg]
+  [:div.slot {:style {:min-width (talk-slot->width start end add-padding)
                       :background-color bg}}
    [:h1.title title]
    [:div.author
@@ -152,23 +152,22 @@
 (def test-progress (atom 8))
 
 (defn update-progress-test! []
-  (when (< @test-progress 19)
-    (reset! progress (current-progress (doto (js/Date.)
-                                         (.setHours @test-progress)
-                                         (.setMinutes 55))))
-    (swap! test-progress inc)
-    true))
+  (reset! progress (current-progress (doto (js/Date.)
+                                       (.setHours @test-progress)
+                                       (.setMinutes 20))))
+  (swap! test-progress inc)
+  true)
 
 (defn update-progress! []
   (let [d (js/Date.)]
-    (if (> (.getHours d) 19)
+    (if (< (.getHours d) 19)
       (do
         (reset! progress (current-progress d))
         true)
       (do
         (reset! progress (current-progress (doto d
                                              (.setHours 19)
-                                             (.setMinutes 30))))
+                                             (.setMinutes 20))))
         false))))
 
 (defn schedule [f t]
@@ -184,5 +183,8 @@
         (reagent/render-component [carousel-component] root)
         (schedule update-progress! 1000)
         ; (schedule update-progress-test! 1000)
-        ; (dotimes [_ 5] (update-progress-test!))
+        ; (enable-console-print!)
+        ; (dotimes [_ 11] (update-progress-test!))
+        ; (prn @progress)
+        ; (prn (map :time clean-agenda))
         ))))

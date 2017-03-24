@@ -235,6 +235,7 @@
     :description "How do we make effective use of data when designing software in Clojure? This talk will provide a tour of the options that are available, and explain how liberal use of data structures can make a codebase simpler and more adaptive to change."
     :bio "James Reeves is the current lead developer of Ring, and is the author of a number of other Clojure web development libraries, including Compojure and Hiccup."
     :twitter "weavejester"
+    :add-padding true
     :type :talk}
 
    {:time ["10:25" "11:10"]
@@ -244,6 +245,7 @@
     :description "Brace yourself for a journey into the mysterious and magnificent world of generative testing. Andreas tells his story of how he has combined data generators with Selenium, to test the part of the application every programmer dreads the most: the user interface. By applying this chaotic testing technique to the user interface and the application as a whole, he has found bugs, gained new insight, and ultimately had a lot of fun."
     :bio "I'm an independent consultant, who fell in love with Clojure in 2011 and I've been a functional programming enthusiast ever since. When I don't work for clients, I try to spend as much time as possible on my own (crazy) projects."
     :twitter "aglundahl"
+    :add-padding true
     :type :talk}
 
    {:time ["11:20" "12:05"]
@@ -274,6 +276,7 @@
     :description "Few months ago our company NomNom decided to move all its backend services from Ruby to Clojure. And I think a road trip is best comparison for this migration. There was excitement at start, then panic a few hours down the road wondering what was left behind,  but now a constant joy of discovering new things. In this talk I’d like to share how we eventually arrived at Stuart Sierra’s Component. Let’s take a look at how components improved our quickly growing codebase and testing, as well as some of the trade-offs we had to make. Finally I’ll show how components can help with managing running code in production."
     :bio "Marketa currently works as a Clojure developer at NomNom and is a co-organizer of the Prague Lambda Meetup. She is actively involved in introducing Clojure to wider community and has an strong interest in teaching programming."
     :twitter "MarketaAdamova"
+    :add-padding true
     :type :talk}
 
    {:title "Lightning Talks"
@@ -328,6 +331,7 @@
     :description "Clojure has always been good at manipulating data. With the release of spec and Onyx (\"masterless, cloud scale, fault tolerant, high performance distributed computation system\") good became best. In this talk I will walk you through a data layer architecture build around Kafka an Onyx that is self-describing, declarative, scalable and convenient to work with for the end user. The focus will be on the power and elegance of describing data and computation with data; and the inferences and automations that can be built on top of that."
     :bio "Built my first computer out of Lego bricks and learned to program soon after. Emergence, networks, modes of thought, limits of language and expression are what makes me smile (and up at night). Currently working at GoOpti making the company data-driven; setting up our analytics infrastructure (end goal: provide any answer stemming from data in 2 min or less); and building our predictive-realtime-superduper pricing engine."
     :twitter "sbelak"
+    :add-padding true
     :type :talk}
 
    {:time ["16:40" "17:25"]
@@ -337,6 +341,7 @@
     :description "Are you learning Clojure and want to be prepared for some of the most common traps and pitfalls? Are you a seasoned Clojure veteran and you think you've seen them all? Then come join us to play the Clojure Puzzlers! 8 questions are presented to the audience and you'll have to pick one of the possible answers. Anyone with a working knowledge of the language will be able to understand the puzzles, but even the most senior Clojure master will be puzzled. The interactive talk format is entertaining while the puzzles teach you about the subtleties of Clojure and its standard library."
     :bio "I started programming professionally around 2000. I've done work/research for different industries, corporate and startups. I moved between languages and got interested in Clojure sometime in 2010. After some spare time with it I decided it had to be my profession! I'm author of \"Clojure Standard Library, an Annotated Reference\" by Manning. I currently work at uSwitch in London."
     :twitter "reborg"
+    :add-padding true
     :type :talk}
 
    {:time ["17:35" "18:20"]
@@ -346,6 +351,7 @@
     :description "The talk goes over how to translate a product idea and continuous real world  user feedback from rapid iterations into a working prototype. I will highlight the distinct advantages of ClojureScript itself and its sophisticated tooling for this purpose, but also show how the excellent re-frame library provides sane and scalable structure and other \"similar in spirit\" technologies like PouchDB and CouchDB serve as a solid foundation for the prototype."
     :bio "Former lawyer now legal tech consultant and entrepreneur build next generation contract management system using ClojureScript."
     :twitter "MartinClausen8"
+    :add-padding true
     :type :talk}
 
    {:time ["18:20" "18:30"]
