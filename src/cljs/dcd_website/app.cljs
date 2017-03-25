@@ -336,6 +336,15 @@
     :type :talk}
 
    {:time ["16:40" "17:25"]
+    :title "From 0 to prototype using ClojureScript, re-frame and friends."
+    :profile-pic "martin.jpg"
+    :author "Martin Clausen"
+    :description "The talk goes over how to translate a product idea and continuous real world  user feedback from rapid iterations into a working prototype. I will highlight the distinct advantages of ClojureScript itself and its sophisticated tooling for this purpose, but also show how the excellent re-frame library provides sane and scalable structure and other \"similar in spirit\" technologies like PouchDB and CouchDB serve as a solid foundation for the prototype."
+    :bio "Former lawyer now legal tech consultant and entrepreneur build next generation contract management system using ClojureScript."
+    :twitter "MartinClausen8"
+    :type :talk}
+
+   {:time ["17:35" "18:20"]
     :title "Clojure Puzzlers"
     :profile-pic "renzo.jpg"
     :author "Renzo Borgatti"
@@ -343,15 +352,6 @@
     :bio "I started programming professionally around 2000. I've done work/research for different industries, corporate and startups. I moved between languages and got interested in Clojure sometime in 2010. After some spare time with it I decided it had to be my profession! I'm author of \"Clojure Standard Library, an Annotated Reference\" by Manning. I currently work at uSwitch in London."
     :twitter "reborg"
     :add-padding true
-    :type :talk}
-
-   {:time ["17:35" "18:20"]
-    :title "From 0 to prototype using ClojureScript, re-frame and friends."
-    :profile-pic "martin.jpg"
-    :author "Martin Clausen"
-    :description "The talk goes over how to translate a product idea and continuous real world  user feedback from rapid iterations into a working prototype. I will highlight the distinct advantages of ClojureScript itself and its sophisticated tooling for this purpose, but also show how the excellent re-frame library provides sane and scalable structure and other \"similar in spirit\" technologies like PouchDB and CouchDB serve as a solid foundation for the prototype."
-    :bio "Former lawyer now legal tech consultant and entrepreneur build next generation contract management system using ClojureScript."
-    :twitter "MartinClausen8"
     :type :talk}
 
    {:time ["18:20" "18:30"]
