@@ -97,7 +97,7 @@
 
 (defn when-component []
   [:div
-   [:p"Dutch Clojure Days will happen on "]
+   [:p"Dutch Clojure Days did happen on "]
    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440" :target :_blank}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017, 8:30 AM – 5:30 PM CET"] "."])
 
