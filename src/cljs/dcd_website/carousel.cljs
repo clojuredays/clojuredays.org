@@ -64,10 +64,11 @@
    start])
 
 (defn org-slot->width
-  [start end]
+  [start end add-padding]
   (let [start-min (time-str->minutes start)
-        end-min (time-str->minutes end)]
-    (str (* minute-size (- end-min start-min)) "px")))
+        end-min (time-str->minutes end)
+        padding (if add-padding (* 10 minute-size) 0)]
+    (str (+ padding (* minute-size (- end-min start-min))) "px")))
 
 (defn talk-slot->width
   ([start end add-padding]
@@ -79,8 +80,8 @@
 (defmulti render-slot (fn [{:keys [type]} _ _] type))
 
 (defmethod render-slot :org
-  [{title :title [start end] :time author :author description :timeline-description :as slot} bg fg]
-  (let [size (org-slot->width start end)]
+  [{title :title [start end] :time author :author description :timeline-description add-padding :add-paggind :as slot} bg fg]
+  (let [size (org-slot->width start end add-padding)]
     [:div.slot {:style {:min-height "100%"
                         :min-width size
                         :background-color bg}}
@@ -125,18 +126,19 @@
 
 (defn render-all-slots [slots]
   (let [colors (cycle [light-blue "white"])]
-  [:div {:style {:overflow "hidden"
-                 :display "flex"
-                 :position "relative"
-                 :min-height "100%"
-                 :transition "margin-left 200ms ease-in-out"
-                 :margin-left (progress->margin)}}
-   (doall (map
-            (fn [slot bg fg]
-              ^{:key slot} [render-slot slot bg fg])
-            slots
-            colors
-            (drop 1 colors)))]))
+    (prn "progress->margin" (progress->margin))
+    [:div {:style {:overflow "hidden"
+                   :display "flex"
+                   :position "relative"
+                   :min-height "100%"
+                   :transition "margin-left 200ms ease-in-out"
+                   :margin-left (progress->margin)}}
+     (doall (map
+             (fn [slot bg fg]
+               ^{:key slot} [render-slot slot bg fg])
+             slots
+             colors
+             (drop 1 colors)))]))
 
 (defn carousel-component []
   [:div.site {:style {:height "71vh"}}
@@ -169,6 +171,11 @@
                                              (.setHours 19)
                                              (.setMinutes 20))))
         false))))
+
+(defn set-time-test [hh mm]
+  (reset! progress (current-progress (doto (js/Date.)
+                                       (.setHours hh)
+                                       (.setMinutes mm)))))
 
 (defn schedule [f t]
   (.setTimeout js/window

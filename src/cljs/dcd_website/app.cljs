@@ -322,6 +322,7 @@
    {:time ["15:15" "15:45"]
     :title "Coffee break"
     :type :org
+    :add-padding true
     :force-timeline-visible? true}
 
    {:time ["15:45" "16:30"]
@@ -351,7 +352,6 @@
     :description "The talk goes over how to translate a product idea and continuous real world  user feedback from rapid iterations into a working prototype. I will highlight the distinct advantages of ClojureScript itself and its sophisticated tooling for this purpose, but also show how the excellent re-frame library provides sane and scalable structure and other \"similar in spirit\" technologies like PouchDB and CouchDB serve as a solid foundation for the prototype."
     :bio "Former lawyer now legal tech consultant and entrepreneur build next generation contract management system using ClojureScript."
     :twitter "MartinClausen8"
-    :add-padding true
     :type :talk}
 
    {:time ["18:20" "18:30"]
