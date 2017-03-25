@@ -263,6 +263,7 @@ cljs.core.cst$kw$img$speaker = new cljs.core.Keyword(null,"img.speaker","img.spe
 cljs.core.cst$kw$h1$title = new cljs.core.Keyword(null,"h1.title","h1.title",-2139952071);
 cljs.core.cst$sym$keys = new cljs.core.Symbol(null,"keys","keys",-1586012071,null);
 cljs.core.cst$kw$span$org_DASH_info = new cljs.core.Keyword(null,"span.org-info","span.org-info",1821273177);
+cljs.core.cst$kw$add_DASH_paggind = new cljs.core.Keyword(null,"add-paggind","add-paggind",125798553);
 cljs.core.cst$sym$set_BANG_ = new cljs.core.Symbol(null,"set!","set!",250714521,null);
 cljs.core.cst$kw$tag = new cljs.core.Keyword(null,"tag","tag",-1290361223);
 cljs.core.cst$sym$tree_DASH_map = new cljs.core.Symbol(null,"tree-map","tree-map",1373073049,null);

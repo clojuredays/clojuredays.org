@@ -73,10 +73,11 @@ dcd_website.carousel.lightning_starts_QMARK_ = cljs.core.set(cljs.core.map.cljs$
 dcd_website.carousel.render_time = (function dcd_website$carousel$render_time(start,fg){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$time,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$color,fg], null)], null),start], null);
 });
-dcd_website.carousel.org_slot__GT_width = (function dcd_website$carousel$org_slot__GT_width(start,end){
+dcd_website.carousel.org_slot__GT_width = (function dcd_website$carousel$org_slot__GT_width(start,end,add_padding){
 var start_min = dcd_website.carousel.time_str__GT_minutes(start);
 var end_min = dcd_website.carousel.time_str__GT_minutes(end);
-return [cljs.core.str((dcd_website.carousel.minute_size * (end_min - start_min))),cljs.core.str("px")].join('');
+var padding = (cljs.core.truth_(add_padding)?((10) * dcd_website.carousel.minute_size):(0));
+return [cljs.core.str((padding + (dcd_website.carousel.minute_size * (end_min - start_min)))),cljs.core.str("px")].join('');
 });
 dcd_website.carousel.talk_slot__GT_width = (function dcd_website$carousel$talk_slot__GT_width(start,end,add_padding){
 var start_min = dcd_website.carousel.time_str__GT_minutes(start);
@@ -119,7 +120,8 @@ var start = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12818,(0),null);
 var end = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12818,(1),null);
 var author = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs.core.cst$kw$author);
 var description = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs.core.cst$kw$timeline_DASH_description);
-var size = dcd_website.carousel.org_slot__GT_width(start,end);
+var add_padding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs.core.cst$kw$add_DASH_paggind);
+var size = dcd_website.carousel.org_slot__GT_width(start,end,add_padding);
 return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$slot,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$min_DASH_height,"100%",cljs.core.cst$kw$min_DASH_width,size,cljs.core.cst$kw$background_DASH_color,bg], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$title,title], null),(cljs.core.truth_(description)?description:null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.render_time,start,fg], null)], null);
 }));
 dcd_website.carousel.render_talk_slot = (function dcd_website$carousel$render_talk_slot(p__12820,bg,fg){
@@ -156,6 +158,8 @@ return [cljs.core.str(((650) - (dcd_website.carousel.minute_size * cljs.core.cst
 });
 dcd_website.carousel.render_all_slots = (function dcd_website$carousel$render_all_slots(slots){
 var colors = cljs.core.cycle(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.light_blue,"white"], null));
+cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq(["progress->margin",dcd_website.carousel.progress__GT_margin()], 0));
+
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 6, [cljs.core.cst$kw$overflow,"hidden",cljs.core.cst$kw$display,"flex",cljs.core.cst$kw$position,"relative",cljs.core.cst$kw$min_DASH_height,"100%",cljs.core.cst$kw$transition,"margin-left 200ms ease-in-out",cljs.core.cst$kw$margin_DASH_left,dcd_website.carousel.progress__GT_margin()], null)], null),cljs.core.doall.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$4(((function (colors){
 return (function (slot,bg,fg){
 return cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.render_slot,slot,bg,fg], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,slot], null));
@@ -203,6 +207,17 @@ return G__12848;
 return false;
 }
 });
+dcd_website.carousel.set_time_test = (function dcd_website$carousel$set_time_test(hh,mm){
+var G__12858 = dcd_website.carousel.progress;
+var G__12859 = dcd_website.carousel.current_progress((function (){var G__12860 = (new Date());
+G__12860.setHours(hh);
+
+G__12860.setMinutes(mm);
+
+return G__12860;
+})());
+return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__12858,G__12859) : cljs.core.reset_BANG_.call(null,G__12858,G__12859));
+});
 dcd_website.carousel.schedule = (function dcd_website$carousel$schedule(f,t){
 return window.setTimeout((function (){
 if(cljs.core.truth_((f.cljs$core$IFn$_invoke$arity$0 ? f.cljs$core$IFn$_invoke$arity$0() : f.call(null)))){
@@ -218,9 +233,9 @@ dcd_website.app.init();
 if(cljs.core.truth_(document.location)){
 var root = document.getElementById("carousel-container");
 if(cljs.core.truth_(root)){
-var G__12855_12857 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.carousel_component], null);
-var G__12856_12858 = root;
-(reagent.core.render_component.cljs$core$IFn$_invoke$arity$2 ? reagent.core.render_component.cljs$core$IFn$_invoke$arity$2(G__12855_12857,G__12856_12858) : reagent.core.render_component.call(null,G__12855_12857,G__12856_12858));
+var G__12863_12865 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.carousel_component], null);
+var G__12864_12866 = root;
+(reagent.core.render_component.cljs$core$IFn$_invoke$arity$2 ? reagent.core.render_component.cljs$core$IFn$_invoke$arity$2(G__12863_12865,G__12864_12866) : reagent.core.render_component.call(null,G__12863_12865,G__12864_12866));
 
 return dcd_website.carousel.schedule(dcd_website.carousel.update_progress_BANG_,(1000));
 } else {
