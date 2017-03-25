@@ -60,8 +60,6 @@ var mm = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12808,(1),null);
 return dcd_website.carousel.minutes_of_day(hh,mm);
 });
 dcd_website.carousel.current_progress = (function dcd_website$carousel$current_progress(now){
-cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$progress,now], 0));
-
 return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$progress,dcd_website.carousel.agenda_progress(now)], null);
 });
 if(typeof dcd_website.carousel.progress !== 'undefined'){
@@ -158,8 +156,6 @@ return [cljs.core.str(((650) - (dcd_website.carousel.minute_size * cljs.core.cst
 });
 dcd_website.carousel.render_all_slots = (function dcd_website$carousel$render_all_slots(slots){
 var colors = cljs.core.cycle(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.light_blue,"white"], null));
-cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq(["progress->margin",dcd_website.carousel.progress__GT_margin()], 0));
-
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 6, [cljs.core.cst$kw$overflow,"hidden",cljs.core.cst$kw$display,"flex",cljs.core.cst$kw$position,"relative",cljs.core.cst$kw$min_DASH_height,"100%",cljs.core.cst$kw$transition,"margin-left 200ms ease-in-out",cljs.core.cst$kw$margin_DASH_left,dcd_website.carousel.progress__GT_margin()], null)], null),cljs.core.doall.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$4(((function (colors){
 return (function (slot,bg,fg){
 return cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.carousel.render_slot,slot,bg,fg], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,slot], null));
