@@ -48,7 +48,6 @@
     (minutes-of-day hh mm)))
 
 (defn current-progress [now]
-  (prn :progress now)
   {:progress (agenda-progress now)})
 
 (defonce progress (atom (current-progress (js/Date.))))
@@ -126,7 +125,6 @@
 
 (defn render-all-slots [slots]
   (let [colors (cycle [light-blue "white"])]
-    (prn "progress->margin" (progress->margin))
     [:div {:style {:overflow "hidden"
                    :display "flex"
                    :position "relative"
@@ -190,7 +188,7 @@
         (reagent/render-component [carousel-component] root)
         (schedule update-progress! 1000)
         ; (schedule update-progress-test! 1000)
-        ; (enable-console-print!)
+        ; (enable-print!)
         ; (dotimes [_ 11] (update-progress-test!))
         ; (prn @progress)
         ; (prn (map :time clean-agenda))
