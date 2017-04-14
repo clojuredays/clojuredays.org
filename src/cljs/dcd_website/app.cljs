@@ -228,7 +228,8 @@
     :bio "James Reeves is the current lead developer of Ring, and is the author of a number of other Clojure web development libraries, including Compojure and Hiccup."
     :twitter "weavejester"
     :add-padding true
-    :type :talk}
+    :type :talk
+    :youtube-link "https://youtu.be/zznwKCifC1A"}
 
    {:time ["10:25" "11:10"]
     :title "Generatively testing user interfaces"
@@ -238,7 +239,8 @@
     :bio "I'm an independent consultant, who fell in love with Clojure in 2011 and I've been a functional programming enthusiast ever since. When I don't work for clients, I try to spend as much time as possible on my own (crazy) projects."
     :twitter "aglundahl"
     :add-padding true
-    :type :talk}
+    :type :talk
+    :youtube-link "https://youtu.be/hHH0LtHQ8T0"}
 
    {:time ["11:20" "12:05"]
     :title "Building Hermetic Systems (without Docker)"
@@ -254,7 +256,8 @@
       [:li "How to leverage Clojure  (and the REPL) to build and manage hermetic systems"]]]
     :bio "Will Farrell is the Lead Software Architect at MojoTech in Providence, RI, where he oversees software projects large and small. He’s been building software for about a decade and loves Clojure especially. In his free time, when not working on open source software, he’s likely practicing his vinyl DJing skills or cooking a fancy meal."
     :twitter "wkf"
-    :type :talk}
+    :type :talk
+    :youtube-link "https://youtu.be/ikLFUmY70u8"}
 
    {:time ["12:05" "13:20"]
     :title "Lunch"
@@ -269,7 +272,8 @@
     :bio "Marketa currently works as a Clojure developer at NomNom and is a co-organizer of the Prague Lambda Meetup. She is actively involved in introducing Clojure to wider community and has an strong interest in teaching programming."
     :twitter "MarketaAdamova"
     :add-padding true
-    :type :talk}
+    :type :talk
+    :youtube-link "https://youtu.be/V8mSlPFZWeM"}
 
    {:title "Lightning Talks"
     :force-timeline-hidden? true
@@ -282,7 +286,8 @@
     :author "Piotr Jagielski"
     :bio "JVM/Java developer for 10 years, last 2 years exploring Clojure/Overtone."
     :twitter "pjagielski"
-    :type :lightning}
+    :type :lightning
+    :youtube-link "https://youtu.be/-PtL5WDZmjQ"}
 
    {:time ["14:30" "14:45"]
     :title "Shipping a Clojurescript App"
@@ -291,7 +296,8 @@
     :description "We will explore a case study of the use of Clojurescript on top of Electron  (Atom Shell) for the development and distribution of a desktop application. Rather than going through an introductory proof of concept, we will focus on the characteristics that made this technology stack a good fit for building, distributing and supporting a desktop app. Along the way, we will pick a few extra tools and practical tricks that may be beneficial to a similar endeavour."
     :bio "I am a web developer with a long term itch for UX and product design.  The Ruby ecosystem has been for a long time my toolkit of choice, but more recently I fell for the charm of functional programming in general, and Lisps in particular. Currently I am running, with the help of a few friends 100Starlings, a remote-first software development collective."
     :twitter "bru"
-    :type :lightning}
+    :type :lightning
+    :youtube-link "https://youtu.be/NE8BW4Sc7N4"}
 
    {:time ["14:45" "15:00"]
     :title "Mach"
@@ -300,7 +306,8 @@
     :description "JUXT's Mach is a remake of make, the venerable build system rebuilt in ClojureScript with some differences. There are hundreds of build tools, this talk will introduce Mach and explain why I felt the need to make one more, what you can do with it and why you might want to use it."
     :bio "Founder of JUXT, author of some Clojure libs including bidi and yada."
     :twitter "malcolmsparks"
-    :type :lightning}
+    :type :lightning
+    :youtube-link "https://youtu.be/RRoJaOs-K6U"}
 
    {:time ["15:00" "15:15"]
     :title "CREPL: Write and run ClojureScript code together"
@@ -309,7 +316,8 @@
     :description "CREPL is an online collaborative ClojureScript editor and evaluator. It's like a Google docs for ClojureScript, with a self-hosted ClojureScript compiler. This talks shows how to use CREPL to work together on the same ClojureScript code, for instance in a teaching setting. This talk is also a demonstration of what is possible with Clojure and ClojureScript because CREPL is written with both."
     :bio "Clojure programmer in Amsterdam."
     :twitter "thegeez"
-    :type :lightning}
+    :type :lightning
+    :youtube-link "https://youtu.be/kzbnk-zmSN0"}
 
    {:time ["15:15" "15:45"]
     :title "Coffee break"
@@ -325,7 +333,8 @@
     :bio "Built my first computer out of Lego bricks and learned to program soon after. Emergence, networks, modes of thought, limits of language and expression are what makes me smile (and up at night). Currently working at GoOpti making the company data-driven; setting up our analytics infrastructure (end goal: provide any answer stemming from data in 2 min or less); and building our predictive-realtime-superduper pricing engine."
     :twitter "sbelak"
     :add-padding true
-    :type :talk}
+    :type :talk
+    :youtube-link "https://youtu.be/5GLXmGeuoOU"}
 
    {:time ["16:40" "17:25"]
     :title "From 0 to prototype using ClojureScript, re-frame and friends."
@@ -335,7 +344,8 @@
     :bio "Former lawyer now legal tech consultant and entrepreneur build next generation contract management system using ClojureScript."
     :twitter "MartinClausen8"
     :add-padding true
-    :type :talk}
+    :type :talk
+    :youtube-link "https://youtu.be/DdkwNTgtIJ0"}
 
    {:time ["17:35" "18:20"]
     :title "Clojure Puzzlers"
@@ -344,7 +354,8 @@
     :description "Are you learning Clojure and want to be prepared for some of the most common traps and pitfalls? Are you a seasoned Clojure veteran and you think you've seen them all? Then come join us to play the Clojure Puzzlers! 8 questions are presented to the audience and you'll have to pick one of the possible answers. Anyone with a working knowledge of the language will be able to understand the puzzles, but even the most senior Clojure master will be puzzled. The interactive talk format is entertaining while the puzzles teach you about the subtleties of Clojure and its standard library."
     :bio "I started programming professionally around 2000. I've done work/research for different industries, corporate and startups. I moved between languages and got interested in Clojure sometime in 2010. After some spare time with it I decided it had to be my profession! I'm author of \"Clojure Standard Library, an Annotated Reference\" by Manning. I currently work at uSwitch in London."
     :twitter "reborg"
-    :type :talk}
+    :type :talk
+    :youtube-link "https://youtu.be/H9o3peh3hKY"}
 
    {:time ["18:20" "18:30"]
     :title "Closing"
@@ -388,7 +399,7 @@
     [:tbody
      (doall (map table-row agenda-data))]]])
 
-(defn speaker-component [{:keys [author description title type profile-pic bio twitter]}]
+(defn speaker-component [{:keys [author description title type profile-pic bio twitter youtube-link]}]
   ^{:key author}
   [:div.speaker
    [:div.name
@@ -400,7 +411,12 @@
    [:div.info
     [:h3.title title]
     [:div.description description]
-    (when bio [:div.bio "About the speaker: " bio])]])
+    (when bio [:div.bio "About the speaker: " bio])
+    (when youtube-link
+      [:a.youtube-link {:href youtube-link
+           :target :_blank}
+       [:img.icon.youtube {:src "img/icons/youtube.svg"}]
+       "Watch on YouTube"])]])
 
 (defn speakers-component []
   [:div.speakers
