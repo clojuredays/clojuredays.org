@@ -1,29 +1,30 @@
 (ns dcd-website.carousel
   (:require [reagent.core :as reagent :refer [atom]]
             [clojure.string :as s]
-            [dcd-website.app :as dcd]))
+            [dcd-website.app :as dcd]
+            [dcd-website.dcd2017 :as dcd2017]))
 
 (def minute-size 15)
 
-; (enable-console-print!)
+;; (enable-console-print!)
 
 (def clean-agenda
-  (as-> dcd/agenda-data $
-       (filter (fn [{:keys [type force-timeline-visible? force-timeline-hidden?]}]
-                 (and (or force-timeline-visible? (#{:lightning :talk} type))
-                      (not force-timeline-hidden?)))
-               $)
-       (concat [{:time ["8:30" "9:30"]
-                 :type :org
-                 :title "Reception/Opening"}]
-               $
-               [{:time ["18:20" "20:00"]
-                 :type :org
-                 :timeline-description
-                 [:div.timeline-description
-                  [:h2 "Thank you!"]
-                  [:h3 "See you next year for #DCD18!"]]
-                 :title "Closing/Networking/Drinks"}])))
+  (as-> dcd2017/agenda-data $
+    (filter (fn [{:keys [type force-timeline-visible? force-timeline-hidden?]}]
+              (and (or force-timeline-visible? (#{:lightning :talk} type))
+                   (not force-timeline-hidden?)))
+            $)
+    (concat [{:time ["8:30" "9:30"]
+              :type :org
+              :title "Reception/Opening"}]
+            $
+            [{:time ["18:20" "20:00"]
+              :type :org
+              :timeline-description
+              [:div.timeline-description
+               [:h2 "Thank you!"]
+               [:h3 "See you next year for #DCD18!"]]
+              :title "Closing/Networking/Drinks"}])))
 
 (defn minutes-of-day [hh mm]
   (+ (* 60 hh) mm))
@@ -187,9 +188,9 @@
       (when root
         (reagent/render-component [carousel-component] root)
         (schedule update-progress! 1000)
-        ; (schedule update-progress-test! 1000)
-        ; (enable-print!)
-        ; (dotimes [_ 11] (update-progress-test!))
-        ; (prn @progress)
-        ; (prn (map :time clean-agenda))
+                                        ; (schedule update-progress-test! 1000)
+                                        ; (enable-print!)
+                                        ; (dotimes [_ 11] (update-progress-test!))
+                                        ; (prn @progress)
+                                        ; (prn (map :time clean-agenda))
         ))))
