@@ -7,6 +7,10 @@
             [dcd-website.credits :refer [credits]]
             [dcd-website.footer :refer  [footer-component]]))
 
+(defn header-component-2017
+  []
+  (header-component {:title "Dutch Clojure Days 2017"}))
+
 (defn call-for-paper-component []
   [:div
    [:p "Call for papers ended on 31th of January, 2017."]])
@@ -267,6 +271,6 @@
     [credits]]])
 
 (def dcd2017-website-structure
-  {:header-component  header-component
+  {:header-component  header-component-2017
    :main-component    main-component
    :footer-component  footer-component})

@@ -4,6 +4,10 @@
             [dcd-website.coc :refer [code-of-conduct-component]]
             [dcd-website.credits :refer [credits]]))
 
+(defn header-component-2018
+  []
+  (header-component {:title "Dutch Clojure Days 2018"}))
+
 (defn main-component []
   [:article.main
    [:div#about
@@ -49,5 +53,5 @@
 
 (def dcd2018-website-structure
   {:main-component main-component
-   :header-component header-component
+   :header-component header-component-2018
    :footer-component footer-component})

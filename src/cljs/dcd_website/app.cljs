@@ -32,7 +32,7 @@
 
 (defn init []
   (when js/document.location
-    (swap! website-structure (constantly dcd2018/dcd2018-website-structure))
+    (reset! website-structure dcd2018/dcd2018-website-structure)
     (let [root (.getElementById js/document "container")]
       (when root
         (reagent/render-component [website-component] root)))))

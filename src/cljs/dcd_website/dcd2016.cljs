@@ -2,6 +2,10 @@
   (:require [dcd-website.header :as header]
             [dcd-website.footer :refer [footer-component]]))
 
+(defn header-component-2016
+  []
+  (header/header-component {:title "Dutch Clojure Days 2016"}))
+
 (defn main-component []
   [:article.main
    [:div#dcd16
@@ -13,6 +17,6 @@
       "DCD16 Playlist on Youtube"] "."]]])
 
 (def dcd2016-website-structure
-  {:header-component  header/header-component
+  {:header-component  header-component-2016
    :main-component    main-component
    :footer-component  footer-component})
