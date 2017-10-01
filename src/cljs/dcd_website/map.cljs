@@ -17,7 +17,7 @@
 
 (defn init-map! [coords]
   (let [mymap (-> js/L
-                  (.map "location-map")
+                  (.map "location-map" (clj->js {::scrollWheelZoom false}))
                   (.setView coords 17))]
     (init-tile-layer! mymap)
     (add-marker! mymap coords)))
