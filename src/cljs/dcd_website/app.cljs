@@ -6,7 +6,7 @@
             [dcd-website.style :refer [colors]]
             [dcd-website.state :refer [website-structure]]))
 
-(declare agenda-component speakers-component)
+(reset! website-structure dcd2018/dcd2018-website-structure)
 
 (defn website-component []
   (let [{:keys [header-component
@@ -21,7 +21,6 @@
 
 (defn init []
   (when js/document.location
-    (reset! website-structure dcd2018/dcd2018-website-structure)
     (let [root (.getElementById js/document "container")]
       (when root
         (reagent/render-component [website-component] root)))))

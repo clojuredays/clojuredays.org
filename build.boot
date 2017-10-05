@@ -18,14 +18,14 @@
                  [cljsjs/leaflet "0.7.7-6"]])
 
 (require
-  '[clojure.java.io             :as io]
-  '[clojure.string              :as string]
-  '[adzerk.boot-cljs            :refer [cljs]]
-  '[adzerk.boot-cljs-repl       :refer [cljs-repl start-repl]]
-  '[adzerk.boot-reload          :refer [reload]]
-  '[pandeiro.boot-http          :refer [serve]]
-  '[crisptrutski.boot-cljs-test :refer [test-cljs]]
-  '[deraen.boot-sass            :refer [sass]])
+ '[clojure.java.io             :as io]
+ '[clojure.string              :as string]
+ '[adzerk.boot-cljs            :refer [cljs]]
+ '[adzerk.boot-cljs-repl       :refer [cljs-repl start-repl]]
+ '[adzerk.boot-reload          :refer [reload]]
+ '[pandeiro.boot-http          :refer [serve]]
+ '[crisptrutski.boot-cljs-test :refer [test-cljs]]
+ '[deraen.boot-sass            :refer [sass]])
 
 (import 'com.eclipsesource.v8.V8)
 
