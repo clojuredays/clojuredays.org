@@ -2,6 +2,7 @@
   (:require [reagent.core :as reagent :refer [atom]]
             [clojure.string :as s]
             [dcd-website.app :as dcd]
+            [dcd-website.header :as header]
             [dcd-website.dcd2017 :as dcd2017]))
 
 (def minute-size 15)
@@ -144,7 +145,7 @@
    [render-all-slots clean-agenda]
    [time-bar]
    [:div.wrapper
-    [dcd/header-component {:style {:position "absolute"
+    [header/header-component {:style {:position "absolute"
                                    :bottom 0
                                    :height "350px"
                                    :width "100%"}}]
