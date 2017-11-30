@@ -18,12 +18,17 @@
     [:p "The CFP is not open yet"]]
    [:div#date
     [:h2 "When?"]
-    [:p "TBD"]]
+    [:p "DCD 2018 will happen on "
+     [:b "Saturday April 21st, 2018"]
+     "! So mark your calendars!"]]
    [:div#location
     [:h2 "Where?"]
     [:p "TBD"]]
    [:div#sponsors
     [:h2 "Sponsors"]
+    [:p "Dutch Clojure Day is a free event organised by community. And we can never make it happen without our sponsors. This year we have two sponsorship packages available for DCD 18. Check them out."]
+    [:img {:src "img/2018/sponsor-packages/regular.jpg"}]
+    [:img {:src "img/2018/sponsor-packages/platinum.jpg"}]
     [:p "If you are interested in sponsoring this event please contact us via "
      [:a {:href "mailto:events@clojuredays.org"}
       [:img.icon.email {:src "img/icons/email.svg"}]
