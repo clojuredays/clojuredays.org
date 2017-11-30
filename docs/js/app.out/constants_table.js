@@ -232,6 +232,7 @@ cljs.core.cst$kw$attribution = new cljs.core.Keyword(null,"attribution","attribu
 cljs.core.cst$kw$col_DASH_span = new cljs.core.Keyword(null,"col-span","col-span",-232603210);
 cljs.core.cst$sym$sb = new cljs.core.Symbol(null,"sb","sb",-1249746442,null);
 cljs.core.cst$kw$img$icon$email = new cljs.core.Keyword(null,"img.icon.email","img.icon.email",-553301354);
+cljs.core.cst$kw$b = new cljs.core.Keyword(null,"b","b",1482224470);
 cljs.core.cst$kw$div_SHARP_speakers = new cljs.core.Keyword(null,"div#speakers","div#speakers",2135822551);
 cljs.core.cst$kw$styles = new cljs.core.Keyword(null,"styles","styles",1954480375);
 cljs.core.cst$kw$display_DASH_name = new cljs.core.Keyword(null,"display-name","display-name",694513143);
