@@ -27,8 +27,7 @@
    [:div#sponsors
     [:h2 "Sponsors"]
     [:p "Dutch Clojure Day is a free event organised by community. And we can never make it happen without our sponsors. This year we have two sponsorship packages available for DCD 18. Check them out."]
-    [:img {:src "img/2018/sponsor-packages/regular.jpg"}]
-    [:img {:src "img/2018/sponsor-packages/platinum.jpg"}]
+    [:img {:src "img/2018/sponsor-packages.jpg"}]
     [:p "If you are interested in sponsoring this event please contact us via "
      [:a {:href "mailto:events@clojuredays.org"}
       [:img.icon.email {:src "img/icons/email.svg"}]
