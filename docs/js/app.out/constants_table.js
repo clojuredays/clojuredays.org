@@ -52,6 +52,7 @@ cljs.core.cst$kw$ul = new cljs.core.Keyword(null,"ul","ul",-1349521403);
 cljs.core.cst$sym$some_QMARK_ = new cljs.core.Symbol(null,"some?","some?",234752293,null);
 cljs.core.cst$sym$meta8150 = new cljs.core.Symbol(null,"meta8150","meta8150",413089061,null);
 cljs.core.cst$kw$dup = new cljs.core.Keyword(null,"dup","dup",556298533);
+cljs.core.cst$kw$text_DASH_align = new cljs.core.Keyword(null,"text-align","text-align",1786091845);
 cljs.core.cst$sym$a = new cljs.core.Symbol(null,"a","a",-482876059,null);
 cljs.core.cst$kw$key = new cljs.core.Keyword(null,"key","key",-1516042587);
 cljs.core.cst$kw$img$icon = new cljs.core.Keyword(null,"img.icon","img.icon",-1569368379);
