@@ -8,22 +8,33 @@
   []
   (header-component {:title "Dutch Clojure Days 2018"}))
 
+(defn about-component []
+  [:div#about
+   [:h2 "About DCD18"]
+   [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]] )
+
+(defn cfp-component []
+  [:div#cfp
+   [:h2 "Call for proposals"]
+   [:p "Our CFP is open! Submit your talk today using " [:a {:href "https://www.papercall.io/dcd18"} "this form"]]])
+
+(defn tickets-component []
+  [:div#date
+   [:h2 "Reserve your Spot"]
+   [:p "DCD 2018 will be in Amsterdam on"
+    [:b "Saturday April 21st, 2018"] "! Get your ticket now!"]
+   [:div
+    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2018-tickets-41749338395?ref=ebtnebregn" :target "_blank"}
+     [:img {:src "https://www.eventbrite.com/custombutton?eid=41749338395" :alt "Eventbrite - Dutch Clojure Day 2018"}]]]])
+
 (defn main-component []
   [:article.main
-   [:div#about
-    [:h2 "About DCD18"]
-    [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]]
-   [:div#cfp
-    [:h2 "Call for papers"]
-    [:p "The CFP is not open yet"]]
-   [:div#date
-    [:h2 "When?"]
-    [:p "DCD 2018 will happen on "
-     [:b "Saturday April 21st, 2018"]
-     "! So mark your calendars!"]]
+   [about-component]
+   [cfp-component]
+   [tickets-component]
    [:div#location
     [:h2 "Where?"]
-    [:p "TBD"]]
+    [:p "Amsterdam - More details about the venue coming soon!"]]
    [:div#sponsors
     [:h2 "Sponsors"]
     [:p "Dutch Clojure Day is a free event organised by community. And we can never make it happen without our sponsors. This year we have two sponsorship packages available for DCD 18. Check them out."]
