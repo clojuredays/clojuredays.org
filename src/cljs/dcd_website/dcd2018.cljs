@@ -18,6 +18,18 @@
    [:h2 "Call for proposals"]
    [:p "Our CFP is open! Submit your talk today using " [:a {:href "https://www.papercall.io/dcd18"} "this form"]]])
 
+(defn sponsors-component []
+  [:div.sponsors
+   [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
+   [:h2.platinum "Platinum sponsors"]
+   [:a.sponsor {:href "http://www.adgoji.com/" :target :_blank}
+    [:img {:src "img/2018/sponsors/adgoji.svg"}]]
+   [:a.sponsor {:href "http://www.metosin.fi/en" :target :_blank}
+    [:img {:src "img/2018/sponsors/metosin.svg"}]]
+   [:a.sponsor {:href "https://synple.eu/en/index" :target :_blank}
+    [:img {:src "img/2018/sponsors/synple.png"}]]
+   ])
+
 (defn tickets-component []
   [:div#date
    [:h2 "Reserve your Spot"]
@@ -37,6 +49,7 @@
     [:p "Amsterdam - More details about the venue coming soon!"]]
    [:div#sponsors
     [:h2 "Sponsors"]
+    [sponsors-component]
     [:p "Dutch Clojure Day is a free event organised by community. And we can never make it happen without our sponsors. This year we have two sponsorship packages available for DCD 18. Check them out."]
     [:img {:src "img/2018/sponsor-packages.jpg"}]
     [:p "If you are interested in sponsoring this event please contact us via "
