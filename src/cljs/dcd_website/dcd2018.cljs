@@ -27,7 +27,7 @@
    [:a.sponsor {:href "http://www.metosin.fi/en" :target :_blank}
     [:img {:src "img/2018/sponsors/metosin.svg"}]]
    [:a.sponsor {:href "https://synple.eu/en/index" :target :_blank}
-    [:img {:src "img/2018/sponsors/synple.png"}]]
+    [:img {:src "img/2018/sponsors/synple.svg"}]]
    ])
 
 (defn tickets-component []
