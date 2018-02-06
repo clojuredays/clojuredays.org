@@ -27,6 +27,8 @@
     [:img {:src "img/2018/sponsors/adgoji.svg"}]]
    [:a.sponsor {:href "http://www.metosin.fi/en" :target :_blank}
     [:img {:src "img/2018/sponsors/metosin.svg"}]]
+   [:a.sponsor {:href "https://www.exoscale.ch/" :target :_blank}
+    [:img {:src "img/2018/sponsors/exoscale.svg"}]]
    [:a.sponsor {:href "https://synple.eu/en/index" :target :_blank}
     [:img {:src "img/2018/sponsors/synple.svg"}]]
    [:h2.regular "Regular Sponsors"]
