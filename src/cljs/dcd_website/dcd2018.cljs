@@ -1,5 +1,6 @@
 (ns dcd-website.dcd2018
-  (:require [dcd-website.header :refer [header-component]]
+  (:require [dcd-website.map :refer    [location-component]]
+            [dcd-website.header :refer [header-component]]
             [dcd-website.footer :refer [footer-component]]
             [dcd-website.coc :refer [code-of-conduct-component]]
             [dcd-website.credits :refer [credits]]))
@@ -28,6 +29,9 @@
     [:img {:src "img/2018/sponsors/metosin.svg"}]]
    [:a.sponsor {:href "https://synple.eu/en/index" :target :_blank}
     [:img {:src "img/2018/sponsors/synple.svg"}]]
+   [:h2.regular "Regular Sponsors"]
+   [:a.sponsor.infi {:href "https://infi.nl/" :target :_blank}
+    [:img {:src "img/2018/sponsors/infi.svg"}]]
    ])
 
 (defn tickets-component []
@@ -46,7 +50,7 @@
    [tickets-component]
    [:div#location
     [:h2 "Where?"]
-    [:p "Amsterdam - More details about the venue coming soon!"]]
+    [location-component {:coords [52.3666451 4.892396599999984]}]]
    [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]

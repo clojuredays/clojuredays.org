@@ -25,7 +25,7 @@
 (defn location-component [{:keys [coords]}]
   (reagent/create-class {:reagent-render (fn []
                                            [:div.location
-                                            [:p "Dutch Clojure Days 2017 will take place at "
+                                            [:p "Dutch Clojure Days will take place at "
                                              [:a {:href "http://tq.co" :target :_blank} "TQ"]
                                              " (Singel 542, 1017 AZ Amsterdam)."]
                                             [:div#location-map]])
