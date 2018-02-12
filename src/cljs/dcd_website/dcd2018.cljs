@@ -30,11 +30,13 @@
    [:a.sponsor {:href "https://www.exoscale.ch/" :target :_blank}
     [:img {:src "img/2018/sponsors/exoscale.svg"}]]
    [:a.sponsor {:href "https://synple.eu/en/index" :target :_blank}
-    [:img {:src "img/2018/sponsors/synple.svg"}]]
-   
+    [:img {:src "img/2018/sponsors/synple.png"}]]
+
    [:h2.regular "Regular Sponsors"]
    [:a.sponsor.infi {:href "https://infi.nl/" :target :_blank}
     [:img {:src "img/2018/sponsors/infi.svg"}]]
+   [:a.sponsor.infi {:href "https://www.brightin.nl/" :target :_blank}
+    [:img {:src "img/2018/sponsors/brightin.png"}]]
    ])
 
 (defn tickets-component []
