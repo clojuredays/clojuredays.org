@@ -42,7 +42,7 @@
 (defn tickets-component []
   [:div#date
    [:h2 "Reserve your Spot"]
-   [:p "DCD 2018 will be in Amsterdam on"
+   [:p "DCD 2018 will be in Amsterdam on "
     [:b "Saturday April 21st, 2018"] "! Get your ticket now!"]
    [:div
     [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2018-tickets-41749338395?ref=ebtnebregn" :target "_blank"}
