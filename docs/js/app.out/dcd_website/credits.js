@@ -3,10 +3,10 @@ goog.provide('dcd_website.credits');
 goog.require('cljs.core');
 dcd_website.credits.dcd_team = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Carlo Sciolla","skuro"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Vijay Kiran","vijaykiran"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Max Gonzih","gonzih"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Joost Diepenmaat","ZeekatSoftware"], null)], null);
 dcd_website.credits.credits = (function dcd_website$credits$credits(){
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$span,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,(function (){var organizer = (function dcd_website$credits$credits_$_organizer(p__12677){
-var vec__12679 = p__12677;
-var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12679,(0),null);
-var handle = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12679,(1),null);
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$span,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,(function (){var organizer = (function dcd_website$credits$credits_$_organizer(p__12650){
+var vec__12652 = p__12650;
+var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12652,(0),null);
+var handle = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12652,(1),null);
 return cljs.core.with_meta(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$span$org_DASH_info,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$href,[cljs.core.str("https://twitter.com/"),cljs.core.str(handle)].join(''),cljs.core.cst$kw$target,cljs.core.cst$kw$_blank], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img$icon$twitter,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,"img/icons/twitter.svg"], null)], null),name], null)], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,handle], null));
 });
 return cljs.core.map.cljs$core$IFn$_invoke$arity$2(organizer,dcd_website.credits.dcd_team);
