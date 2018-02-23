@@ -33,10 +33,12 @@
     [:img {:src "img/2018/sponsors/synple.png"}]]
 
    [:h2.regular "Regular Sponsors"]
-   [:a.sponsor.infi {:href "https://infi.nl/" :target :_blank}
+   [:a.sponsor {:href "https://infi.nl/" :target :_blank}
     [:img {:src "img/2018/sponsors/infi.svg"}]]
-   [:a.sponsor.infi {:href "https://www.brightin.nl/" :target :_blank}
+   [:a.sponsor {:href "https://www.brightin.nl/" :target :_blank}
     [:img {:src "img/2018/sponsors/brightin.png"}]]
+   [:a.sponsor {:href "https://www.alliander.com/en" :target :_blank}
+    [:img {:src "img/2018/sponsors/alliander.png"}]]
    ])
 
 (defn tickets-component []

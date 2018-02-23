@@ -14,17 +14,17 @@ dcd_website.map.init_tile_layer_BANG_(mymap);
 
 return dcd_website.map.add_marker_BANG_(mymap,coords);
 });
-dcd_website.map.location_component = (function dcd_website$map$location_component(p__12788){
-var map__12791 = p__12788;
-var map__12791__$1 = ((((!((map__12791 == null)))?((((map__12791.cljs$lang$protocol_mask$partition0$ & (64))) || (map__12791.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__12791):map__12791);
-var coords = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12791__$1,cljs.core.cst$kw$coords);
-return reagent.core.create_class(new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$reagent_DASH_render,((function (map__12791,map__12791__$1,coords){
+dcd_website.map.location_component = (function dcd_website$map$location_component(p__12786){
+var map__12789 = p__12786;
+var map__12789__$1 = ((((!((map__12789 == null)))?((((map__12789.cljs$lang$protocol_mask$partition0$ & (64))) || (map__12789.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__12789):map__12789);
+var coords = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12789__$1,cljs.core.cst$kw$coords);
+return reagent.core.create_class(new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$reagent_DASH_render,((function (map__12789,map__12789__$1,coords){
 return (function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$location,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$p,"Dutch Clojure Days will take place at ",new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$href,"http://tq.co",cljs.core.cst$kw$target,cljs.core.cst$kw$_blank], null),"TQ"], null)," (Singel 542, 1017 AZ Amsterdam)."], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div_SHARP_location_DASH_map], null)], null);
-});})(map__12791,map__12791__$1,coords))
-,cljs.core.cst$kw$component_DASH_did_DASH_mount,((function (map__12791,map__12791__$1,coords){
+});})(map__12789,map__12789__$1,coords))
+,cljs.core.cst$kw$component_DASH_did_DASH_mount,((function (map__12789,map__12789__$1,coords){
 return (function (){
 return dcd_website.map.init_map_BANG_(cljs.core.clj__GT_js(coords));
-});})(map__12791,map__12791__$1,coords))
+});})(map__12789,map__12789__$1,coords))
 ], null));
 });
