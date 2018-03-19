@@ -62,36 +62,36 @@
     :type :org}
 
    {:time ["9:30" "10:15"]
-    :title ""
-    :author ""
-    :profile-pic ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "Embrace the JVM"
+    :author "Alexander Yakushev"
+    :profile-pic "alexander.jpg"
+    :description "JVM is the native platform for Clojure, yet a lot of its tools and tricks are unfamiliar to Clojure programmers. This talk will bring them to light and show you how the JVM facilities can make your Clojure work even more productive."
+    :bio "Alexander is a software engineer at Grammarly where he blurs the line between programming and natural languages. After being bitten by a radioactive spider with a lambda on its back, Alexander promised to use the obtained Lisp superpowers for good only. In his free time, he contributes to Clojure tooling like CIDER, studies distributed systems, and fills his half-full stack."
+    :twitter "unlog1c"
     :add-padding true
     :type :talk
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["10:25" "11:10"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "Online statistical analysis using transducers and sketch algorithms"
+    :profile-pic "simon.jpg"
+    :author "Simon Belak"
+    :description "Online statistical analysis using transducers and sketch algorithms. Don’t know what either is? You are going to learn something very cool (and perspective-changing) then. Know them, but want an experience report? Got you covered, fam."
+    :bio "Built my first computer out of Lego bricks and learned to program soon after. Emergence, networks, modes of thought, limits of language and expression are what makes me smile (and stay up at night). The combination of lisp and machine learning put me on the path of always striving to make myself redundant if not outright obsolete. Currently working hard to become obsolete at Metabase where I am trying to build an artificial data scientist and imbue visualisations with understanding and context."
+    :twitter "sbelak"
     :add-padding true
     :type :talk
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["11:20" "12:05"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "Fulcro: A Unified Architecture for SPAs"
+    :profile-pic "tony.jpg"
+    :author "Tony Kay"
+    :description "One thing most SPA approaches are missing is a clearly-defined full-stack architecture. An “easy” front-end library is great when getting started, but it leaves developers to invent a distributed system. In this talk I’ll show how Fulcro eases the long-term story of production web software."
+    :bio "Tony Kay is a software developer and entrepreneur with 35 years of experience. He has worked professionally in C, C++, Java, Scala, Perl, Javascript, Objective-C, Clojure, and Clojurescript. His career spans many different roles in development, and he has also authored numerous publications, including research about concurrent programming. One of his core passions is evolving software development tools and techniques to be less painful to developers and the businesses that rely on them. He is the lead architect and developer of the full-stack data-driven web development library Fulcro, and CTO/Founder of Fulcrologic, LLC. In his spare time you might find him hiking or playing euro-style board games."
+    :twitter "fulcrologic"
     :type :talk
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["12:05" "13:20"]
     :title "Lunch"
@@ -99,59 +99,65 @@
     :force-timeline-visible? true}
 
    {:time ["13:20" "14:05"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "CIDER: Inside the Brewery"
+    :profile-pic "bozhidar.jpg"
+    :author "Bozhidar Batsov"
+    :description "A visit to CIDER’s brewery where all the magic is happening. On this exciting journey you’ll learn more about the current state and the future of the CIDER project. But above else - we’ll have some fun while doing so!"
+    :bio "Bozhidar is the maintainer of CIDER and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He’s also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.
+
+Believe it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won’t bore with those here."
+    :twitter "bbatsov"
     :add-padding true
     :type :talk
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:title "Lightning Talks"
     :force-timeline-hidden? true
     :type :lightning}
 
    {:time ["14:15" "14:30"]
-    :title ""
-    :profile-pic ""
-    :description ""
-    :author ""
-    :bio ""
-    :twitter ""
+    :title "Easier REPL-based debugging with scope-capture"
+    :profile-pic "val.jpg"
+    :description "Tired of manually re-creating Ring requests, app states and database connections simply to evaluate this tiny expression at the REPL? Scope-capture to the rescue, a new Clojure(Script) library that lets you instantly save and restore local bindings at the REPL."
+    :author "Valentin Waeselynck"
+    :bio "Valentin Waeselynck is the CTO of BandSquare, a platform providing web and CRM tools for managing audiences, built on top of Clojure and Datomic. He authored a few open-source libraries for Clojure and Datomic, including Datomock, scope-capture and Datofu. On the side, he enjoys doing maths and climbing mountains."
+    :twitter "val_waeselynck"
     :type :lightning
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["14:30" "14:45"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "REPtiLe - exercise your lizard brain and share REPLs in a cold-blooded browser"
+    :profile-pic "ray.jpg"
+    :author "Ray McDermott"
+    :description "Use REPtiLe to have your own REPL on the web and also see what your team are doing in their REPLs.
+
+REPtiLe is ideal for a small number of developers to work together in real-time."
+    :bio "Clojure developer / architect. co-host defn podcast and the apropos youtube channel"
+    :twitter "raymcdermott"
     :type :lightning
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["14:45" "15:00"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "Surprise! A collection of unexpected behavior in Clojure"
+    :profile-pic "jens.jpg"
+    :author "Jens Bendisposto"
+    :description [:span "Do you know that " [:pre {:style {:display "inline"}} "(sorted? [1 2 3])"] " evaluates to " [:pre {:style {:display "inline"}} " false"] "? In my talk I will show some funny quirks and little inconsistencies in Clojure that may take you by surprise."]
+    :bio "Jens is in a relationship with Clojure for more than 7 years and he is still in love despite the little quirks he discovered. Jens teaches a yearly course on functional programming with Clojure at the University of Düsseldorf since 2013 and he is one of the organizers of the Düsseldorf Clojure User Group, the Java User Group and the Lambda Düsseldorf Meetup."
+    :twitter "jbendisposto"
     :type :lightning
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["15:00" "15:15"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "Stay agile with clojure.spec"
+    :profile-pic "unknown.png"
+    :author "Dr Roland Kay"
+    :description "You love the sense of liberation and control that Clojurescript gives you and you want the same for your data. A schema for your in-memory data will enable you to change it quickly with confidence. So, the next time that your product manager drops a last minute change request, it will be no stress."
+    :bio "Dr Kay has over ten years experience working in investment banking in London developing financial models and delivering tools which depend on them to trading desks. He came of age with asm, C and C++ and has been using dynamically typed languages to put the power of the core analytics written in C++ in the hands of practitioners who lack extensive software development experience.
+
+He has recently discovered the power of functional programming to tame the complexity of front-end development. He is impressed by the ability of clojure.spec to exceed the level of confidence in code integrity that comes with statically-typed languages while retaining the flexibility and fast-prototyping offered by dynamic languages."
+    :twitter nil
     :type :lightning
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["15:15" "15:45"]
     :title "Coffee break"
@@ -160,36 +166,38 @@
     :force-timeline-visible? true}
 
    {:time ["15:45" "16:30"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "No EC2 instances were harmed during this deployment"
+    :profile-pic "josh.jpg"
+    :author "Josh Glover"
+    :description "Serverless systems promise a bright future of increased battery life for on-call developers’ phones, but do they deliver? This is a story of how we built a backend with Clojure, API Gateway, Lambda, and DynamoDB. Takeaway: when, where, or if this approach fits your problems."
+    :bio "Josh Glover has come a long way since declaring Lisp a completely pointless language in university. 15 years and three countries later, he shudders at the very thought of using a language other than Clojure. He is really interested in teaching programming and increasing diversity in the industry. He currently lives in Stockholm and works for Klarna Bank AB, the leading payments company in the Nordics."
+    :twitter "jmglov"
     :add-padding true
     :type :talk
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["16:40" "17:25"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "How we test at Nubank"
+    :profile-pic "phillip.jpg"
+    :author "Phillip Mates"
+    :description "Nubank has been shipping business-critical Clojure services for 5+ years. To do so reliably we’ve adopted various approaches to testing, combining unit, integration, & end-to-end tests. This talk will explore our experiences: what’s worked, what hasn’t, and where we are going next with testing"
+    :bio "Coming from a background in theoretical programming language research I’ve been coding Clojure at Nubank for over a year. In this time I’ve become the maintainer of Midje, co-authored a library for validating nested data-structures that produces readable diffs (matcher-combinators), and participated in projects to scale Nubank’s testing infrastructure past 100 microservices. Last Fall I moved to Berlin to help Nubank open its first office outside of Brazil. In Berlin, my colleagues and I are focused on building data infrastructure for São Paulo-based analysts and engineers to use."
+    :twitter "matey"
     :add-padding true
     :type :talk
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["17:35" "18:20"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+    :title "5 years of Clojure: building better infrastructure with parentheses"
+    :profile-pic "pierre.jpg"
+    :author "Pierre-Yves Ritschard"
+    :description "This talk gives an overview of the initial architectural decisions at Exoscale, an Infrastructure as a Service company where Clojure is in heavy use."
+    :bio "Pierre-Yves is CTO at exoscale where he is responsible for architecture and strategic technology choices, relying on experience in the architecture of very large corporate systems as well as technical product design in several startups.
+
+Pierre-Yves is an active member of the open-source community as author of pithos and cyanite as well as key contributions to OpenBSD, collectd and riemann amongst others."
+    :twitter "pyr"
     :type :talk
-    :youtube-link ""}
+    :youtube-link nil}
 
    {:time ["18:20" "18:30"]
     :title "Closing"
@@ -198,7 +206,17 @@
 
    {:time ["18:30" "21:30"]
     :title "Networking/Drinks"
-    :type :org}])
+    :type :org}
+
+   {:time ["19:00" "19:30"]
+    :title "defjoke - a macro for creating FP jokes"
+    :profile-pic "ray.jpg"
+    :author "Ray McDermott"
+    :description "Bringing pure fun to an impure world."
+    :bio "Clojure enthusiast: software architect by day, co-orgniser Belgian Clojure User group and co-host of defn podcast by night (some nights anyway)."
+    :twitter "raymcdermott"
+    :type :lightning
+    :force-timeline-hidden? true}])
 
 (defn main-component []
   [:article.main

@@ -24,9 +24,10 @@
   [:div.speaker
    [:div.name
     [:img {:src (str "img/speakers/" profile-pic)}]
-    [:a.twitter-link {:href (str "https://twitter.com/" twitter) :target :_blank}
-     [:img.icon.twitter {:src "img/icons/twitter.svg"}]
-     [:span.twitter-handle (str "@" twitter)]]
+    (when twitter
+      [:a.twitter-link {:href (str "https://twitter.com/" twitter) :target :_blank}
+       [:img.icon.twitter {:src "img/icons/twitter.svg"}]
+       [:span.twitter-handle (str "@" twitter)]])
     [:h3 author]]
    [:div.info
     [:h3.title title]
