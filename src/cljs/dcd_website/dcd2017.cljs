@@ -1,9 +1,8 @@
 (ns dcd-website.dcd2017
   (:require [dcd-website.map :refer     [location-component]]
             [dcd-website.coc :refer     [code-of-conduct-component]]
-            [dcd-website.style :refer   [colors]]
             [dcd-website.header :refer  [header-component]]
-            [dcd-website.agenda :refer  [speakers-component]]
+            [dcd-website.agenda :refer  [speakers-component agenda-component]]
             [dcd-website.credits :refer [credits]]
             [dcd-website.footer :refer  [footer-component]]))
 
@@ -207,24 +206,6 @@
     :type :lightning
     :force-timeline-hidden? true}])
 
-(defn table-row [{:keys [title time author type]}]
-  (let [[start end] time]
-    ^{:key (str time author)}
-    [:tr
-     {:style {:background (colors type)}}
-     [:td.time
-      (when start [:p.start start])
-      (when end [:p.end end])]
-     [:td {:col-span (if author 1 2)} title]
-     (when author
-       [:td author])]))
-
-(defn agenda-component []
-  [:div.agenda
-   [:table {:cell-spacing 0}
-    [:tbody
-     (doall (map table-row agenda-data))]]])
-
 (defn main-component []
   [:article.main
    [:div#about
@@ -249,10 +230,10 @@
     [sponsors-component]]
    [:div#agenda
     [:h2 "Agenda"]
-    [agenda-component]]
+    [agenda-component agenda-data]]
    [:div#speakers
     [:h2 "Speakers"]
-    [speakers-component]]
+    [speakers-component agenda-data]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]

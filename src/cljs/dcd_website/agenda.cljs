@@ -13,7 +13,7 @@
      (when author
        [:td author])]))
 
-(defn agenda-component [{:keys [agenda-data]}]
+(defn agenda-component [agenda-data]
   [:div.agenda
    [:table {:cell-spacing 0}
     [:tbody
@@ -38,7 +38,7 @@
        [:img.icon.youtube {:src "img/icons/youtube.svg"}]
        "Watch on YouTube"])]])
 
-(defn speakers-component [{:keys [agenda-data]}]
+(defn speakers-component [agenda-data]
   [:div.speakers
    (doall (->> agenda-data
                (filter #(and (:profile-pic %)
