@@ -1,5 +1,5 @@
 (ns dcd-website.app
-  (:require [reagent.core :as reagent :refer [atom]]
+  (:require [reagent.core :as reagent]
             [dcd-website.dcd2018 :as dcd2018]
             [dcd-website.sidebar :refer [sidebar-component]]
             [dcd-website.map :refer [add-marker! init-tile-layer! init-map!]]

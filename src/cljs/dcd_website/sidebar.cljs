@@ -2,15 +2,16 @@
   (:require [dcd-website.dcd2016 :as dcd2016]
             [dcd-website.dcd2017 :as dcd2017]
             [dcd-website.dcd2018 :as dcd2018]
-            [dcd-website.state :as state]))
+            [dcd-website.state :as state]
+            [reagent.core :as reagent]))
 
-(defonce sidebar-expanded (atom false))
+(defonce sidebar-expanded (reagent/atom false))
 
 (defn collapse-sidebar []
   (reset! sidebar-expanded false)
   true)
 
-(defn expand-sidebar [_]
+(defn expand-sidebar []
   (reset! sidebar-expanded true)
   true)
 
@@ -36,10 +37,7 @@
   [:aside.sidebar
    {:class (when-not @sidebar-expanded "collapsed")}
    [:a.item.expand-icon
-    {:href "#"
-     :on-click (fn [e]
-                 (.preventDefault e)
-                 (swap! sidebar-expanded not))}
+    {:on-click #(swap! sidebar-expanded not)}
     "☰"]
    (map menu-entry-component [{:link "#about"    :text "About"}
                               {:link "#cfp"      :text "Call for papers"}
