@@ -13,8 +13,9 @@
                 main-component
                 footer-component]} @website-structure]
     [:div.site
+     [:div.wrapper-header
+      [header-component]]
      [:div.wrapper
-      [header-component]
       [sidebar-component]
       [main-component]]
      [footer-component]]))

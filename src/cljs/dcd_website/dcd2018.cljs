@@ -33,11 +33,11 @@
     [:img {:src "img/2018/sponsors/synple.png"}]]
 
    [:h2.regular "Regular Sponsors"]
-   [:a.sponsor {:href "https://infi.nl/" :target :_blank}
+   [:a.sponsor.regular.infi {:href "https://infi.nl/" :target :_blank}
     [:img {:src "img/2018/sponsors/infi.svg"}]]
-   [:a.sponsor {:href "https://www.brightin.nl/" :target :_blank}
+   [:a.sponsor.regular {:href "https://www.brightin.nl/" :target :_blank}
     [:img {:src "img/2018/sponsors/brightin.png"}]]
-   [:a.sponsor {:href "https://www.alliander.com/en" :target :_blank}
+   [:a.sponsor.regular.alliander {:href "https://www.alliander.com/en" :target :_blank}
     [:img {:src "img/2018/sponsors/alliander.png"}]]
    ])
 
@@ -62,7 +62,7 @@
     [:h2 "Sponsors"]
     [sponsors-component]
     [:p "Dutch Clojure Day is a free event organised by community. And we can never make it happen without our sponsors. This year we have two sponsorship packages available for DCD 18. Check them out."]
-    [:img {:src "img/2018/sponsor-packages.jpg"}]
+    [:img#packages {:src "img/2018/sponsor-packages.jpg"}]
     [:p "If you are interested in sponsoring this event please contact us via "
      [:a {:href "mailto:events@clojuredays.org"}
       [:img.icon.email {:src "img/icons/email.svg"}]
