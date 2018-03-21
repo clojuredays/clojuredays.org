@@ -83,13 +83,13 @@
     :type :talk
     :youtube-link nil}
 
-   {:time ["11:20" "12:05"]
-    :title "Fulcro: A Unified Architecture for SPAs"
-    :profile-pic "tony.jpg"
-    :author "Tony Kay"
-    :description "One thing most SPA approaches are missing is a clearly-defined full-stack architecture. An “easy” front-end library is great when getting started, but it leaves developers to invent a distributed system. In this talk I’ll show how Fulcro eases the long-term story of production web software."
-    :bio "Tony Kay is a software developer and entrepreneur with 35 years of experience. He has worked professionally in C, C++, Java, Scala, Perl, Javascript, Objective-C, Clojure, and Clojurescript. His career spans many different roles in development, and he has also authored numerous publications, including research about concurrent programming. One of his core passions is evolving software development tools and techniques to be less painful to developers and the businesses that rely on them. He is the lead architect and developer of the full-stack data-driven web development library Fulcro, and CTO/Founder of Fulcrologic, LLC. In his spare time you might find him hiking or playing euro-style board games."
-    :twitter "fulcrologic"
+   #_{:time ["11:20" "12:05"]
+    :title ""
+    :profile-pic ""
+    :author ""
+    :description ""
+    :bio ""
+    :twitter ""
     :type :talk
     :youtube-link nil}
 
@@ -99,14 +99,12 @@
     :force-timeline-visible? true}
 
    {:time ["13:20" "14:05"]
-    :title "CIDER: Inside the Brewery"
-    :profile-pic "bozhidar.jpg"
-    :author "Bozhidar Batsov"
-    :description "A visit to CIDER’s brewery where all the magic is happening. On this exciting journey you’ll learn more about the current state and the future of the CIDER project. But above else - we’ll have some fun while doing so!"
-    :bio "Bozhidar is the maintainer of CIDER and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He’s also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.
-
-Believe it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won’t bore with those here."
-    :twitter "bbatsov"
+    :title "Implementing Graph API's with Clojure"
+    :profile-pic "wilker.jpg"
+    :author "Wilker Lúcio"
+    :description "REST is taking a rest. Over the past years we are seeing a huge growth of graph API’s with GraphQL leading the way. In this talk I will describe what graph APIs can look like on the Clojure side, and even show you how to achieve the best of both worlds by integrating GraphQL with Clojure graphs!"
+    :bio "I’m a passionate developer working and learning programming skills since 12 years old, love the way of web development and always researching new technologies. I started real web programming with PHP, but ever trying to learn more and more (passing through Java, Python, C#, ActionScript, Javascript…), currently passionate about Clojure and it’s ecosystem. In recent years I’ve been engaged in the Clojure community, collaborating in projects like Om.next/Fulcro, Devcards, and writing libraries like Pathom. If you’d like to learn more about my work, please check my Github profile at https://github.com/wilkerlucio."
+    :twitter "wilkerlucio"
     :add-padding true
     :type :talk
     :youtube-link nil}
@@ -137,7 +135,7 @@ REPtiLe is ideal for a small number of developers to work together in real-time.
     :type :lightning
     :youtube-link nil}
 
-   {:time ["14:45" "15:00"]
+   #_{:time ["14:45" "15:00"]
     :title "Surprise! A collection of unexpected behavior in Clojure"
     :profile-pic "jens.jpg"
     :author "Jens Bendisposto"
@@ -147,7 +145,7 @@ REPtiLe is ideal for a small number of developers to work together in real-time.
     :type :lightning
     :youtube-link nil}
 
-   {:time ["15:00" "15:15"]
+   #_{:time ["15:00" "15:15"]
     :title "Stay agile with clojure.spec"
     :profile-pic "unknown.png"
     :author "Dr Roland Kay"
@@ -231,7 +229,8 @@ Pierre-Yves is an active member of the open-source community as author of pithos
     [sponsors-component]]
    [:div#agenda
     [:h2 "Agenda"]
-    [agenda-component agenda-data]]
+    [:p "TBD"]
+    #_[agenda-component agenda-data]]
    [:div#speakers
     [:h2 "Speakers"]
     [speakers-component agenda-data]]
