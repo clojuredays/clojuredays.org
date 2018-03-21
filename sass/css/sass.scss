@@ -436,6 +436,15 @@ body {
             font-size: 14px;
           }
 
+          .lightning {
+            color: darkgrey;
+            padding-right: 10px;
+          }
+
+          .lightning::before {
+            content: "⚡️";
+          }
+
           .youtube-link {
             display: block;
             padding-top: 25px;

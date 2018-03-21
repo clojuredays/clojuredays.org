@@ -18,8 +18,8 @@
 
 (defn cfp-component []
   [:div#cfp
-   [:h2 "Call for proposals"]
-   [:p "Our CFP is open! Submit your talk today using " [:a {:href "https://www.papercall.io/dcd18"} "this form"]]])
+   [:h2 "Call for papers"]
+   [:p "Our CFP is now officially closed."]])
 
 (defn sponsors-component []
   [:div.sponsors
@@ -180,7 +180,7 @@ He has recently discovered the power of functional programming to tame the compl
     :author "Phillip Mates"
     :description "Nubank has been shipping business-critical Clojure services for 5+ years. To do so reliably we’ve adopted various approaches to testing, combining unit, integration, & end-to-end tests. This talk will explore our experiences: what’s worked, what hasn’t, and where we are going next with testing"
     :bio "Coming from a background in theoretical programming language research I’ve been coding Clojure at Nubank for over a year. In this time I’ve become the maintainer of Midje, co-authored a library for validating nested data-structures that produces readable diffs (matcher-combinators), and participated in projects to scale Nubank’s testing infrastructure past 100 microservices. Last Fall I moved to Berlin to help Nubank open its first office outside of Brazil. In Berlin, my colleagues and I are focused on building data infrastructure for São Paulo-based analysts and engineers to use."
-    :twitter "matey"
+    :twitter "pmatey"
     :add-padding true
     :type :talk
     :youtube-link nil}

@@ -30,7 +30,10 @@
        [:span.twitter-handle (str "@" twitter)]])
     [:h3 author]]
    [:div.info
-    [:h3.title title]
+    [:h3.title
+     (when (= :lightning type)
+       [:span.lightning "lightning talk"])
+     title]
     [:div.description description]
     (when bio [:div.bio "About the speaker: " bio])
     (when youtube-link
