@@ -131,6 +131,7 @@ cljs.core.cst$sym$_next = new cljs.core.Symbol(null,"_next","_next",101877036,nu
 cljs.core.cst$sym$string_QMARK_ = new cljs.core.Symbol(null,"string?","string?",-1129175764,null);
 cljs.core.cst$kw$type = new cljs.core.Keyword(null,"type","type",1174270348);
 cljs.core.cst$sym$parent = new cljs.core.Symbol(null,"parent","parent",761652748,null);
+cljs.core.cst$kw$span$lightning = new cljs.core.Keyword(null,"span.lightning","span.lightning",1357382316);
 cljs.core.cst$sym$root_DASH_iter = new cljs.core.Symbol(null,"root-iter","root-iter",1974672108,null);
 cljs.core.cst$sym$validate = new cljs.core.Symbol(null,"validate","validate",1439230700,null);
 cljs.core.cst$kw$img$icon$twitter = new cljs.core.Keyword(null,"img.icon.twitter","img.icon.twitter",182074188);
