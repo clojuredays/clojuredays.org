@@ -40,7 +40,9 @@
    [:a.sponsor.regular {:href "https://www.brightin.nl/" :target :_blank}
     [:img {:src "img/2018/sponsors/brightin.png"}]]
    [:a.sponsor.regular.alliander {:href "https://www.alliander.com/en" :target :_blank}
-    [:img {:src "img/2018/sponsors/alliander.png"}]]])
+    [:img {:src "img/2018/sponsors/alliander.png"}]]
+   [:a.sponsor.regular.digitalechecklisten {:href "https://digitalechecklisten.nl/" :target :_blank}
+    [:img {:src "img/2018/sponsors/digitalechecklisten.png"}]]])
 
 (defn tickets-component []
   [:div#date
@@ -83,13 +85,17 @@
     :type :talk
     :youtube-link nil}
 
-   #_{:time ["11:20" "12:05"]
-    :title ""
-    :profile-pic ""
-    :author ""
-    :description ""
-    :bio ""
-    :twitter ""
+   {:time ["11:20" "12:05"]
+    :title "Practical Generative Testing Patterns"
+    :profile-pic "srihari.jpg"
+    :author "Srihari Sriraman"
+    :description "Generative tests are great! But we don’t write them often enough. Why not?
+As unit tests, they can be harder to write and read. As stateful acceptance tests, they can be brittle, slow, and unjustifiable.
+I’ll discuss some important patterns to leverage generative tests to their potential."
+    :bio "Srihari is a FOSS enthusiast. He has contributed to Gimp, Eclipse, Diaspora and is excited about opportunities to give back. He has been writing Clojure for over 5 years now, and over this time, he has engineered low latency systems, large analytics platforms, monitoring solutions, distributed payment platforms and multiple simulation testing systems.
+He is passionate about fostering the Clojure community, conducts workshops, and organizes IN/Clojure. He also works on computational music synthesis and generation as a hobby.
+He is a partner at nilenso, a hippie tree hugging bicycle riding software cooperative based in Bangalore."
+    :twitter "sriharisriraman"
     :type :talk
     :youtube-link nil}
 
@@ -135,7 +141,7 @@ REPtiLe is ideal for a small number of developers to work together in real-time.
     :type :lightning
     :youtube-link nil}
 
-   #_{:time ["14:45" "15:00"]
+   {:time ["14:45" "15:00"]
     :title "Surprise! A collection of unexpected behavior in Clojure"
     :profile-pic "jens.jpg"
     :author "Jens Bendisposto"
@@ -145,7 +151,7 @@ REPtiLe is ideal for a small number of developers to work together in real-time.
     :type :lightning
     :youtube-link nil}
 
-   #_{:time ["15:00" "15:15"]
+   {:time ["15:00" "15:15"]
     :title "Stay agile with clojure.spec"
     :profile-pic "unknown.png"
     :author "Dr Roland Kay"
@@ -207,10 +213,11 @@ Pierre-Yves is an active member of the open-source community as author of pithos
     :type :org}
 
    {:time ["19:00" "19:30"]
-    :title "defjoke - a macro for creating FP jokes"
+    :title "extemporay - REPL driven comedy"
     :profile-pic "ray.jpg"
     :author "Ray McDermott"
-    :description "Bringing pure fun to an impure world."
+    :description "Learn how to compose a library of simple functions and data to deliver the most elegant forms of comedy on the Clojuresphere.
+You will see how you can get feedback from something better than actual humans: the REPL"
     :bio "Clojure enthusiast: software architect by day, co-orgniser Belgian Clojure User group and co-host of defn podcast by night (some nights anyway)."
     :twitter "raymcdermott"
     :type :lightning
