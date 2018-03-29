@@ -130,28 +130,6 @@ He is a partner at nilenso, a hippie tree hugging bicycle riding software cooper
     :youtube-link nil}
 
    {:time ["14:30" "14:45"]
-    :title "REPtiLe - exercise your lizard brain and share REPLs in a cold-blooded browser"
-    :profile-pic "ray.jpg"
-    :author "Ray McDermott"
-    :description "Use REPtiLe to have your own REPL on the web and also see what your team are doing in their REPLs.
-
-REPtiLe is ideal for a small number of developers to work together in real-time."
-    :bio "Clojure developer / architect. co-host defn podcast and the apropos youtube channel"
-    :twitter "raymcdermott"
-    :type :lightning
-    :youtube-link nil}
-
-   {:time ["14:45" "15:00"]
-    :title "Surprise! A collection of unexpected behavior in Clojure"
-    :profile-pic "jens.jpg"
-    :author "Jens Bendisposto"
-    :description [:span "Do you know that " [:pre {:style {:display "inline"}} "(sorted? [1 2 3])"] " evaluates to " [:pre {:style {:display "inline"}} " false"] "? In my talk I will show some funny quirks and little inconsistencies in Clojure that may take you by surprise."]
-    :bio "Jens is in a relationship with Clojure for more than 7 years and he is still in love despite the little quirks he discovered. Jens teaches a yearly course on functional programming with Clojure at the University of Düsseldorf since 2013 and he is one of the organizers of the Düsseldorf Clojure User Group, the Java User Group and the Lambda Düsseldorf Meetup."
-    :twitter "jbendisposto"
-    :type :lightning
-    :youtube-link nil}
-
-   {:time ["15:00" "15:15"]
     :title "Stay agile with clojure.spec"
     :profile-pic "unknown.png"
     :author "Dr Roland Kay"
@@ -160,6 +138,28 @@ REPtiLe is ideal for a small number of developers to work together in real-time.
 
 He has recently discovered the power of functional programming to tame the complexity of front-end development. He is impressed by the ability of clojure.spec to exceed the level of confidence in code integrity that comes with statically-typed languages while retaining the flexibility and fast-prototyping offered by dynamic languages."
     :twitter nil
+    :type :lightning
+    :youtube-link nil}
+
+   {:time ["14:45" "15:00"]
+    :title "Writing an asynchronous MQTT broker in Clojure (and a bit of Java)"
+    :profile-pic "unknown.png"
+    :author "Thomas van der Veen"
+    :description "A talk about the attempt to write a MQTT broker with Clojure and some Java and make the whole thing non-blocking where possible so that it can scale really well… hopefully."
+    :bio "Thomas has been writing bits of Clojure since 2011 and in 2016 he gave a talk at the Dutch Clojure Days about using MQTT in a Clojure(Script) application. This time he is back with an MQTT broker written in Clojure and just for good measure he he snug in some Java as well… because you can."
+    :twitter "thomasvdv007"
+    :type :lightning
+    :youtube-link nil}
+
+   {:time ["15:00" "15:15"]
+    :title "REPtiLe - exercise your lizard brain and share REPLs in a cold-blooded browser"
+    :profile-pic "ray.jpg"
+    :author "Ray McDermott"
+    :description "Use REPtiLe to have your own REPL on the web and also see what your team are doing in their REPLs.
+
+REPtiLe is ideal for a small number of developers to work together in real-time."
+    :bio "Clojure developer / architect. co-host defn podcast and the apropos youtube channel"
+    :twitter "raymcdermott"
     :type :lightning
     :youtube-link nil}
 
@@ -236,8 +236,8 @@ You will see how you can get feedback from something better than actual humans: 
     [sponsors-component]]
    [:div#agenda
     [:h2 "Agenda"]
-    [:p "TBD"]
-    #_[agenda-component agenda-data]]
+    #_[:p "TBD"]
+    [agenda-component agenda-data]]
    [:div#speakers
     [:h2 "Speakers"]
     [speakers-component agenda-data]]
