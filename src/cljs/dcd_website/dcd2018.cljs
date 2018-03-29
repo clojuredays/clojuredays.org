@@ -143,7 +143,7 @@ He has recently discovered the power of functional programming to tame the compl
 
    {:time ["14:45" "15:00"]
     :title "Writing an asynchronous MQTT broker in Clojure (and a bit of Java)"
-    :profile-pic "unknown.png"
+    :profile-pic "thomas.png"
     :author "Thomas van der Veen"
     :description "A talk about the attempt to write a MQTT broker with Clojure and some Java and make the whole thing non-blocking where possible so that it can scale really well… hopefully."
     :bio "Thomas has been writing bits of Clojure since 2011 and in 2016 he gave a talk at the Dutch Clojure Days about using MQTT in a Clojure(Script) application. This time he is back with an MQTT broker written in Clojure and just for good measure he he snug in some Java as well… because you can."
