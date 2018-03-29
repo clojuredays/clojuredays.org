@@ -57,7 +57,6 @@ cljs.core.cst$sym$meta8150 = new cljs.core.Symbol(null,"meta8150","meta8150",413
 cljs.core.cst$kw$dup = new cljs.core.Keyword(null,"dup","dup",556298533);
 cljs.core.cst$sym$a = new cljs.core.Symbol(null,"a","a",-482876059,null);
 cljs.core.cst$kw$min_DASH_height = new cljs.core.Keyword(null,"min-height","min-height",398480837);
-cljs.core.cst$kw$pre = new cljs.core.Keyword(null,"pre","pre",2118456869);
 cljs.core.cst$kw$key = new cljs.core.Keyword(null,"key","key",-1516042587);
 cljs.core.cst$kw$img$icon = new cljs.core.Keyword(null,"img.icon","img.icon",-1569368379);
 cljs.core.cst$sym$comp = new cljs.core.Symbol(null,"comp","comp",-1462482139,null);
