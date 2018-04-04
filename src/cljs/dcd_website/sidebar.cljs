@@ -39,15 +39,15 @@
    [:a.item.expand-icon
     {:on-click #(swap! sidebar-expanded not)}
     "☰"]
-   (map menu-entry-component [{:link "#about"    :text "About"}
-                              {:link "#cfp"      :text "Call for papers"}
+   (map menu-entry-component [#_{:link "#about"    :text "About"}
+                              #_{:link "#cfp"      :text "Call for papers"}
                               {:link "#date"     :text "When?"}
-                              {:link "#location" :text "Where?"}
-                              {:link "#sponsors" :text "Sponsors"}
                               {:link "#agenda"   :text "Agenda"}
+                              {:link "#sponsors" :text "Sponsors"}
                               {:link "#speakers" :text "Speakers"}
                               {:link "#behave"   :text "Code of conduct"}
-                              {:link "#org"      :text "Contacts"}])
+                              {:link "#org"      :text "Contacts"}
+                              {:link "#location" :text "Where?"}])
    [archive]
    (map archive-entry-component [{:link "#dcd2017"
                                   :text "DCD2017"

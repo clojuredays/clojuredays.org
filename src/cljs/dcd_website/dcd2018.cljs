@@ -131,7 +131,7 @@ He is a partner at nilenso, a hippie tree hugging bicycle riding software cooper
 
    {:time ["14:30" "14:45"]
     :title "Stay agile with clojure.spec"
-    :profile-pic "unknown.png"
+    :profile-pic "roland.png"
     :author "Dr Roland Kay"
     :description "You love the sense of liberation and control that Clojurescript gives you and you want the same for your data. A schema for your in-memory data will enable you to change it quickly with confidence. So, the next time that your product manager drops a last minute change request, it will be no stress."
     :bio "Dr Kay has over ten years experience working in investment banking in London developing financial models and delivering tools which depend on them to trading desks. He came of age with asm, C and C++ and has been using dynamically typed languages to put the power of the core analytics written in C++ in the hands of practitioners who lack extensive software development experience.
@@ -223,21 +223,23 @@ You will see how you can get feedback from something better than actual humans: 
     :type :lightning
     :force-timeline-hidden? true}])
 
+(defn when-component []
+  [:div
+   [:p"Dutch Clojure Days will happen on "]
+   [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2018-tickets-41749338395" :target :_blank}
+    [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, April 21st 2018, 8:30 AM – 5:30 PM CET"] "."])
+
 (defn main-component []
   [:article.main
-   [about-component]
-   [cfp-component]
-   [tickets-component]
-   [:div#location
-    [:h2 "Where?"]
-    [location-component {:coords [52.3666451 4.892396599999984]}]]
+   [:div#date
+    [:h2 "When?"]
+    [when-component]]
+   [:div#agenda
+    [:h2 "Agenda"]
+    [agenda-component agenda-data]]
    [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
-   [:div#agenda
-    [:h2 "Agenda"]
-    #_[:p "TBD"]
-    [agenda-component agenda-data]]
    [:div#speakers
     [:h2 "Speakers"]
     [speakers-component agenda-data]]
@@ -256,7 +258,10 @@ You will see how you can get feedback from something better than actual humans: 
       [:img.icon.twitter {:src "img/icons/twitter.svg"}]
       "@clojuredays"]]
     [:h3 "DCD team"]
-    [credits]]])
+    [credits]]
+   [:div#location
+    [:h2 "Where?"]
+    [location-component {:coords [52.3666451 4.892396599999984]}]]])
 
 (def dcd2018-website-structure
   {:main-component main-component

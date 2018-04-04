@@ -9,7 +9,7 @@
      [:td.time
       (when start [:p.start start])
       (when end [:p.end end])]
-     [:td {:col-span (if author 1 2)} title]
+     [:td {:col-span (if author 1 2)} [:a {:href (str "#" title)} title]]
      (when author
        [:td author])]))
 
@@ -30,7 +30,7 @@
        [:span.twitter-handle (str "@" twitter)]])
     [:h3 author]]
    [:div.info
-    [:h3.title
+    [:h3.title {:id title}
      (when (= :lightning type)
        [:span.lightning "lightning talk"])
      title]
