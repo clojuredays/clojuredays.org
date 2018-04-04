@@ -217,6 +217,7 @@ cljs.core.cst$sym$ci = new cljs.core.Symbol(null,"ci","ci",2049808339,null);
 cljs.core.cst$kw$div$description = new cljs.core.Keyword(null,"div.description","div.description",1049154676);
 cljs.core.cst$kw$print_DASH_length = new cljs.core.Keyword(null,"print-length","print-length",1931866356);
 cljs.core.cst$kw$link = new cljs.core.Keyword(null,"link","link",-1769163468);
+cljs.core.cst$kw$id = new cljs.core.Keyword(null,"id","id",-1388402092);
 cljs.core.cst$sym$src = new cljs.core.Symbol(null,"src","src",-10544524,null);
 cljs.core.cst$sym$ratom = new cljs.core.Symbol(null,"ratom","ratom",1514010260,null);
 cljs.core.cst$kw$class = new cljs.core.Keyword(null,"class","class",-2030961996);
