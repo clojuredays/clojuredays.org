@@ -1,18 +1,18 @@
 (ns dcd-website.credits)
 
 (def dcd-team
-  [["Carlo Sciolla" "skuro"]
-   ["Vijay Kiran" "vijaykiran"]
-   ["Max Gonzih" "gonzih"]
-   ["Joost Diepenmaat" "ZeekatSoftware"]])
+  [["Carlo Sciolla" "https://twitter.com/skuro"]
+   ["Vijay Kiran" "https://twitter.com/vijaykiran"]
+   ["Eugene Lukyanchuk" "https://github.com/agnivalent"]
+   ["Joost Diepenmaat" "https://twitter.com/ZeekatSoftware"]])
 
 (defn credits []
   [:span
    [:div
-    (letfn [(organizer [[name handle]]
-              ^{:key handle}
+    (letfn [(organizer [[name link]]
+              ^{:key link}
               [:span.org-info
-               [:a {:href (str "https://twitter.com/" handle)
+               [:a {:href link
                     :target :_blank}
                 [:img.icon.twitter {:src "img/icons/twitter.svg"}]
                 name]])]
