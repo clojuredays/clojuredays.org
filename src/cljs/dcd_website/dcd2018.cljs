@@ -33,6 +33,8 @@
     [:img {:src "img/2018/sponsors/exoscale.svg"}]]
    [:a.sponsor.platinum {:href "https://synple.eu/en/index" :target :_blank}
     [:img {:src "img/2018/sponsors/synple.png"}]]
+   [:a.sponsor.platinum {:href "https://vakantiediscounter.nl" :target :_blank}
+    [:img {:src "img/2018/sponsors/otravo.svg"}]]
 
    [:h2.regular "Regular Sponsors"]
    [:a.sponsor.regular.infi {:href "https://infi.nl/" :target :_blank}
