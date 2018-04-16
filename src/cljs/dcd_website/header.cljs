@@ -4,5 +4,5 @@
   [{:keys [styles title]} & children]
   [:header.header styles
    [:div.logo
-    [:img {:src "img/2018/logo.png"}]]
+    [:img {:src "img/2018/logo.svg"}]]
    children])
