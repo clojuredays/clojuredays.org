@@ -205,7 +205,7 @@ Pierre-Yves is an active member of the open-source community as author of pithos
 
    {:time ["18:20" "18:30"]
     :title "Closing"
-    :author "#DCD17 team"
+    :author "#DCD18 team"
     :type :org}
 
    {:time ["18:30" "21:30"]

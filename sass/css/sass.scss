@@ -56,6 +56,7 @@ body {
     }
 
     .header {
+        position: relative;
         min-height: 590px;
         display: flex;
         flex-direction: column;
@@ -68,8 +69,10 @@ body {
         }
 
         div.logo {
-            margin-left: 20px;
-            margin-top: 20px;
+            position: absolute;
+            margin-left: 30px;
+            margin-top: -125px;
+            top: 50%;
 
             flex: 1 100%;
 
@@ -232,6 +235,7 @@ body {
             div.logo {
                 margin: auto;
                 margin-top: 20px;
+                position: relative;
             }
         }
     }
