@@ -48,14 +48,14 @@ var n__7360__auto__ = a.length;
 var i = (0);
 while(true){
 if((i < n__7360__auto__)){
-var c_12230 = (a[i]);
-if((c_12230["cljsIsDirty"]) === true){
-(c_12230["forceUpdate"])();
+var c_12258 = (a[i]);
+if((c_12258["cljsIsDirty"]) === true){
+(c_12258["forceUpdate"])();
 } else {
 }
 
-var G__12231 = (i + (1));
-i = G__12231;
+var G__12259 = (i + (1));
+i = G__12259;
 continue;
 } else {
 return null;
@@ -93,8 +93,8 @@ while(true){
 if((i < n__7360__auto__)){
 (fs[i]).call(null);
 
-var G__12233 = (i + (1));
-i = G__12233;
+var G__12261 = (i + (1));
+i = G__12261;
 continue;
 } else {
 return null;
@@ -124,12 +124,12 @@ return null;
 } else {
 self__.scheduled_QMARK_ = true;
 
-var G__12232 = ((function (this$){
+var G__12260 = ((function (this$){
 return (function (){
 return this$.run_queues();
 });})(this$))
 ;
-return (reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1 ? reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1(G__12232) : reagent.impl.batching.next_tick.call(null,G__12232));
+return (reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1 ? reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1(G__12260) : reagent.impl.batching.next_tick.call(null,G__12260));
 }
 });
 
@@ -140,13 +140,13 @@ this$.run_funs("beforeFlush");
 
 reagent.impl.batching.ratom_flush();
 
-var temp__4661__auto___12234 = (this$["componentQueue"]);
-if((temp__4661__auto___12234 == null)){
+var temp__4661__auto___12262 = (this$["componentQueue"]);
+if((temp__4661__auto___12262 == null)){
 } else {
-var cs_12235 = temp__4661__auto___12234;
+var cs_12263 = temp__4661__auto___12262;
 (this$["componentQueue"] = null);
 
-reagent.impl.batching.run_queue(cs_12235);
+reagent.impl.batching.run_queue(cs_12263);
 }
 
 return this$.flush_after_render();
