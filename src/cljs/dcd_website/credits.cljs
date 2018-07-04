@@ -4,7 +4,8 @@
   [["Carlo Sciolla" "https://twitter.com/skuro"]
    ["Vijay Kiran" "https://twitter.com/vijaykiran"]
    ["Eugene Lukyanchuk" "https://github.com/agnivalent"]
-   ["Joost Diepenmaat" "https://twitter.com/ZeekatSoftware"]])
+   ["Joost Diepenmaat" "https://twitter.com/ZeekatSoftware"]
+   ["Max Gonzih" "https://github.com/Gonzih"]])
 
 (defn credits []
   [:span
