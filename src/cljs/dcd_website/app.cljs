@@ -1,12 +1,12 @@
 (ns dcd-website.app
   (:require [reagent.core :as reagent]
-            [dcd-website.dcd2018 :as dcd2018]
+            [dcd-website.dcd2019 :as dcd2019]
             [dcd-website.sidebar :refer [sidebar-component]]
             [dcd-website.map :refer [add-marker! init-tile-layer! init-map!]]
             [dcd-website.style :refer [colors]]
             [dcd-website.state :refer [website-structure]]))
 
-(reset! website-structure dcd2018/dcd2018-website-structure)
+(reset! website-structure dcd2019/dcd2019-website-structure)
 
 (defn website-component []
   (let [{:keys [header-component

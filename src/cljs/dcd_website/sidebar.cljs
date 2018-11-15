@@ -39,17 +39,20 @@
    [:a.item.expand-icon
     {:on-click #(swap! sidebar-expanded not)}
     "☰"]
-   (map menu-entry-component [#_{:link "#about"    :text "About"}
-                              #_{:link "#cfp"      :text "Call for papers"}
+   (map menu-entry-component [{:link "#about"    :text "About"}
+                              {:link "#cfp"      :text "Call for papers"}
                               {:link "#date"     :text "When?"}
-                              {:link "#agenda"   :text "Agenda"}
-                              {:link "#sponsors" :text "Sponsors"}
-                              {:link "#speakers" :text "Speakers"}
+                              #_{:link "#agenda"   :text "Agenda"}
+                              #_{:link "#sponsors" :text "Sponsors"}
+                              #_{:link "#speakers" :text "Speakers"}
                               {:link "#behave"   :text "Code of conduct"}
                               {:link "#org"      :text "Contacts"}
-                              {:link "#location" :text "Where?"}])
+                              #_{:link "#location" :text "Where?"}])
    [archive]
-   (map archive-entry-component [{:link "#dcd2017"
+   (map archive-entry-component [{:link "#dcd2018"
+                                  :text "DCD2018"
+                                  :website-structure dcd2018/dcd2018-website-structure}
+                                 {:link "#dcd2017"
                                   :text "DCD2017"
                                   :website-structure dcd2017/dcd2017-website-structure}
                                  {:link "#dcd2016"
