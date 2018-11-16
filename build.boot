@@ -13,7 +13,7 @@
                  [org.slf4j/slf4j-nop  "1.7.22"                :scope "test"]
                  [org.clojure/clojurescript "1.7.228"]
                  [reagent "0.6.0"]
-                 [com.eclipsesource.j2v8/j2v8_linux_x86_64 "4.6.0"]
+                 [com.eclipsesource.j2v8/j2v8_macosx_x86_64 "4.6.0"]
                  [boot-deps "0.1.6"]
                  [cljsjs/leaflet "0.7.7-6"]])
 
