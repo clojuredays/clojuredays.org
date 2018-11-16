@@ -64,7 +64,7 @@ body {
         padding: 0;
         background-color: $primary-color;
         color: $light-color;
-
+        height: 250px;
         h1 {
             position: absolute;
             width: 100%;
@@ -126,6 +126,7 @@ body {
     }
 
     .main {
+        padding-top: 20px;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
@@ -183,10 +184,6 @@ body {
             padding-right: 10px;
         }
 
-        .header {
-            min-height: 350px;
-        }
-
         .sidebar {
             padding-top: 10px;
             padding-right: 0;
@@ -217,7 +214,7 @@ body {
         }
 
         .header {
-            min-height: 100px;
+            height: 150px;
             div.logo {
                 img {
                     width: 100px;
