@@ -2,6 +2,7 @@
   (:require [dcd-website.dcd2016 :as dcd2016]
             [dcd-website.dcd2017 :as dcd2017]
             [dcd-website.dcd2018 :as dcd2018]
+            [dcd-website.dcd2019 :as dcd2019]
             [dcd-website.state :as state]
             [reagent.core :as reagent]))
 
@@ -23,13 +24,11 @@
     (collapse-sidebar)
     (swap-website-structure webcontent)))
 
-(defn menu-entry-component [{:keys [link text]}]
-  [:a.item {:href link :on-click (follow-menu-link dcd2018/dcd2018-website-structure) :key (gensym)} text])
-
 (defn archive []
   [:span.menu-title "Previous editions:"])
 
-(defn archive-entry-component [{:keys [link text website-structure]}]
+(defn menu-entry-component [{:keys [link text website-structure]
+                             :or {website-structure dcd2019/dcd2019-website-structure}}]
   [:a.item {:href link :on-click #(do (collapse-sidebar)
                                       (swap-website-structure website-structure)) :key (gensym)} text])
 
@@ -47,14 +46,14 @@
                               #_{:link "#speakers" :text "Speakers"}
                               {:link "#behave"   :text "Code of conduct"}
                               {:link "#org"      :text "Contacts"}
-                              #_{:link "#location" :text "Where?"}])
-   [archive]
-   (map archive-entry-component [{:link "#dcd2018"
-                                  :text "DCD2018"
-                                  :website-structure dcd2018/dcd2018-website-structure}
-                                 {:link "#dcd2017"
-                                  :text "DCD2017"
-                                  :website-structure dcd2017/dcd2017-website-structure}
-                                 {:link "#dcd2016"
-                                  :text "DCD2016"
-                                  :website-structure dcd2016/dcd2016-website-structure}])])
+                              #_{:link "#location" :text "Where?"}
+                              {:link "#dcd2018"
+                               :text "DCD2018"
+                               :website-structure dcd2018/dcd2018-website-structure}
+                              {:link              "#dcd2017"
+                               :text              "DCD2017"
+                               :website-structure dcd2017/dcd2017-website-structure}
+                              {:link              "#dcd2016"
+                               :text              "DCD2016"
+                               :website-structure dcd2016/dcd2016-website-structure}
+                              ])])

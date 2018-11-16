@@ -227,7 +227,7 @@ You will see how you can get feedback from something better than actual humans: 
 
 (defn when-component []
   [:div
-   [:p"Dutch Clojure Days will happen on "]
+   [:p "Dutch Clojure Days happened on "]
    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2018-tickets-41749338395" :target :_blank}
     [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, April 21st 2018, 8:30 AM – 5:30 PM CET"] "."])
 
