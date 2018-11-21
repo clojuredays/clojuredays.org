@@ -1,4 +1,4 @@
-$primary-color: #353433;
+$primary-color: #fff;
 $highlight-color: #ff6b12;
 $light-color: #dfd7d2;
 $white: #fff;
@@ -65,25 +65,15 @@ body {
         background-color: $primary-color;
         color: $light-color;
         height: 250px;
-        h1 {
-            position: absolute;
-            width: 100%;
-            margin: auto;
-            padding-top: 100px;
-            padding-bottom: 0.5em;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: normal;
-            line-height: 1.4;
-            font-size: 44px;
-            background-color: $primary-color;
-            .title {
-                padding: 0 40px 0 240px;
-            }
-        }
+
+        background-image: url(/img/2019/background.svg);
+        background-repeat: no-repeat;
+        background-position: right bottom;
 
         .logo {
+            width: 380px;
             z-index: 1;
+            display: inline-block;
         }
     }
 
@@ -126,6 +116,8 @@ body {
     }
 
     .main {
+        background-color:  #f7f7f7;
+        color: #4a4a4a;
         padding-top: 20px;
         padding-left: 20px;
         padding-right: 20px;
@@ -215,11 +207,6 @@ body {
 
         .header {
             height: 150px;
-            div.logo {
-                img {
-                    width: 100px;
-                }
-            }
             h1 {
                 font-size: 20px;
                 margin-top: -50px;

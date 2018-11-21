@@ -9,7 +9,7 @@
 
 (defn header-component-2019
   []
-  (header-component {:title "Dutch Clojure Days 2019"}))
+  (header-component {:title "Dutch Clojure Days"}))
 
 (defn about-component []
   [:div#about
