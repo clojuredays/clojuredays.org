@@ -227,6 +227,8 @@ You will see how you can get feedback from something better than actual humans: 
 
 (defn main-component []
   [:article.main
+   [:div#about
+    [about-component]]
    [:div#date
     [:h2 "When?"]
     [when-component]
