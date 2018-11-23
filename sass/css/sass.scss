@@ -21,6 +21,17 @@ a {
   color: $highlight-color;
 }
 
+.eventbrite {
+  background-color: $main-bg-color;
+  @media all and (max-width: 500px) {
+    height: 325px !important;
+  }
+  @media all and (min-width: 500px) {
+    height: 270px !important;
+  }
+
+}
+
 .site {
     display: flex;
     flex-direction: column;
