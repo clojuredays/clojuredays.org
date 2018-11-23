@@ -49,7 +49,7 @@
    [:h2 "Reserve your Spot"]
    [:p "DCD 2019 will be in Amsterdam on "
     [:b "Saturday on April 6th, 2019"] "! Get your ticket now!"]
-   [:div#eventbrite-widget-container-52858312636.eventbrite]])
+   [:div#eventbrite-widget-container-52858312636]])
 
 (def agenda-data
   [{:time ["8:30" "9:15"]
