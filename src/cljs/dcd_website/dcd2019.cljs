@@ -47,10 +47,9 @@
 (defn tickets-component []
   [:div#date
    [:h2 "Reserve your Spot"]
-   [:p "DCD 2019 will be in Amsterdam on"
+   [:p "DCD 2019 will be in Amsterdam on "
     [:b "Saturday on April 6th, 2019"] "! Get your ticket now!"]
-   [:div
-    ]])
+   [:div#eventbrite-widget-container-52858312636]])
 
 (def agenda-data
   [{:time ["8:30" "9:15"]
@@ -224,13 +223,14 @@ You will see how you can get feedback from something better than actual humans: 
 
 (defn when-component []
   [:div
-   [:p"Dutch Clojure Days will happen on " "Saturday on April 6th, 2019" "."]])
+   [:p"Dutch Clojure Days will happen on " " Saturday on April 6th, 2019" "."]])
 
 (defn main-component []
   [:article.main
    [:div#date
     [:h2 "When?"]
-    [when-component]]
+    [when-component]
+    [tickets-component]]
    [:div#cfp
     [cfp-component]]
    #_[:div#agenda
