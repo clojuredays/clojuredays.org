@@ -31,11 +31,11 @@ return cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.
 });
 dcd_website.agenda.speakers_component = (function dcd_website$agenda$speakers_component(agenda_data){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$speakers,cljs.core.doall.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$2(dcd_website.agenda.speaker_component,cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__12803_SHARP_){
-var and__6443__auto__ = cljs.core.cst$kw$profile_DASH_pic.cljs$core$IFn$_invoke$arity$1(p1__12803_SHARP_);
-if(cljs.core.truth_(and__6443__auto__)){
+var and__6445__auto__ = cljs.core.cst$kw$profile_DASH_pic.cljs$core$IFn$_invoke$arity$1(p1__12803_SHARP_);
+if(cljs.core.truth_(and__6445__auto__)){
 return new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$lightning,null,cljs.core.cst$kw$talk,null], null), null).call(null,cljs.core.cst$kw$type.cljs$core$IFn$_invoke$arity$1(p1__12803_SHARP_));
 } else {
-return and__6443__auto__;
+return and__6445__auto__;
 }
 }),agenda_data)))], null);
 });

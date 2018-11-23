@@ -34,18 +34,18 @@ return dcd_website.sidebar.swap_website_structure(webcontent);
 dcd_website.sidebar.archive = (function dcd_website$sidebar$archive(){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$span$menu_DASH_title,"Previous editions:"], null);
 });
-dcd_website.sidebar.menu_entry_component = (function dcd_website$sidebar$menu_entry_component(p__12814){
-var map__12817 = p__12814;
-var map__12817__$1 = ((((!((map__12817 == null)))?((((map__12817.cljs$lang$protocol_mask$partition0$ & (64))) || (map__12817.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__12817):map__12817);
-var link = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs.core.cst$kw$link);
-var text = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12817__$1,cljs.core.cst$kw$text);
-var website_structure = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__12817__$1,cljs.core.cst$kw$website_DASH_structure,dcd_website.dcd2019.dcd2019_website_structure);
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a$item,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$href,link,cljs.core.cst$kw$on_DASH_click,((function (map__12817,map__12817__$1,link,text,website_structure){
+dcd_website.sidebar.menu_entry_component = (function dcd_website$sidebar$menu_entry_component(p__12816){
+var map__12819 = p__12816;
+var map__12819__$1 = ((((!((map__12819 == null)))?((((map__12819.cljs$lang$protocol_mask$partition0$ & (64))) || (map__12819.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__12819):map__12819);
+var link = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12819__$1,cljs.core.cst$kw$link);
+var text = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12819__$1,cljs.core.cst$kw$text);
+var website_structure = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__12819__$1,cljs.core.cst$kw$website_DASH_structure,dcd_website.dcd2019.dcd2019_website_structure);
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a$item,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$href,link,cljs.core.cst$kw$on_DASH_click,((function (map__12819,map__12819__$1,link,text,website_structure){
 return (function (){
 dcd_website.sidebar.collapse_sidebar();
 
 return dcd_website.sidebar.swap_website_structure(website_structure);
-});})(map__12817,map__12817__$1,link,text,website_structure))
+});})(map__12819,map__12819__$1,link,text,website_structure))
 ,cljs.core.cst$kw$key,cljs.core.gensym.cljs$core$IFn$_invoke$arity$0()], null),text], null);
 });
 dcd_website.sidebar.sidebar_component = (function dcd_website$sidebar$sidebar_component(){
