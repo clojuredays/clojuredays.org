@@ -45,7 +45,6 @@
                               #_{:link "#sponsors" :text "Sponsors"}
                               #_{:link "#speakers" :text "Speakers"}
                               {:link "#behave" :text "Code of conduct"}
-                              {:link "#org" :text "Contacts"}
                               #_{:link "#location" :text "Where?"}
                               {:link              "#dcd2018"
                                :text              "Archive: DCD2018"
