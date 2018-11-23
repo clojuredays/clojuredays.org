@@ -5,24 +5,23 @@ goog.require('reagent.core');
 goog.require('dcd_website.dcd2019');
 goog.require('dcd_website.sidebar');
 goog.require('dcd_website.map');
-goog.require('dcd_website.style');
 goog.require('dcd_website.state');
 (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(dcd_website.state.website_structure,dcd_website.dcd2019.dcd2019_website_structure) : cljs.core.reset_BANG_.call(null,dcd_website.state.website_structure,dcd_website.dcd2019.dcd2019_website_structure));
 dcd_website.app.website_component = (function dcd_website$app$website_component(){
-var map__12829 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(dcd_website.state.website_structure) : cljs.core.deref.call(null,dcd_website.state.website_structure));
-var map__12829__$1 = ((((!((map__12829 == null)))?((((map__12829.cljs$lang$protocol_mask$partition0$ & (64))) || (map__12829.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__12829):map__12829);
-var header_component = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12829__$1,cljs.core.cst$kw$header_DASH_component);
-var main_component = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12829__$1,cljs.core.cst$kw$main_DASH_component);
-var footer_component = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12829__$1,cljs.core.cst$kw$footer_DASH_component);
+var map__12823 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(dcd_website.state.website_structure) : cljs.core.deref.call(null,dcd_website.state.website_structure));
+var map__12823__$1 = ((((!((map__12823 == null)))?((((map__12823.cljs$lang$protocol_mask$partition0$ & (64))) || (map__12823.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__12823):map__12823);
+var header_component = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12823__$1,cljs.core.cst$kw$header_DASH_component);
+var main_component = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12823__$1,cljs.core.cst$kw$main_DASH_component);
+var footer_component = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12823__$1,cljs.core.cst$kw$footer_DASH_component);
 return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$site,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$wrapper_DASH_header,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [header_component], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$wrapper,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.sidebar.sidebar_component], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [main_component], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [footer_component], null)], null);
 });
 dcd_website.app.init = (function dcd_website$app$init(){
 if(cljs.core.truth_(document.location)){
 var root = document.getElementById("container");
 if(cljs.core.truth_(root)){
-var G__12833 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.app.website_component], null);
-var G__12834 = root;
-return (reagent.core.render_component.cljs$core$IFn$_invoke$arity$2 ? reagent.core.render_component.cljs$core$IFn$_invoke$arity$2(G__12833,G__12834) : reagent.core.render_component.call(null,G__12833,G__12834));
+var G__12827 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcd_website.app.website_component], null);
+var G__12828 = root;
+return (reagent.core.render_component.cljs$core$IFn$_invoke$arity$2 ? reagent.core.render_component.cljs$core$IFn$_invoke$arity$2(G__12827,G__12828) : reagent.core.render_component.call(null,G__12827,G__12828));
 } else {
 return null;
 }
