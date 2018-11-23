@@ -1,11 +1,9 @@
-(ns dcd-website.agenda
-  (:require [dcd-website.style :refer [colors]]))
+(ns dcd-website.agenda)
 
 (defn table-row [{:keys [title time author type]}]
   (let [[start end] time]
     ^{:key (str time author)}
     [:tr
-     {:style {:background (colors type)}}
      [:td.time
       (when start [:p.start start])
       (when end [:p.end end])]
@@ -26,7 +24,6 @@
     [:img {:src (str "img/speakers/" profile-pic)}]
     (when twitter
       [:a.twitter-link {:href (str "https://twitter.com/" twitter) :target :_blank}
-       [:img.icon.twitter {:src "img/icons/twitter.svg"}]
        [:span.twitter-handle (str "@" twitter)]])
     [:h3 author]]
    [:div.info
@@ -39,7 +36,6 @@
     (when youtube-link
       [:a.youtube-link {:href youtube-link
                         :target :_blank}
-       [:img.icon.youtube {:src "img/icons/youtube.svg"}]
        "Watch on YouTube"])]])
 
 (defn speakers-component [agenda-data]

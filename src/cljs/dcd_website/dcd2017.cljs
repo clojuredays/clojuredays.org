@@ -3,7 +3,6 @@
             [dcd-website.coc :refer     [code-of-conduct-component]]
             [dcd-website.header :refer  [header-component]]
             [dcd-website.agenda :refer  [speakers-component agenda-component]]
-            [dcd-website.credits :refer [credits]]
             [dcd-website.footer :refer  [footer-component]]))
 
 (defn header-component-2017
@@ -18,7 +17,7 @@
   [:div
    [:p"Dutch Clojure Days did happen on "]
    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2017-tickets-30113550440" :target :_blank}
-    [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, March 25th 2017, 8:30 AM – 5:30 PM CET"] "."])
+    "Saturday, March 25th 2017, 8:30 AM – 5:30 PM CET"] "."])
 
 (defn sponsors-component []
   [:div.sponsors
@@ -37,7 +36,6 @@
     [:img {:src "img/sponsors/lunatech.svg"}]]
    [:p "If you are interested in sponsoring this event please contact us via "
     [:a {:href "mailto:events@clojuredays.org"}
-     [:img.icon.email {:src "img/icons/email.svg"}]
      "email."]]])
 
 (def agenda-data
@@ -214,7 +212,6 @@
     [:p "The recordings from the 2017 edition are available here: "]
     [:p [:a {:href "https://www.youtube.com/watch?v=nhwYgJqozg4&list=PLjzcwcP9P2Lc1ECd6sG0F4TnUVQBdYbmX"
              :target :_blank}
-         [:img.icon.youtube {:src "img/icons/youtube.svg"}]
          "DCD17 Playlist on Youtube"]]]
    [:div#cfp
     [:h2 "Call for papers"]
@@ -236,20 +233,7 @@
     [speakers-component agenda-data]]
    [:div#behave
     [:h2 "Code of Conduct"]
-    [code-of-conduct-component]]
-   [:div#org
-    [:h2 "Contacts"]
-    [:h3 "Official contacts"]
-    [:span.email-info
-     [:a {:href "mailto:events@clojuredays.org"}
-      [:img.icon.email {:src "img/icons/email.svg"}]
-      "events@clojuredays.org"]]
-    [:span.org-info
-     [:a {:href "https://twitter.com/clojuredays"}
-      [:img.icon.twitter {:src "img/icons/twitter.svg"}]
-      "@clojuredays"]]
-    [:h3 "DCD team"]
-    [credits]]])
+    [code-of-conduct-component]]])
 
 (def dcd2017-website-structure
   {:header-component  header-component-2017

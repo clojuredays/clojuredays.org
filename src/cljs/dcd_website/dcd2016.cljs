@@ -13,7 +13,6 @@
     [:p "Videos from the previous event are available here: "
      [:a {:href "https://www.youtube.com/playlist?list=PLjzcwcP9P2LeiVXofnnXcxAqvmVNn3fTD"
           :target :_blank}
-      [:img.icon.youtube {:src "img/icons/youtube.svg"}]
       "DCD16 Playlist on Youtube"] "."]]])
 
 (def dcd2016-website-structure

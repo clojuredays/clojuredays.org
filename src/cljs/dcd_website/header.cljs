@@ -3,5 +3,6 @@
 (defn header-component
   [{:keys [styles title]} & children]
   [:header.header styles
-   [:img.logo {:src "/img/2019/logo.svg"}]
+   [:div.logo [:img {:src "/img/2019/logo.svg"}]]
+   [:span.title "DUTCH CLOJURE DAYS 2019"]
    children])

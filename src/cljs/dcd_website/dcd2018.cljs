@@ -1,11 +1,9 @@
 (ns dcd-website.dcd2018
   (:require [dcd-website.map :refer    [location-component]]
             [dcd-website.header :refer [header-component]]
-            [dcd-website.style :refer   [colors]]
             [dcd-website.footer :refer [footer-component]]
             [dcd-website.agenda :refer  [speakers-component agenda-component]]
-            [dcd-website.coc :refer [code-of-conduct-component]]
-            [dcd-website.credits :refer [credits]]))
+            [dcd-website.coc :refer [code-of-conduct-component]]))
 
 (defn header-component-2018
   []
@@ -229,7 +227,7 @@ You will see how you can get feedback from something better than actual humans: 
   [:div
    [:p "Dutch Clojure Days happened on "]
    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2018-tickets-41749338395" :target :_blank}
-    [:img.icon {:src "img/icons/calendar.svg"}] "Saturday, April 21st 2018, 8:30 AM – 5:30 PM CET"] "."])
+    "Saturday, April 21st 2018, 8:30 AM – 5:30 PM CET"] "."])
 
 (defn main-component []
   [:article.main
@@ -248,19 +246,6 @@ You will see how you can get feedback from something better than actual humans: 
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]
-   [:div#org
-    [:h2 "Contacts"]
-    [:h3 "Official contacts"]
-    [:span.email-info
-     [:a {:href "mailto:events@clojuredays.org"}
-      [:img.icon.email {:src "img/icons/email.svg"}]
-      "events@clojuredays.org"]]
-    [:span.org-info
-     [:a {:href "https://twitter.com/clojuredays"}
-      [:img.icon.twitter {:src "img/icons/twitter.svg"}]
-      "@clojuredays"]]
-    [:h3 "DCD team"]
-    [credits]]
    [:div#location
     [:h2 "Where?"]
     [location-component {:coords [52.3666451 4.892396599999984]}]]])

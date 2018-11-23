@@ -1,11 +1,9 @@
 (ns dcd-website.dcd2019
   (:require [dcd-website.map :refer    [location-component]]
             [dcd-website.header :refer [header-component]]
-            [dcd-website.style :refer   [colors]]
             [dcd-website.footer :refer [footer-component]]
             [dcd-website.agenda :refer  [speakers-component agenda-component]]
-            [dcd-website.coc :refer [code-of-conduct-component]]
-            [dcd-website.credits :refer [credits]]))
+            [dcd-website.coc :refer [code-of-conduct-component]]))
 
 (defn header-component-2019
   []
@@ -249,21 +247,7 @@ You will see how you can get feedback from something better than actual humans: 
     [:p "Dutch Clojure Days will take place at the center of Amsterdam."]]
    [:div#behave
     [:h2 "Code of Conduct"]
-    [code-of-conduct-component]]
-   [:div#org
-    [:h2 "Contacts"]
-    [:h3 "Official contacts"]
-    [:span.email-info
-     [:a {:href "mailto:events@clojuredays.org"}
-      [:img.icon.email {:src "img/icons/email.svg"}]
-      "events@clojuredays.org"]]
-    [:span.org-info
-     [:a {:href "https://twitter.com/clojuredays"}
-      [:img.icon.twitter {:src "img/icons/twitter.svg"}]
-      "@clojuredays"]]
-    [:h3 "DCD team"]
-    [credits]]
-   ])
+    [code-of-conduct-component]]])
 
 (def dcd2019-website-structure
   {:main-component main-component

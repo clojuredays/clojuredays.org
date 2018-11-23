@@ -6,10 +6,8 @@
    [:h3 "Need Help?"]
    [:p "You can always reach out to us at "
     [:a {:href "mailto:events@clojuredays.org"}
-     [:img.icon.email {:src "img/icons/email.svg"}]
      "events@clojuredays.org"] " or on "
     [:a {:href "https://twitter.com/clojuredays"}
-     [:img.icon.twitter {:src "img/icons/twitter.svg"}]
      "twitter"] "."]
    [:h3 "The Quick Version"]
    [:p "Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference  " [:strong "without a refund"] " at the discretion of the conference organisers."]

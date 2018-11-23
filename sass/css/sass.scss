@@ -2,9 +2,12 @@ $primary-color: #fff;
 $highlight-color: #ff6b12;
 $light-color: #dfd7d2;
 $white: #fff;
+$main-bg-color: #fff;
+$gray-color: #4a4a4a;
+$sidebar-color: #f7f7f7;
 
 body {
-    font: 100% 'Avenir Next', 'Helvetica Neue', 'Sans-Serif';
+    font-family: 'Quicksand', sans-serif;
     font-weight: normal;
     font-style: normal;
     line-height: 170%;
@@ -12,6 +15,10 @@ body {
     color: $primary-color;
     margin: 0;
     background-color: white;
+}
+
+a {
+  color: $highlight-color;
 }
 
 .site {
@@ -60,20 +67,67 @@ body {
     .header {
         position: relative;
         display: flex;
-        flex-direction: column;
-        padding: 0;
         background-color: $primary-color;
         color: $light-color;
-        height: 250px;
 
-        background-image: url(/img/2019/background.svg);
+        background-image: url(/img/2019/background.jpg);
         background-repeat: no-repeat;
-        background-position: right bottom;
+        background-position: top center;
+        background-size: auto 85%;
+        width: 100%;
+        padding-top: 41%;
+        border-bottom: 8px solid $highlight-color;
+
+        .logo, .title {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        .title {
+            @media all and (max-width: 500px) {
+              font-size: 20px;
+            }
+            @media all and (min-width: 500px) and (max-width: 1000px) {
+              font-size: 35px;
+            }
+            @media all and (min-width: 1000px) {
+              font-size: 50px;
+            }
+            bottom: 3%;
+            color: $gray-color;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.51;
+            letter-spacing: 2.9px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 300;
+        }
 
         .logo {
-            width: 380px;
+            @media all and (max-width: 500px) {
+              bottom: 25%;
+            }
+            @media all and (min-width: 500px) and (max-width: 1000px) {
+              bottom: 20%;
+            }
+            @media all and (min-width: 1000px) {
+              bottom: 15%;
+            }
+
+          img {
+            @media all and (max-width: 500px) {
+              width: 150px;
+            }
+            @media all and (min-width: 500px) and (max-width: 1000px) {
+              width: 200px;
+            }
+            @media all and (min-width: 1000px) {
+              width: 250px;
+            }
             z-index: 1;
             display: inline-block;
+          }
         }
     }
 
@@ -91,19 +145,19 @@ body {
         a, a:visited {
             text-decoration: none;
             cursor: pointer;
-            color: $primary-color;
+            color: $gray-color;
         }
 
 
         flex-direction: column;
         display: flex;
-        min-width: 180px;
-        background: $light-color;
-        padding-top: 40px;
+        min-width: 60px;
+        background: $sidebar-color;
+        padding-top: 83px;
         padding-left: 20px;
 
         a.item {
-            padding-bottom: 20px;
+            padding-bottom: 15px;
         }
 
         span.menu-title {
@@ -116,26 +170,29 @@ body {
     }
 
     .main {
-        background-color:  #f7f7f7;
-        color: #4a4a4a;
+        background-color:  $main-bg-color;
+        color: $gray-color;
         padding-top: 20px;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
 
         h2 {
-            font-size: 1.2rem;
-
-            &::after {
-                content: " ";
-                display: block;
-                width: 80px;
-                height: 2px;
-                margin: 10px 0;
-                background: $primary-color;
+            @media all and (max-width: 500px) {
+              font-size: 1.6rem;
             }
+            @media all and (min-width: 500px) and (max-width: 1000px) {
+              font-size: 2.5rem;
+            }
+            @media all and (min-width: 1000px) {
+              font-size: 3.2rem;
+            }
+            color: $highlight-color;
+            text-transform: uppercase;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
 
-            margin-top: 40px;
+            margin-top: 66px;
         }
 
         h3 {
@@ -239,24 +296,46 @@ body {
 
     .footer {
         display: flex;
-        flex-flow: row wrap;
-        height: 52px;
+        flex-flow: row;
+        min-height: 294px;
 
-        a {
+        &, .sidebar, .main {
+          background: $highlight-color;
+          color: $main-bg-color;
+        }
+
+        .sidebar {
+          min-width: 60px;
+          content: "&nbsp;";
+        }
+
+        .main {
+          display: flex;
+          flex-flow: row;
+          .col {
+            width: 30%;
+          }
+
+          @media all and (max-width: 900px) {
+            flex-flow: column;
+
+            .col {
+              width: 100%;
+            }
+          }
+
+          a {
             flex: 1 1 auto;
             display: inline-block;
             text-align: center;
             vertical-align: middle;
             overflow: hidden;
-
-            img {
-                padding: 10px;
-                height: 32px;
-                width: 32px;
-            }
+            color: $main-bg-color;
+          }
         }
 
-        background: #f7f7f7;
+        background: $highlight-color;
+        color: $main-bg-color;
     }
 
     // Small viewport
@@ -270,9 +349,14 @@ body {
 
     .sponsors {
         h2.platinum, h2.regular {
+            margin-top: 120px;
             &:after {
                 content: none;
             }
+        }
+
+        .sponsor {
+          margin-top: 40px;
         }
 
         a.sponsor.platinum {
@@ -348,7 +432,7 @@ body {
 
             td {
                 padding: 15px;
-                border-bottom: 1px solid #626262;
+                border-bottom: 1px solid $highlight-color;
             }
 
             td.time {
@@ -403,7 +487,7 @@ body {
                     display: block;
 
                     .twitter-handle {
-                        color: $primary-color;
+                        color: $highlight-color;
                         font-weight: bold;
                         font-size: 13px;
                         vertical-align: middle;
@@ -485,15 +569,6 @@ body {
         border-left: 5px solid rgba(160,200,220,.8);
         background-color: rgba(255, 255, 255, 0.8);
         z-index: 1;
-    }
-
-    .header {
-        .title {
-            h1 {
-                text-align: left;
-                padding-left: 20px;
-            }
-        }
     }
 
     .timeline-description {

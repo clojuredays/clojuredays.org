@@ -1,12 +1,42 @@
 (ns dcd-website.footer)
 
+(def dcd-team
+  [["Carlo Sciolla" "https://twitter.com/skuro"]
+   ["Vijay Kiran" "https://twitter.com/vijaykiran"]
+   ["Eugene Lukyanchuk" "https://github.com/agnivalent"]
+   ["Joost Diepenmaat" "https://twitter.com/ZeekatSoftware"]
+   ["Max Gonzih" "https://github.com/Gonzih"]])
+
 (defn footer-component []
   [:footer.footer
-   [:a {:href "https://twitter.com/clojuredays"
-        :target :_blank}
-    [:img {:src "img/icons/twitter.svg"}]]
-   [:a {:href "https://www.youtube.com/channel/UCZ7rYtyjSgF1jMYHCkyjwMQ"
-        :target :_blank}
-    [:img {:src "img/icons/youtube.svg"}]]
-   [:a {:href "mailto:events@clojuredays.org"}
-    [:img {:src "img/icons/email.svg"}]]])
+
+   [:aside.sidebar]
+
+   [:article.main
+    [:div.col
+     [:h3 "Official contacts"]
+     [:span.email-info
+      [:a {:href "mailto:events@clojuredays.org"}
+       "events@clojuredays.org"]]
+     [:span.org-info
+      [:a {:href "https://twitter.com/clojuredays"}
+       "@clojuredays"]]]
+
+    [:div.col
+     [:h3 "DCD team"]
+     [:span
+      [:div
+       (letfn [(organizer [[name link]]
+                 ^{:key link}
+                 [:span.org-info
+                  [:a {:href link
+                       :target :_blank}
+                   name]])]
+         (map organizer dcd-team))]]]
+
+    [:div.col
+     [:h3 "Design & Art"]
+     [:span
+      [:a {:href "https://twitter.com/moolver_sin"
+           :target :_blank}
+       "Lubov Soltan"]]]]])
