@@ -15,14 +15,14 @@ return (max === p1__12236_SHARP_);
  */
 clojure.set.union = (function clojure$set$union(var_args){
 var args12237 = [];
-var len__7513__auto___12243 = arguments.length;
-var i__7514__auto___12244 = (0);
+var len__7515__auto___12243 = arguments.length;
+var i__7516__auto___12244 = (0);
 while(true){
-if((i__7514__auto___12244 < len__7513__auto___12243)){
-args12237.push((arguments[i__7514__auto___12244]));
+if((i__7516__auto___12244 < len__7515__auto___12243)){
+args12237.push((arguments[i__7516__auto___12244]));
 
-var G__12245 = (i__7514__auto___12244 + (1));
-i__7514__auto___12244 = G__12245;
+var G__12245 = (i__7516__auto___12244 + (1));
+i__7516__auto___12244 = G__12245;
 continue;
 } else {
 }
@@ -44,8 +44,8 @@ return clojure.set.union.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(argumen
 
 break;
 default:
-var argseq__7532__auto__ = (new cljs.core.IndexedSeq(args12237.slice((2)),(0)));
-return clojure.set.union.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__7532__auto__);
+var argseq__7534__auto__ = (new cljs.core.IndexedSeq(args12237.slice((2)),(0)));
+return clojure.set.union.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__7534__auto__);
 
 }
 });
@@ -85,14 +85,14 @@ clojure.set.union.cljs$lang$maxFixedArity = (2);
  */
 clojure.set.intersection = (function clojure$set$intersection(var_args){
 var args12248 = [];
-var len__7513__auto___12254 = arguments.length;
-var i__7514__auto___12255 = (0);
+var len__7515__auto___12254 = arguments.length;
+var i__7516__auto___12255 = (0);
 while(true){
-if((i__7514__auto___12255 < len__7513__auto___12254)){
-args12248.push((arguments[i__7514__auto___12255]));
+if((i__7516__auto___12255 < len__7515__auto___12254)){
+args12248.push((arguments[i__7516__auto___12255]));
 
-var G__12256 = (i__7514__auto___12255 + (1));
-i__7514__auto___12255 = G__12256;
+var G__12256 = (i__7516__auto___12255 + (1));
+i__7516__auto___12255 = G__12256;
 continue;
 } else {
 }
@@ -110,8 +110,8 @@ return clojure.set.intersection.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(
 
 break;
 default:
-var argseq__7532__auto__ = (new cljs.core.IndexedSeq(args12248.slice((2)),(0)));
-return clojure.set.intersection.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__7532__auto__);
+var argseq__7534__auto__ = (new cljs.core.IndexedSeq(args12248.slice((2)),(0)));
+return clojure.set.intersection.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__7534__auto__);
 
 }
 });
@@ -164,14 +164,14 @@ clojure.set.intersection.cljs$lang$maxFixedArity = (2);
  */
 clojure.set.difference = (function clojure$set$difference(var_args){
 var args12260 = [];
-var len__7513__auto___12266 = arguments.length;
-var i__7514__auto___12267 = (0);
+var len__7515__auto___12266 = arguments.length;
+var i__7516__auto___12267 = (0);
 while(true){
-if((i__7514__auto___12267 < len__7513__auto___12266)){
-args12260.push((arguments[i__7514__auto___12267]));
+if((i__7516__auto___12267 < len__7515__auto___12266)){
+args12260.push((arguments[i__7516__auto___12267]));
 
-var G__12268 = (i__7514__auto___12267 + (1));
-i__7514__auto___12267 = G__12268;
+var G__12268 = (i__7516__auto___12267 + (1));
+i__7516__auto___12267 = G__12268;
 continue;
 } else {
 }
@@ -189,8 +189,8 @@ return clojure.set.difference.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(ar
 
 break;
 default:
-var argseq__7532__auto__ = (new cljs.core.IndexedSeq(args12260.slice((2)),(0)));
-return clojure.set.difference.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__7532__auto__);
+var argseq__7534__auto__ = (new cljs.core.IndexedSeq(args12260.slice((2)),(0)));
+return clojure.set.difference.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__7534__auto__);
 
 }
 });
@@ -297,14 +297,14 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m__$1,v,k);
  */
 clojure.set.join = (function clojure$set$join(var_args){
 var args12284 = [];
-var len__7513__auto___12291 = arguments.length;
-var i__7514__auto___12292 = (0);
+var len__7515__auto___12291 = arguments.length;
+var i__7516__auto___12292 = (0);
 while(true){
-if((i__7514__auto___12292 < len__7513__auto___12291)){
-args12284.push((arguments[i__7514__auto___12292]));
+if((i__7516__auto___12292 < len__7515__auto___12291)){
+args12284.push((arguments[i__7516__auto___12292]));
 
-var G__12293 = (i__7514__auto___12292 + (1));
-i__7514__auto___12292 = G__12293;
+var G__12293 = (i__7516__auto___12292 + (1));
+i__7516__auto___12292 = G__12293;
 continue;
 } else {
 }

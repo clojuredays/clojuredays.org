@@ -259,9 +259,9 @@ break;
 case "shouldComponentUpdate":
 return ((function (G__12521){
 return (function reagent$impl$component$custom_wrapper_$_shouldComponentUpdate(nextprops,nextstate){
-var or__6455__auto__ = reagent.impl.util._STAR_always_update_STAR_;
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+var or__6457__auto__ = reagent.impl.util._STAR_always_update_STAR_;
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 var c = this;
 var old_argv = (c["props"]["argv"]);
@@ -352,11 +352,11 @@ return null;
 });
 reagent.impl.component.get_wrapper = (function reagent$impl$component$get_wrapper(key,f,name){
 var wrap = reagent.impl.component.custom_wrapper(key,f);
-if(cljs.core.truth_((function (){var and__6443__auto__ = wrap;
-if(cljs.core.truth_(and__6443__auto__)){
+if(cljs.core.truth_((function (){var and__6445__auto__ = wrap;
+if(cljs.core.truth_(and__6445__auto__)){
 return f;
 } else {
-return and__6443__auto__;
+return and__6445__auto__;
 }
 })())){
 if(cljs.core.ifn_QMARK_(f)){
@@ -366,9 +366,9 @@ throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str(
 } else {
 }
 
-var or__6455__auto__ = wrap;
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+var or__6457__auto__ = wrap;
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 return f;
 }
@@ -402,24 +402,24 @@ throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str(
 }
 
 
-var render_fun = (function (){var or__6455__auto__ = cljs.core.cst$kw$reagentRender.cljs$core$IFn$_invoke$arity$1(fmap);
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+var render_fun = (function (){var or__6457__auto__ = cljs.core.cst$kw$reagentRender.cljs$core$IFn$_invoke$arity$1(fmap);
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 return cljs.core.cst$kw$componentFunction.cljs$core$IFn$_invoke$arity$1(fmap);
 }
 })();
 var legacy_render = (render_fun == null);
-var render_fun__$1 = (function (){var or__6455__auto__ = render_fun;
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+var render_fun__$1 = (function (){var or__6457__auto__ = render_fun;
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 return cljs.core.cst$kw$render.cljs$core$IFn$_invoke$arity$1(fmap);
 }
 })();
-var name = [cljs.core.str((function (){var or__6455__auto__ = cljs.core.cst$kw$displayName.cljs$core$IFn$_invoke$arity$1(fmap);
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+var name = [cljs.core.str((function (){var or__6457__auto__ = cljs.core.cst$kw$displayName.cljs$core$IFn$_invoke$arity$1(fmap);
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 return reagent.impl.util.fun_name(render_fun__$1);
 }
@@ -462,15 +462,15 @@ throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_st
 return (reagent.impl.util.react["createClass"])(reagent.impl.component.cljsify(body));
 });
 reagent.impl.component.component_path = (function reagent$impl$component$component_path(c){
-var elem = (function (){var G__12542 = (function (){var or__6455__auto__ = (function (){var G__12544 = c;
+var elem = (function (){var G__12542 = (function (){var or__6457__auto__ = (function (){var G__12544 = c;
 if((G__12544 == null)){
 return null;
 } else {
 return (G__12544["_reactInternalInstance"]);
 }
 })();
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 return c;
 }
@@ -507,9 +507,9 @@ return res;
 });
 reagent.impl.component.comp_name = (function reagent$impl$component$comp_name(){
 var c = reagent.impl.component._STAR_current_component_STAR_;
-var n = (function (){var or__6455__auto__ = reagent.impl.component.component_path(c);
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+var n = (function (){var or__6457__auto__ = reagent.impl.component.component_path(c);
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 var G__12548 = c;
 var G__12548__$1 = (((G__12548 == null))?null:G__12548.constructor);

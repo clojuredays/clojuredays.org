@@ -17,9 +17,9 @@ if(typeof ReactDOMServer !== 'undefined'){
 return reagent.dom.server.imported = ReactDOMServer;
 } else {
 if(typeof require !== 'undefined'){
-var or__6455__auto__ = reagent.dom.server.imported = require("react-dom/server");
-if(cljs.core.truth_(or__6455__auto__)){
-return or__6455__auto__;
+var or__6457__auto__ = reagent.dom.server.imported = require("react-dom/server");
+if(cljs.core.truth_(or__6457__auto__)){
+return or__6457__auto__;
 } else {
 throw (new Error("require('react-dom/server') failed"));
 }
@@ -36,11 +36,11 @@ throw (new Error("js/ReactDOMServer is missing"));
 reagent.dom.server.render_to_string = (function reagent$dom$server$render_to_string(component){
 reagent.ratom.flush_BANG_();
 
-var _STAR_non_reactive_STAR_12622 = reagent.impl.util._STAR_non_reactive_STAR_;
+var _STAR_non_reactive_STAR_12665 = reagent.impl.util._STAR_non_reactive_STAR_;
 reagent.impl.util._STAR_non_reactive_STAR_ = true;
 
 try{return (reagent.dom.server.module()["renderToString"])(reagent.impl.template.as_element(component));
-}finally {reagent.impl.util._STAR_non_reactive_STAR_ = _STAR_non_reactive_STAR_12622;
+}finally {reagent.impl.util._STAR_non_reactive_STAR_ = _STAR_non_reactive_STAR_12665;
 }});
 /**
  * Turns a component into an HTML string, without data-react-id attributes, etc.
@@ -48,9 +48,9 @@ try{return (reagent.dom.server.module()["renderToString"])(reagent.impl.template
 reagent.dom.server.render_to_static_markup = (function reagent$dom$server$render_to_static_markup(component){
 reagent.ratom.flush_BANG_();
 
-var _STAR_non_reactive_STAR_12624 = reagent.impl.util._STAR_non_reactive_STAR_;
+var _STAR_non_reactive_STAR_12667 = reagent.impl.util._STAR_non_reactive_STAR_;
 reagent.impl.util._STAR_non_reactive_STAR_ = true;
 
 try{return (reagent.dom.server.module()["renderToStaticMarkup"])(reagent.impl.template.as_element(component));
-}finally {reagent.impl.util._STAR_non_reactive_STAR_ = _STAR_non_reactive_STAR_12624;
+}finally {reagent.impl.util._STAR_non_reactive_STAR_ = _STAR_non_reactive_STAR_12667;
 }});
