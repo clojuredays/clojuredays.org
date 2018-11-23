@@ -274,12 +274,6 @@ a {
         }
     }
 
-    // Small viewport
-    @media all and (max-width: 500px) {
-        .sidebar {
-        }
-    }
-
     .org-info, .email-info {
         display: block;
 
@@ -305,6 +299,9 @@ a {
         }
 
         .sidebar {
+          @media all and (max-width: 800px) {
+            display: none;
+          }
           min-width: 60px;
           content: "&nbsp;";
         }
