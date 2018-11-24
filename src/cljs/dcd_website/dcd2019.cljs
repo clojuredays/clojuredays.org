@@ -11,8 +11,10 @@
 
 (defn about-component []
   [:div#about
-   [:h2 "About DCD18"]
-   [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]] )
+   [:h2 "About DCD '19"]
+   [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]
+   [:p "We welcome you to the 4th edition of our  " [:b "free "] "Clojure conference organised by community, for community with full day of amazing talks and a warn friendly atmosphere. Reserve your free spot today!"]
+   [:p "If you want to support us and Clojure community, consider sponsoring us. You can get in touch via email events@clojuredays.org "]] )
 
 (defn cfp-component []
   [:div#cfp
@@ -223,7 +225,8 @@ You will see how you can get feedback from something better than actual humans: 
 
 (defn when-component []
   [:div
-   [:p"Dutch Clojure Days will happen on " " Saturday on April 6th, 2019" "."]])
+   [:p"Dutch Clojure Days will happen on "
+    [:b " Saturday April 6th, 2019"] "."]])
 
 (defn main-component []
   [:article.main
