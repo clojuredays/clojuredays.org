@@ -13,7 +13,7 @@
   [:div#about
    [:h2 "About DCD '19"]
    [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]
-   [:p "We welcome you to the 4th edition of our  " [:b "free "] "Clojure conference organised by community, for community with full day of amazing talks in a friendly welcoming atmosphere. Reserve your free spot today!"]
+   [:p "We welcome you to the 4th edition of our  " [:b "free "] " and non-profit Clojure conference organised by the community, for the community with a full day of amazing talks in a friendly welcoming atmosphere. Reserve your free spot today!"]
    [:p "If you want to support us and Clojure community, consider sponsoring us. You can get in touch via email events@clojuredays.org "]] )
 
 (defn cfp-component []
