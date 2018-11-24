@@ -18,8 +18,10 @@
 
 (defn cfp-component []
   [:div#cfp
-   [:h2 "Call for papers"]
-   [:p "CFP will open soon"]])
+   [:h2 "Call for Proposals"]
+   [:p "We welcome talk proposals of all levels and speakers of all experience levels, our CFP is now OPEN - "]
+    [:a {:href "https://www.papercall.io/dcd19" :target :_blank}
+     [:h4 "Submit your talk today!"]]])
 
 (defn sponsors-component []
   [:div.sponsors
@@ -234,10 +236,11 @@ You will see how you can get feedback from something better than actual humans: 
     [about-component]]
    [:div#date
     [:h2 "When?"]
-    [when-component]
-    [tickets-component]]
+    [when-component]]
    [:div#cfp
     [cfp-component]]
+   [:div
+    [tickets-component]]
    #_[:div#agenda
     [:h2 "Agenda"]
     [agenda-component agenda-data]]
