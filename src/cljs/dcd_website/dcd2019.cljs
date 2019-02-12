@@ -255,7 +255,8 @@ You will see how you can get feedback from something better than actual humans: 
       [speakers-component agenda-data]]
    [:div#location
     [:h2 "Where?"]
-    [:p "Dutch Clojure Days will take place at the center of Amsterdam."]]
+    [:p "Dutch Clojure Days will take place at the center of Amsterdam."]
+    [location-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]])
