@@ -16,7 +16,7 @@
                  [com.eclipsesource.j2v8/j2v8_macosx_x86_64 "4.6.0"]
                  [com.eclipsesource.j2v8/j2v8_linux_x86_64 "4.6.0"]
                  [boot-deps "0.1.6"]
-                 [cljsjs/leaflet "0.7.7-6"]])
+                 [cljsjs/leaflet "1.4.0-0"]])
 
 (require
  '[clojure.java.io             :as io]

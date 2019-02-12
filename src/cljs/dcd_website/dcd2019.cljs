@@ -256,7 +256,7 @@ You will see how you can get feedback from something better than actual humans: 
    [:div#location
     [:h2 "Where?"]
     [:p "Dutch Clojure Days will take place at the center of Amsterdam."]
-    [location-component]]
+    [location-component {:coords [52.3666451 4.892396599999984]}]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]])

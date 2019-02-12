@@ -17,12 +17,13 @@
 
 (defn init-map! [coords]
   (let [mymap (-> js/L
-                  (.map "location-map" (clj->js {::scrollWheelZoom false}))
+                  (.map "location-map" (clj->js {:scrollWheelZoom false}))
                   (.setView coords 17))]
     (init-tile-layer! mymap)
     (add-marker! mymap coords)))
 
 (defn location-component [{:keys [coords]}]
+  (assert (not (nil? coords)))
   (reagent/create-class {:reagent-render (fn []
                                            [:div.location
                                             [:p "Dutch Clojure Days will take place at "
