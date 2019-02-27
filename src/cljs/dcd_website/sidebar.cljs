@@ -42,7 +42,7 @@
                               {:link "#cfp" :text "Call for papers"}
                               {:link "#date" :text "When?"}
                               #_{:link "#agenda" :text "Agenda"}
-                              #_{:link "#sponsors" :text "Sponsors"}
+                              {:link "#sponsors" :text "Sponsors"}
                               #_{:link "#speakers" :text "Speakers"}
                               {:link "#behave" :text "Code of conduct"}
                               #_{:link "#location" :text "Where?"}

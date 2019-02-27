@@ -29,27 +29,22 @@
 (defn sponsors-component []
   [:div.sponsors
    [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
-   [:h2.platinum "Platinum sponsors"]
-   [:a.sponsor.platinum {:href "http://www.adgoji.com/" :target :_blank}
-    [:img {:src "img/2018/sponsors/adgoji.svg"}]]
-   [:a.sponsor.platinum {:href "http://www.metosin.fi/en" :target :_blank}
-    [:img {:src "img/2018/sponsors/metosin.svg"}]]
-   [:a.sponsor.platinum {:href "https://www.exoscale.ch/" :target :_blank}
-    [:img {:src "img/2018/sponsors/exoscale.svg"}]]
-   [:a.sponsor.platinum {:href "https://synple.eu/en/index" :target :_blank}
-    [:img {:src "img/2018/sponsors/synple.png"}]]
-   [:a.sponsor.platinum {:href "https://vakantiediscounter.nl" :target :_blank}
-    [:img {:src "img/2018/sponsors/otravo.svg"}]]
-
-   [:h2.regular "Regular Sponsors"]
+   [:a.sponsor.regular {:href "http://www.adgoji.com/" :target :_blank}
+    [:img {:src "img/2019/sponsors/adgoji.svg"}]]
+   [:a.sponsor.regular {:href "http://www.metosin.fi/en" :target :_blank}
+    [:img {:src "img/2019/sponsors/metosin.svg"}]]
+   [:a.sponsor.regular {:href "https://www.exoscale.ch/" :target :_blank}
+    [:img {:src "img/2019/sponsors/exoscale.svg"}]]
+   [:a.sponsor.regular {:href "https://vakantiediscounter.nl" :target :_blank}
+    [:img {:src "img/2019/sponsors/devakantiediscounter.svg"}]]
    [:a.sponsor.regular.infi {:href "https://infi.nl/" :target :_blank}
-    [:img {:src "img/2018/sponsors/infi.svg"}]]
-   [:a.sponsor.regular {:href "https://www.brightin.nl/" :target :_blank}
-    [:img {:src "img/2018/sponsors/brightin.png"}]]
-   [:a.sponsor.regular.alliander {:href "https://www.alliander.com/en" :target :_blank}
-    [:img {:src "img/2018/sponsors/alliander.png"}]]
-   [:a.sponsor.regular.digitalechecklisten {:href "https://digitalechecklisten.nl/" :target :_blank}
-    [:img {:src "img/2018/sponsors/digitalechecklisten.png"}]]])
+    [:img {:src "img/2019/sponsors/infi.svg"}]]
+   [:a.sponsor.regular.digitalechecklisten {:href "https://flexiana.com/" :target :_blank}
+    [:img {:src "img/2019/sponsors/flexiana.jpg"}]]
+   [:a.sponsor.regular.digitalechecklisten {:href "https://lunatech.com/" :target :_blank}
+    [:img {:src "img/2019/sponsors/lunatech.svg"}]]
+   [:a.sponsor.regular.digitalechecklisten {:href "https://nedap.com" :target :_blank}
+    [:img {:src "img/2019/sponsors/nedap.png"}]]])
 
 (defn tickets-component []
   [:div#date
@@ -245,13 +240,13 @@ You will see how you can get feedback from something better than actual humans: 
    [:div
     [tickets-component]]
    #_[:div#agenda
-    [:h2 "Agenda"]
-    [agenda-component agenda-data]]
-   #_[:div#sponsors
+      [:h2 "Agenda"]
+      [agenda-component agenda-data]]
+   [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
    #_[:div#speakers
-    [:h2 "Speakers"]
+      [:h2 "Speakers"]
       [speakers-component agenda-data]]
    [:div#location
     [:h2 "Where?"]
