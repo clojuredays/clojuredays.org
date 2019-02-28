@@ -29,6 +29,8 @@
 (defn sponsors-component []
   [:div.sponsors
    [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
+   [:a.sponsor.platinum {:href "https://flexiana.com/" :target :_blank}
+    [:img {:src "img/2019/sponsors/flexiana.jpg"}]]
    [:a.sponsor.regular {:href "http://www.adgoji.com/" :target :_blank}
     [:img {:src "img/2019/sponsors/adgoji.svg"}]]
    [:a.sponsor.regular {:href "http://www.metosin.fi/en" :target :_blank}
@@ -37,13 +39,11 @@
     [:img {:src "img/2019/sponsors/exoscale.svg"}]]
    [:a.sponsor.regular {:href "https://vakantiediscounter.nl" :target :_blank}
     [:img {:src "img/2019/sponsors/devakantiediscounter.svg"}]]
-   [:a.sponsor.regular.infi {:href "https://infi.nl/" :target :_blank}
+   [:a.sponsor.regular {:href "https://infi.nl/" :target :_blank}
     [:img {:src "img/2019/sponsors/infi.svg"}]]
-   [:a.sponsor.regular.digitalechecklisten {:href "https://flexiana.com/" :target :_blank}
-    [:img {:src "img/2019/sponsors/flexiana.jpg"}]]
-   [:a.sponsor.regular.digitalechecklisten {:href "https://lunatech.com/" :target :_blank}
+  [:a.sponsor.regular {:href "https://lunatech.com/" :target :_blank}
     [:img {:src "img/2019/sponsors/lunatech.svg"}]]
-   [:a.sponsor.regular.digitalechecklisten {:href "https://nedap.com" :target :_blank}
+   [:a.sponsor.regular {:href "https://nedap.com" :target :_blank}
     [:img {:src "img/2019/sponsors/nedap.png"}]]])
 
 (defn tickets-component []
