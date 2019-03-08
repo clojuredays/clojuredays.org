@@ -22,9 +22,7 @@
 (defn cfp-component []
   [:div#cfp
    [:h2 "Call for Proposals"]
-   [:p "We welcome talk proposals of all levels and speakers of all experience levels, our CFP is now OPEN - "]
-    [:a {:href "https://www.papercall.io/dcd19" :target :_blank}
-     [:h4 "Submit your talk today!"]]])
+   [:p "Our CFP is now closed."]])
 
 (defn sponsors-component []
   [:div.sponsors
@@ -64,38 +62,35 @@
     :type :org}
 
    {:time ["9:30" "10:15"]
-    :title "Embrace the JVM"
-    :author "Alexander Yakushev"
-    :profile-pic "alexander.jpg"
-    :description "JVM is the native platform for Clojure, yet a lot of its tools and tricks are unfamiliar to Clojure programmers. This talk will bring them to light and show you how the JVM facilities can make your Clojure work even more productive."
-    :bio "Alexander is a software engineer at Grammarly where he blurs the line between programming and natural languages. After being bitten by a radioactive spider with a lambda on its back, Alexander promised to use the obtained Lisp superpowers for good only. In his free time, he contributes to Clojure tooling like CIDER, studies distributed systems, and fills his half-full stack."
-    :twitter "unlog1c"
+    :author "Bozhidar Batsov"
+    :title "nREPL Redux"
+    :profile-pic "bbatsov.jpg"
+    :description "After years of stagnation nREPL left Clojure Contrib and its development has resumed! It wasn’t easy, it took a lot of work, I learned many valuable lessons along the way, and I want to share all of this with you! This talk is going to examine the efforts that lead to restarting the active nREPL development in 2018, the current state of the project and the ambitious plans for its future. As almost all Clojure developers rely on nREPL in one way or another (e.g. cider-jack-in or lein repl), I believe that many of you might find this talk both interesting and informative! A maybe even fun! ;-)"
+    :bio "Bozhidar is the maintainer of CIDER, nREPL and many Clojure libraries related to Clojure tooling. He’s also the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He’s also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.
+Believe it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won’t bore with those here."
+    :twitter "bbatsov"
     :add-padding true
     :type :talk
     :youtube-link nil}
 
    {:time ["10:25" "11:10"]
-    :title "Online statistical analysis using transducers and sketch algorithms"
-    :profile-pic "simon.jpg"
-    :author "Simon Belak"
-    :description "Online statistical analysis using transducers and sketch algorithms. Don’t know what either is? You are going to learn something very cool (and perspective-changing) then. Know them, but want an experience report? Got you covered, fam."
-    :bio "Built my first computer out of Lego bricks and learned to program soon after. Emergence, networks, modes of thought, limits of language and expression are what makes me smile (and stay up at night). The combination of lisp and machine learning put me on the path of always striving to make myself redundant if not outright obsolete. Currently working hard to become obsolete at Metabase where I am trying to build an artificial data scientist and imbue visualisations with understanding and context."
-    :twitter "sbelak"
+    :author "Bahadir Cambel"
+    :title "Building BNR Smart Radio & FD.nl Recommender system using Clojure & Serverless Architecture"
+    :profile-pic "bcambel.jpg"
+    :description "Managing servers and infrastructure is a costly, time consuming huge pain. This talk is going to demonstrate how Clojure is a perfect match for Serverless Architecture and how to max AWS capabilities to build your ultra-scale system without any frameworks."
+    :bio "Software Architect & Lead Data Engineer @fd_nieuws #Clojure #Python distributed computing. Runner. Almost ultra-marathoner Freelancing for FD & Schiphol Runs more than he should."
+    :twitter "bahadircambel"
     :add-padding true
     :type :talk
     :youtube-link nil}
 
    {:time ["11:20" "12:05"]
-    :title "Practical Generative Testing Patterns"
-    :profile-pic "srihari.jpg"
-    :author "Srihari Sriraman"
-    :description "Generative tests are great! But we don’t write them often enough. Why not?
-As unit tests, they can be harder to write and read. As stateful acceptance tests, they can be brittle, slow, and unjustifiable.
-I’ll discuss some important patterns to leverage generative tests to their potential."
-    :bio "Srihari is a FOSS enthusiast. He has contributed to Gimp, Eclipse, Diaspora and is excited about opportunities to give back. He has been writing Clojure for over 5 years now, and over this time, he has engineered low latency systems, large analytics platforms, monitoring solutions, distributed payment platforms and multiple simulation testing systems.
-He is passionate about fostering the Clojure community, conducts workshops, and organizes IN/Clojure. He also works on computational music synthesis and generation as a hobby.
-He is a partner at nilenso, a hippie tree hugging bicycle riding software cooperative based in Bangalore."
-    :twitter "sriharisriraman"
+    :author "Rakhim Davletkaliyev"
+    :title "Decentralized evolutionary computation with Clojure and ClojureScript"
+    :profile-pic "rdavletkaliyev.jpg"
+    :description "Let’s get inspired by biological evolution and write a decentralized genetic algorithms framework entirely in Clojure and Cljs. Then let’s use it to casually tackle some NP-complete problems by combining the computing power of all devices of Clojure Day 2019 participants!"
+    :bio "Software developer since 2010. Co-founder of Hexlet, an educational startup from Finland which is the home of 200k students who learn computer programming and software development, get hired and build cool stuff. In November 2019 resigned as CEO and about to launch something new. I organize free workshops and open lectures on programming and computing in Helsinki. Blog at rakhim.org."
+    :twitter "freetonik"
     :type :talk
     :youtube-link nil}
 
@@ -105,12 +100,12 @@ He is a partner at nilenso, a hippie tree hugging bicycle riding software cooper
     :force-timeline-visible? true}
 
    {:time ["13:20" "14:05"]
-    :title "Implementing Graph API's with Clojure"
-    :profile-pic "wilker.jpg"
-    :author "Wilker Lúcio"
-    :description "REST is taking a rest. Over the past years we are seeing a huge growth of graph API’s with GraphQL leading the way. In this talk I will describe what graph APIs can look like on the Clojure side, and even show you how to achieve the best of both worlds by integrating GraphQL with Clojure graphs!"
-    :bio "I’m a passionate developer working and learning programming skills since 12 years old, love the way of web development and always researching new technologies. I started real web programming with PHP, but ever trying to learn more and more (passing through Java, Python, C#, ActionScript, Javascript…), currently passionate about Clojure and it’s ecosystem. In recent years I’ve been engaged in the Clojure community, collaborating in projects like Om.next/Fulcro, Devcards, and writing libraries like Pathom. If you’d like to learn more about my work, please check my Github profile at https://github.com/wilkerlucio."
-    :twitter "wilkerlucio"
+    :author "Alex King"
+    :title "How we migrated a complex JavaScript application to ClojureScript step-by-step"
+    :profile-pic "aking.jpg"
+    :description "As software evolves along with the languages and frameworks it is built upon, it’s easy to create a monster. This is the tale of tackling complexity at the heart of Exoscale, and how a data-driven approach with ClojureScript enabled us to seamlessly replace a JavaScript app without user outage."
+    :bio "Alex King is a software engineer from the UK, currently based in Switzerland with Exoscale. He is passionate about delivering clean, well tested code, that is easy for others to understand. He is well experienced with over 15 years of software development, and adept at bridging the gap between the front-end and back-end teams. He was responsible for large rewrites of core architecture behind the BBC Sport and BBC News platforms, and worked as a consultant for JUXT, where he helped to develop a large Clojure(script) application used by traders at Credit Suisse, along with many years of Scala development before finding a home with Clojure. Away from the day job he can be found enjoying hammock time up in the mountains, or on stage in a dive bar with a guitar in hand."
+    :twitter "superaking"
     :add-padding true
     :type :talk
     :youtube-link nil}
@@ -120,46 +115,42 @@ He is a partner at nilenso, a hippie tree hugging bicycle riding software cooper
     :type :lightning}
 
    {:time ["14:15" "14:30"]
-    :title "Easier REPL-based debugging with scope-capture"
-    :profile-pic "val.jpg"
-    :description "Tired of manually re-creating Ring requests, app states and database connections simply to evaluate this tiny expression at the REPL? Scope-capture to the rescue, a new Clojure(Script) library that lets you instantly save and restore local bindings at the REPL."
-    :author "Valentin Waeselynck"
-    :bio "Valentin Waeselynck is the CTO of BandSquare, a platform providing web and CRM tools for managing audiences, built on top of Clojure and Datomic. He authored a few open-source libraries for Clojure and Datomic, including Datomock, scope-capture and Datofu. On the side, he enjoys doing maths and climbing mountains."
-    :twitter "val_waeselynck"
+    :author "Heimo Laukkanen"
+    :title "Clojure powered services at Finnish Broadcasting Company"
+    :profile-pic "hlaukkanen.jpg"
+    :description "Finnish Broadcasting Company runs the most loved streaming service in Finland. One enabler is the use of Clojure, which empowers teams to build and operate robust micro-services. This talk shares our experiences and learnings on how we have enabled developer success in our ecosystem since 2015."
+    :bio "."
+    :twitter "huima"
     :type :lightning
     :youtube-link nil}
 
    {:time ["14:30" "14:45"]
-    :title "Stay agile with clojure.spec"
-    :profile-pic "roland.png"
-    :author "Dr Roland Kay"
-    :description "You love the sense of liberation and control that Clojurescript gives you and you want the same for your data. A schema for your in-memory data will enable you to change it quickly with confidence. So, the next time that your product manager drops a last minute change request, it will be no stress."
-    :bio "Dr Kay has over ten years experience working in investment banking in London developing financial models and delivering tools which depend on them to trading desks. He came of age with asm, C and C++ and has been using dynamically typed languages to put the power of the core analytics written in C++ in the hands of practitioners who lack extensive software development experience.
-
-He has recently discovered the power of functional programming to tame the complexity of front-end development. He is impressed by the ability of clojure.spec to exceed the level of confidence in code integrity that comes with statically-typed languages while retaining the flexibility and fast-prototyping offered by dynamic languages."
+    :title "Discourje: Automatically validated message exchange patterns in Clojure."
+    :profile-pic "rhamers.jpg"
+    :author "Ruben Hamers"
+    :description "The core.async library provides many high-level features for async programming, but does not protect against classical concurrency problems. Discourje extends core.async and offers high-level abstractions to define message exchange patterns that are run-time validated and enforced between threads."
+    :bio "I got in touch with Clojure while reading about Java concurrency and was instantly fascinated by the elegance of Clojure’s syntax and macros. Inspired and enthused by previous research on high-level abstractions for MEPs (e.g., in Java, JavaScript, Rust, and Go), I initiated the Discourje project to bring such abstractions for the first time to Clojure. As a part-time master student at Open Universiteit, I am currently finishing my MSc thesis on Discourje (and its underlying formal theory!). In my full-time day-to-day job, I work as a software engineer at BlueTea (www.bluetea.nl) where we build virtual simulations and serious games."
     :twitter nil
     :type :lightning
     :youtube-link nil}
 
    {:time ["14:45" "15:00"]
-    :title "Writing an asynchronous MQTT broker in Clojure (and a bit of Java)"
-    :profile-pic "thomas.png"
-    :author "Thomas van der Veen"
-    :description "A talk about the attempt to write a MQTT broker with Clojure and some Java and make the whole thing non-blocking where possible so that it can scale really well… hopefully."
-    :bio "Thomas has been writing bits of Clojure since 2011 and in 2016 he gave a talk at the Dutch Clojure Days about using MQTT in a Clojure(Script) application. This time he is back with an MQTT broker written in Clojure and just for good measure he he snug in some Java as well… because you can."
-    :twitter "thomasvdv007"
+    :title "Re-find: discover functions with spec"
+    :profile-pic "borkdude.jpg"
+    :author "Michiel Borkent"
+    :description "Re-find is an app and a library that lets you interactively discover Clojure functions based on example in- and output values or predicates. In this talk we will see how it works and how it is implemented, using clojure.spec as the driving force."
+    :bio "Michiel Borkent is a software developer and Clojurian. He can be found as @borkdude in various places on the web."
+    :twitter "borkdude"
     :type :lightning
     :youtube-link nil}
 
    {:time ["15:00" "15:15"]
-    :title "REPtiLe - exercise your lizard brain and share REPLs in a cold-blooded browser"
-    :profile-pic "ray.jpg"
-    :author "Ray McDermott"
-    :description "Use REPtiLe to have your own REPL on the web and also see what your team are doing in their REPLs.
-
-REPtiLe is ideal for a small number of developers to work together in real-time."
-    :bio "Clojure developer / architect. co-host defn podcast and the apropos youtube channel"
-    :twitter "raymcdermott"
+    :title "Future boot"
+    :profile-pic "mratzke.jpg"
+    :author "Matthew Ratzke"
+    :description "Boot-clj is a powerful tool for any Clojure developer, find out about the new maintainers, and what we have planned for the future of boot. Here’s a hint: native images."
+    :bio "Matt is a self-proclaimed Clojure Entrepreneur. Using Clojure as a foundation for his startups, matt is currently working on solutions for the Canadian cannabis industry. He is also the lead maintainer of boot-clj and contributes heavily to Hoplon and the boot-clj ecosystem."
+    :twitter "degree9io"
     :type :lightning
     :youtube-link nil}
 
@@ -170,36 +161,34 @@ REPtiLe is ideal for a small number of developers to work together in real-time.
     :force-timeline-visible? true}
 
    {:time ["15:45" "16:30"]
-    :title "No EC2 instances were harmed during this deployment"
-    :profile-pic "josh.jpg"
-    :author "Josh Glover"
-    :description "Serverless systems promise a bright future of increased battery life for on-call developers’ phones, but do they deliver? This is a story of how we built a backend with Clojure, API Gateway, Lambda, and DynamoDB. Takeaway: when, where, or if this approach fits your problems."
-    :bio "Josh Glover has come a long way since declaring Lisp a completely pointless language in university. 15 years and three countries later, he shudders at the very thought of using a language other than Clojure. He is really interested in teaching programming and increasing diversity in the industry. He currently lives in Stockholm and works for Klarna Bank AB, the leading payments company in the Nordics."
-    :twitter "jmglov"
+    :title "How I Supercharged Learning Clojure through Gamification"
+    :profile-pic "mbeisaron.jpg"
+    :author "Mey Beisaron"
+    :description "Gamification can be an excellent way to reduce the barrier of entry & quickly learn new programming languages. This talk will dive into how through a simple game you can master new syntaxes by applying concepts from languages you know & leveraging shared libraries to ramp up your coding skills."
+    :bio "Mey Beisaron is a public speaker, a Clojure, Java, and Node.js developer and a software engineering graduate. When she is not spending her weekends at hackathons, she experiments with algorithms or learns languages such as russian, french and italian. Mey is also a sworn star wars fan. May the force be with you."
+    :twitter "ladymeyy"
     :add-padding true
     :type :talk
     :youtube-link nil}
 
    {:time ["16:40" "17:25"]
-    :title "How we test at Nubank"
+    :title "The rise and fall of e2e testing at scale"
     :profile-pic "phillip.jpg"
     :author "Phillip Mates"
-    :description "Nubank has been shipping business-critical Clojure services for 5+ years. To do so reliably we’ve adopted various approaches to testing, combining unit, integration, & end-to-end tests. This talk will explore our experiences: what’s worked, what hasn’t, and where we are going next with testing"
-    :bio "Coming from a background in theoretical programming language research I’ve been coding Clojure at Nubank for over a year. In this time I’ve become the maintainer of Midje, co-authored a library for validating nested data-structures that produces readable diffs (matcher-combinators), and participated in projects to scale Nubank’s testing infrastructure past 100 microservices. Last Fall I moved to Berlin to help Nubank open its first office outside of Brazil. In Berlin, my colleagues and I are focused on building data infrastructure for São Paulo-based analysts and engineers to use."
-    :twitter "pmatey"
+    :description "Last year I presented on single-service testing. This year I’d like to focus on how Nubank has evolved multi-service testing: our adoption & eventual abandonment of end-to-end tests; the rise of light-weight cross-service generative-based schema validation tests"
+    :bio "Coming from a background in theoretical programming language research I’ve been coding Clojure at Nubank for the last 2 years. In this time I’ve become the maintainer of Midje, co-authored a library for validating nested data-structures that produces readable diffs (matcher-combinators), and participated in projects to scale Nubank’s testing infrastructure past 100 microservices. I’m currently focused on building data infrastructure out of Nubank’s small Berlin office."
+    :twitter "philomates"
     :add-padding true
     :type :talk
     :youtube-link nil}
 
    {:time ["17:35" "18:20"]
-    :title "5 years of Clojure: building better infrastructure with parentheses"
-    :profile-pic "pierre.jpg"
-    :author "Pierre-Yves Ritschard"
-    :description "This talk gives an overview of the initial architectural decisions at Exoscale, an Infrastructure as a Service company where Clojure is in heavy use."
-    :bio "Pierre-Yves is CTO at exoscale where he is responsible for architecture and strategic technology choices, relying on experience in the architecture of very large corporate systems as well as technical product design in several startups.
-
-Pierre-Yves is an active member of the open-source community as author of pithos and cyanite as well as key contributions to OpenBSD, collectd and riemann amongst others."
-    :twitter "pyr"
+    :title "TBD"
+    :profile-pic "unknown.png"
+    :author "TBD"
+    :description "TBD"
+    :bio "TBD"
+    :twitter ""
     :type :talk
     :youtube-link nil}
 
@@ -212,16 +201,16 @@ Pierre-Yves is an active member of the open-source community as author of pithos
     :title "Networking/Drinks"
     :type :org}
 
-   {:time ["19:00" "19:30"]
-    :title "extemporay - REPL driven comedy"
-    :profile-pic "ray.jpg"
-    :author "Ray McDermott"
-    :description "Learn how to compose a library of simple functions and data to deliver the most elegant forms of comedy on the Clojuresphere.
+   #_{:time ["19:00" "19:30"]
+      :title "extemporay - REPL driven comedy"
+      :profile-pic "ray.jpg"
+      :author "Ray McDermott"
+      :description "Learn how to compose a library of simple functions and data to deliver the most elegant forms of comedy on the Clojuresphere.
 You will see how you can get feedback from something better than actual humans: the REPL"
-    :bio "Clojure enthusiast: software architect by day, co-orgniser Belgian Clojure User group and co-host of defn podcast by night (some nights anyway)."
-    :twitter "raymcdermott"
-    :type :lightning
-    :force-timeline-hidden? true}])
+      :bio "Clojure enthusiast: software architect by day, co-orgniser Belgian Clojure User group and co-host of defn podcast by night (some nights anyway)."
+      :twitter "raymcdermott"
+      :type :lightning
+      :force-timeline-hidden? true}])
 
 (defn when-component []
   [:div
@@ -239,15 +228,15 @@ You will see how you can get feedback from something better than actual humans: 
     [cfp-component]]
    [:div
     [tickets-component]]
-   #_[:div#agenda
-      [:h2 "Agenda"]
-      [agenda-component agenda-data]]
+   [:div#agenda
+    [:h2 "Agenda"]
+    [agenda-component agenda-data]]
    [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
-   #_[:div#speakers
-      [:h2 "Speakers"]
-      [speakers-component agenda-data]]
+   [:div#speakers
+    [:h2 "Speakers"]
+    [speakers-component agenda-data]]
    [:div#location
     [:h2 "Where?"]
     [:p "Dutch Clojure Days will take place at the center of Amsterdam."]
