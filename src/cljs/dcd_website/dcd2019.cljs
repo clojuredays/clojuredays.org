@@ -42,7 +42,9 @@
   [:a.sponsor.regular {:href "https://lunatech.com/" :target :_blank}
     [:img {:src "img/2019/sponsors/lunatech.svg"}]]
    [:a.sponsor.regular {:href "https://nedap.com" :target :_blank}
-    [:img {:src "img/2019/sponsors/nedap.png"}]]])
+    [:img {:src "img/2019/sponsors/nedap.png"}]]
+   [:a.sponsor.regular {:href "https://data42.de" :target :_blank}
+    [:img {:src "img/2019/sponsors/data42.svg"}]]])
 
 (defn tickets-component []
   [:div#date
