@@ -41,11 +41,11 @@
    (map menu-entry-component [{:link "#about" :text "About"}
                               {:link "#cfp" :text "Call for papers"}
                               {:link "#date" :text "When?"}
-                              #_{:link "#agenda" :text "Agenda"}
+                              {:link "#agenda" :text "Agenda"}
                               {:link "#sponsors" :text "Sponsors"}
-                              #_{:link "#speakers" :text "Speakers"}
+                              {:link "#speakers" :text "Speakers"}
                               {:link "#behave" :text "Code of conduct"}
-                              #_{:link "#location" :text "Where?"}
+                              {:link "#location" :text "Where?"}
                               {:link              "#dcd2018"
                                :text              "Archive: DCD2018"
                                :website-structure dcd2018/dcd2018-website-structure}

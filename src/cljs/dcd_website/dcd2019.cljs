@@ -2,7 +2,7 @@
   (:require [dcd-website.map :refer    [location-component]]
             [dcd-website.header :refer [header-component]]
             [dcd-website.footer :refer [footer-component]]
-            [dcd-website.agenda :refer  [speakers-component agenda-component]]
+            [dcd-website.agenda :refer [speakers-component agenda-component]]
             [dcd-website.coc :refer [code-of-conduct-component]]))
 
 (defn header-component-2019
@@ -146,14 +146,23 @@ Believe it or not, Bozhidar has hobbies and interests outside the realm of compu
     :type :lightning
     :youtube-link nil}
 
+   #_ {:time ["15:00" "15:15"]
+       :title "Future boot"
+       :profile-pic "mratzke.jpg"
+       :author "Matthew Ratzke"
+       :description "Boot-clj is a powerful tool for any Clojure developer, find out about the new maintainers, and what we have planned for the future of boot. Here’s a hint: native images."
+       :bio "Matt is a self-proclaimed Clojure Entrepreneur. Using Clojure as a foundation for his startups, matt is currently working on solutions for the Canadian cannabis industry. He is also the lead maintainer of boot-clj and contributes heavily to Hoplon and the boot-clj ecosystem."
+       :twitter "degree9io"
+       :type :lightning
+       :youtube-link nil}
    {:time ["15:00" "15:15"]
-    :title "Future boot"
-    :profile-pic "mratzke.jpg"
-    :author "Matthew Ratzke"
-    :description "Boot-clj is a powerful tool for any Clojure developer, find out about the new maintainers, and what we have planned for the future of boot. Here’s a hint: native images."
-    :bio "Matt is a self-proclaimed Clojure Entrepreneur. Using Clojure as a foundation for his startups, matt is currently working on solutions for the Canadian cannabis industry. He is also the lead maintainer of boot-clj and contributes heavily to Hoplon and the boot-clj ecosystem."
-    :twitter "degree9io"
-    :type :lightning
+    :title "TBD"
+    :profile-pic "unknown.png"
+    :author "TBD"
+    :description "TBD"
+    :bio "TBD"
+    :twitter ""
+    :type :talk
     :youtube-link nil}
 
    {:time ["15:15" "15:45"]
@@ -185,11 +194,11 @@ Believe it or not, Bozhidar has hobbies and interests outside the realm of compu
     :youtube-link nil}
 
    {:time ["17:35" "18:20"]
-    :title "TBD"
-    :profile-pic "unknown.png"
-    :author "TBD"
-    :description "TBD"
-    :bio "TBD"
+    :title "Growing a biomedical search engine in Clojure"
+    :profile-pic "jkuipers.png"
+    :author "Joël Kuiper"
+    :description "Starting a new project is always hard. The blank pages stare at you. Sometimes you know what needs to be done, but sometimes the requirements are totally unknown. Three years ago Doctor Evidence decided to build a biomedical search engine, and this talk will be about our journey into the unknown."
+    :bio "I once set out on doing academic research for a living, but then thought better of it. Received a Bachelor of Science degree in Artificial Intelligence from the University of Groningen, the Netherlands. I’m passionate about software development, user experience, and machine learning. Hobby astronomer by night."
     :twitter ""
     :type :talk
     :youtube-link nil}
@@ -241,7 +250,6 @@ You will see how you can get feedback from something better than actual humans: 
     [speakers-component agenda-data]]
    [:div#location
     [:h2 "Where?"]
-    [:p "Dutch Clojure Days will take place at the center of Amsterdam."]
     [location-component {:coords [52.3666451 4.892396599999984]}]]
    [:div#behave
     [:h2 "Code of Conduct"]
