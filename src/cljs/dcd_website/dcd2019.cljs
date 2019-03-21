@@ -146,24 +146,24 @@ Believe it or not, Bozhidar has hobbies and interests outside the realm of compu
     :type :lightning
     :youtube-link nil}
 
-   #_ {:time ["15:00" "15:15"]
-       :title "Future boot"
-       :profile-pic "mratzke.jpg"
-       :author "Matthew Ratzke"
-       :description "Boot-clj is a powerful tool for any Clojure developer, find out about the new maintainers, and what we have planned for the future of boot. Here’s a hint: native images."
-       :bio "Matt is a self-proclaimed Clojure Entrepreneur. Using Clojure as a foundation for his startups, matt is currently working on solutions for the Canadian cannabis industry. He is also the lead maintainer of boot-clj and contributes heavily to Hoplon and the boot-clj ecosystem."
-       :twitter "degree9io"
-       :type :lightning
-       :youtube-link nil}
    {:time ["15:00" "15:15"]
-    :title "TBD"
-    :profile-pic "unknown.png"
-    :author "TBD"
-    :description "TBD"
-    :bio "TBD"
-    :twitter ""
-    :type :talk
+    :title "Future boot"
+    :profile-pic "mratzke.jpg"
+    :author "Matthew Ratzke"
+    :description "Boot-clj is a powerful tool for any Clojure developer, find out about the new maintainers, and what we have planned for the future of boot. Here’s a hint: native images."
+    :bio "Matt is a self-proclaimed Clojure Entrepreneur. Using Clojure as a foundation for his startups, matt is currently working on solutions for the Canadian cannabis industry. He is also the lead maintainer of boot-clj and contributes heavily to Hoplon and the boot-clj ecosystem."
+    :twitter "degree9io"
+    :type :lightning
     :youtube-link nil}
+   #_{:time ["15:00" "15:15"]
+      :title "TBD"
+      :profile-pic "unknown.png"
+      :author "TBD"
+      :description "TBD"
+      :bio "TBD"
+      :twitter ""
+      :type :talk
+      :youtube-link nil}
 
    {:time ["15:15" "15:45"]
     :title "Coffee break"
