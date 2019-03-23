@@ -14,10 +14,10 @@
    [:h2 "About DCD '19"]
    [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"]
    [:p "We welcome you to the 4th edition of our  " [:b "free "] " and non-profit Clojure conference organised by the community, for the community with a full day of amazing talks in a friendly welcoming atmosphere. Reserve your free spot today!"]
-   [:h2 "Sponsorship Packages"]
-   [:p "If you want to support us and Clojure community, consider sponsoring us. Please get in touch via email events@clojuredays.org. We offer two affordable sponsorship packages, check them out: "]
-   [:img {:src "img/2019/sponsor.png" :width "600px"}]
-   [:img {:src "img/2019/partner.png" :width "600px"}]])
+   (comment  [:h2 "Sponsorship Packages"]
+             [:p "If you want to support us and Clojure community, consider sponsoring us. Please get in touch via email events@clojuredays.org. We offer two affordable sponsorship packages, check them out: "]
+             [:img {:src "img/2019/sponsor.png" :width "600px"}]
+             [:img {:src "img/2019/partner.png" :width "600px"}])])
 
 (defn cfp-component []
   [:div#cfp
