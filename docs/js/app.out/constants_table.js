@@ -111,7 +111,6 @@ cljs.core.cst$sym$__hash = new cljs.core.Symbol(null,"__hash","__hash",-13287966
 cljs.core.cst$sym$meta = new cljs.core.Symbol(null,"meta","meta",-1154898805,null);
 cljs.core.cst$sym$_meta = new cljs.core.Symbol(null,"_meta","_meta",-1716892533,null);
 cljs.core.cst$kw$a$sponsor$regular = new cljs.core.Keyword(null,"a.sponsor.regular","a.sponsor.regular",1418849451);
-cljs.core.cst$kw$width = new cljs.core.Keyword(null,"width","width",-384071477);
 cljs.core.cst$sym$$_DASH_on_DASH_set = new cljs.core.Symbol(null,".-on-set",".-on-set",-1855206165,null);
 cljs.core.cst$kw$profile_DASH_pic = new cljs.core.Keyword(null,"profile-pic","profile-pic",1303117099);
 cljs.core.cst$sym$afn = new cljs.core.Symbol(null,"afn","afn",216963467,null);
