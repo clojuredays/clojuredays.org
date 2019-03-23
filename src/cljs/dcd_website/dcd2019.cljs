@@ -39,12 +39,14 @@
     [:img {:src "img/2019/sponsors/devakantiediscounter.svg"}]]
    [:a.sponsor.regular {:href "https://infi.nl/" :target :_blank}
     [:img {:src "img/2019/sponsors/infi.svg"}]]
-  [:a.sponsor.regular {:href "https://lunatech.com/" :target :_blank}
+   [:a.sponsor.regular {:href "https://lunatech.com/" :target :_blank}
     [:img {:src "img/2019/sponsors/lunatech.svg"}]]
    [:a.sponsor.regular {:href "https://nedap.com" :target :_blank}
     [:img {:src "img/2019/sponsors/nedap.png"}]]
    [:a.sponsor.regular {:href "https://data42.de" :target :_blank}
-    [:img {:src "img/2019/sponsors/data42.svg"}]]])
+    [:img {:src "img/2019/sponsors/data42.svg"}]]
+   [:a.sponsor.regular {:href "https://cognitect.com" :target :_blank}
+    [:img {:src "img/2019/sponsors/cognitect.svg"}]]])
 
 (defn tickets-component []
   [:div#date
