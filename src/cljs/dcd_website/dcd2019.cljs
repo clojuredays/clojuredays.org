@@ -61,7 +61,7 @@
 
    {:time ["9:15" "9:30"]
     :title "Opening"
-    :author "#DCD18 team"
+    :author "#DCD19 team"
     :type :org}
 
    {:time ["9:30" "10:15"]
@@ -206,7 +206,7 @@ Believe it or not, Bozhidar has hobbies and interests outside the realm of compu
 
    {:time ["18:20" "18:30"]
     :title "Closing"
-    :author "#DCD18 team"
+    :author "#DCD19 team"
     :type :org}
 
    {:time ["18:30" "21:30"]
