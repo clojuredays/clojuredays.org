@@ -52,8 +52,7 @@
   [:div#date
    [:h2 "Reserve your Spot"]
    [:p "DCD 2019 will be in Amsterdam on "
-    [:b "Saturday on April 6th, 2019"] "! Get your ticket now!"]
-   [:div#eventbrite-widget-container-52858312636]])
+    [:b "Saturday on April 6th, 2019"] "! We are sold out - sorry!"]])
 
 (def agenda-data
   [{:time ["8:30" "9:15"]
@@ -237,22 +236,22 @@ You will see how you can get feedback from something better than actual humans: 
    [:div#date
     [:h2 "When?"]
     [when-component]]
-   [:div#cfp
-    [cfp-component]]
-   [:div
-    [tickets-component]]
-   [:div#agenda
-    [:h2 "Agenda"]
-    [agenda-component agenda-data]]
    [:div#sponsors
     [:h2 "Sponsors"]
     [sponsors-component]]
+   [:div#agenda
+    [:h2 "Agenda"]
+    [agenda-component agenda-data]]
    [:div#speakers
     [:h2 "Speakers"]
     [speakers-component agenda-data]]
    [:div#location
     [:h2 "Where?"]
     [location-component {:coords [52.3666451 4.892396599999984]}]]
+   [:div
+    [tickets-component]]
+   [:div#cfp
+    [cfp-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]])
