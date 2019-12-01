@@ -43,6 +43,8 @@
    [:div#date
     [:h2 "When?"]
     [when-component]]
+   [:div#cfp
+    [cfp-component]]
    #_[:div#sponsors
       [:h2 "Sponsors"]
       [sponsors-component]]
@@ -57,8 +59,6 @@
     [location-component {:coords [52.3666451 4.892396599999984]}]]
    [:div
     [tickets-component]]
-   [:div#cfp
-    [cfp-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]])
