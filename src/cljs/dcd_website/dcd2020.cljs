@@ -22,8 +22,7 @@
 (defn cfp-component []
   [:div#cfp
    [:h2 "Call for Proposals"]
-   [:p "Our CFP is currently closed. We'll soon open our CFP, make sure to follow us on "
-    [:a {:href "https://twitter.com/clojuredays"} "@clojuredays"] " to get the news as soon as we open it up!"]])
+   [:p "Our CFP is open! You can submit your proposal at " [:a {:href "https://www.papercall.io/dcd20"} "Papercall"] ". We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on real-world experiences and lessons learned frm putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc."]])
 
 (defn tickets-component []
   [:div#date
