@@ -1,11 +1,9 @@
 (ns dcd-website.footer)
 
 (def dcd-team
-  [["Carlo Sciolla" "https://twitter.com/skuro"]
-   ["Vijay Kiran" "https://twitter.com/vijaykiran"]
-   ["Eugene Lukyanchuk" "https://github.com/agnivalent"]
-   ["Joost Diepenmaat" "https://twitter.com/ZeekatSoftware"]
-   ["Max Gonzih" "https://github.com/Gonzih"]])
+  [["Carlo Sciolla"      "https://twitter.com/skuro"]
+   ["Joost Diepenmaat"   "https://twitter.com/ZeekatSoftware"]
+   ["Iulia Mastacaneanu" "https://twitter.com/iulia_mm"]])
 
 (defn footer-component []
   [:footer.footer

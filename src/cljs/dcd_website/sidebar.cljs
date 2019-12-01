@@ -41,11 +41,14 @@
    (map menu-entry-component [{:link "#about" :text "About"}
                               {:link "#cfp" :text "Call for papers"}
                               {:link "#date" :text "When?"}
-                              {:link "#agenda" :text "Agenda"}
-                              {:link "#sponsors" :text "Sponsors"}
-                              {:link "#speakers" :text "Speakers"}
+                              #_{:link "#agenda" :text "Agenda"}
+                              #_{:link "#sponsors" :text "Sponsors"}
+                              #_{:link "#speakers" :text "Speakers"}
                               {:link "#behave" :text "Code of conduct"}
                               {:link "#location" :text "Where?"}
+                              {:link              "#dcd2019"
+                               :text              "Archive: DCD2019"
+                               :website-structure dcd2019/dcd2019-website-structure}
                               {:link              "#dcd2018"
                                :text              "Archive: DCD2018"
                                :website-structure dcd2018/dcd2018-website-structure}
