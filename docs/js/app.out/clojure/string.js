@@ -18,31 +18,31 @@ return s.replace((new RegExp(re.source,"g")),replacement);
 });
 clojure.string.replace_with = (function clojure$string$replace_with(f){
 return (function() { 
-var G__12156__delegate = function (args){
+var G__12163__delegate = function (args){
 var matches = cljs.core.drop_last.cljs$core$IFn$_invoke$arity$2((2),args);
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.count(matches),(1))){
-var G__12154 = cljs.core.first(matches);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__12154) : f.call(null,G__12154));
+var G__12161 = cljs.core.first(matches);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__12161) : f.call(null,G__12161));
 } else {
-var G__12155 = cljs.core.vec(matches);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__12155) : f.call(null,G__12155));
+var G__12162 = cljs.core.vec(matches);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__12162) : f.call(null,G__12162));
 }
 };
-var G__12156 = function (var_args){
+var G__12163 = function (var_args){
 var args = null;
 if (arguments.length > 0) {
-var G__12157__i = 0, G__12157__a = new Array(arguments.length -  0);
-while (G__12157__i < G__12157__a.length) {G__12157__a[G__12157__i] = arguments[G__12157__i + 0]; ++G__12157__i;}
-  args = new cljs.core.IndexedSeq(G__12157__a,0);
+var G__12164__i = 0, G__12164__a = new Array(arguments.length -  0);
+while (G__12164__i < G__12164__a.length) {G__12164__a[G__12164__i] = arguments[G__12164__i + 0]; ++G__12164__i;}
+  args = new cljs.core.IndexedSeq(G__12164__a,0);
 } 
-return G__12156__delegate.call(this,args);};
-G__12156.cljs$lang$maxFixedArity = 0;
-G__12156.cljs$lang$applyTo = (function (arglist__12158){
-var args = cljs.core.seq(arglist__12158);
-return G__12156__delegate(args);
+return G__12163__delegate.call(this,args);};
+G__12163.cljs$lang$maxFixedArity = 0;
+G__12163.cljs$lang$applyTo = (function (arglist__12165){
+var args = cljs.core.seq(arglist__12165);
+return G__12163__delegate(args);
 });
-G__12156.cljs$core$IFn$_invoke$arity$variadic = G__12156__delegate;
-return G__12156;
+G__12163.cljs$core$IFn$_invoke$arity$variadic = G__12163__delegate;
+return G__12163;
 })()
 ;
 });
@@ -84,23 +84,23 @@ return s.replace(match,replacement);
  *   separated by an optional separator.
  */
 clojure.string.join = (function clojure$string$join(var_args){
-var args12159 = [];
-var len__7515__auto___12162 = arguments.length;
-var i__7516__auto___12163 = (0);
+var args12166 = [];
+var len__7524__auto___12169 = arguments.length;
+var i__7525__auto___12170 = (0);
 while(true){
-if((i__7516__auto___12163 < len__7515__auto___12162)){
-args12159.push((arguments[i__7516__auto___12163]));
+if((i__7525__auto___12170 < len__7524__auto___12169)){
+args12166.push((arguments[i__7525__auto___12170]));
 
-var G__12164 = (i__7516__auto___12163 + (1));
-i__7516__auto___12163 = G__12164;
+var G__12171 = (i__7525__auto___12170 + (1));
+i__7525__auto___12170 = G__12171;
 continue;
 } else {
 }
 break;
 }
 
-var G__12161 = args12159.length;
-switch (G__12161) {
+var G__12168 = args12166.length;
+switch (G__12168) {
 case 1:
 return clojure.string.join.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -110,7 +110,7 @@ return clojure.string.join.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(argum
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12159.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12166.length)].join('')));
 
 }
 });
@@ -120,10 +120,10 @@ var sb = (new goog.string.StringBuffer());
 var coll__$1 = cljs.core.seq(coll);
 while(true){
 if(!((coll__$1 == null))){
-var G__12166 = sb.append([cljs.core.str(cljs.core.first(coll__$1))].join(''));
-var G__12167 = cljs.core.next(coll__$1);
-sb = G__12166;
-coll__$1 = G__12167;
+var G__12173 = sb.append([cljs.core.str(cljs.core.first(coll__$1))].join(''));
+var G__12174 = cljs.core.next(coll__$1);
+sb = G__12173;
+coll__$1 = G__12174;
 continue;
 } else {
 return sb.toString();
@@ -145,10 +145,10 @@ if((coll__$2 == null)){
 sb.append(separator);
 }
 
-var G__12168 = sb;
-var G__12169 = coll__$2;
-sb = G__12168;
-coll__$1 = G__12169;
+var G__12175 = sb;
+var G__12176 = coll__$2;
+sb = G__12175;
+coll__$1 = G__12176;
 continue;
 } else {
 return sb.toString();
@@ -185,8 +185,8 @@ clojure.string.pop_last_while_empty = (function clojure$string$pop_last_while_em
 var v__$1 = v;
 while(true){
 if(("" === cljs.core.peek(v__$1))){
-var G__12170 = cljs.core.pop(v__$1);
-v__$1 = G__12170;
+var G__12177 = cljs.core.pop(v__$1);
+v__$1 = G__12177;
 continue;
 } else {
 return v__$1;
@@ -205,12 +205,12 @@ clojure.string.split_with_empty_regex = (function clojure$string$split_with_empt
 if(((limit <= (0))) || ((limit >= ((2) + cljs.core.count(s))))){
 return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(cljs.core.vec(cljs.core.cons("",cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.seq(s)))),"");
 } else {
-var pred__12174 = cljs.core._EQ__EQ_;
-var expr__12175 = limit;
-if(cljs.core.truth_((pred__12174.cljs$core$IFn$_invoke$arity$2 ? pred__12174.cljs$core$IFn$_invoke$arity$2((1),expr__12175) : pred__12174.call(null,(1),expr__12175)))){
+var pred__12181 = cljs.core._EQ__EQ_;
+var expr__12182 = limit;
+if(cljs.core.truth_((pred__12181.cljs$core$IFn$_invoke$arity$2 ? pred__12181.cljs$core$IFn$_invoke$arity$2((1),expr__12182) : pred__12181.call(null,(1),expr__12182)))){
 return (new cljs.core.PersistentVector(null,1,(5),cljs.core.PersistentVector.EMPTY_NODE,[s],null));
 } else {
-if(cljs.core.truth_((pred__12174.cljs$core$IFn$_invoke$arity$2 ? pred__12174.cljs$core$IFn$_invoke$arity$2((2),expr__12175) : pred__12174.call(null,(2),expr__12175)))){
+if(cljs.core.truth_((pred__12181.cljs$core$IFn$_invoke$arity$2 ? pred__12181.cljs$core$IFn$_invoke$arity$2((2),expr__12182) : pred__12181.call(null,(2),expr__12182)))){
 return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,["",s],null));
 } else {
 var c = (limit - (2));
@@ -224,23 +224,23 @@ return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(cljs.core.vec(cljs.core.cons
  *   the maximum number of splits. Not lazy. Returns vector of the splits.
  */
 clojure.string.split = (function clojure$string$split(var_args){
-var args12177 = [];
-var len__7515__auto___12180 = arguments.length;
-var i__7516__auto___12181 = (0);
+var args12184 = [];
+var len__7524__auto___12187 = arguments.length;
+var i__7525__auto___12188 = (0);
 while(true){
-if((i__7516__auto___12181 < len__7515__auto___12180)){
-args12177.push((arguments[i__7516__auto___12181]));
+if((i__7525__auto___12188 < len__7524__auto___12187)){
+args12184.push((arguments[i__7525__auto___12188]));
 
-var G__12182 = (i__7516__auto___12181 + (1));
-i__7516__auto___12181 = G__12182;
+var G__12189 = (i__7525__auto___12188 + (1));
+i__7525__auto___12188 = G__12189;
 continue;
 } else {
 }
 break;
 }
 
-var G__12179 = args12177.length;
-switch (G__12179) {
+var G__12186 = args12184.length;
+switch (G__12186) {
 case 2:
 return clojure.string.split.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -250,7 +250,7 @@ return clojure.string.split.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(argu
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12177.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12184.length)].join('')));
 
 }
 });
@@ -270,12 +270,12 @@ return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(parts,s__$1);
 var m = cljs.core.re_find(re,s__$1);
 if(!((m == null))){
 var index = s__$1.indexOf(m);
-var G__12184 = s__$1.substring((index + cljs.core.count(m)));
-var G__12185 = (limit__$1 - (1));
-var G__12186 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(parts,s__$1.substring((0),index));
-s__$1 = G__12184;
-limit__$1 = G__12185;
-parts = G__12186;
+var G__12191 = s__$1.substring((index + cljs.core.count(m)));
+var G__12192 = (limit__$1 - (1));
+var G__12193 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(parts,s__$1.substring((0),index));
+s__$1 = G__12191;
+limit__$1 = G__12192;
+parts = G__12193;
 continue;
 } else {
 return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(parts,s__$1);
@@ -325,8 +325,8 @@ return "";
 } else {
 var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(s,(index - (1)));
 if((("\n" === ch)) || (("\r" === ch))){
-var G__12187 = (index - (1));
-index = G__12187;
+var G__12194 = (index - (1));
+index = G__12194;
 continue;
 } else {
 return s.substring((0),index);
@@ -364,8 +364,8 @@ buffer.append([cljs.core.str(replacement)].join(''));
 buffer.append(ch);
 }
 
-var G__12188 = (index + (1));
-index = G__12188;
+var G__12195 = (index + (1));
+index = G__12195;
 continue;
 }
 break;
@@ -376,23 +376,23 @@ break;
  *   forward from from-index or nil if not found.
  */
 clojure.string.index_of = (function clojure$string$index_of(var_args){
-var args12189 = [];
-var len__7515__auto___12192 = arguments.length;
-var i__7516__auto___12193 = (0);
+var args12196 = [];
+var len__7524__auto___12199 = arguments.length;
+var i__7525__auto___12200 = (0);
 while(true){
-if((i__7516__auto___12193 < len__7515__auto___12192)){
-args12189.push((arguments[i__7516__auto___12193]));
+if((i__7525__auto___12200 < len__7524__auto___12199)){
+args12196.push((arguments[i__7525__auto___12200]));
 
-var G__12194 = (i__7516__auto___12193 + (1));
-i__7516__auto___12193 = G__12194;
+var G__12201 = (i__7525__auto___12200 + (1));
+i__7525__auto___12200 = G__12201;
 continue;
 } else {
 }
 break;
 }
 
-var G__12191 = args12189.length;
-switch (G__12191) {
+var G__12198 = args12196.length;
+switch (G__12198) {
 case 2:
 return clojure.string.index_of.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -402,7 +402,7 @@ return clojure.string.index_of.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(a
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12189.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12196.length)].join('')));
 
 }
 });
@@ -431,23 +431,23 @@ clojure.string.index_of.cljs$lang$maxFixedArity = 3;
  *   searching backward from from-index or nil if not found.
  */
 clojure.string.last_index_of = (function clojure$string$last_index_of(var_args){
-var args12196 = [];
-var len__7515__auto___12199 = arguments.length;
-var i__7516__auto___12200 = (0);
+var args12203 = [];
+var len__7524__auto___12206 = arguments.length;
+var i__7525__auto___12207 = (0);
 while(true){
-if((i__7516__auto___12200 < len__7515__auto___12199)){
-args12196.push((arguments[i__7516__auto___12200]));
+if((i__7525__auto___12207 < len__7524__auto___12206)){
+args12203.push((arguments[i__7525__auto___12207]));
 
-var G__12201 = (i__7516__auto___12200 + (1));
-i__7516__auto___12200 = G__12201;
+var G__12208 = (i__7525__auto___12207 + (1));
+i__7525__auto___12207 = G__12208;
 continue;
 } else {
 }
 break;
 }
 
-var G__12198 = args12196.length;
-switch (G__12198) {
+var G__12205 = args12203.length;
+switch (G__12205) {
 case 2:
 return clojure.string.last_index_of.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -457,7 +457,7 @@ return clojure.string.last_index_of.cljs$core$IFn$_invoke$arity$3((arguments[(0)
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12196.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args12203.length)].join('')));
 
 }
 });
