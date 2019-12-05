@@ -12,39 +12,41 @@
 (defn about-component []
   [:div#about
    [:h2 "About DCD 2020"]
-   [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands! We welcome you to the 5th edition of our " [:b "free "] " and non-profit Clojure conference organised by the community, for the community with a full day of amazing talks in a friendly welcoming atmosphere."]
+   [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands! We welcome you to the 5th edition of our " [:b "free "] " and non-profit Clojure conference organised by the community, for the community with a full day of amazing talks in a friendly welcoming atmosphere."]])
+
+(defn cfp-component []
+  [:div#cfp
+   [:h2 "Call for Proposals"]
+   [:p "Our CFP is open! You can submit your proposal at " [:a {:href "https://www.papercall.io/dcd20"} "Papercall"] "."]
+   [:p "We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on topics such as (but not limited to) real-world experiences and lessons learned from putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc. Be creative!"]])
+
+(defn tickets-component []
+  [:div#date
+   [:h2 "Tickets"]
+   [:p  "Dutch Clojure Days are always free conferences but you still need to register to be able to attend. Make sure to"
+    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " reserve your spot "] "today!"]])
+
+(defn sponsor-packages-component []
+  [:div#packages
    [:h2 "Sponsorship Packages"]
    [:p "If you want to support us and Clojure community, consider sponsoring us. Please get in touch via email at " [:a {:href "mailto:events@clojuredays.org"} "events@clojuredays.org"] "."]
    ;;  We offer two affordable sponsorship packages, check them out:
    (comment [:img {:src "/img/2020/sponsor.png" :width "600px"}]
             [:img {:src "/img/2020/partner.png" :width "600px"}])])
 
-(defn cfp-component []
-  [:div#cfp
-   [:h2 "Call for Proposals"]
-   [:p "Our CFP is open! You can submit your proposal at " [:a {:href "https://www.papercall.io/dcd20"} "Papercall"] ". We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on real-world experiences and lessons learned frm putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc."]])
-
-(defn tickets-component []
-  [:div#date
-   [:h2 "Reserve your Spot"]
-   [:p "DCD 2020 will be in Amsterdam on "
-    [:b "Saturday, May 16th, 2020"] ". We'll soon open our registrations, make sure to follow us on "
-    [:a {:href "https://twitter.com/clojuredays"} "@clojuredays"] " and be the first to reserve your spot!"]])
-
 (defn when-component []
-  [:div
+  [:div#date
+   [:h2 "When?"]
    [:p"Dutch Clojure Days will happen on "
     [:b " Saturday, May 16th, 2020"] "."]])
 
 (defn main-component []
   [:article.main
-   [:div#about
-    [about-component]]
-   [:div#date
-    [:h2 "When?"]
-    [when-component]]
-   [:div#cfp
-    [cfp-component]]
+   [about-component]
+   [when-component]
+   [tickets-component]
+   [cfp-component]
+   [sponsor-packages-component]
    #_[:div#sponsors
       [:h2 "Sponsors"]
       [sponsors-component]]
@@ -57,8 +59,6 @@
    [:div#location
     [:h2 "Where?"]
     [location-component {:coords [52.3666451 4.892396599999984]}]]
-   [:div
-    [tickets-component]]
    [:div#behave
     [:h2 "Code of Conduct"]
     [code-of-conduct-component]]])
