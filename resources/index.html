@@ -1,51 +1,61 @@
 <!doctype html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!">
-    <title>Dutch Clojure Days 2019</title>
-    <meta content='Dutch Clojure Days 2019' property='og:title'>
-    <meta content='http://clojuredays.org/img/2019/logo.png' property='og:image'>
-    <meta content='clojuredays.org' property='og:site_name'>
-    <meta content="The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!" name="og:description">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/Quicksand:200,300,400,500,700" type="text/css" />
-    <link href="css/sass.css" rel="stylesheet" type="text/css" media="screen">
-    <link rel="icon" href="img/fav.png" sizes="32x32" />
-    <link rel="icon" href="img/fav.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="img/fav.png" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-                           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-                           crossorigin=""/>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!">
+        <title>Dutch Clojure Days 2019</title>
+        <meta content='Dutch Clojure Days 2019' property='og:title'>
+        <meta content='http://clojuredays.org/img/2019/logo.png' property='og:image'>
+        <meta content='clojuredays.org' property='og:site_name'>
+        <meta content="The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!" name="og:description">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/Quicksand:200,300,400,500,700" type="text/css" />
+        <link href="css/sass.css" rel="stylesheet" type="text/css" media="screen">
+        <link rel="icon" href="img/fav.png" sizes="32x32" />
+        <link rel="icon" href="img/fav.png" sizes="192x192" />
+        <link rel="apple-touch-icon-precomposed" href="img/fav.png" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+              integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+              crossorigin=""/>
+    </head>
 
-<body>
-    <div id="container">
-        <!--placeholder-->
-    </div>
-     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-             integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-             crossorigin=""></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-    <script type="text/javascript">
-        var exampleCallback = function() {
-            console.log('Order complete!');
-        };
+    <body>
+        <div id="container">
+            <!--placeholder-->
+        </div>
+        <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+                integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+                crossorigin=""></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+        <script type="text/javascript">
+         var exampleCallback = function() {
+             console.log('Order complete!');
+         };
 
-        window.EBWidgets.createWidget({
-            // Required
-            widgetType: 'checkout',
-            eventId: '52858312636',
-            iframeContainerId: 'eventbrite-widget-container-52858312636',
-            // Optional
-            iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
-            onOrderComplete: exampleCallback // Method called when an order has successfully completed
-        });
-    </script>
+         window.EBWidgets.createWidget({
+             // Required
+             widgetType: 'checkout',
+             eventId: '85069363757',
+             iframeContainerId: 'eventbrite-widget-container-85069363757',
+
+             // Optional
+             iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+             onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+         });
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87614066-1"></script>
+        <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'UA-87614066-1');
+        </script>
 
 
-</body>
+    </body>
 
 </html>

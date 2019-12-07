@@ -24,7 +24,10 @@
   [:div#date
    [:h2 "Tickets"]
    [:p  "Dutch Clojure Days are always free conferences but you still need to register to be able to attend. Make sure to"
-    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " reserve your spot "] "today!"]])
+    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " reserve your spot "] "today!"]
+   #_[:div#eventbrite-widget-container-85069363757]])
+;; [:button#eventbrite-widget-modal-trigger-85069363757 {:type "button"} "Reserve your spot"]
+
 
 (defn sponsor-packages-component []
   [:div#packages
