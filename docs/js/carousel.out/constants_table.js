@@ -266,6 +266,7 @@ cljs.core.cst$kw$cell_DASH_spacing = new cljs.core.Keyword(null,"cell-spacing","
 cljs.core.cst$kw$error = new cljs.core.Keyword(null,"error","error",-978969032);
 cljs.core.cst$kw$h2 = new cljs.core.Keyword(null,"h2","h2",-372662728);
 cljs.core.cst$kw$talk = new cljs.core.Keyword(null,"talk","talk",309472888);
+cljs.core.cst$kw$br = new cljs.core.Keyword(null,"br","br",934104792);
 cljs.core.cst$kw$componentFunction = new cljs.core.Keyword(null,"componentFunction","componentFunction",825866104);
 cljs.core.cst$kw$img$speaker = new cljs.core.Keyword(null,"img.speaker","img.speaker",1385838649);
 cljs.core.cst$kw$main_DASH_component = new cljs.core.Keyword(null,"main-component","main-component",-1680547783);
