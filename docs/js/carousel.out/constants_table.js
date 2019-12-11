@@ -153,6 +153,7 @@ cljs.core.cst$kw$div$col = new cljs.core.Keyword(null,"div.col","div.col",-18007
 cljs.core.cst$kw$fallback_DASH_impl = new cljs.core.Keyword(null,"fallback-impl","fallback-impl",-1501286995);
 cljs.core.cst$sym$meta8159 = new cljs.core.Symbol(null,"meta8159","meta8159",1121629837,null);
 cljs.core.cst$kw$flush_DASH_on_DASH_newline = new cljs.core.Keyword(null,"flush-on-newline","flush-on-newline",-151457939);
+cljs.core.cst$kw$max_DASH_width = new cljs.core.Keyword(null,"max-width","max-width",-1939924051);
 cljs.core.cst$sym$default_DASH_dispatch_DASH_val = new cljs.core.Symbol(null,"default-dispatch-val","default-dispatch-val",-1231201266,null);
 cljs.core.cst$sym$this = new cljs.core.Symbol(null,"this","this",1028897902,null);
 cljs.core.cst$kw$componentWillUnmount = new cljs.core.Keyword(null,"componentWillUnmount","componentWillUnmount",1573788814);
