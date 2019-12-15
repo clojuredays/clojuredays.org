@@ -1,6 +1,8 @@
 /target
-/.nrepl-port
+/.cpcache
 /out
-.cljs_rhino_repl/
-.cljs_nashorn_repl/
-nashorn_code_cache/
+/.idea
+*.iml
+public/*.html
+public/css/main.css
+public/css/main.css.map
