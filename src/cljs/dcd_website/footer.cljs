@@ -35,6 +35,6 @@
     [:div.col
      [:h3 "Design & Art"]
      [:span
-      [:a {:href "https://twitter.com/moolver_sin"
+      [:a {:href "http://lubovsoltan.com/"
            :target :_blank}
        "Lubov Soltan"]]]]])
