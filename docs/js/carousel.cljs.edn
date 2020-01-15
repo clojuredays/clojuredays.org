@@ -1,3 +1,0 @@
-{:require  [dcd-website.carousel]
- :init-fns [dcd-website.carousel/init]
- :compiler-options {:asset-path "js/carousel.out"}}
