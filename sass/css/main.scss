@@ -167,6 +167,17 @@ a {
         .expand-icon {
             display: none;
         }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li {
+                margin: 0;
+                padding: 0 0 0 1em;
+            }
+        }
+
     }
 
     .main {
