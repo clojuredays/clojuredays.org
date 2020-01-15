@@ -11,7 +11,8 @@
 (defn cfp-component []
   [:div#cfp
    [:h2 "Call for Proposals"]
-   [:p "Our CFP is open! You can submit your proposal at " [:a {:href "https://www.papercall.io/dcd20"} "Papercall"] "."]
+   [:p "Our CFP is open until March 15, 2020."]
+   [:p "You can submit your proposal at " [:a {:href "https://www.papercall.io/dcd20"} "Papercall"] "."]
    [:p "We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on topics such as (but not limited to) real-world experiences and lessons learned from putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc. Be creative!"]])
 
 (defn tickets-component []
