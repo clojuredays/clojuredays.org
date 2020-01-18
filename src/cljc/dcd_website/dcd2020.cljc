@@ -54,8 +54,10 @@
    [:h2 "Sponsors"]
    [:div.sponsors
     [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
+    [:h3.package "Partner"]
     [:a.sponsor.platinum {:href "https://www.greenhousegroup.com/" :target :_blank}
      [:img {:src "img/2020/sponsors/ghg.png"}]]
+    [:h3.package "Sponsor"]
     [:a.sponsor.regular {:href "http://www.adgoji.com/" :target :_blank}
      [:img {:src "img/2019/sponsors/adgoji.svg"}]]
     [:a.sponsor.regular {:href "https://cognitect.com" :target :_blank}
