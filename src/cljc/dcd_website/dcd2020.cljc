@@ -16,10 +16,13 @@
    [:p "We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on topics such as (but not limited to) real-world experiences and lessons learned from putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc. Be creative!"]])
 
 (defn tickets-component []
-  [:div#date
+  [:div#tickets
    [:h2 "Tickets"]
-   [:p "Dutch Clojure Days are always free conferences but you still need to register to be able to attend. Make sure to"
-    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " reserve your spot "] "today!"]
+   [:p "The conference is currently sold out, but fear not! As a free event, it often happens that tickets become available later during to cancellations. "
+    [:a {:href "https://twitter.com/clojuredays"}
+     "Stay tuned"] " for updates!"]
+   #_[:p "Dutch Clojure Days are always free conferences but you still need to register to be able to attend. Make sure to"
+      [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " reserve your spot "] "today!"]
    #_[:div#eventbrite-widget-container-85069363757]])
 ;; [:button#eventbrite-widget-modal-trigger-85069363757 {:type "button"} "Reserve your spot"]
 
@@ -41,25 +44,42 @@
    [:p "Dutch Clojure Days will happen on "
     [:b " Saturday, May 16th, 2020"] "."]])
 
+(defn where-component []
+  [:div#location
+   [:h2 "Where?"]
+   (location-component)])
+
+(defn sponsors-component []
+  [:div#sponsors
+   [:h2 "Sponsors"]
+   [:div.sponsors
+    [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
+    [:a.sponsor.platinum {:href "https://www.greenhousegroup.com/" :target :_blank}
+     [:img {:src "img/2020/sponsors/ghg.png"}]]
+    [:a.sponsor.regular {:href "http://www.adgoji.com/" :target :_blank}
+     [:img {:src "img/2019/sponsors/adgoji.svg"}]]
+    [:a.sponsor.regular {:href "https://cognitect.com" :target :_blank}
+     [:img {:src "img/2019/sponsors/cognitect.svg"}]]
+    [:a.sponsor.regular {:href "https://www.magnet.coop/" :target :_blank}
+     [:img {:src "img/2020/sponsors/magnet.svg"}]]
+    ;; TODO: missing details for Iñaki Arenaza
+    ]])
+
 (defn main-component []
   [:article.main
    (about-component)
    (when-component)
+   (where-component)
    (tickets-component)
    (cfp-component)
+   (sponsors-component)
    (sponsor-packages-component)
-   #_[:div#sponsors
-      [:h2 "Sponsors"]
-      [sponsors-component]]
    #_[:div#agenda
       [:h2 "Agenda"]
       [agenda-component agenda-data]]
    #_[:div#speakers
       [:h2 "Speakers"]
       [speakers-component agenda-data]]
-   [:div#location
-    [:h2 "Where?"]
-    (location-component)]
    [:div#behave
     [:h2 "Code of Conduct"]
     (code-of-conduct-component)]])
