@@ -259,6 +259,21 @@ a {
     margin: -60px; }
   .site .sponsors a.sponsor.digitalechecklisten img {
     margin-top: 25px; }
+  .site .sponsors h3.package {
+    color: #ff6b12;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    margin-top: 66px; }
+    @media all and (max-width: 500px) {
+      .site .sponsors h3.package {
+        font-size: 0.8rem; } }
+    @media all and (min-width: 500px) and (max-width: 1000px) {
+      .site .sponsors h3.package {
+        font-size: 1.2rem; } }
+    @media all and (min-width: 1000px) {
+      .site .sponsors h3.package {
+        font-size: 1.6rem; } }
   .site .sponsors a.sponsor {
     max-width: 500px;
     display: block; }
