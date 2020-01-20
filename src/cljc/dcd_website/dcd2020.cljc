@@ -65,7 +65,7 @@
     [:a.sponsor.regular {:href "https://www.magnet.coop/" :target :_blank}
      [:img {:src "img/2020/sponsors/magnet.svg"}]]
     [:a.sponsor.regular {:href "https://twitter.com/iarenaza" :target :_blank}
-     [:img {:src "img/2020/sponsors/ian2.svg"}]]]])
+     [:img {:src "img/2020/sponsors/ian.svg"}]]]])
 
 (defn main-component []
   [:article.main
