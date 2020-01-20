@@ -64,8 +64,8 @@
      [:img {:src "img/2019/sponsors/cognitect.svg"}]]
     [:a.sponsor.regular {:href "https://www.magnet.coop/" :target :_blank}
      [:img {:src "img/2020/sponsors/magnet.svg"}]]
-    ;; TODO: missing details for Iñaki Arenaza
-    ]])
+    [:a.sponsor.regular {:href "https://twitter.com/iarenaza" :target :_blank}
+     [:img {:src "img/2020/sponsors/ian2.svg"}]]]])
 
 (defn main-component []
   [:article.main
