@@ -65,7 +65,17 @@
     [:a.sponsor.regular {:href "https://www.magnet.coop/" :target :_blank}
      [:img {:src "img/2020/sponsors/magnet.svg"}]]
     [:a.sponsor.regular {:href "https://twitter.com/iarenaza" :target :_blank}
-     [:img {:src "img/2020/sponsors/ian.svg"}]]]])
+     [:img {:src "img/2020/sponsors/ian.svg"}]]
+    [:a.sponsor.regular {:href "https://www.brightin.nl/" :target :_blank}
+     [:img {:src "img/2018/sponsors/brightin.png"}]]
+    [:a.sponsor.regular {:href "https://vakantiediscounter.nl" :target :_blank}
+     [:img {:src "img/2019/sponsors/devakantiediscounter.svg"}]]
+    [:a.sponsor.regular {:href "https://flexiana.com/" :target :_blank}
+     [:img {:src "img/2019/sponsors/flexiana.jpg"}]]
+    [:a.sponsor.regular {:href "https://infi.nl/" :target :_blank}
+     [:img {:src "img/2019/sponsors/infi.svg"}]]
+    [:a.sponsor.regular {:href "https://lunatech.com/" :target :_blank}
+     [:img {:src "img/2019/sponsors/lunatech.svg"}]]]])
 
 (defn main-component []
   [:article.main
