@@ -21,8 +21,8 @@
    [:p "The conference is currently sold out, but fear not! As a free event, it often happens that tickets become available later during to cancellations. "
     [:a {:href "https://twitter.com/clojuredays"}
      "Stay tuned"] " for updates!"]
-   #_[:p "Dutch Clojure Days are always free conferences but you still need to register to be able to attend. Make sure to"
-      [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " reserve your spot "] "today!"]
+   [:p "In the meanwhile you can always"
+    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " join the waiting list"] " so you can get in as soon as a spot frees up."]
    #_[:div#eventbrite-widget-container-85069363757]])
 ;; [:button#eventbrite-widget-modal-trigger-85069363757 {:type "button"} "Reserve your spot"]
 
