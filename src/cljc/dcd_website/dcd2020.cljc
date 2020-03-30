@@ -3,6 +3,20 @@
             [dcd-website.agenda :refer [speakers-component agenda-component]]
             [dcd-website.coc :refer [code-of-conduct-component]]))
 
+(defn cancelled-component []
+  [:div#about
+   [:h2 "ClojureDays 2020 has been cancelled"]
+   [:p "Thank your for your enthousiastic reaction to this year's edition of
+Dutch Clojure Days. We receieved a fantastic response in both our CFP
+and ticket sale and would have loved to organize yet another great
+programme."]
+   [:p "Unfortunately the Corona crisis makes it impossible this year to
+organise the planned event safely. That's why we've decided to cancel
+this year's ClojureDays conference."]
+   [:p "We are considering options for organising another kind of event at a
+later time. Stay tuned for news and make sure to follow us on twitter."]
+   [:p "On behalf of the Dutch Clojure Days team" [:br] "Carlo Sciolla"]])
+
 (defn about-component []
   [:div#about
    [:h2 "About DCD 2020"]
@@ -96,6 +110,10 @@
     [:h2 "Code of Conduct"]
     (code-of-conduct-component)]])
 
+(defn cancelled []
+  [:article.main
+   (cancelled-component)])
+
 (def dcd2020-website-structure
   {:title          "Dutch Clojure Days 2020"
-   :main-component (main-component)})
+   :main-component (cancelled)})
