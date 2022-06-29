@@ -1,5 +1,5 @@
 (ns dcd-website.dcd2018
-  (:require [dcd-website.location :refer [location-component]]
+  (:require [dcd-website.location :refer [tq-location-component]]
             [dcd-website.agenda :refer [speakers-component agenda-component]]
             [dcd-website.coc :refer [code-of-conduct-component]]))
 
@@ -239,7 +239,7 @@ You will see how you can get feedback from something better than actual humans: 
     (code-of-conduct-component)]
    [:div#location
     [:h2 "Where?"]
-    (location-component)]])
+    (tq-location-component)]])
 
 (def dcd2018-website-structure
   {:title "Dutch Clojure Days 2018"

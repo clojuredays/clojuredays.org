@@ -1,5 +1,5 @@
 (ns dcd-website.dcd2019
-  (:require [dcd-website.location :refer    [location-component]]
+  (:require [dcd-website.location :refer    [tq-location-component]]
             [dcd-website.header :refer [header-component]]
             [dcd-website.agenda :refer [speakers-component agenda-component]]
             [dcd-website.coc :refer [code-of-conduct-component]]))
@@ -242,7 +242,7 @@ You will see how you can get feedback from something better than actual humans: 
     (speakers-component agenda-data)]
    [:div#location
     [:h2 "Where?"]
-    (location-component)]
+    (tq-location-component)]
    [:div
     (tickets-component)]
    [:div#cfp

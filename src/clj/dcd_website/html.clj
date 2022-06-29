@@ -1,4 +1,4 @@
-(ns dcd_website.html
+(ns dcd-website.html
   (:require [hiccup.page :refer [html5]]
             [dcd-website.header :refer [header-component]]
             [dcd-website.main :refer [content]]))

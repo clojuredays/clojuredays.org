@@ -3,7 +3,7 @@
 (defn sidebar-component []
   [:aside#sidebar.sidebar.collapsed
    [:a.item.expand-icon {:onclick "switchSidebar()"} "☰"]
-   [:a.item {:href "index.html" :onclick "collapseSidebar()"} "Upcoming: DCD2020"]
+   [:a.item {:href "index.html" :onclick "collapseSidebar()"} "Upcoming: DCD2022"]
    [:ul
     [:li [:a.item {:href "/#about" :onclick "collapseSidebar()"} "About"]]
     [:li [:a.item {:href "/#date" :onclick "collapseSidebar()"} "When?"]]
@@ -16,6 +16,7 @@
     [:li [:a.item {:href "/#behave" :onclick "collapseSidebar()"} "Code of conduct"]]
     [:li [:a.item {:href "/#location" :onclick "collapseSidebar()"} "Where?"]]]
    [:br]
+   [:a.item {:href "dcd2020.html" :onclick "collapseSidebar()"} "Archive: DCD2020"]
    [:a.item {:href "dcd2019.html" :onclick "collapseSidebar()"} "Archive: DCD2019"]
    [:a.item {:href "dcd2018.html" :onclick "collapseSidebar()"} "Archive: DCD2018"]
    [:a.item {:href "dcd2017.html" :onclick "collapseSidebar()"} "Archive: DCD2017"]

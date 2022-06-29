@@ -1,5 +1,5 @@
 (ns dcd-website.dcd2017
-  (:require [dcd-website.location :refer [location-component]]
+  (:require [dcd-website.location :refer [tq-location-component]]
             [dcd-website.coc :refer [code-of-conduct-component]]
             [dcd-website.agenda :refer [speakers-component agenda-component]]))
 
@@ -215,7 +215,7 @@
     (when-component)]
    [:div#location
     [:h2 "Where?"]
-    (location-component)]
+    (tq-location-component)]
    [:div#sponsors
     [:h2 "Sponsors"]
     (sponsors-component)]
