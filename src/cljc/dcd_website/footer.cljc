@@ -2,8 +2,8 @@
 
 (def dcd-team
   [["Carlo Sciolla"      "https://twitter.com/skuro"]
-   ["Joost Diepenmaat"   "https://twitter.com/ZeekatSoftware"]
-   ["Iulia Mastacaneanu" "https://twitter.com/iulia_mm"]])
+   ["Joost Diepenmaat"   "https://jomco.nl/"]
+   ["Remco van 't Veer" "https://jomco.nl/"]])
 
 (defn footer-component []
   [:footer.footer
@@ -21,7 +21,7 @@
        "@clojuredays"]]]
 
     [:div.col
-     [:h3 "DCD team"]
+     [:h3 "ClojureDays foundation"]
      [:span
       [:div
        (letfn [(organizer [[name link]]

@@ -32,11 +32,11 @@
   [:div#packages
    [:h2 "Sponsorship Packages"]
    [:p "If you want to support us and Clojure community, consider sponsoring us. We offer two affordable sponsorship packages, check them out:"]
-   [:a {:href "img/2020/partner.png" :target "none"}
-    [:img {:src "img/2020/partner.png" :style "width: 100%; height: auto; max-width: 600px"}]]
+   [:a {:href "img/2022/partner.png" :target "none"}
+    [:img {:src "img/2022/partner.png" :style "width: 100%; height: auto; max-width: 600px"}]]
    [:br]
-   [:a {:href "img/2020/sponsor.png" :target "none"}
-    [:img {:src "img/2020/sponsor.png" :style "width: 100%; height: auto; max-width: 600px"}]]
+   [:a {:href "img/2022/sponsor.png" :target "none"}
+    [:img {:src "img/2022/sponsor.png" :style "width: 100%; height: auto; max-width: 600px"}]]
    [:p "If you want to support and engage with the Dutch Clojure Days community, please get in touch via email at " [:a {:href "mailto:events@clojuredays.org"} "events@clojuredays.org"] "."]])
 
 (defn when-component []
