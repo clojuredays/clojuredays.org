@@ -22,11 +22,8 @@ jobs:
       run: lein run
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      env:
-        # ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        # PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
       with:
-        emptyCommits: false
+        allow_empty_commit: false
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./public
