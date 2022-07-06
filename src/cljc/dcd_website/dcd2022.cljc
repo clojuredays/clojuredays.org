@@ -23,6 +23,7 @@
        "Stay tuned"] " for updates!"]
    #_[:p "In the meanwhile you can always"
       [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2022-tickets-380638669507"} " join the waiting list"] " so you can get in as soon as a spot frees up."]
+   [:p "Tickets for the conference are free of charge. You can reserve your spot on Eventbrite:"]
    [:div#eventbrite-widget-container-380638669507]
    [:button#eventbrite-widget-modal-trigger-380638669507 {:type "button"} "Reserve your spot"]])
 
