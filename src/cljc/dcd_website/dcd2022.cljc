@@ -18,13 +18,13 @@
 (defn tickets-component []
   [:div#tickets
    [:h2 "Tickets"]
-   [:p "The conference is currently sold out, but fear not! As a free event, it often happens that tickets become available later during to cancellations. "
-    [:a {:href "https://twitter.com/clojuredays"}
-     "Stay tuned"] " for updates!"]
-   [:p "In the meanwhile you can always"
-    [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2020-tickets-85069363757"} " join the waiting list"] " so you can get in as soon as a spot frees up."]
-   #_[:div#eventbrite-widget-container-85069363757]])
-;; [:button#eventbrite-widget-modal-trigger-85069363757 {:type "button"} "Reserve your spot"]
+   #_[:p "The conference is currently sold out, but fear not! As a free event, it often happens that tickets become available later during to cancellations. "
+      [:a {:href "https://twitter.com/clojuredays"}
+       "Stay tuned"] " for updates!"]
+   #_[:p "In the meanwhile you can always"
+      [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2022-tickets-380638669507"} " join the waiting list"] " so you can get in as soon as a spot frees up."]
+   [:div#eventbrite-widget-container-380638669507]
+   [:button#eventbrite-widget-modal-trigger-380638669507 {:type "button"} "Reserve your spot"]])
 
 
 (defn sponsor-packages-component []

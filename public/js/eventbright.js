@@ -5,8 +5,8 @@ const exampleCallback = function() {
 window.EBWidgets.createWidget({
   // Required
   widgetType: 'checkout',
-  eventId: '85069363757',
-  iframeContainerId: 'eventbrite-widget-container-85069363757',
+  eventId: '380638669507',
+  iframeContainerId: 'eventbrite-widget-container-380638669507',
 
   // Optional
   iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
