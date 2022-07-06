@@ -4,6 +4,7 @@ const collapseSidebar = function () {
     sidebar.classList.add('collapsed');
   }
 };
+
 const switchSidebar = function () {
   let sidebar = document.getElementById('sidebar');
   if (sidebar.classList.contains('collapsed')) {
@@ -12,12 +13,36 @@ const switchSidebar = function () {
     sidebar.classList.add('collapsed');
   }
 };
+
+const locations = {
+  tq: {link: {href: 'https://tq.co',
+              alt: 'TQ - Singel 542'},
+       coords: {lat: 52.3666451,
+                long: 4.892396599999984}},
+  cloudpirates: {link: {href: 'https://www.cloudpirates.nl',
+                        alt: 'Cloud Pirates - Piet Heinkade 217'},
+                 coords: {lat: 52.3758439,
+                          long: 4.9238819}}
+};
+
+const mapPopup = function(location) {
+  return '<a href=\'' + location.link.href +'\' target=\'_blank\'>' + location.link.alt + '</a>';
+};
+
 const loadMap = function () {
   let locationMap = document.getElementById('location-map');
   if (!locationMap) {
     return;
   }
-  let coords = [52.3666451, 4.892396599999984];
+
+  let locationConfig = locationMap.attributes['location'];
+  if(!locationConfig) {
+    return
+  }
+
+  let location = locations[locationConfig.value];
+  let coords = [location.coords.lat, location.coords.long];
+
   locationMap.setAttribute('location-map', coords);
   let myMap = L.map('location-map', {
     scrollWheelZoom: false,
@@ -31,7 +56,8 @@ const loadMap = function () {
         accessToken: 'pk.eyJ1IjoiZ29uemloIiwiYSI6ImNpeHc1eDA0NjAwMmczMmw4MnR5b2p4eWsifQ.nrJj6lim59mVefvEwsiCgA'
       }).addTo(myMap);
   L.marker(coords)
-      .addTo(myMap)
-      .bindPopup('<a href=\'http://tq.co\' target=\'_blank\'>TQ - Singel 542</a>');
+    .addTo(myMap)
+    .bindPopup(mapPopup(location));
 };
+
 loadMap();
