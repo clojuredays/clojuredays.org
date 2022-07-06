@@ -9,7 +9,7 @@ lein sass watch &
 SASS="$!"
 
 echo "Hit <enter> to quit"
-read DONE
+read -r _DONE
 
 kill "$SERVER"
 trap "kill $SERVER $SASS" SIGINT SIGTERM EXIT SIGSTOP
