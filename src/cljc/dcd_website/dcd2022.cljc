@@ -12,7 +12,7 @@
   [:div#cfp
    [:h2 "Call for Proposals"]
    [:p "Our CFP is open until August 15th, 2022."]
-   [:p "You can submit your proposal at " [:a {:href "https://sessionize.com/app/speaker/event/details/8379"} "Sessionize"] "."]
+   [:p "You can submit your proposal at " [:a {:href "https://sessionize.com/dutch-clojure-days-2022/"} "Sessionize"] "."]
    [:p "We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on topics such as (but not limited to) real-world experiences and lessons learned from putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc. Be creative!"]])
 
 (defn tickets-component []
@@ -55,7 +55,9 @@
    [:h2 "Sponsors"]
    [:div.sponsors
     [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
-    [:h3.package "Partner"]]])
+    [:h3.package "Friends and family"]
+    [:a.sponsor.regular {:href "https://www.cloudpirates.nl/" :target :_blank}
+     [:img {:src "img/2022/sponsors/cloudpirates.png"}]]]])
 
 (defn main-component []
   [:article.main
