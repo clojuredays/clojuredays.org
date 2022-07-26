@@ -55,6 +55,12 @@
    [:h2 "Sponsors"]
    [:div.sponsors
     [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
+    [:h3.package "Partner"]
+    [:a.sponsor.platinum {:href "https://www.brightmotive.com/company/careers/" :target :_blank}
+     [:img {:src "img/2022/sponsors/brightmotive.svg"}]]
+    [:h3.package "Sponsor"]
+    [:a.sponsor.regular {:href "https://www.eerlijkewoz.nl/" :target :_blank}
+     [:img {:src "img/2022/sponsors/eerlijkewoz.svg"}]]
     [:h3.package "Friends and family"]
     [:a.sponsor.regular {:href "https://www.cloudpirates.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/cloudpirates.png"}]]]])
