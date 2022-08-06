@@ -1,6 +1,6 @@
 (ns dcd-website.agenda)
 
-(defn table-row [{:keys [title time author type]}]
+(defn table-row [{:keys [title time author _type]}]
   (let [[start end] time]
     ^{:key (str time author)}
     [:tr
@@ -25,7 +25,8 @@
     (when twitter
       [:a.twitter-link {:href (str "https://twitter.com/" twitter) :target :_blank}
        [:span.twitter-handle (str "@" twitter)]])
-    [:h3 author]]
+    (when-not (= :placeholder type)
+      [:h3 author])]
    [:div.info
     [:h3.title {:id title}
      (when (= :lightning type)
@@ -42,5 +43,5 @@
   [:div.speakers
    (doall (->> agenda-data
                (filter #(and (:profile-pic %)
-                             (#{:lightning :talk} (:type %))))
+                             (#{:lightning :talk :placeholder} (:type %))))
                (map speaker-component)))])

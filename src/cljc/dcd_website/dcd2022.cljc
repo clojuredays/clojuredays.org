@@ -65,6 +65,158 @@
     [:a.sponsor.regular {:href "https://www.cloudpirates.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/cloudpirates.png"}]]]])
 
+(def agenda-data
+  [{:time ["8:30" "9:15"]
+    :title "Reception"
+    :type :org}
+
+   {:time ["9:15" "9:30"]
+    :title "Opening"
+    :author "#DCD19 team"
+    :type :org}
+
+   {:time ["9:30" "10:15"]
+    :author "Nikita Prokopov"
+    :title "Cloure + UI = ❤️"
+    :profile-pic "tonsky.jpg"
+    :description "The web became a de-facto way of building UIs these days. But is it good? Or fast?
+
+I argue that the web has its unique features, but it also brings a lot of unnecessary complexity to desktop apps, both in performance, resource use, compatibility, and stability.
+
+Another point is that REPL-driven development is a perfect environment for building UIs, which ClojureScript + Figwheel has proven. Zero time feedback loop + persistent state + no reloads == a blessing for any visual project, yet many modern tools get there.
+
+Finally, in the true spirit of Clojure and JVM, write once, run anywhere means desktop apps should run the same on all platforms, respecting platforms but also giving a lot of common ground to share development efforts, just like Electron apps do.
+
+I feel Clojure has a unique opportunity to lead a new era in GUI app development — cross-platform Clojure desktop apps.
+
+In this talk, we’ll present Humble UI, a brand-new way of building desktop apps in Clojure that doesn’t rely on the web ecosystem or any of the existing cross-platform UI frameworks. Instead, it’s custom-tailored from the ground up for the interactivity and portability of Clojure.
+
+We’ll talk about graphical stack, OS integration, layout, components and reuse, state management, and also some unique twists you probably always wanted in the UI framework but didn’t know to ask for."
+    :bio "Clojure enthusiast, author of DataScript, Rum, Fira Code
+
+Nikita has been programming in Clojure, Java, Python, Erlang for 17 years, been interested in UI/UX design for about the same amount of time, and created a few notable projects, including DataScript, Rum and Fira Code."
+    :twitter "nikitonsky"
+    :add-padding true
+    :type :talk
+    :youtube-link nil}
+
+   {:time ["10:25" "11:10"]
+    :author "TBD"
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :description [:a {:href "https://sessionize.com/dutch-clojure-days-2022/"} "Our CfP is open, submit your talk!"]
+    #_#_:bio "N/A"
+    :twitter "clojuredays"
+    :add-padding true
+    :type :placeholder
+    :youtube-link nil}
+
+   {:time ["11:20" "12:05"]
+    :author "TBD"
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["12:05" "13:20"]
+    :title "Lunch"
+    :type :org
+    :force-timeline-visible? true}
+
+   {:title "Lightning Talks"
+    :force-timeline-hidden? true
+    :type :lightning}
+
+   {:time ["14:15" "14:30"]
+    :author "TBD"
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["14:30" "14:45"]
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :author "TBD"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["14:45" "15:00"]
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :author "TBD"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["15:00" "15:15"]
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :author "TBD"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["15:15" "15:45"]
+    :title "Coffee break"
+    :type :org
+    :add-padding true
+    :force-timeline-visible? true}
+
+   {:time ["15:45" "16:30"]
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :author "TBD"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :add-padding true
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["16:40" "17:25"]
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :author "TBD"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :add-padding true
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["17:35" "18:20"]
+    :title "TBD"
+    :profile-pic "../fav.png"
+    :author "TBD"
+    :description ""
+    :bio ""
+    :twitter "clojuredays"
+    :type :skip
+    :youtube-link nil}
+
+   {:time ["18:20" "18:30"]
+    :title "Closing"
+    :author "#DCD19 team"
+    :type :org}
+
+   {:time ["18:30" "21:30"]
+    :title "Networking/Drinks"
+    :type :org}])
+
 (defn main-component []
   [:article.main
    (about-component)
@@ -74,12 +226,13 @@
    (cfp-component)
    (sponsors-component)
    (sponsor-packages-component)
-   #_[:div#agenda
-      [:h2 "Agenda"]
-      [agenda-component agenda-data]]
-   #_[:div#speakers
-      [:h2 "Speakers"]
-      [speakers-component agenda-data]]
+   [:div#agenda
+    [:h2 "Agenda"]
+    [:p "The agenda below is just an indication as " [:a {:href "https://sessionize.com/dutch-clojure-days-2022/"} "our CfP is still ongoing!"]]
+    (agenda-component agenda-data)]
+   [:div#speakers
+    [:h2 "Speakers"]
+    (speakers-component agenda-data)]
    [:div#behave
     [:h2 "Code of Conduct"]
     (code-of-conduct-component)]])

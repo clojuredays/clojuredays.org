@@ -20,3 +20,6 @@
 
 (defn -main [& _args]
   (doseq [page (pages)] (html/to-html page)))
+
+(comment
+  (-main))
