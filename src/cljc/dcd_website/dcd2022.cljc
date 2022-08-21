@@ -75,7 +75,7 @@
 
    {:time ["9:15" "9:30"]
     :title "Opening"
-    :author "#DCD19 team"
+    :author "#DCD22 team"
     :type :org}
 
    {:time ["9:30" "10:15"]
@@ -219,7 +219,7 @@ Would this increase the adoption of ClojureScript in the mainstream? Would this 
 
    {:time ["18:20" "18:30"]
     :title "Closing"
-    :author "#DCD19 team"
+    :author "#DCD22 team"
     :type :org}
 
    {:time ["18:30" "21:30"]
