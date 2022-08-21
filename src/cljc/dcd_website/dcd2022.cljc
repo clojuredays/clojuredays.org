@@ -18,15 +18,14 @@
 (defn tickets-component []
   [:div#tickets
    [:h2 "Tickets"]
-   #_[:p "The conference is currently sold out, but fear not! As a free event, it often happens that tickets become available later during to cancellations. "
-      [:a {:href "https://twitter.com/clojuredays"}
-       "Stay tuned"] " for updates!"]
-   #_[:p "In the meanwhile you can always"
-      [:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2022-tickets-380638669507"} " join the waiting list"] " so you can get in as soon as a spot frees up."]
-   [:p "Tickets for the conference are free of charge. You can reserve your spot on Eventbrite:"]
+   [:p "The conference is currently sold out, but fear not! As a free event, it often happens that tickets become available later during to cancellations. "
+    [:a {:href "https://twitter.com/clojuredays"}
+     "Stay tuned"] " for updates!"]
+   [:p "In the meanwhile you can always join the waitlist"
+    #_[:a {:href "https://www.eventbrite.com/e/dutch-clojure-day-2022-tickets-380638669507"} " join the waiting list"] " so you can get in as soon as a spot frees up."]
+   #_[:p "Tickets for the conference are free of charge. You can reserve your spot on Eventbrite:"]
    [:div#eventbrite-widget-container-380638669507]
    [:button#eventbrite-widget-modal-trigger-380638669507 {:type "button"} "Reserve your spot"]])
-
 
 (defn sponsor-packages-component []
   [:div#packages
@@ -61,6 +60,10 @@
     [:h3.package "Sponsor"]
     [:a.sponsor.regular {:href "https://www.eerlijkewoz.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/eerlijkewoz.svg"}]]
+    [:a.sponsor.regular {:href "https://adgoji.bamboohr.com/jobs/" :target :_blank}
+     [:img {:src "img/sponsors/adgoji.svg"}]]
+    [:a.sponsor.regular {:href "https://www.metosin.fi/en/" :target :_blank}
+     [:img {:src "img/2022/sponsors/metosin.svg"}]]
     [:h3.package "Friends and family"]
     [:a.sponsor.regular {:href "https://www.cloudpirates.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/cloudpirates.png"}]]]])
@@ -199,13 +202,19 @@ Nikita has been programming in Clojure, Java, Python, Erlang for 17 years, been 
     :youtube-link nil}
 
    {:time ["17:35" "18:20"]
-    :title "TBD"
-    :profile-pic "../fav.png"
-    :author "TBD"
-    :description ""
-    :bio ""
-    :twitter "clojuredays"
-    :type :skip
+    :title "ClojureScript reimagined"
+    :profile-pic "borkdude.jpg"
+    :author "Michiel Borkent"
+    :description "For the last three years I've occupied myself mostly with building new Clojure tooling and libraries: clj-kondo, babashka, nbb, etc. These tools opened up use cases for Clojure(Script) that were previously less feasible and also attracted new audiences to Clojure. With babashka it is very easy to sneak in a small script at your non-Clojure job. Similar for nbb: writing a Node script for your colleagues who just use NPM became easy.
+<br />
+What if we could pull off the same trick with ClojureScript in the browser?
+<br />
+What if sneaking in a little bit of ClojureScript into a JavaScript project was as easy as installing one extra library in your package.json? What if interop between JavaScript and .cljs files was seamless? What if JS devs could still use Node for all your tooling and didn't have to pull in a JVM? What if you could publish libraries with compiled CLJS to NPM that all share the same CLJS core functions?
+<br />
+Would this increase the adoption of ClojureScript in the mainstream? Would this approach be helpful to existing ClojureScript users for a new category of projects? In this talk we're getting a glimpse of what that may look like."
+    :bio "Michiel Borkent, also known as @borkdude on the web, is an open source software developer who loves Clojure. He is the author of clj-kondo, babashka, SCI, nbb and other tools that you might have heard of. When he is not coding, he likes to go for a walk outdoors or eat vegetables!"
+    :twitter "borkdude"
+    :type :talk
     :youtube-link nil}
 
    {:time ["18:20" "18:30"]
@@ -225,7 +234,7 @@ Nikita has been programming in Clojure, Java, Python, Erlang for 17 years, been 
    (tickets-component)
    (cfp-component)
    (sponsors-component)
-   (sponsor-packages-component)
+   #_(sponsor-packages-component)
    [:div#agenda
     [:h2 "Agenda"]
     [:p "The agenda below is just an indication as " [:a {:href "https://sessionize.com/dutch-clojure-days-2022/"} "our CfP is still ongoing!"]]
