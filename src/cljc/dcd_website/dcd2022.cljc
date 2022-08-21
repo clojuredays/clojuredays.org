@@ -77,7 +77,7 @@
 
    {:time ["9:30" "10:15"]
     :author "Nikita Prokopov"
-    :title "Cloure + UI = ❤️"
+    :title "Cljoure + UI = ❤️"
     :profile-pic "tonsky.jpg"
     :description "The web became a de-facto way of building UIs these days. But is it good? Or fast?
 
