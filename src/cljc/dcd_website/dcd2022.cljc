@@ -61,9 +61,15 @@
     [:a.sponsor.regular {:href "https://www.eerlijkewoz.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/eerlijkewoz.svg"}]]
     [:a.sponsor.regular {:href "https://adgoji.bamboohr.com/jobs/" :target :_blank}
-     [:img {:src "img/sponsors/adgoji.svg"}]]
+     [:img {:src "img/2022/sponsors/adgoji.png"}]]
     [:a.sponsor.regular {:href "https://www.metosin.fi/en/" :target :_blank}
      [:img {:src "img/2022/sponsors/metosin.svg"}]]
+    [:a.sponsor.regular {:href "https://juxt.pro" :target :_blank}
+     [:img {:src "img/2022/sponsors/juxt.svg"}]]
+    [:a.sponsor.regular {:href "https://freshcodeit.com/services/clojure-development-company" :target :_blank}
+     [:img {:src "img/2022/sponsors/freshcode.svg"}]]
+    [:a.sponsor.regular {:href "https://flexiana.com/" :target :_blank}
+     [:img {:src "img/2022/sponsors/flexiana.png"}]]
     [:h3.package "Friends and family"]
     [:a.sponsor.regular {:href "https://www.cloudpirates.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/cloudpirates.png"}]]]])
