@@ -57,6 +57,12 @@
     [:h3.package "Partner"]
     [:a.sponsor.platinum {:href "https://www.brightmotive.com/company/careers/" :target :_blank}
      [:img {:src "img/2022/sponsors/brightmotive.svg"}]]
+    [:a.sponsor.platinum {:href "https://juxt.pro" :target :_blank}
+     [:img {:src "img/2022/sponsors/juxt.svg"}]]
+    [:a.sponsor.platinum {:href "https://flexiana.com/" :target :_blank}
+     [:img {:src "img/2022/sponsors/flexiana.png"}]]
+    [:a.sponsor.platinum {:href "https://freshcodeit.com/services/clojure-development-company" :target :_blank}
+     [:img {:src "img/2022/sponsors/freshcode.svg"}]]
     [:h3.package "Sponsor"]
     [:a.sponsor.regular {:href "https://www.eerlijkewoz.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/eerlijkewoz.svg"}]]
@@ -64,12 +70,6 @@
      [:img {:src "img/2022/sponsors/adgoji.png"}]]
     [:a.sponsor.regular {:href "https://www.metosin.fi/en/" :target :_blank}
      [:img {:src "img/2022/sponsors/metosin.svg"}]]
-    [:a.sponsor.regular {:href "https://juxt.pro" :target :_blank}
-     [:img {:src "img/2022/sponsors/juxt.svg"}]]
-    [:a.sponsor.regular {:href "https://freshcodeit.com/services/clojure-development-company" :target :_blank}
-     [:img {:src "img/2022/sponsors/freshcode.svg"}]]
-    [:a.sponsor.regular {:href "https://flexiana.com/" :target :_blank}
-     [:img {:src "img/2022/sponsors/flexiana.png"}]]
     [:h3.package "Friends and family"]
     [:a.sponsor.regular {:href "https://www.cloudpirates.nl/" :target :_blank}
      [:img {:src "img/2022/sponsors/cloudpirates.png"}]]]])
