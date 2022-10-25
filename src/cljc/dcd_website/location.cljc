@@ -14,6 +14,6 @@
    [:p "Dutch Clojure Days will be hosted by the wonderful people at "
     [:a {:href "https://www.cloudpirates.nl/" :target :_blank} "Cloud Pirates"]
     ", in the heart of Amsterdam "
-    [:a {:href "https://goo.gl/maps/R8bcfmyeWM1v4v2G9"}
+    [:a {:href "https://goo.gl/maps/zdcrQVyNjAQuuBXeA"}
      "(Piet Heinkade 217, 1019 HM Amsterdam)"] "."]
    [:div#location-map {:location "cloudpirates"}]])
