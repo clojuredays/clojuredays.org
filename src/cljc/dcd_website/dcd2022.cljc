@@ -56,23 +56,23 @@
     [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
     [:h3.package "Partner"]
     [:a.sponsor.platinum {:href "https://www.brightmotive.com/company/careers/" :target :_blank}
-     [:img {:src "img/2022/sponsors/brightmotive.svg"}]]
+     [:img {:src "img/2022/sponsors/brightmotive.svg" :alt "Brightmotive"}]]
     [:a.sponsor.platinum {:href "https://juxt.pro" :target :_blank}
-     [:img {:src "img/2022/sponsors/juxt.svg"}]]
+     [:img {:src "img/2022/sponsors/juxt.svg" :alt "JUXT"}]]
     [:a.sponsor.platinum {:href "https://flexiana.com/" :target :_blank}
-     [:img {:src "img/2022/sponsors/flexiana.png"}]]
+     [:img {:src "img/2022/sponsors/flexiana.png" :alt "Flexiana"}]]
     [:a.sponsor.platinum {:href "https://freshcodeit.com/services/clojure-development-company" :target :_blank}
-     [:img {:src "img/2022/sponsors/freshcode.svg"}]]
+     [:img {:src "img/2022/sponsors/freshcode.svg" :alt "Freshcode"}]]
     [:h3.package "Sponsor"]
     [:a.sponsor.regular {:href "https://www.eerlijkewoz.nl/" :target :_blank}
-     [:img {:src "img/2022/sponsors/eerlijkewoz.svg"}]]
+     [:img {:src "img/2022/sponsors/eerlijkewoz.svg" :alt "Eerlijke WOZ"}]]
     [:a.sponsor.regular {:href "https://adgoji.bamboohr.com/jobs/" :target :_blank}
-     [:img {:src "img/2022/sponsors/adgoji.png"}]]
+     [:img {:src "img/2022/sponsors/adgoji.png" :alt "adgoji"}]]
     [:a.sponsor.regular {:href "https://www.metosin.fi/en/" :target :_blank}
-     [:img {:src "img/2022/sponsors/metosin.svg"}]]
+     [:img {:src "img/2022/sponsors/metosin.svg" :alt "Metosin"}]]
     [:h3.package "Friends and family"]
     [:a.sponsor.regular {:href "https://www.cloudpirates.nl/" :target :_blank}
-     [:img {:src "img/2022/sponsors/cloudpirates.png"}]]]])
+     [:img {:src "img/2022/sponsors/cloudpirates.png" :alt "Cloud Pirates"}]]]])
 
 (def agenda-data
   [{:time ["8:30" "9:15"]

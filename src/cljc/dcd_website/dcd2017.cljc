@@ -18,16 +18,16 @@
    [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
    [:h2.platinum "Platinum sponsors"]
    [:a.sponsor {:href "http://www.adgoji.com/" :target :_blank}
-    [:img {:src "img/sponsors/adgoji.svg"}]]
+    [:img {:src "img/sponsors/adgoji.svg" :alt "adgoji"}]]
    [:a.sponsor {:href "http://www.vakantiediscounter.nl/" :target :_blank}
-    [:img {:src "img/sponsors/elmar.svg"}]]
+    [:img {:src "img/sponsors/elmar.svg" :alt "VakantieDiscounter"}]]
    [:h2.regular "Silver sponsors"]
    [:a.sponsor.juxt {:href "https://juxt.pro/" :target :_blank}
-    [:img {:src "img/sponsors/juxt.svg"}]]
+    [:img {:src "img/sponsors/juxt.svg" :alt "JUXT"}]]
    [:a.sponsor.infi {:href "https://infi.nl/" :target :_blank}
-    [:img {:src "img/sponsors/infi.svg"}]]
+    [:img {:src "img/sponsors/infi.svg" :alt "Infi"}]]
    [:a.sponsor.lunatech {:href "http://lunatech.com/" :target :_blank}
-    [:img {:src "img/sponsors/lunatech.svg"}]]
+    [:img {:src "img/sponsors/lunatech.svg" :alt "Lunatech"}]]
    [:p "If you are interested in sponsoring this event please contact us via "
     [:a {:href "mailto:events@clojuredays.org"}
      "email."]]])

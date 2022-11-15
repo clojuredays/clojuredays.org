@@ -13,25 +13,25 @@
    [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
    [:h2.platinum "Platinum sponsors"]
    [:a.sponsor.platinum {:href "http://www.adgoji.com/" :target :_blank}
-    [:img {:src "img/2018/sponsors/adgoji.svg"}]]
+    [:img {:src "img/2018/sponsors/adgoji.svg" :alt "adgoji"}]]
    [:a.sponsor.platinum {:href "http://www.metosin.fi/en" :target :_blank}
-    [:img {:src "img/2018/sponsors/metosin.svg"}]]
+    [:img {:src "img/2018/sponsors/metosin.svg" :alt "Metosin"}]]
    [:a.sponsor.platinum {:href "https://www.exoscale.ch/" :target :_blank}
-    [:img {:src "img/2018/sponsors/exoscale.svg"}]]
+    [:img {:src "img/2018/sponsors/exoscale.svg" :alt "Exoscale"}]]
    [:a.sponsor.platinum {:href "https://synple.eu/en/index" :target :_blank}
-    [:img {:src "img/2018/sponsors/synple.png"}]]
+    [:img {:src "img/2018/sponsors/synple.png" :alt "Synple"}]]
    [:a.sponsor.platinum {:href "https://vakantiediscounter.nl" :target :_blank}
-    [:img {:src "img/2018/sponsors/otravo.svg"}]]
+    [:img {:src "img/2018/sponsors/otravo.svg" :alt "VakantieDiscounter"}]]
 
    [:h2.regular "Regular Sponsors"]
    [:a.sponsor.regular.infi {:href "https://infi.nl/" :target :_blank}
-    [:img {:src "img/2018/sponsors/infi.svg"}]]
+    [:img {:src "img/2018/sponsors/infi.svg" :alt "Infi"}]]
    [:a.sponsor.regular {:href "https://www.brightin.nl/" :target :_blank}
-    [:img {:src "img/2018/sponsors/brightin.png"}]]
+    [:img {:src "img/2018/sponsors/brightin.png" :alt "Brightin"}]]
    [:a.sponsor.regular.alliander {:href "https://www.alliander.com/en" :target :_blank}
-    [:img {:src "img/2018/sponsors/alliander.png"}]]
+    [:img {:src "img/2018/sponsors/alliander.png" :alt "Alliander"}]]
    [:a.sponsor.regular.digitalechecklisten {:href "https://digitalechecklisten.nl/" :target :_blank}
-    [:img {:src "img/2018/sponsors/digitalechecklisten.png"}]]])
+    [:img {:src "img/2018/sponsors/digitalechecklisten.png" :alt "Digitale Checklisten"}]]])
 
 (defn tickets-component []
   [:div#date
