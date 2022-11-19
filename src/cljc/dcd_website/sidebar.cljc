@@ -3,7 +3,7 @@
 (defn sidebar-component []
   [:aside#sidebar.sidebar.collapsed
    [:a.item.expand-icon {:onclick "switchSidebar()"} "☰"]
-   [:a.item {:href "index.html" :onclick "collapseSidebar()"} "Upcoming: DCD2022"]
+   [:a.item {:href "index.html" :onclick "collapseSidebar()"} "Archive: DCD2022"]
    [:ul
     [:li [:a.item {:href "/#about" :onclick "collapseSidebar()"} "About"]]
     [:li [:a.item {:href "/#date" :onclick "collapseSidebar()"} "When?"]]
