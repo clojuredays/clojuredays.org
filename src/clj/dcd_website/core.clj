@@ -19,7 +19,9 @@
    (assoc dcd2022-website-structure :file-name "index")])
 
 (defn -main [& _args]
-  (doseq [page (pages)] (html/to-html page)))
+  (println "Starting")
+  (doseq [page (pages)] (html/to-html page))
+  (println "Complete"))
 
 (comment
   (-main))
