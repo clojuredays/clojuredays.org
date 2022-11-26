@@ -70,26 +70,26 @@ later time. Stay tuned for news and make sure to follow us on twitter."]
     [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
     [:h3.package "Partner"]
     [:a.sponsor.platinum {:href "https://www.greenhousegroup.com/" :target :_blank}
-     [:img {:src "img/2020/sponsors/ghg.png"}]]
+     [:img {:src "img/2020/sponsors/ghg.png" :alt "Greenhouse Group"}]]
     [:h3.package "Sponsor"]
     [:a.sponsor.regular {:href "http://www.adgoji.com/" :target :_blank}
-     [:img {:src "img/2019/sponsors/adgoji.svg"}]]
+     [:img {:src "img/2019/sponsors/adgoji.svg" :alt "adgoji"}]]
     [:a.sponsor.regular {:href "https://cognitect.com" :target :_blank}
-     [:img {:src "img/2019/sponsors/cognitect.svg"}]]
+     [:img {:src "img/2019/sponsors/cognitect.svg" :alt "Cognitect"}]]
     [:a.sponsor.regular {:href "https://www.magnet.coop/" :target :_blank}
-     [:img {:src "img/2020/sponsors/magnet.svg"}]]
+     [:img {:src "img/2020/sponsors/magnet.svg" :alt "Magnet"}]]
     [:a.sponsor.regular {:href "https://twitter.com/iarenaza" :target :_blank}
-     [:img {:src "img/2020/sponsors/ian.svg"}]]
+     [:img {:src "img/2020/sponsors/ian.svg" :alt "Iñaki Arenaza"}]]
     [:a.sponsor.regular {:href "https://www.brightin.nl/" :target :_blank}
-     [:img {:src "img/2018/sponsors/brightin.png"}]]
+     [:img {:src "img/2018/sponsors/brightin.png" :alt "Brightin"}]]
     [:a.sponsor.regular {:href "https://vakantiediscounter.nl" :target :_blank}
-     [:img {:src "img/2019/sponsors/devakantiediscounter.svg"}]]
+     [:img {:src "img/2019/sponsors/devakantiediscounter.svg" :alt "VakantieDiscounter"}]]
     [:a.sponsor.regular {:href "https://flexiana.com/" :target :_blank}
-     [:img {:src "img/2019/sponsors/flexiana.jpg"}]]
+     [:img {:src "img/2019/sponsors/flexiana.jpg" :alt "Flexiana"}]]
     [:a.sponsor.regular {:href "https://infi.nl/" :target :_blank}
-     [:img {:src "img/2019/sponsors/infi.svg"}]]
+     [:img {:src "img/2019/sponsors/infi.svg" :alt "Infi"}]]
     [:a.sponsor.regular {:href "https://lunatech.com/" :target :_blank}
-     [:img {:src "img/2019/sponsors/lunatech.svg"}]]]])
+     [:img {:src "img/2019/sponsors/lunatech.svg" :alt "Lunatech"}]]]])
 
 (defn main-component []
   [:article.main

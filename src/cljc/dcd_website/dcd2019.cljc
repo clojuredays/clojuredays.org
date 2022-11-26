@@ -23,25 +23,25 @@
   [:div.sponsors
    [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
    [:a.sponsor.platinum {:href "https://flexiana.com/" :target :_blank}
-    [:img {:src "img/2019/sponsors/flexiana.jpg"}]]
+    [:img {:src "img/2019/sponsors/flexiana.jpg" :alt "Flexiana"}]]
    [:a.sponsor.regular {:href "http://www.adgoji.com/" :target :_blank}
-    [:img {:src "img/2019/sponsors/adgoji.svg"}]]
+    [:img {:src "img/2019/sponsors/adgoji.svg" :alt "adgoji"}]]
    [:a.sponsor.regular {:href "http://www.metosin.fi/en" :target :_blank}
-    [:img {:src "img/2019/sponsors/metosin.svg"}]]
+    [:img {:src "img/2019/sponsors/metosin.svg" :alt "Metosin"}]]
    [:a.sponsor.regular {:href "https://www.exoscale.ch/" :target :_blank}
-    [:img {:src "img/2019/sponsors/exoscale.svg"}]]
+    [:img {:src "img/2019/sponsors/exoscale.svg" :alt "Exoscale"}]]
    [:a.sponsor.regular {:href "https://vakantiediscounter.nl" :target :_blank}
-    [:img {:src "img/2019/sponsors/devakantiediscounter.svg"}]]
+    [:img {:src "img/2019/sponsors/devakantiediscounter.svg" :alt "VakantieDiscounter"}]]
    [:a.sponsor.regular {:href "https://infi.nl/" :target :_blank}
-    [:img {:src "img/2019/sponsors/infi.svg"}]]
+    [:img {:src "img/2019/sponsors/infi.svg" :alt "Infi"}]]
    [:a.sponsor.regular {:href "https://lunatech.com/" :target :_blank}
-    [:img {:src "img/2019/sponsors/lunatech.svg"}]]
+    [:img {:src "img/2019/sponsors/lunatech.svg" :alt "Lunatech"}]]
    [:a.sponsor.regular {:href "https://nedap.com" :target :_blank}
-    [:img {:src "img/2019/sponsors/nedap.png"}]]
+    [:img {:src "img/2019/sponsors/nedap.png" :alt "Nedap"}]]
    [:a.sponsor.regular {:href "https://data42.de" :target :_blank}
-    [:img {:src "img/2019/sponsors/data42.svg"}]]
+    [:img {:src "img/2019/sponsors/data42.svg" :alt "data42"}]]
    [:a.sponsor.regular {:href "https://cognitect.com" :target :_blank}
-    [:img {:src "img/2019/sponsors/cognitect.svg"}]]])
+    [:img {:src "img/2019/sponsors/cognitect.svg" :alt "Cognitect"}]]])
 
 (defn tickets-component []
   [:div#date
