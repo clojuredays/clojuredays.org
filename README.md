@@ -8,8 +8,7 @@ This repository hosts the sources as well as the public site itself on top of Gi
 
 ### Prerequisites
 
-- [leiningen](https://leiningen.org/)
-- [sass](https://sass-lang.com/documentation/cli/dart-sass) (optional)
+- [sass](https://sass-lang.com/install) (optional)
 
 ### Compile the stylesheet
 
@@ -21,16 +20,10 @@ Styles are written in SCSS, so you need to translate them into vanilla CSS. You 
 sass sass/css/main.scss public/css/main.css
 ```
 
-- if you're running an older version of java when Nashorn was still a thing, then you can also
-
-```shell
-lein sass
-```
-
 ### Generate the static pages
 
 ```shell
-lein run
+clojure -X:generate-html
 ```
 
 ### Serve the static site locally
@@ -41,7 +34,18 @@ Assuming you have `python3` installed on your system:
 $(cd public && python3 -m http.server)
 ```
 
+or run
+```shell
+./serve.sh
+```
+
 The website is then accessible at http://localhost:8000
+
+## Build script
+To generate both the CSS and HTML pages, run:
+```shell
+./build.sh
+```
 
 ## Deploying changes
 

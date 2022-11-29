@@ -1,0 +1,4 @@
+{:paths ["src/clj" "src/cljc"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        hiccup/hiccup {:mvn/version "1.0.5"}}
+ :aliases {:generate-html {:exec-fn dcd-website.core/-main}}}
