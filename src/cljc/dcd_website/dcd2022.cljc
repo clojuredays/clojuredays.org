@@ -41,7 +41,7 @@
 (defn when-component []
   [:div#date
    [:h2 "When?"]
-   [:p "Dutch Clojure Days will happen on "
+   [:p "Dutch Clojure Days happened on "
     [:b " Saturday, October 29th, 2022"] "."]])
 
 (defn where-component []

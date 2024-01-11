@@ -2,7 +2,7 @@
 
 (defn tq-location-component []
   [:div.location
-   [:p "Dutch Clojure Days will take place at the wonderful "
+   [:p "Dutch Clojure Days took place at the wonderful "
     [:a {:href "http://tq.co" :target :_blank} "TQ"]
     ", in the heart of Amsterdam "
     [:a {:href "https://goo.gl/maps/R8bcfmyeWM1v4v2G9"}
@@ -11,7 +11,7 @@
 
 (defn cloud-pirates-location-component []
   [:div.location
-   [:p "Dutch Clojure Days will be hosted by the wonderful people at "
+   [:p "Dutch Clojure Days was hosted by the wonderful people at "
     [:a {:href "https://www.cloudpirates.nl/" :target :_blank} "Cloud Pirates"]
     ", in the heart of Amsterdam "
     [:a {:href "https://goo.gl/maps/zdcrQVyNjAQuuBXeA"}
