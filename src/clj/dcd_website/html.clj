@@ -17,6 +17,7 @@
          [:meta {:name "og:description", :content "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"}]
          [:link {:type "text/css" :href "https://fontlibrary.org/face/Quicksand:200,300,400,500,700" :media "screen" :rel "stylesheet"}]
          [:link {:type "text/css" :href "css/cookieconsent.css" :rel "stylesheet"}]
+         [:link {:type "text/css" :href "css/cookieconsent.override.css" :rel "stylesheet"}]
          [:link {:media "screen", :type "text/css", :rel "stylesheet", :href "css/main.css"}]
          [:link {:sizes "32x32" :href "img/fav.png" :rel "icon"}]
          [:link {:sizes "192x192" :href "img/fav.png" :rel "icon"}]

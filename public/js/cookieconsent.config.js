@@ -33,7 +33,7 @@ CookieConsent.run({
                     sections: [
                         {
                             title: 'Somebody said ... cookies?',
-                            description: 'Yummy!!'
+                            description: 'Yummy!! Well, not always. As you probably know, we (and whomever provides us with analytics services) can track your journey over this website.<br/>We obviously won\'t ever do anything harmful nor malicious with your navigation data, but you still have to trust us and our analytics of choice, which we don\'t want to force on you.<br/>Feel free to thrash our cookies, we won\'t take it personal!'
                         },
                         {
                             title: 'Strictly Necessary cookies',
@@ -49,7 +49,7 @@ CookieConsent.run({
                         },
                         {
                             title: 'More information',
-                            description: 'For any queries in relation to my policy on cookies and your choices, please <a href="mailto:events@clojuredays.org">contact us</a>'
+                            description: 'For any queries in relation to our policy on cookies and your choices, please <a href="mailto:events@clojuredays.org">contact us</a>'
                         }
                     ]
                 }
