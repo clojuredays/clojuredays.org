@@ -16,6 +16,7 @@
          [:meta {:property "og:site_name", :content "clojuredays.org"}]
          [:meta {:name "og:description", :content "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands!"}]
          [:link {:type "text/css" :href "https://fontlibrary.org/face/Quicksand:200,300,400,500,700" :media "screen" :rel "stylesheet"}]
+         [:link {:type "text/css" :href "css/cookieconsent.css" :rel "stylesheet"}]
          [:link {:media "screen", :type "text/css", :rel "stylesheet", :href "css/main.css"}]
          [:link {:sizes "32x32" :href "img/fav.png" :rel "icon"}]
          [:link {:sizes "192x192" :href "img/fav.png" :rel "icon"}]
@@ -27,7 +28,8 @@
          [:script {:src "js/eb_widgets.js" :type "text/javascript"}]
          [:script {:src "js/eventbright.js" :type "text/javascript"}]
          [:script {:src "https://www.googletagmanager.com/gtag/js?id=UA-87614066-1" :type "text/javascript" :async "async"}]
-         [:script {:src "js/gtag.js"}]))
+         [:script {:src "js/gtag.js" :type "text/plain" :data-category "analytics"}]
+         [:script {:src "js/cookieconsent.config.js" :type "module"}]))
 
 (defn to-html
   "Will take a map with things like content and output a html file in the public folder."
