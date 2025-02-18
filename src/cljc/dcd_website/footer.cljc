@@ -18,7 +18,8 @@
        "events@clojuredays.org"]]
      [:span.org-info
       [:a {:href "https://twitter.com/clojuredays"}
-       "@clojuredays"]
+       "@clojuredays"]]
+     [:span.org-info
       [:a {:rel "me"
            :href "https://clj.social/@dcd"}
        "@dcd@clj.social"]]]
