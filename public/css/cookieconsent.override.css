@@ -1,0 +1,11 @@
+ #cc-main {
+     /** Style buttons like the rest of the site  **/
+     --cc-btn-primary-bg: #ff6b12;
+     --cc-btn-primary-border-color: #ff6b12;
+     --cc-btn-primary-hover-bg: #4a4a4a;
+     --cc-btn-primary-hover-border-color: #444444;
+     --cc-btn-secondary-bg: #f7f7f7
+
+     /** Also make toggles the same color as the button **/
+     --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+ }
