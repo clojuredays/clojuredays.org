@@ -15,25 +15,23 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3
-    - name: Install clojure tools
-      uses: DeLaGuardo/setup-clojure@12.3
-      with:
-          # Install just one or all simultaneously
-          # The value must indicate a particular version of the tool, or use 'latest'
-          # to always provision the latest version
-          cli: 1.11.1.1429             # Clojure CLI based on tools.deps
-          #bb: 0.7.8                    # Babashka
-          #clj-kondo: 2022.05.31        # Clj-kondo
-          #cljfmt: 0.10.2               # cljfmt
-          #cljstyle: 0.15.0             # cljstyle
-          #zprint: 1.2.3                # zprint
+
+    - name: Install clj runtime
+      run: |
+        cd "$HOME"
+        curl -L -O https://github.com/clojure/brew-install/releases/latest/download/posix-install.sh
+        chmod +x posix-install.sh
+        sudo ./posix-install.sh
+
     - name: Build stylesheet
       uses: gha-utilities/sass-build@v0.5.1
       with:
           source: sass/css/main.scss
           destination: public/css/main.css
+
     - name: Build html
       run: clojure -X:generate-html
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
