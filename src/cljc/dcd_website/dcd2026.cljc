@@ -1,0 +1,142 @@
+(ns dcd-website.dcd2026
+  (:require [dcd-website.location :refer [wesopa-location-component]]
+            [dcd-website.agenda :refer [speakers-component agenda-component]]
+            [dcd-website.coc :refer [code-of-conduct-component]]))
+
+(defn about-component []
+  [:div#about
+   [:h2 "About DCD 2026"]
+   [:p "The Annual International Gathering of Clojure Enthusiasts and Practitioners in the Netherlands! We welcome you to the 6th edition of our " [:b "free "] " and non-profit Clojure conference organised by the community, for the community with a full day of amazing talks in a friendly welcoming atmosphere."]])
+
+(defn cfp-component []
+  [:div#cfp
+   [:h2 "Call for Proposals"]
+   [:p "Our CFP is open until January 15th, 2026."]
+   [:p "You can submit your proposal at " [:a {:href "https://sessionize.com/dutch-clojure-days-2026"} "Sessionize"] "."]
+   [:p "We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on topics such as (but not limited to) real-world experiences and lessons learned from putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc. Be creative!"]])
+
+(defn tickets-component []
+  [:div#tickets
+   [:h2 "Tickets"]
+   [:p "Registrations are open and free of charge. Go ahead and "
+    [:a {:href "https://www.eventbrite.com/e/tickets-dutch-clojure-days-2026-1396444435899"} " get your ticket now!"]]
+   [:div#eventbrite-widget-container-eventbrite-widget-container-1396444435899]])
+
+(defn sponsor-packages-component []
+  [:div#packages
+   [:h2 "Sponsorship Packages"]
+   [:p "If you want to support us and Clojure community, consider sponsoring us. We offer two affordable sponsorship packages, check them out:"]
+   [:a {:href "img/2026/partner.svg" :target "none"}
+    [:img {:src "img/2026/partner.svg" :style "width: 100%; height: auto; max-width: 600px"}]]
+   [:br]
+   [:a {:href "img/2026/sponsor.svg" :target "none"}
+    [:img {:src "img/2026/sponsor.svg" :style "width: 100%; height: auto; max-width: 600px"}]]
+   [:br]
+   [:a {:href "img/2026/supporter.svg" :target "none"}
+    [:img {:src "img/2026/supporter.svg" :style "width: 100%; height: auto; max-width: 600px"}]]
+   [:p "If you want to support and engage with the Dutch Clojure Days community, please get in touch via email at " [:a {:href "mailto:events@clojuredays.org"} "events@clojuredays.org"] "."]])
+
+(defn when-component []
+  [:div#date
+   [:h2 "When?"]
+   [:p "Dutch Clojure Days is scheduled to happen on "
+    [:b " Saturday, May 9th, 2026"] "."]])
+
+(defn where-component []
+  [:div#location
+   [:h2 "Where?"]
+   (wesopa-location-component)])
+
+(def agenda-data
+  [{:time ["8:30" "9:15"]
+    :title "Reception"
+    :type :org}
+
+   {:time ["9:15" "9:30"]
+    :title "Opening"
+    :author "#DCD26 team"
+    :type :org}
+
+   {:time ["9:30" "10:15"]
+    :add-padding true
+    :type :talk
+    :youtube-link nil}
+
+   {:time ["10:25" "11:10"]
+    :add-padding true
+    :type :talk
+    :youtube-link nil}
+
+   {:time ["11:20" "12:00"]
+    :add-padding true
+    :type :talk
+    :youtube-link nil}
+
+   {:time ["12:00" "14:00"]
+    :title "Lunch"
+    :type :org
+    :force-timeline-visible? true}
+
+   {:title "Lightning Talks"
+    :force-timeline-hidden? true
+    :type :lightning}
+
+   {:time ["14:00" "14:10"]
+    :type :lightning
+    :youtube-link nil}
+
+   {:time ["14:10" "14:20"]
+    :type :lightning
+    :youtube-link nil}
+
+   {:time ["14:20" "14:30"]
+    :type :lightning
+    :youtube-link nil}
+
+   {:time ["14:40" "15:00"]
+    :title "Coffee break"
+    :type :org
+    :add-padding true
+    :force-timeline-visible? true}
+
+   {:time ["15:00" "15:45"]
+    :add-padding true
+    :type :talk
+    :youtube-link nil}
+
+   {:time ["15:45" "16:30"]
+    :add-padding true
+    :type :talk
+    :youtube-link nil}
+
+   {:time ["16:30" "16:40"]
+    :title "Closing"
+    :author "#DCD22 team"
+    :type :org}
+
+   {:time ["17:00" "🥳"]
+    :title "Networking/Drinks"
+    :type :org}])
+
+(defn main-component []
+  [:article.main
+   (about-component)
+   (when-component)
+   (where-component)
+   (tickets-component)
+   (cfp-component)
+   (sponsor-packages-component)
+   [:div#agenda
+    [:h2 "Agenda"]
+    [:p "The agenda below is just an indication as " [:a {:href "https://sessionize.com/dutch-clojure-days-2022/"} "our CfP is still ongoing!"]]
+    (agenda-component agenda-data)]
+   #_[:div#speakers
+    [:h2 "Speakers"]
+    (speakers-component agenda-data)]
+   [:div#behave
+    [:h2 "Code of Conduct"]
+    (code-of-conduct-component)]])
+
+(def dcd2026-website-structure
+  {:title          "Dutch Clojure Days 2026"
+   :main-component (main-component)})

@@ -6,7 +6,10 @@
             [dcd-website.dcd2019 :refer [dcd2019-website-structure]]
             [dcd-website.dcd2020 :refer [dcd2020-website-structure]]
             [dcd-website.dcd2022 :refer [dcd2022-website-structure]]
-            [dcd-website.upcoming :refer [upcoming-website-structure]])
+            [dcd-website.dcd2026 :refer [dcd2026-website-structure]]
+            ;; to be used when there are no further conferences scheduled:
+            ;;[dcd-website.upcoming :refer [upcoming-website-structure]]
+            )
   (:gen-class))
 
 (defn pages
@@ -18,7 +21,7 @@
    (assoc dcd2019-website-structure :file-name "dcd2019")
    (assoc dcd2020-website-structure :file-name "dcd2020")
    (assoc dcd2022-website-structure :file-name "dcd2022")
-   (assoc upcoming-website-structure :file-name "index")])
+   (assoc dcd2026-website-structure :file-name "index")])
 
 (defn -main [& _args]
   (println "Starting")

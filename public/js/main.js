@@ -22,7 +22,11 @@ const locations = {
   cloudpirates: {link: {href: 'https://www.cloudpirates.nl',
                         alt: 'Cloud Pirates - Piet Heinkade 217'},
                  coords: {lat: 52.3758439,
-                          long: 4.9238819}}
+                          long: 4.9238819}},
+  wesopa: {link: {href: 'https://wesopa.nl/city/',
+                  alt: 'City of Wesopa - Herengracht 23, Weesp'},
+           coords: {lat: 52.3089306,
+                    long: 5.0397913}}
 };
 
 const mapPopup = function(location) {

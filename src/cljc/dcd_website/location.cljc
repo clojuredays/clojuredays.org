@@ -17,3 +17,12 @@
     [:a {:href "https://goo.gl/maps/zdcrQVyNjAQuuBXeA"}
      "(Piet Heinkade 217, 1019 HM Amsterdam)"] "."]
    [:div#location-map {:location "cloudpirates"}]])
+
+(defn wesopa-location-component []
+  [:div.location
+   [:p "Dutch Clojure Days will take place at the amazing "
+    [:a {:href "https://wesopa.nl/city/" :target :_blank} "City of Wesopa"]
+    ", in the stunning Amsterdam city district of Weesp "
+    [:a {:href "https://maps.app.goo.gl/gfc9foREXeVhunTi9"}
+     "(Singel 542, 1017 AZ Amsterdam)"] "."]
+   [:div#location-map {:location "wesopa"}]])
