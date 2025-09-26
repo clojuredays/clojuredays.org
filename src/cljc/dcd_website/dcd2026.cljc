@@ -28,7 +28,7 @@
 (defn sponsor-packages-component []
   [:div#packages
    [:h2 "Sponsorship Packages"]
-   [:p "If you want to support us and Clojure community, consider sponsoring us. We offer two affordable sponsorship packages, check them out:"]
+   [:p "Want to join us in spreading the Clojure love? We'd be thrilled to have you as a sponsor! We've got three awesome sponsorship packages designed to fit every budget:"]
    [:a {:href "img/2026/partner.svg" :target "none"}
     [:img {:src "img/2026/partner.svg" :style "width: 100%; height: auto; max-width: 600px"}]]
    [:br]
