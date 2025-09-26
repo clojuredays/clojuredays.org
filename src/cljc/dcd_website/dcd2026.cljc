@@ -11,7 +11,10 @@
 (defn cfp-component []
   [:div#cfp
    [:h2 "Call for Proposals"]
-   [:p "Our CFP is open until January 15th, 2026."]
+   [:p "Our CFP will be open from "
+    [:b "November 1st, 2025 "]
+    [:span "until "]
+    [:b "January 15th, 2026."]]
    [:p "You can submit your proposal at " [:a {:href "https://sessionize.com/dutch-clojure-days-2026"} "Sessionize"] "."]
    [:p "We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on topics such as (but not limited to) real-world experiences and lessons learned from putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc. Be creative!"]])
 
@@ -128,7 +131,7 @@
    (sponsor-packages-component)
    [:div#agenda
     [:h2 "Agenda"]
-    [:p "The agenda below is just an indication as " [:a {:href "https://sessionize.com/dutch-clojure-days-2022/"} "our CfP is still ongoing!"]]
+    [:p "The agenda below is just an indication as " [:a {:href "https://sessionize.com/dutch-clojure-days-2026/"} "our CfP is still ongoing!"]]
     (agenda-component agenda-data)]
    #_[:div#speakers
     [:h2 "Speakers"]
