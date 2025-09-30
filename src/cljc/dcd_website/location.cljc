@@ -24,5 +24,5 @@
     [:a {:href "https://wesopa.nl/city/" :target :_blank} "City of Wesopa"]
     ", in the stunning Amsterdam city district of Weesp "
     [:a {:href "https://maps.app.goo.gl/gfc9foREXeVhunTi9"}
-     "(Singel 542, 1017 AZ Amsterdam)"] "."]
+     "(Herengracht 23, 1382 AG Weesp)"] "."]
    [:div#location-map {:location "wesopa"}]])
