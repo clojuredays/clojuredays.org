@@ -114,7 +114,7 @@
 
    {:time ["16:30" "16:40"]
     :title "Closing"
-    :author "#DCD22 team"
+    :author "#DCD26 team"
     :type :org}
 
    {:time ["17:00" "🥳"]
