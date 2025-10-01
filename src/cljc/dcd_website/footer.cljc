@@ -1,7 +1,7 @@
 (ns dcd-website.footer)
 
 (def dcd-team
-  [["Carlo Sciolla"      "https://twitter.com/skuro"]
+  [["Carlo Sciolla"      "https://codehopper.nl"]
    ["Joost Diepenmaat"   "https://jomco.nl/"]
    ["Remco van 't Veer" "https://jomco.nl/"]])
 
