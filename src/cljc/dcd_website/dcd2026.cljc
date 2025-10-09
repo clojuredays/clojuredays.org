@@ -15,8 +15,16 @@
     [:b "November 1st, 2025 "]
     [:span "until "]
     [:b "January 15th, 2026."]]
-   [:p "You can submit your proposal at " [:a {:href "https://sessionize.com/dutch-clojure-days-2026"} "Sessionize"] "."]
-   [:p "We look forward to receive your groudbreaking, breathtaking, parenssurfing proposals on topics such as (but not limited to) real-world experiences and lessons learned from putting your clojure(script) applications to production, fancy new library tool that just landed on the clojure planet, etc. Be creative!"]])
+   [:p "Are you involved in in the Clojure ecosystem? Are you proud of a
+project you're working on?"]
+   [:p "Come and present at the Dutch Clojure Days 2026 Conference! Your
+solution can be absurd, incredibly practical or make the world a
+better place. Show your warm Clojure-knitted sweaters, exciting live
+music setup, break-through open source tools, community work or
+perfectly executed business solution. If you're passionate about it,
+we want to hear about it!"]
+   [:p "Your presentation can be a short, 7 minute lightning talk, or a full 35 minute presentation."]
+   [:p "From November 1rst, 2025 you can submit your proposal at " [:a {:href "https://sessionize.com/dutch-clojure-days-2026"} "Sessionize"] "."]])
 
 (defn tickets-component []
   [:div#tickets
