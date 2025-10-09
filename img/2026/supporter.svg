@@ -7,10 +7,10 @@
    stroke-linecap="square"
    stroke-miterlimit="10"
    id="svg25"
-   sodipodi:docname="Sponsorship flyer_ supporter.svg"
+   sodipodi:docname="supporter.svg"
    width="1085.488"
    height="527.08136"
-   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -60,12 +60,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.1295582"
-     inkscape:cx="524.54136"
-     inkscape:cy="236.3756"
-     inkscape:window-width="1728"
-     inkscape:window-height="1051"
-     inkscape:window-x="0"
-     inkscape:window-y="38"
+     inkscape:cx="728.1608"
+     inkscape:cy="252.31104"
+     inkscape:window-width="1680"
+     inkscape:window-height="997"
+     inkscape:window-x="1835"
+     inkscape:window-y="304"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg25"
      showgrid="false" />
@@ -166,6 +166,18 @@
          y="102.76522"
          style="font-size:42.6667px">Supporter - € 1.500</tspan></text>
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Quicksand;-inkscape-font-specification:Quicksand;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;stroke:#ffffff;stroke-width:0.755906"
+     x="943.91962"
+     y="123.34797"
+     id="text2-9"
+     inkscape:label="Package item - 1"><tspan
+       sodipodi:role="line"
+       id="tspan2-3"
+       x="943.91962"
+       y="123.34797"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:12px;font-family:Quicksand;-inkscape-font-specification:'Quicksand Light'">excluding VAT</tspan></text>
   <g
      id="g27"
      inkscape:label="Left">
