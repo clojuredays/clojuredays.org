@@ -23,6 +23,7 @@ better place. Show your warm Clojure-knitted sweaters, exciting live
 music setup, break-through open source tools, community work or
 perfectly executed business solution. If you're passionate about it,
 we want to hear about it!"]
+   [:p "Your presentation can be a short, 7 minute lightning talk, or a full 35 minute presentation."]
    [:p "From November 1rst, 2025 you can submit your proposal at " [:a {:href "https://sessionize.com/dutch-clojure-days-2026"} "Sessionize"] "."]])
 
 (defn tickets-component []
