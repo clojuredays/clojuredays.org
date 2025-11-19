@@ -58,6 +58,15 @@ we want to hear about it!"]
    [:h2 "Where?"]
    (wesopa-location-component)])
 
+(defn sponsors-component []
+  [:div#sponsors
+   [:h2 "Sponsors"]
+   [:div.sponsors
+    [:p "DCD is a free event that is made possible thanks to our amazing sponsors and volunteers."]
+    [:h3.package "Supporter"]
+    [:a.sponsor.supporter {:href "https://nextjournal.com/" :target :_blank}
+     [:img {:src "img/2026/sponsors/nextjournal.svg" :alt "Nextjournal"}]]]])
+
 (def agenda-data
   [{:time ["8:30" "9:15"]
     :title "Reception"
@@ -136,14 +145,15 @@ we want to hear about it!"]
    (where-component)
    (tickets-component)
    (cfp-component)
+   (sponsors-component)
    (sponsor-packages-component)
    [:div#agenda
     [:h2 "Agenda"]
     [:p "The agenda below is just an indication as " [:a {:href "https://sessionize.com/dutch-clojure-days-2026/"} "our CfP is still ongoing!"]]
     (agenda-component agenda-data)]
    #_[:div#speakers
-    [:h2 "Speakers"]
-    (speakers-component agenda-data)]
+      [:h2 "Speakers"]
+      (speakers-component agenda-data)]
    [:div#behave
     [:h2 "Code of Conduct"]
     (code-of-conduct-component)]])
