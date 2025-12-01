@@ -21,8 +21,8 @@
        "@clojuredays"]]
      [:span.org-info
       [:a {:rel "me"
-           :href "https://clj.social/@dcd"}
-       "@dcd@clj.social"]]]
+           :href "https://functional.cafe/@clojuredays"}
+       "@clojuredays@functional.cafe"]]]
 
     [:div.col
      [:h3 "ClojureDays foundation"]
