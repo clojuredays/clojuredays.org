@@ -20,6 +20,12 @@ Styles are written in SCSS, so you need to translate them into vanilla CSS. You 
 sass sass/css/main.scss public/css/main.css
 ```
 
+as an alternative using [`mise`](https://mise.jdx.dev/):
+
+```shell
+mise x ruby@3.4.6 -- sass sass/css/main.scss:public/css/main.css --style compressed --no-source-map
+```
+
 ### Generate the static pages
 
 ```shell
