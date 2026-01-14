@@ -51,7 +51,8 @@ we want to hear about it!"]
   [:div#date
    [:h2 "When?"]
    [:p "Dutch Clojure Days is scheduled to happen on "
-    [:b " Saturday, May 9th, 2026"] "."]])
+    [:time {:date-time "2026-05-09"}
+     [:b " Saturday, May 9th, 2026"]] "."]])
 
 (defn where-component []
   [:div#location
