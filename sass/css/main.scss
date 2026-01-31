@@ -523,8 +523,8 @@ a {
                         color: $highlight-color;
                         font-weight: bold;
                         font-size: 13px;
-                        vertical-align: middle;
-                        display: inline-block;
+                        display: inline-flex;
+                        align-items: center;
                     }
                 }
             }

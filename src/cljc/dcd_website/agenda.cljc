@@ -1,4 +1,5 @@
-(ns dcd-website.agenda)
+(ns dcd-website.agenda
+  (:require [clojure.string :as string]))
 
 (defn table-row [{:keys [title time author _type]}]
   (let [[start end] time]
@@ -17,16 +18,36 @@
     [:tbody
      (doall (map table-row agenda-data))]]])
 
-(defn speaker-component [{:keys [author description title type profile-pic bio twitter youtube-link]}]
+(defn- strip-protocol [url]
+  (string/replace url #"https?://" ""))
+
+;; courtesy of clj-commons/humanize
+(defn- max-20-chars [the-string]
+  (let [suffix "…"
+        suffix-len (count suffix)
+        max-length 20
+        string-len (count the-string)]
+    (if (<= string-len max-length)
+      the-string
+      (str (subs the-string 0 (- max-length suffix-len)) suffix))))
+
+(defn speaker-component [{:keys [author description title type profile-pic bio twitter youtube-link blog company]}]
   ^{:key author}
   [:div.speaker
    [:div.name
     [:img {:src (str "img/speakers/" profile-pic)}]
-    (when twitter
-      [:a.twitter-link {:href (str "https://twitter.com/" twitter) :target :_blank}
-       [:span.twitter-handle (str "@" twitter)]])
     (when-not (= :placeholder type)
-      [:h3 author])]
+      [:h3 author])
+    (when twitter
+      [:a.twitter-link {:href (str "https://x.com/" twitter) :target :_blank}
+       [:span.twitter-handle [:img {:class "icon" :src "img/icons/x.svg"}] (str "@" twitter)]])
+    (when blog
+      (let [link-url blog
+            link-text (-> blog
+                          strip-protocol
+                          max-20-chars)]
+        [:a.twitter-link {:href link-url}
+         [:span.twitter-handle [:img {:class "icon" :src "img/icons/external-link.png"}] link-text]]))]
    [:div.info
     [:h3.title {:id title}
      (when (= :lightning type)
