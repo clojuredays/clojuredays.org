@@ -9,7 +9,7 @@
     [:li [:a.item {:href "/#date" :onclick "collapseSidebar()"} "When?"]]
     [:li [:a.item {:href "/#location" :onclick "collapseSidebar()"} "Where?"]]
     [:li [:a.item {:href "/#tickets" :onclick "collapseSidebar()"} "Tickets"]]
-    [:li [:a.item {:href "/#cfp" :onclick "collapseSidebar()"} "Call for proposals"]]
+    #_[:li [:a.item {:href "/#cfp" :onclick "collapseSidebar()"} "Call for proposals"]]
     [:li [:a.item {:href "/#agenda" :onclick "collapseSidebar()"} "Agenda"]]
     [:li [:a.item {:href "/#sponsors" :onclick "collapseSidebar()"} "Sponsors"]]
     [:li [:a.item {:href "/#packages" :onclick "collapseSidebar()"} "Sponsorship"]]

@@ -203,7 +203,7 @@ this wonderful world themselves."
 
    {:time ["15:40" "15:50"]
     :type :lightning
-    :title "Bringing async/await froum Squint to ClojureScript"
+    :title "Bringing async/await from Squint to ClojureScript"
     :author "Michiel Borkent"
     :profile-pic "borkdude.jpg"
     :bio "Michiel Borkent, known online as @borkdude, is a passionate open source Clojure developer. He’s helping developers to write cleaner, faster, and more enjoyable code with popular tools like clj-kondo, babashka, SCI, nbb, and squint. When he’s not deep in parentheses, you’ll find him at the piano or enjoying a walk outdoors."
@@ -243,7 +243,7 @@ Lately, he's been lurking around open-source Clojure projects looking for easy b
    (when-component)
    (where-component)
    (tickets-component)
-   (cfp-component)
+   #_(cfp-component)
    (sponsors-component)
    (sponsor-packages-component)
    [:div#agenda
