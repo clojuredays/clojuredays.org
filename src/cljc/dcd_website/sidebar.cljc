@@ -13,7 +13,7 @@
     [:li [:a.item {:href "/#agenda" :onclick "collapseSidebar()"} "Agenda"]]
     [:li [:a.item {:href "/#sponsors" :onclick "collapseSidebar()"} "Sponsors"]]
     [:li [:a.item {:href "/#packages" :onclick "collapseSidebar()"} "Sponsorship"]]
-    [:a.item {:href "/#speakers" :onclick "collapseSidebar()"} "Speakers"]
+    [:li [:a.item {:href "/#speakers" :onclick "collapseSidebar()"} "Speakers"]]
     [:li [:a.item {:href "/#behave" :onclick "collapseSidebar()"} "Code of conduct"]]]
    [:br]
    [:a.item {:href "dcd2022.html" :onclick "collapseSidebar()"} "Archive: DCD2022"]
