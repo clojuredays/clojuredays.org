@@ -108,6 +108,7 @@ In times of uncertainty, we don't have to be alone. With care, building together
 For the past year, I've been working on Easel, a pure Clojure IDE. In this talk, we'll explore ideas from the past that were ahead of their time, demonstrate what's possible today, and imagine what the future of IDEs could look like."
     :type :talk
     :blog "https://blog.phronemophobic.com"
+    :profile-pic "asmith.png"
     :twitter "phronmophobic"}
 
    {:time ["10:45" "11:15"]
@@ -165,6 +166,7 @@ Coffi's macros and memory arenas make programming C from Clojure fun."]
     :author "Wendy Randolph"
     :description "What happens when your first programming language is Clojure? Are we all born with an inherent fear of parentheses? How does immersing yourself in its powerful abstractions shape your problem-solving approach? In this talk, I’ll share how Clojure, as my first language, shaped my mindset and set me on a path to becoming a more flexible, creative, and precise problem solver. We’ll explore how Clojure’s minimalist syntax and focus on immutability, recursion, and purity build a solid foundation in functional programming. Discover how the REPL’s feedback loop accelerates learning and encourages experimentation. Clojure’s simplicity fosters good habits early on, helping avoid unnecessary complexity and preparing you for modern software challenges, especially in scalable and distributed systems. Learn how this Lisp dialect nurtures a functional mindset, setting you up to excel no matter the language you work with."
     :type :talk
+    :profile-pic "wrandolph.jpg"
     :blog "http://www.wendyrandolph.com"}
 
    {:time ["12:30" "14:00"]
@@ -213,6 +215,7 @@ After several years of development, here's what we learned:
 This is a production story from someone who bet on ClojureScript years ago - and would do it"
     :bio "Managing Director and Tech Lead at 100Starlings, a remote-first software develoment agency. He has been designing and building web applications for the best part of three decades."
     :type :talk
+    :profile-pic "rcambiassi.jpg"
     :youtube-link nil}
 
    {:title "Lightning Talks"
