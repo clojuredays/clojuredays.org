@@ -98,11 +98,17 @@ In times of uncertainty, we don't have to be alone. With care, building together
     :blog "https://clojurecivitas.github.io/Daniel_Slutsky"
     :youtube-link nil}
 
-   {:time ["10:00" "10:45"]
-    :title "Unconfirmed"
-    :add-padding true
+   {:time ["11:45" "12:30"]
+    :title "Reevaluating the IDE"
+    :bio "Adrian is a software engineer and the creator of Easel, a pure clojure IDE in the spirit of Emacs. He got started programming by making tic-tac-toe for his TI-83 calculator. Since then, he's built web, mobile, and desktop applications using python, javascript, ruby, php, objective-c, and c++ before finally finding clojure. He believes that programming should be for everyone and that you shouldn't need a CS degree to make a simple web, desktop, or mobile app.
+"
+    :author "Adrian Smith"
+    :description "What would a Lisp IDE with modern graphics, multi-threading, advanced JIT compilation, world class garbage collection, and an enormous ecosystem of libraries look like? What would programming look like if our workflows were oriented around data rather than text? What if it was easy to build and integrate tools dynamically at runtime that were tailored to the specific problem domain?
+<br />
+For the past year, I've been working on Easel, a pure Clojure IDE. In this talk, we'll explore ideas from the past that were ahead of their time, demonstrate what's possible today, and imagine what the future of IDEs could look like."
     :type :talk
-    :youtube-link nil}
+    :blog "https://blog.phronemophobic.com"
+    :twitter "phronmophobic"}
 
    {:time ["10:45" "11:15"]
     :title "Coffee break"
@@ -154,9 +160,12 @@ Coffi's macros and memory arenas make programming C from Clojure fun."]
     :youtube-link nil}
 
    {:time ["11:45" "12:30"]
-    :title "Unconfirmed"
+    :title "Clojure as Your First Language: Shaping a Functional Mindset"
+    :bio "Wendy is a career-changer and freelance software developer, passionate about functional programming and helping others break into tech. A founding student of Clojure Camp, she has spoken at numerous conferences, such as Clojure Conj, Heart of Clojure, Lambda Days, Clojure South, and Lambda World, co-hosted ElixirConf US and Clojure Conj 2025, and enjoys sewing, jazz dance, sports cars, and Disney."
+    :author "Wendy Randolph"
+    :description "What happens when your first programming language is Clojure? Are we all born with an inherent fear of parentheses? How does immersing yourself in its powerful abstractions shape your problem-solving approach? In this talk, I’ll share how Clojure, as my first language, shaped my mindset and set me on a path to becoming a more flexible, creative, and precise problem solver. We’ll explore how Clojure’s minimalist syntax and focus on immutability, recursion, and purity build a solid foundation in functional programming. Discover how the REPL’s feedback loop accelerates learning and encourages experimentation. Clojure’s simplicity fosters good habits early on, helping avoid unnecessary complexity and preparing you for modern software challenges, especially in scalable and distributed systems. Learn how this Lisp dialect nurtures a functional mindset, setting you up to excel no matter the language you work with."
     :type :talk
-    :force-timeline-visible? true}
+    :blog "http://www.wendyrandolph.com"}
 
    {:time ["12:30" "14:00"]
     :title "Lunch break"
@@ -184,7 +193,25 @@ this wonderful world themselves."
     :youtube-link nil}
 
    {:time ["14:45" "15:30"]
-    :title "Unconfirmed"
+    :title "Bear's Browser Bet: A ClojureScript Story"
+    :author "Riccardo Cambiassi"
+    :description "In 2017, I presented a talk at Dutch Clojure Days about shipping ClojureScript apps. This is what happened next.
+<br />
+Bear is an award-winning note-taking app for the Apple ecosystem, loved by users worldwide. We brought it to the web using ClojureScript and Re-frame - with no backend, syncing directly with Apple's CloudKit from the browser.
+<br />
+After several years of development, here's what we learned:
+<ul>
+<li>Re-frame patterns that survived the test of time</li>
+<li>wrapping JS interop with CloudKit: the undocumented parts</li>
+<li>integrating with WebAssembly from ClojureScript</li>
+<li>Offline-first sync and conflict resolution</li>
+<li>What worked great and what didn't</li>
+<li>Where ClojureScript saved us time and how the landscape evolved around us</li>
+<li>What's next: from CRDTs and embedded SQLite</li>
+</ul>
+<br />
+This is a production story from someone who bet on ClojureScript years ago - and would do it"
+    :bio "Managing Director and Tech Lead at 100Starlings, a remote-first software develoment agency. He has been designing and building web applications for the best part of three decades."
     :type :talk
     :youtube-link nil}
 
