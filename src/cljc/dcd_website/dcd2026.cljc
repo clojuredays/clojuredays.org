@@ -277,7 +277,7 @@ Lately, he's been lurking around open-source Clojure projects looking for easy b
    (tickets-component)
    #_(cfp-component)
    (sponsors-component)
-   (sponsor-packages-component)
+   #_(sponsor-packages-component)
    [:div#agenda
     [:h2 "Agenda"]
     [:p "The agenda below is just an indication as " [:a {:href "https://sessionize.com/dutch-clojure-days-2026/"} "our CfP is still ongoing!"]]
