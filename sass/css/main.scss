@@ -372,7 +372,8 @@ a {
             display: block;
             img {
                 max-width: 500px;
-                width: 100%;
+                max-height: 120px;
+                width: auto;
             }
         }
 

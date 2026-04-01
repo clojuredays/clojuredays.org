@@ -69,6 +69,8 @@ we want to hear about it!"]
      [:img {:src "img/2026/sponsors/exoscale.svg" :alt "Exoscale"}]]
     [:a.sponsor.platinum {:href "https://freshcodeit.com/" :target :_blank}
      [:img {:src "img/2026/sponsors/freshcode.svg" :alt "FreshCode"}]]
+    [:a.sponsor.platinum {:href "https://international.nubank.com.br/" :target :_blank}
+     [:img {:src "img/2026/sponsors/nubank.png" :alt "Nubank"}]]
     [:h3.package "Supporter"]
     [:a.sponsor.supporter {:href "https://nextjournal.com/" :target :_blank}
      [:img {:src "img/2026/sponsors/nextjournal.svg" :alt "Nextjournal"}]]]])
