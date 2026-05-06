@@ -100,7 +100,7 @@ In times of uncertainty, we don't have to be alone. With care, building together
     :blog "https://clojurecivitas.github.io/Daniel_Slutsky"
     :youtube-link nil}
 
-   {:time ["11:45" "12:30"]
+   {:time ["10:00" "10:45"]
     :title "Reevaluating the IDE"
     :bio "Adrian is a software engineer and the creator of Easel, a pure clojure IDE in the spirit of Emacs. He got started programming by making tic-tac-toe for his TI-83 calculator. Since then, he's built web, mobile, and desktop applications using python, javascript, ruby, php, objective-c, and c++ before finally finding clojure. He believes that programming should be for everyone and that you shouldn't need a CS degree to make a simple web, desktop, or mobile app.
 "
