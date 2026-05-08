@@ -35,39 +35,30 @@
       the-string
       (str (subs the-string 0 (- max-length suffix-len)) suffix))))
 
-(defn speaker-component [{:keys [author description title type profile-pic bio twitter youtube-link blog co-speaker]}]
+(defn- speaker-name-block [{:keys [author type profile-pic twitter blog]} co-speaker?]
+  [:div.speaker-name
+   [:img (cond-> {:src (str "img/speakers/" profile-pic)}
+           co-speaker? (assoc :class "co-speaker"))]
+   (when-not (= :placeholder type)
+     [:h3 author])
+   (when twitter
+     [:a.twitter-link {:href (str "https://x.com/" twitter) :target :_blank}
+      [:span.twitter-handle [:img {:class "icon" :src "img/icons/x.svg"}] (str "@" twitter)]])
+   (when blog
+     (let [link-url blog
+           link-text (-> blog
+                         strip-protocol
+                         max-20-chars)]
+       [:a.twitter-link {:href link-url}
+        [:span.twitter-handle [:img {:class "icon" :src "img/icons/external-link.png"}] link-text]]))])
+
+(defn speaker-component [{:keys [author description title type bio youtube-link co-speaker] :as speaker}]
   ^{:key author}
   [:div.speaker
    [:div.name
-    [:img {:src (str "img/speakers/" profile-pic)}]
-    (when-not (= :placeholder type)
-      [:h3 author])
-    (when twitter
-      [:a.twitter-link {:href (str "https://x.com/" twitter) :target :_blank}
-       [:span.twitter-handle [:img {:class "icon" :src "img/icons/x.svg"}] (str "@" twitter)]])
-    (when blog
-      (let [link-url blog
-            link-text (-> blog
-                          strip-protocol
-                          max-20-chars)]
-        [:a.twitter-link {:href link-url}
-         [:span.twitter-handle [:img {:class "icon" :src "img/icons/external-link.png"}] link-text]]))
+    (speaker-name-block speaker false)
     (when co-speaker
-      (let [{:keys [author description title type profile-pic bio twitter youtube-link blog co-speaker]} co-speaker]
-        [:span
-         [:img.co-speaker {:src (str "img/speakers/" profile-pic)}]
-         (when-not (= :placeholder type)
-           [:h3 author])
-         (when twitter
-           [:a.twitter-link {:href (str "https://x.com/" twitter) :target :_blank}
-            [:span.twitter-handle [:img {:class "icon" :src "img/icons/x.svg"}] (str "@" twitter)]])
-         (when blog
-           (let [link-url blog
-                 link-text (-> blog
-                               strip-protocol
-                               max-20-chars)]
-             [:a.twitter-link {:href link-url}
-              [:span.twitter-handle [:img {:class "icon" :src "img/icons/external-link.png"}] link-text]]))]))]
+      (speaker-name-block co-speaker true))]
    [:div.info
     [:h3.title {:id title}
      (when (= :lightning type)

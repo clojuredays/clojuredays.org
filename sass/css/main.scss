@@ -567,6 +567,23 @@ a {
                     margin-top: 0;
                 }
             }
+
+            @media all and (max-width: 550px) {
+                .name {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+
+                    .speaker-name {
+                        flex: 1;
+                        min-width: 0;
+                    }
+
+                    img.co-speaker {
+                        padding-top: 0;
+                    }
+                }
+            }
         }
     }
 }
