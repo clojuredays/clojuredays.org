@@ -98,7 +98,11 @@ Community building raises questions. How do we create spaces where diverse voice
 In times of uncertainty, we don't have to be alone. With care, building together becomes possible. We'll consider what that care may look like, and ask: what do we still need to build for each other?"
     :bio "Daniel Slutsky is a Clojurian and a mathematician. Since 2019, he has been involved in building Scicloj, an open-source community focused on helping Clojure grow. He co-maintains a few tools and libraries, including Noj, Clay, Tableplot, and ClojisR."
     :blog "https://clojurecivitas.github.io/Daniel_Slutsky"
-    :youtube-link nil}
+    :youtube-link nil
+    :co-speaker {:author "Siyoung Byun"
+                 :profile-pic "sbyun.jpg"
+                 :blog "https://clojurecivitas.org/Siyoung_Byun.html"
+                 :bio "Siyoung Byun is currently a freelance fullstack Clojure developer living in Seoul, South Korea. She studied astrophysics for her undergrad in Canada, where she first got into programming and data analysis while running simulations of dying stars crashing into each other. Ever since she was introduced to Clojure, it quickly became her favorite programming language and her passion. Beyond software development and data analysis, she likes to hike, bike, knit, sew and snuggle with her cat in her free time."}}
 
    {:time ["10:00" "10:45"]
     :title "Reevaluating the IDE"
